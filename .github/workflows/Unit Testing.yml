@@ -12,10 +12,10 @@ jobs:
     env:
       XC_VERSION: ${{ '11.4' }}
       XC_WORKSPACE: ${{ 'Smart Home.xcworkspace' }}
-      XC_SCHEME_TESTS: ${{ "SmartHomeTests" }}
+      XC_SCHEME_TESTS: ${{ 'SmartHomeTests' }}
     steps:
     - name: Select latest Xcode
       run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
     - uses: actions/checkout@v2
     - name: Run Unit Tests
-      run: /usr/bin/xcodebuild test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME_TESTS" -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.4'
+      run: /usr/bin/xcodebuild test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME_TESTS" -destination "platform=iOS Simulator,name=iPhone 11"
