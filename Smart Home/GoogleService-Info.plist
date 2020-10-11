@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>536169919010-0o44o6kr1l2ellbj2o5ofvqtnp4887jl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.536169919010-0o44o6kr1l2ellbj2o5ofvqtnp4887jl</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>536169919010-r41d5r37jsrbd59bah3r1q49suhqejc6.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAQBg4uPvqaVRpqpQtWhYZtC__tsj0JwZo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>536169919010</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.diplomarbeit.Smart-Home</string>
+	<key>PROJECT_ID</key>
+	<string>diplomarbeit-33903</string>
+	<key>STORAGE_BUCKET</key>
+	<string>diplomarbeit-33903.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:536169919010:ios:f6db89e75044f429ef507b</string>
+	<key>DATABASE_URL</key>
+	<string>https://diplomarbeit-33903.firebaseio.com</string>
+</dict>
+</plist>
