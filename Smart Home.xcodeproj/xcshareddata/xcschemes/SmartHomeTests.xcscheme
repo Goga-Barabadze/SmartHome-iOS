@@ -10,16 +10,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4AEB2CAF24C03D250001F981"
-               BuildableName = "Smart HomeTests.xctest"
-               BlueprintName = "Smart HomeTests"
+               BlueprintIdentifier = "4A2C947D25343F080075A17D"
+               BuildableName = "SmartHomeTests.xctest"
+               BlueprintName = "SmartHomeTests"
                ReferencedContainer = "container:Smart Home.xcodeproj">
             </BuildableReference>
          </TestableReference>
