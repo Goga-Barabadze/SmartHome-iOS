@@ -38,7 +38,6 @@
 		4AEB2CA524C03D230001F981 /* Smart_Home.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CA324C03D230001F981 /* Smart_Home.xcdatamodeld */; };
 		4AEB2CA724C03D240001F981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEB2CA624C03D240001F981 /* Assets.xcassets */; };
 		4AEB2CAA24C03D240001F981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AEB2CA824C03D240001F981 /* LaunchScreen.storyboard */; };
-		4AEB2CB524C03D250001F981 /* Smart_HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CB424C03D250001F981 /* Smart_HomeTests.swift */; };
 		4AEB2CC324C0526C0001F981 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CC224C0526C0001F981 /* LoginVC.swift */; };
 		4AEB2CC524C052950001F981 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CC424C052950001F981 /* RegisterVC.swift */; };
 		4AEB2CC724C052B30001F981 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CC624C052B30001F981 /* HomeVC.swift */; };
@@ -53,18 +52,7 @@
 		4AEB2CDA24C05E0A0001F981 /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD924C05E0A0001F981 /* Consumer.swift */; };
 		4AEB2CDC24C05ED80001F981 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDB24C05ED80001F981 /* Location.swift */; };
 		4AEB2CDE24C05F2A0001F981 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDD24C05F2A0001F981 /* Weather.swift */; };
-		A153EEEF77A6CDC25242A2E3 /* Pods_Smart_HomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6955863402491E9AE6DACA38 /* Pods_Smart_HomeTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4AEB2CB124C03D250001F981 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4AEB2C8F24C03D230001F981 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4AEB2C9624C03D230001F981;
-			remoteInfo = "Smart Home";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1F3BD8B2A5243E201F5B7AB6 /* Pods-Smart HomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart HomeTests.release.xcconfig"; path = "Target Support Files/Pods-Smart HomeTests/Pods-Smart HomeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +88,6 @@
 		4AEB2CA624C03D240001F981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AEB2CA924C03D240001F981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AEB2CAB24C03D240001F981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AEB2CB024C03D250001F981 /* Smart HomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart HomeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEB2CB424C03D250001F981 /* Smart_HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_HomeTests.swift; sourceTree = "<group>"; };
 		4AEB2CB624C03D250001F981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AEB2CC224C0526C0001F981 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -130,14 +117,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04843BF8EC88A50654D05AC0 /* Pods_Smart_Home.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4AEB2CAD24C03D250001F981 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A153EEEF77A6CDC25242A2E3 /* Pods_Smart_HomeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				4AEB2C9724C03D230001F981 /* Smart Home.app */,
-				4AEB2CB024C03D250001F981 /* Smart HomeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,25 +294,6 @@
 			productReference = 4AEB2C9724C03D230001F981 /* Smart Home.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4AEB2CAF24C03D250001F981 /* Smart HomeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4AEB2CBC24C03D250001F981 /* Build configuration list for PBXNativeTarget "Smart HomeTests" */;
-			buildPhases = (
-				414D505513F25FF2FA32D0DD /* [CP] Check Pods Manifest.lock */,
-				4AEB2CAC24C03D250001F981 /* Sources */,
-				4AEB2CAD24C03D250001F981 /* Frameworks */,
-				4AEB2CAE24C03D250001F981 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4AEB2CB224C03D250001F981 /* PBXTargetDependency */,
-			);
-			name = "Smart HomeTests";
-			productName = "Smart HomeTests";
-			productReference = 4AEB2CB024C03D250001F981 /* Smart HomeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -347,10 +306,6 @@
 				TargetAttributes = {
 					4AEB2C9624C03D230001F981 = {
 						CreatedOnToolsVersion = 11.6;
-					};
-					4AEB2CAF24C03D250001F981 = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = 4AEB2C9624C03D230001F981;
 					};
 				};
 			};
@@ -368,7 +323,6 @@
 			projectRoot = "";
 			targets = (
 				4AEB2C9624C03D230001F981 /* Smart Home */,
-				4AEB2CAF24C03D250001F981 /* Smart HomeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,13 +346,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4AEB2CAE24C03D250001F981 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -418,28 +365,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Smart Home-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		414D505513F25FF2FA32D0DD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Smart HomeTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -524,23 +449,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4AEB2CAC24C03D250001F981 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4AEB2CB524C03D250001F981 /* Smart_HomeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4AEB2CB224C03D250001F981 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4AEB2C9624C03D230001F981 /* Smart Home */;
-			targetProxy = 4AEB2CB124C03D250001F981 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4AEB2CA024C03D230001F981 /* Main.storyboard */ = {
@@ -714,54 +623,6 @@
 			};
 			name = Release;
 		};
-		4AEB2CBD24C03D250001F981 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B561042E92D441FFDEF8724E /* Pods-Smart HomeTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M3493F96B3;
-				INFOPLIST_FILE = "Smart HomeTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hashtag.oct.Smart-HomeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Home.app/Smart Home";
-			};
-			name = Debug;
-		};
-		4AEB2CBE24C03D250001F981 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F3BD8B2A5243E201F5B7AB6 /* Pods-Smart HomeTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M3493F96B3;
-				INFOPLIST_FILE = "Smart HomeTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hashtag.oct.Smart-HomeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Home.app/Smart Home";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -779,15 +640,6 @@
 			buildConfigurations = (
 				4AEB2CBA24C03D250001F981 /* Debug */,
 				4AEB2CBB24C03D250001F981 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4AEB2CBC24C03D250001F981 /* Build configuration list for PBXNativeTarget "Smart HomeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4AEB2CBD24C03D250001F981 /* Debug */,
-				4AEB2CBE24C03D250001F981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
