@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04843BF8EC88A50654D05AC0 /* Pods_Smart_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C876037F534F6DB96255D6 /* Pods_Smart_Home.framework */; };
+		4A2C948125343F080075A17D /* SmartHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2C948025343F080075A17D /* SmartHomeTests.swift */; };
 		4A426BB524C8BDFE002CE5A2 /* SimpleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BB324C8BDFE002CE5A2 /* SimpleTitleCell.swift */; };
 		4A426BB624C8BDFE002CE5A2 /* SimpleTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A426BB424C8BDFE002CE5A2 /* SimpleTitleCell.xib */; };
 		4A426BB924C8C0E2002CE5A2 /* DeviceOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BB724C8C0E2002CE5A2 /* DeviceOverviewCell.swift */; };
@@ -54,8 +55,21 @@
 		4AEB2CDE24C05F2A0001F981 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDD24C05F2A0001F981 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4A2C948325343F080075A17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AEB2C8F24C03D230001F981 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AEB2C9624C03D230001F981;
+			remoteInfo = "Smart Home";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1F3BD8B2A5243E201F5B7AB6 /* Pods-Smart HomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart HomeTests.release.xcconfig"; path = "Target Support Files/Pods-Smart HomeTests/Pods-Smart HomeTests.release.xcconfig"; sourceTree = "<group>"; };
+		4A2C947E25343F080075A17D /* SmartHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2C948025343F080075A17D /* SmartHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeTests.swift; sourceTree = "<group>"; };
+		4A2C948225343F080075A17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A426BB324C8BDFE002CE5A2 /* SimpleTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTitleCell.swift; sourceTree = "<group>"; };
 		4A426BB424C8BDFE002CE5A2 /* SimpleTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTitleCell.xib; sourceTree = "<group>"; };
 		4A426BB724C8C0E2002CE5A2 /* DeviceOverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOverviewCell.swift; sourceTree = "<group>"; };
@@ -88,8 +102,6 @@
 		4AEB2CA624C03D240001F981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AEB2CA924C03D240001F981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AEB2CAB24C03D240001F981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AEB2CB424C03D250001F981 /* Smart_HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_HomeTests.swift; sourceTree = "<group>"; };
-		4AEB2CB624C03D250001F981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AEB2CC224C0526C0001F981 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4AEB2CC424C052950001F981 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		4AEB2CC624C052B30001F981 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -112,6 +124,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4A2C947B25343F080075A17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AEB2C9424C03D230001F981 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,6 +142,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A2C947F25343F080075A17D /* SmartHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A2C948025343F080075A17D /* SmartHomeTests.swift */,
+				4A2C948225343F080075A17D /* Info.plist */,
+			);
+			path = SmartHomeTests;
+			sourceTree = "<group>";
+		};
 		4A6FF6C024C31B4300CA3828 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				4AEB2C9924C03D230001F981 /* Smart Home */,
-				4AEB2CB324C03D250001F981 /* Smart HomeTests */,
+				4A2C947F25343F080075A17D /* SmartHomeTests */,
 				4AEB2C9824C03D230001F981 /* Products */,
 				BDD9D13392C35E09A4F4B7D9 /* Pods */,
 				6693A428C0F5FD9B1A926A0E /* Frameworks */,
@@ -171,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				4AEB2C9724C03D230001F981 /* Smart Home.app */,
+				4A2C947E25343F080075A17D /* SmartHomeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,15 +220,6 @@
 				4A8C37DC24C19AD3004A9DBD /* GoogleService-Info.plist */,
 			);
 			path = "Smart Home";
-			sourceTree = "<group>";
-		};
-		4AEB2CB324C03D250001F981 /* Smart HomeTests */ = {
-			isa = PBXGroup;
-			children = (
-				4AEB2CB424C03D250001F981 /* Smart_HomeTests.swift */,
-				4AEB2CB624C03D250001F981 /* Info.plist */,
-			);
-			path = "Smart HomeTests";
 			sourceTree = "<group>";
 		};
 		4AEB2CBF24C03DC90001F981 /* View */ = {
@@ -274,6 +294,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4A2C947D25343F080075A17D /* SmartHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A2C948525343F080075A17D /* Build configuration list for PBXNativeTarget "SmartHomeTests" */;
+			buildPhases = (
+				4A2C947A25343F080075A17D /* Sources */,
+				4A2C947B25343F080075A17D /* Frameworks */,
+				4A2C947C25343F080075A17D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A2C948425343F080075A17D /* PBXTargetDependency */,
+			);
+			name = SmartHomeTests;
+			productName = SmartHomeTests;
+			productReference = 4A2C947E25343F080075A17D /* SmartHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4AEB2C9624C03D230001F981 /* Smart Home */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AEB2CB924C03D250001F981 /* Build configuration list for PBXNativeTarget "Smart Home" */;
@@ -300,10 +338,14 @@
 		4AEB2C8F24C03D230001F981 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Goga Barabadze";
 				TargetAttributes = {
+					4A2C947D25343F080075A17D = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 4AEB2C9624C03D230001F981;
+					};
 					4AEB2C9624C03D230001F981 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -323,11 +365,19 @@
 			projectRoot = "";
 			targets = (
 				4AEB2C9624C03D230001F981 /* Smart Home */,
+				4A2C947D25343F080075A17D /* SmartHomeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4A2C947C25343F080075A17D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AEB2C9524C03D230001F981 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,6 +459,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4A2C947A25343F080075A17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2C948125343F080075A17D /* SmartHomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AEB2C9324C03D230001F981 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,6 +509,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4A2C948425343F080075A17D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AEB2C9624C03D230001F981 /* Smart Home */;
+			targetProxy = 4A2C948325343F080075A17D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		4AEB2CA024C03D230001F981 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -471,6 +537,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4A2C948625343F080075A17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M3493F96B3;
+				INFOPLIST_FILE = SmartHomeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.ac.htlperg.ahif16.SmartHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Home.app/Smart Home";
+			};
+			name = Debug;
+		};
+		4A2C948725343F080075A17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M3493F96B3;
+				INFOPLIST_FILE = SmartHomeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.ac.htlperg.ahif16.SmartHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Home.app/Smart Home";
+			};
+			name = Release;
+		};
 		4AEB2CB724C03D250001F981 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -626,6 +736,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4A2C948525343F080075A17D /* Build configuration list for PBXNativeTarget "SmartHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2C948625343F080075A17D /* Debug */,
+				4A2C948725343F080075A17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4AEB2C9224C03D230001F981 /* Build configuration list for PBXProject "Smart Home" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
