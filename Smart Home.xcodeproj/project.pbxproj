@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04843BF8EC88A50654D05AC0 /* Pods_Smart_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C876037F534F6DB96255D6 /* Pods_Smart_Home.framework */; };
+		1F2727C3BF519B26DBD04BDA /* Pods_SmartHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C150DD6FA137DBB8CA8215AA /* Pods_SmartHomeTests.framework */; };
 		4A2C948125343F080075A17D /* SmartHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2C948025343F080075A17D /* SmartHomeTests.swift */; };
 		4A426BB524C8BDFE002CE5A2 /* SimpleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BB324C8BDFE002CE5A2 /* SimpleTitleCell.swift */; };
 		4A426BB624C8BDFE002CE5A2 /* SimpleTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A426BB424C8BDFE002CE5A2 /* SimpleTitleCell.xib */; };
@@ -117,10 +118,13 @@
 		4AEB2CDB24C05ED80001F981 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		4AEB2CDD24C05F2A0001F981 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		6955863402491E9AE6DACA38 /* Pods_Smart_HomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_HomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		696B7F590CBE97C43F48D791 /* Pods-SmartHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeTests.release.xcconfig"; path = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		7EA205BB1C6EC0BE35CDB5DC /* Pods-Smart Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home.release.xcconfig"; path = "Target Support Files/Pods-Smart Home/Pods-Smart Home.release.xcconfig"; sourceTree = "<group>"; };
 		AB1949C3D75EE1CE1D3F7C00 /* Pods-Smart Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home.debug.xcconfig"; path = "Target Support Files/Pods-Smart Home/Pods-Smart Home.debug.xcconfig"; sourceTree = "<group>"; };
 		B3C876037F534F6DB96255D6 /* Pods_Smart_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B561042E92D441FFDEF8724E /* Pods-Smart HomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart HomeTests.debug.xcconfig"; path = "Target Support Files/Pods-Smart HomeTests/Pods-Smart HomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C150DD6FA137DBB8CA8215AA /* Pods_SmartHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A58BBDF6B85E6410432C83 /* Pods-SmartHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F2727C3BF519B26DBD04BDA /* Pods_SmartHomeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +281,7 @@
 			children = (
 				B3C876037F534F6DB96255D6 /* Pods_Smart_Home.framework */,
 				6955863402491E9AE6DACA38 /* Pods_Smart_HomeTests.framework */,
+				C150DD6FA137DBB8CA8215AA /* Pods_SmartHomeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,6 +293,8 @@
 				7EA205BB1C6EC0BE35CDB5DC /* Pods-Smart Home.release.xcconfig */,
 				B561042E92D441FFDEF8724E /* Pods-Smart HomeTests.debug.xcconfig */,
 				1F3BD8B2A5243E201F5B7AB6 /* Pods-Smart HomeTests.release.xcconfig */,
+				F7A58BBDF6B85E6410432C83 /* Pods-SmartHomeTests.debug.xcconfig */,
+				696B7F590CBE97C43F48D791 /* Pods-SmartHomeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -298,6 +306,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A2C948525343F080075A17D /* Build configuration list for PBXNativeTarget "SmartHomeTests" */;
 			buildPhases = (
+				9BCE2D58D8D07200D2F72529 /* [CP] Check Pods Manifest.lock */,
 				4A2C947A25343F080075A17D /* Sources */,
 				4A2C947B25343F080075A17D /* Frameworks */,
 				4A2C947C25343F080075A17D /* Resources */,
@@ -439,6 +448,28 @@
 			shellPath = /bin/sh;
 			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
+		9BCE2D58D8D07200D2F72529 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartHomeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C2460AD8C8017EC7CF086107 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -539,6 +570,7 @@
 /* Begin XCBuildConfiguration section */
 		4A2C948625343F080075A17D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7A58BBDF6B85E6410432C83 /* Pods-SmartHomeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
@@ -562,6 +594,7 @@
 		};
 		4A2C948725343F080075A17D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 696B7F590CBE97C43F48D791 /* Pods-SmartHomeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;

@@ -2857,7 +2857,7 @@
 		8D4AC98C1DE80D0D9739E281BE94495F /* encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 429276A0A67DB58DFFAB8AD270755306 /* encode.h */; };
 		8D62FB3504F2C9B9E0910E493637F7BE /* BarChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91610A740555DE066EC85F1A6934321D /* BarChartDataEntry.swift */; };
 		8D77188463D89E904CF3EEDAAB832ECE /* x509_cmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B0B86F543E54732F815E424AC05E62E /* x509_cmp.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -fno-objc-arc"; }; };
-		8D811C29744274B9A9449AB9B6B2321D /* Pods-Smart Home-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA45C624D1CDB56C4EDF4E8C11E0D1A4 /* Pods-Smart Home-dummy.m */; };
+		8D811C29744274B9A9449AB9B6B2321D /* Pods-Smart Home-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D554A7C1DD983F28A381A60576CA4051 /* Pods-Smart Home-dummy.m */; };
 		8D8240AB57167CE5347F3D2D88F63F96 /* cipher.h in Headers */ = {isa = PBXBuildFile; fileRef = 9091D246A20AB6AFBD743A2738F4E763 /* cipher.h */; };
 		8D8EDA1CC78D110655262EC8D556C476 /* iomgr_internal.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = C19DFFDF40F5A95CE0B1596052462FD1 /* iomgr_internal.h */; };
 		8D91F43884EAC3257F85F3C36A7E4B0F /* asn1_compat.c in Sources */ = {isa = PBXBuildFile; fileRef = A3F67C4E31B493E1A63F2F2EC7E020F3 /* asn1_compat.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -fno-objc-arc"; }; };
@@ -2973,7 +2973,7 @@
 		93054C27821A444D511B14A99A7A3A99 /* FIRHTTPSCallable+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A3342D970FD74E80772C9F7752039795 /* FIRHTTPSCallable+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		930F4FD273BB41A8D1BB1F07608B3028 /* RadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C400FC52F6C06AC7A0EC4E9FF6183DD6 /* RadarChartDataSet.swift */; };
 		932F905C9C10A7D08E5524CB647CA52F /* GULApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FAF675E261A53421408BE33BE0CBADF /* GULApplication.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		93309BC038AEADDCEDCB98EBD71F820D /* Pods-Smart Home-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1447520C15FE84FD2DE06130ED13EC1 /* Pods-Smart Home-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93309BC038AEADDCEDCB98EBD71F820D /* Pods-Smart Home-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C28000A65954361C4CCD0CF0A98D1C7 /* Pods-Smart Home-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		934CEE4C44D96473A7B71715E907631E /* http_connection_manager.upb.h in Copy src/core/ext/upb-generated/envoy/config/filter/network/http_connection_manager/v2 Private Headers */ = {isa = PBXBuildFile; fileRef = 88FB6FF60C4BD28794BE4EDB60FEC03C /* http_connection_manager.upb.h */; };
 		93500BEF114C963A0DA0ABC8209CF913 /* client_channel.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F00082AC4D3F4863A9ADFA5B9C5AF3 /* client_channel.h */; };
 		93667E613B8FA005142946FCA00CD6B9 /* slice.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = D87988253AE9925D89EB33DF5E79228A /* slice.h */; };
@@ -3157,6 +3157,7 @@
 		9C13DD7779757E090DFDA5B3657CC5E1 /* thread_manager.h in Copy src/cpp/thread_manager Private Headers */ = {isa = PBXBuildFile; fileRef = 6F297F27D03AA09DD950549624B29E2E /* thread_manager.h */; };
 		9C18B9595C8023FABC477E5A9E0BD53A /* FIRCoreDiagnosticsInterop.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B39F312CF3C6DEFA2E63BA31101E5DB /* FIRCoreDiagnosticsInterop.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9C1D466567BC76F74DE00BA5BA5C8722 /* char_map.h in Copy strings/internal Public Headers */ = {isa = PBXBuildFile; fileRef = A67E1D30629ED103B7082A3157ED49B0 /* char_map.h */; };
+		9C31023FBE5559D12F841A18C619FA98 /* Pods-SmartHomeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 904696F3B0EBB075298EA2434FA3B259 /* Pods-SmartHomeTests-dummy.m */; };
 		9C318444837358E8B4F24E5C8F4ABBD2 /* internal.h in Copy crypto/hrss Private Headers */ = {isa = PBXBuildFile; fileRef = 267D30F299C376CC0EE8C08651D1885E /* internal.h */; };
 		9C5E9610005ED24693C9D37B0BCDAE65 /* bn_asn1.c in Sources */ = {isa = PBXBuildFile; fileRef = C84AE429816AF198D345A9BC93D360B5 /* bn_asn1.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -fno-objc-arc"; }; };
 		9C69A3D41453C10246481295F6083EF3 /* siphash.c in Sources */ = {isa = PBXBuildFile; fileRef = 25CBD11C6785F661EF7B75A1A811E797 /* siphash.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -fno-objc-arc"; }; };
@@ -3688,6 +3689,7 @@
 		BA707C913EF814CB11584C04574BE546 /* str_format.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CCDCE1A30D2684426622CE2BD90A9B /* str_format.h */; };
 		BA731CA41F91262E15AC95ED2177A372 /* Api.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = BE67290D28AB02C7058F69933EF8ACC2 /* Api.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA985F4806256D0C3F19C30421432478 /* FBLPromises.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 76DF9D515C07E0CF4B7C2632734014ED /* FBLPromises.h */; };
+		BAA3A4494CD6EB8F1A53D35C8077A842 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3C5E8A360B7FC2E35263746B9A73B /* Foundation.framework */; };
 		BACD01D5E85602E91C4BF4132118C852 /* GDTCORTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE241815F5B83FAA9E260EFF066FEA9 /* GDTCORTransformer.m */; };
 		BAD266EAD91913F7CA039F808EEB777F /* FIRGameCenterAuthProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = D282DE7EFF1ABBBF7B37F11EFD5A4847 /* FIRGameCenterAuthProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAE3823943545BBE7895C8C8CDC7B090 /* obj_xref.c in Sources */ = {isa = PBXBuildFile; fileRef = B61AC426DCEFDCD9A4F31EFADE3A2982 /* obj_xref.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -fno-objc-arc"; }; };
@@ -3779,7 +3781,6 @@
 		BFAF8DF635FA70661B321F36E6DE5240 /* FIRFacebookAuthCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = B4047231BEB5771645CB791CD6F97884 /* FIRFacebookAuthCredential.m */; };
 		BFB74E6D63410E064C97164C04FDD313 /* FIROptionsInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 01170E79A22B00C697EEFB56F24B73D6 /* FIROptionsInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BFC66EC79DA49B63A975A365ECC19C77 /* alts_iovec_record_protocol.h in Copy src/core/tsi/alts/zero_copy_frame_protector Private Headers */ = {isa = PBXBuildFile; fileRef = 19B09DC11D515BAE13181653AEB8DD11 /* alts_iovec_record_protocol.h */; };
-		BFD8BFD356DB2C64C2E022E3467BDBE7 /* Pods-Smart HomeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B3198797B516AC10D4233176656C3C08 /* Pods-Smart HomeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BFE5F98B0BDE0D6E0A969773FFACC397 /* hkdf.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BEB6CBA1A5F0FC01743B67AD854F676 /* hkdf.h */; };
 		C0020C63ADECF718F441C6C1ECC12001 /* spinlock_win32.inc in Copy base/internal Public Headers */ = {isa = PBXBuildFile; fileRef = 8D75698E1C70C24C9AD4EA0EE6FA84E4 /* spinlock_win32.inc */; };
 		C0077A0FB7A9B2B14E4261210274A2DB /* FIRInstallationsErrorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F60FD0D1FFF30C4054B9AF774EC20B /* FIRInstallationsErrorUtil.m */; };
@@ -3870,7 +3871,6 @@
 		C464BF42ECDA95C66021E80B82AA2444 /* string_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 53D6B30D4695214EE373B3D8490F9F97 /* string_posix.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
 		C478A8F12F4443DD9EAC455BBF19A875 /* child_policy_handler.h in Copy src/core/ext/filters/client_channel/lb_policy Private Headers */ = {isa = PBXBuildFile; fileRef = 619E7DE9A68BD367569DF67351DBB6B5 /* child_policy_handler.h */; };
 		C47AE6BE2128A383E5A917DB62FD78F3 /* call.h in Headers */ = {isa = PBXBuildFile; fileRef = 775D192ED1E945D9E06713FBBE9287C9 /* call.h */; };
-		C492A886FA402979DA83B2399BFC7266 /* Pods-Smart HomeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93444B4F16CB951AF94055C95BE9F87D /* Pods-Smart HomeTests-dummy.m */; };
 		C4931C2653A9B1AACABCE4173BA17397 /* sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F63F2F7BFE314CA116FA9B8167B8B /* sha256.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -fno-objc-arc"; }; };
 		C4C6B2B9936CB5879C7EF553C53669D3 /* fake_credentials.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CEC056FC03D9CCD14A96BBAE7E556F3 /* fake_credentials.h */; };
 		C4CF0B29BA2A2BF2F61D3977ABF5384A /* ev_posix.h in Headers */ = {isa = PBXBuildFile; fileRef = 78220A16DA55E20C2E352B54ED0333C2 /* ev_posix.h */; };
@@ -4223,7 +4223,6 @@
 		D5202552DD56C06651428B8268E5B5A1 /* b64.h in Headers */ = {isa = PBXBuildFile; fileRef = BC43775728B34F9B9FF296E76C03411F /* b64.h */; };
 		D5230BEAB3BAAB5EF0FD49945B708CD1 /* load_file.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = C18DB119E9D20078E37C0D49D8C48477 /* load_file.h */; };
 		D534D6A70DCE86565712C48C8FB3848E /* FIRErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = E86AEF6E66B5A5961300317FE1C98700 /* FIRErrors.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D54A86F98B31FC07C6461DC2A23DC0B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3C5E8A360B7FC2E35263746B9A73B /* Foundation.framework */; };
 		D5516ABD0BADC11F1001EC4F906CAD36 /* chttp2_server.h in Headers */ = {isa = PBXBuildFile; fileRef = EB67B22FB3165FC6DC9A46807ABE84B0 /* chttp2_server.h */; };
 		D555329A83E9389904B152CF16A55B40 /* tls_credentials.h in Copy src/core/lib/security/credentials/tls Private Headers */ = {isa = PBXBuildFile; fileRef = 884AD6F0907DDD76FAAD3BD6761EB42D /* tls_credentials.h */; };
 		D55F4A33A40FBD1D8D02BF9F7CB9D1E9 /* f_enum.c in Sources */ = {isa = PBXBuildFile; fileRef = E4E6A6971DFBF8DA755762406EDC13CC /* f_enum.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -fno-objc-arc"; }; };
@@ -4522,6 +4521,7 @@
 		E4C166AA3D4D17F028F0A2031D0B5D44 /* stream_compression_gzip.h in Copy src/core/lib/compression Private Headers */ = {isa = PBXBuildFile; fileRef = 6A813D63B0DF3DDC16C4241609D2FE1E /* stream_compression_gzip.h */; };
 		E4C734EC23F8907A83D29324EDAC2B38 /* bad_optional_access.h in Copy types Public Headers */ = {isa = PBXBuildFile; fileRef = 43BEB4C6D1B08974BD525A42A9A03103 /* bad_optional_access.h */; };
 		E4E321EA3F514ABEA2D6BD6B9BC8FF93 /* decode.h in Headers */ = {isa = PBXBuildFile; fileRef = 988CA51977785C405261F29A791A236C /* decode.h */; };
+		E4EA4E463E9EF0C51147D9F7C87A8F89 /* Pods-SmartHomeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC5DBBDDD659EE6B5560357C8773A5E /* Pods-SmartHomeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4EF536A691228C7C0B05BEADC1B39EA /* FIRCLSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 08A8FF192FF4BD5F18343884C5EF024A /* FIRCLSNetworkClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E4F244696CDF159AE322E61B6353EA4B /* FBLPromiseError.h in Headers */ = {isa = PBXBuildFile; fileRef = 713AFF22B5F29F4F30792D38FE9A98E5 /* FBLPromiseError.h */; };
 		E4FF1148830734123426FD73AAD016A5 /* socket_utils_uv.cc in Sources */ = {isa = PBXBuildFile; fileRef = BCC62315D8BBBECDDB35B262FC16C61B /* socket_utils_uv.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
@@ -5176,13 +5176,6 @@
 			remoteGlobalIDString = 470FE31978DC918618A329D8B55C85FF;
 			remoteInfo = Protobuf;
 		};
-		3F9FA36D33B33F526F5AF4E767DFA4EC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5282295AA6886E416D5A4D40AAEC20D3;
-			remoteInfo = "Pods-Smart Home";
-		};
 		4221EA471685F4D7D301EA39C433A202 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -5497,6 +5490,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9307B7A119490930CF70393AB529AAC1;
 			remoteInfo = "leveldb-library";
+		};
+		B5C91FB8E35A7C662B8A5C7FE45C66A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5282295AA6886E416D5A4D40AAEC20D3;
+			remoteInfo = "Pods-Smart Home";
 		};
 		B624B96857A774EFED694B0D179D2F47 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -9553,7 +9553,6 @@
 		02CFF19DC965B38C8B3ECBB17B2ABFF1 /* FIRCLSDownloadAndSaveSettingsOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSDownloadAndSaveSettingsOperation.m; path = Crashlytics/Crashlytics/Settings/Operations/FIRCLSDownloadAndSaveSettingsOperation.m; sourceTree = "<group>"; };
 		02E279F3C06187FBE4AEA00C48212423 /* server_interceptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = server_interceptor.h; path = include/grpcpp/impl/codegen/server_interceptor.h; sourceTree = "<group>"; };
 		02FEB57684A20F40F6B761809DDB20EA /* FIRGetOOBConfirmationCodeRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRGetOOBConfirmationCodeRequest.m; path = FirebaseAuth/Sources/Backend/RPC/FIRGetOOBConfirmationCodeRequest.m; sourceTree = "<group>"; };
-		03022325CA6285402060F5D4F5E649C9 /* Pods-Smart HomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smart HomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		030B2370BF8647AF878E68B36AF7CDDF /* GULHeartbeatDateStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULHeartbeatDateStorage.h; path = GoogleUtilities/Environment/Private/GULHeartbeatDateStorage.h; sourceTree = "<group>"; };
 		032219B1AEE21DC09F351781381D4F92 /* FIRListenerRegistration.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FIRListenerRegistration.mm; path = Firestore/Source/API/FIRListenerRegistration.mm; sourceTree = "<group>"; };
 		03342779521DC66BED5FCADEDC1F883D /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
@@ -9703,7 +9702,6 @@
 		0BBFE01970C09A87A8CCF0A77078D17F /* transaction.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = transaction.cc; path = Firestore/core/src/core/transaction.cc; sourceTree = "<group>"; };
 		0BD1A31A87E132CB503B4BE3E7DACF2E /* protocol.upb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = protocol.upb.c; path = "src/core/ext/upb-generated/envoy/api/v2/core/protocol.upb.c"; sourceTree = "<group>"; };
 		0BDD0A195893E4FCA1F45C3D12EA0367 /* thread_identity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = thread_identity.h; path = absl/base/internal/thread_identity.h; sourceTree = "<group>"; };
-		0BF86342A0166205EC28466E88AB36F7 /* Pods-Smart Home-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Smart Home-frameworks.sh"; sourceTree = "<group>"; };
 		0BFF7E9FFB8ECED2971D4426EF35F079 /* GPBRootObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBRootObject.h; path = objectivec/GPBRootObject.h; sourceTree = "<group>"; };
 		0BFFB3C79B1F157F383B36E05CAF9C46 /* document_change.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = document_change.cc; path = Firestore/core/src/api/document_change.cc; sourceTree = "<group>"; };
 		0C01BF2F0B97DB219B42DE8967F90252 /* FBLPromise+Recover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Recover.m"; path = "Sources/FBLPromises/FBLPromise+Recover.m"; sourceTree = "<group>"; };
@@ -9711,7 +9709,6 @@
 		0C2E888D7D89BC222695708CD2DE232A /* trace.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = trace.cc; path = src/core/lib/debug/trace.cc; sourceTree = "<group>"; };
 		0C723087D3F5E1F00063D85FC3E373D9 /* byte_buffer_reader.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = byte_buffer_reader.cc; path = src/core/lib/surface/byte_buffer_reader.cc; sourceTree = "<group>"; };
 		0C7D8DF0D0AFB57A0A17A1E876DBA328 /* api_trace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = api_trace.h; path = src/core/lib/surface/api_trace.h; sourceTree = "<group>"; };
-		0C83B7FF53F4BD2E113204E126EF99DA /* Pods-Smart HomeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smart HomeTests-Info.plist"; sourceTree = "<group>"; };
 		0C8CA90BD8905B11856BA39D78F6EC39 /* dynamic_thread_pool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dynamic_thread_pool.h; path = src/cpp/server/dynamic_thread_pool.h; sourceTree = "<group>"; };
 		0CB7B31396AFD09B3FB178E726F9D45D /* httpcli.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = httpcli.h; path = src/core/lib/http/httpcli.h; sourceTree = "<group>"; };
 		0CC72CC3002EA40F5AC7223FA494DE0D /* secure_endpoint.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = secure_endpoint.cc; path = src/core/lib/security/transport/secure_endpoint.cc; sourceTree = "<group>"; };
@@ -9741,6 +9738,7 @@
 		0E0FAC76CF0DDF28A1A8715760679665 /* FIRInstanceIDAPNSInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDAPNSInfo.h; path = Firebase/InstanceID/FIRInstanceIDAPNSInfo.h; sourceTree = "<group>"; };
 		0E2FF641D6F88A3689F0FCD863D2D4BB /* is_epollexclusive_available.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = is_epollexclusive_available.cc; path = src/core/lib/iomgr/is_epollexclusive_available.cc; sourceTree = "<group>"; };
 		0E4F3AFD2EAD785C3166E90B298E315D /* FirebaseInstallations-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FirebaseInstallations-dummy.m"; sourceTree = "<group>"; };
+		0E72CBB5B0DE15641BD48219E7A3C332 /* Pods-Smart Home-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smart Home-Info.plist"; sourceTree = "<group>"; };
 		0E91881B26F6969C29CF4378CD6F2AF5 /* xds_api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xds_api.h; path = src/core/ext/filters/client_channel/xds/xds_api.h; sourceTree = "<group>"; };
 		0E94B0BACD43307675BAB29E92F5287A /* FIRCLSLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSLogger.m; path = Crashlytics/Crashlytics/Helpers/FIRCLSLogger.m; sourceTree = "<group>"; };
 		0EAA348FC99F6339B408780AD6660B47 /* rand.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rand.c; path = src/crypto/fipsmodule/rand/rand.c; sourceTree = "<group>"; };
@@ -9853,6 +9851,7 @@
 		16156E4A5578EF53538C3AC9B5531EB0 /* GULKeychainStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULKeychainStorage.m; path = GoogleUtilities/Environment/SecureStorage/GULKeychainStorage.m; sourceTree = "<group>"; };
 		16160D2624A7130471D510D0F430612D /* gRPC-C++-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "gRPC-C++-prefix.pch"; sourceTree = "<group>"; };
 		161872CDD406CB1195FBEAF15DC5FB02 /* iomgr_custom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iomgr_custom.h; path = src/core/lib/iomgr/iomgr_custom.h; sourceTree = "<group>"; };
+		16198D8461F6F5DEB611701340265518 /* Pods-Smart Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smart Home.debug.xcconfig"; sourceTree = "<group>"; };
 		16243235D0FC06383EDC4608CA58C51E /* FIRGoogleAuthProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRGoogleAuthProvider.m; path = FirebaseAuth/Sources/AuthProvider/Google/FIRGoogleAuthProvider.m; sourceTree = "<group>"; };
 		1624A0433701FCF0B18ED4E6878E23D5 /* log_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = log_posix.cc; path = src/core/lib/gpr/log_posix.cc; sourceTree = "<group>"; };
 		16345A9B086C92D7A8309A36C1075465 /* ChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartData.swift; path = Source/Charts/Data/Implementations/Standard/ChartData.swift; sourceTree = "<group>"; };
@@ -9964,6 +9963,7 @@
 		1E16092CB4F84861656541A324036050 /* internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = internal.h; path = src/crypto/x509v3/internal.h; sourceTree = "<group>"; };
 		1E205830469F2650EB512D9B8E0007A6 /* sha512.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sha512.c; path = src/crypto/fipsmodule/sha/sha512.c; sourceTree = "<group>"; };
 		1E5D7BB8A7529147A92E1CBE0B31AE5E /* dtls1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dtls1.h; path = src/include/openssl/dtls1.h; sourceTree = "<group>"; };
+		1E6FBD151214CEC4DB07383836437A61 /* Pods_SmartHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SmartHomeTests.framework; path = "Pods-SmartHomeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9C41859EEF1214DE4DD5341A078239 /* hide_ptr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hide_ptr.h; path = absl/base/internal/hide_ptr.h; sourceTree = "<group>"; };
 		1EB6191A3995F06E5CCF32F9FF9DDD70 /* pollset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pollset.h; path = src/core/lib/iomgr/pollset.h; sourceTree = "<group>"; };
 		1ED7ABB429DAF88138364AD57EC3C687 /* BoringSSL-GRPC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BoringSSL-GRPC-dummy.m"; sourceTree = "<group>"; };
@@ -9976,7 +9976,6 @@
 		1F165C90158011B7D7ABDE7432DC4809 /* FIRAuthStoredUserManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthStoredUserManager.h; path = FirebaseAuth/Sources/SystemService/FIRAuthStoredUserManager.h; sourceTree = "<group>"; };
 		1F3F2ACB1D2FB06E53E658F72E06880A /* BoringSSL-GRPC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "BoringSSL-GRPC.xcconfig"; sourceTree = "<group>"; };
 		1F45BE3EA99ED5E5D548FC5E4D559179 /* GPBDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBDictionary.m; path = objectivec/GPBDictionary.m; sourceTree = "<group>"; };
-		1F47989360FE1CAE81799224A172A74F /* Pods-Smart Home.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Smart Home.modulemap"; sourceTree = "<group>"; };
 		1F4B46193FFF9F3D9410365AADCC7EFF /* FirebaseInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseInstanceID.h; path = Firebase/InstanceID/Public/FirebaseInstanceID.h; sourceTree = "<group>"; };
 		1F4FAEEF204C96478FA2941D447E4833 /* string_util.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = string_util.cc; path = Firestore/core/src/util/string_util.cc; sourceTree = "<group>"; };
 		1F61F7C0BF8C95C5BDCDFA67E52568C4 /* testharness.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = testharness.h; path = util/testharness.h; sourceTree = "<group>"; };
@@ -10036,6 +10035,7 @@
 		239F31D5EA90BB487225F2202E52ADA6 /* FIRInstanceIDLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDLogger.m; path = Firebase/InstanceID/FIRInstanceIDLogger.m; sourceTree = "<group>"; };
 		23A208DEDC0C4DF99CF6DA3218C19672 /* hash.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = hash.cc; path = util/hash.cc; sourceTree = "<group>"; };
 		23B6AEC9823D3BD556543C184727AAD6 /* f_int.c */ = {isa = PBXFileReference; includeInIndex = 1; name = f_int.c; path = src/crypto/asn1/f_int.c; sourceTree = "<group>"; };
+		23B82EC7051A801DFB040A08D1B7929F /* Pods-SmartHomeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartHomeTests-Info.plist"; sourceTree = "<group>"; };
 		23C16C26A319B6B5657CBF5AE859D363 /* config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = config.h; path = include/grpcpp/impl/codegen/config.h; sourceTree = "<group>"; };
 		23C504B0A10AA628F3A31548915BE8CB /* FirebaseCoreInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseCoreInternal.h; path = FirebaseCore/Sources/Private/FirebaseCoreInternal.h; sourceTree = "<group>"; };
 		23E24F4B5F785DC1592AB911860A25CD /* thread.c */ = {isa = PBXFileReference; includeInIndex = 1; name = thread.c; path = src/crypto/thread.c; sourceTree = "<group>"; };
@@ -10231,7 +10231,6 @@
 		30763C990E2FE3FDAC50F4AB76222AA9 /* env.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = env.h; path = include/leveldb/env.h; sourceTree = "<group>"; };
 		30786992BE0E6944D71459F027BAAAD4 /* GDTCORLifecycle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORLifecycle.h; path = GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORLifecycle.h; sourceTree = "<group>"; };
 		308D748837BAB72119DCEBC00A37E22D /* pollset_set_custom.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = pollset_set_custom.cc; path = src/core/lib/iomgr/pollset_set_custom.cc; sourceTree = "<group>"; };
-		30AB4CF11939A3FA875A58B65643C252 /* Pods-Smart Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smart Home.debug.xcconfig"; sourceTree = "<group>"; };
 		30B67F662A23D338CF9E10BD8D1A98A3 /* watch_stream.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = watch_stream.cc; path = Firestore/core/src/remote/watch_stream.cc; sourceTree = "<group>"; };
 		30BD5AE9DEB3540FA8930BF566B3F138 /* FIRAuthBackend.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthBackend.h; path = FirebaseAuth/Sources/Backend/FIRAuthBackend.h; sourceTree = "<group>"; };
 		30BE043E9CCDFA15FDED9D28B72AF8B7 /* FIRGetAccountInfoResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRGetAccountInfoResponse.m; path = FirebaseAuth/Sources/Backend/RPC/FIRGetAccountInfoResponse.m; sourceTree = "<group>"; };
@@ -10496,6 +10495,7 @@
 		42560E4FBC081ACE4E62D23D5ECAD322 /* json_util.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = json_util.h; path = src/core/lib/security/util/json_util.h; sourceTree = "<group>"; };
 		425D376679F48A99F29C7BCE7C51FA7C /* endpoint_pair_uv.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = endpoint_pair_uv.cc; path = src/core/lib/iomgr/endpoint_pair_uv.cc; sourceTree = "<group>"; };
 		4262850A234CBFDD9A072CE76F8EB8A5 /* FIRCLSUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSUtility.m; path = Crashlytics/Crashlytics/Helpers/FIRCLSUtility.m; sourceTree = "<group>"; };
+		42753CC311D22E9A1B22A5DA61E00B17 /* Pods-Smart Home-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Smart Home-frameworks.sh"; sourceTree = "<group>"; };
 		428DBE179BD97C5550BA9D6913CABD00 /* json_util.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = json_util.cc; path = src/core/lib/security/util/json_util.cc; sourceTree = "<group>"; };
 		429276A0A67DB58DFFAB8AD270755306 /* encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encode.h; path = third_party/upb/upb/encode.h; sourceTree = "<group>"; };
 		42A40A0D0662F131579D85E8E9DA2D3D /* ossl_typ.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ossl_typ.h; path = src/include/openssl/ossl_typ.h; sourceTree = "<group>"; };
@@ -10552,7 +10552,6 @@
 		46356FD8745918FA3EF675C67873DD2E /* resolving_lb_policy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = resolving_lb_policy.h; path = src/core/ext/filters/client_channel/resolving_lb_policy.h; sourceTree = "<group>"; };
 		463C2863B4D357144E5BC7B849A8CB83 /* FirebaseAuthVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FirebaseAuthVersion.m; path = FirebaseAuth/Sources/FirebaseAuthVersion.m; sourceTree = "<group>"; };
 		464023D800FA8E03063534C703DC7F2D /* FIRAuthUserDefaults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthUserDefaults.h; path = FirebaseAuth/Sources/Storage/FIRAuthUserDefaults.h; sourceTree = "<group>"; };
-		4640D8EDF6E10744DEC19299B5273B3E /* Pods-Smart HomeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smart HomeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		46748F9B4D732FEEE6A7A59E0823375D /* wrap_memcpy.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = wrap_memcpy.cc; path = src/core/lib/gpr/wrap_memcpy.cc; sourceTree = "<group>"; };
 		467CDCBD1985BAE4FE0A55CE0F9A7902 /* query_listener.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = query_listener.cc; path = Firestore/core/src/core/query_listener.cc; sourceTree = "<group>"; };
 		469E15CCA774FE55ACC04F3393539096 /* logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = logging.h; path = util/logging.h; sourceTree = "<group>"; };
@@ -10578,7 +10577,6 @@
 		47A2FB415EB86647F042646F7D7E6B30 /* completion_queue_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = completion_queue_impl.h; path = include/grpcpp/impl/codegen/completion_queue_impl.h; sourceTree = "<group>"; };
 		47AFC85966B678CAF08E9CD9B9A7A326 /* FIRMultiFactorSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMultiFactorSession.m; path = FirebaseAuth/Sources/MultiFactor/FIRMultiFactorSession.m; sourceTree = "<group>"; };
 		47FFE6382523578463D06AF9E36E571F /* message.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = message.cc; path = Firestore/core/src/nanopb/message.cc; sourceTree = "<group>"; };
-		480D075AADA6CE07D736311C90CC2DFE /* Pods_Smart_HomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Smart_HomeTests.framework; path = "Pods-Smart HomeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48253F33B6551FC19D93DDCC3F447A34 /* histogram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = histogram.h; path = util/histogram.h; sourceTree = "<group>"; };
 		485711D2D61BC448D369138C7AFB3C73 /* FIRCLSReportManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSReportManager.m; path = Crashlytics/Crashlytics/Controllers/FIRCLSReportManager.m; sourceTree = "<group>"; };
 		48689495830633470ED1ED4348E8C907 /* FirebaseInstallationsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseInstallationsInternal.h; path = FirebaseInstallations/Source/Library/Private/FirebaseInstallationsInternal.h; sourceTree = "<group>"; };
@@ -10694,6 +10692,7 @@
 		4FAD9AEA69BEA5D768F4A33F457C5F8A /* transport_security_common_api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = transport_security_common_api.h; path = src/core/tsi/alts/handshaker/transport_security_common_api.h; sourceTree = "<group>"; };
 		4FB91A59959C97999B100C4C2D35376C /* FIRInstallationsSingleOperationPromiseCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsSingleOperationPromiseCache.h; path = FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsSingleOperationPromiseCache.h; sourceTree = "<group>"; };
 		4FBE9628CFA06DF8107EA6928144111D /* FIRMMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMMessageCode.h; path = FirebaseMessaging/Sources/FIRMMessageCode.h; sourceTree = "<group>"; };
+		4FC5DBBDDD659EE6B5560357C8773A5E /* Pods-SmartHomeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartHomeTests-umbrella.h"; sourceTree = "<group>"; };
 		4FCA20893B4515520C6B18DF0B74555F /* metadata.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metadata.upb.h; path = "src/core/ext/upb-generated/envoy/type/metadata/v2/metadata.upb.h"; sourceTree = "<group>"; };
 		4FE8ED553036A1BD87507AFA95D59873 /* options.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = options.cc; path = util/options.cc; sourceTree = "<group>"; };
 		4FF56293779D3AF3A30FEAEC80996C7B /* string_windows.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = string_windows.cc; path = src/core/lib/gpr/string_windows.cc; sourceTree = "<group>"; };
@@ -11012,6 +11011,7 @@
 		65EBA8DBA636467E56E7BEF796DB4EBE /* random.c */ = {isa = PBXFileReference; includeInIndex = 1; name = random.c; path = src/crypto/fipsmodule/bn/random.c; sourceTree = "<group>"; };
 		66069384C9823BF852CB6828C2EEEB51 /* FIRInstanceIDStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDStore.m; path = Firebase/InstanceID/FIRInstanceIDStore.m; sourceTree = "<group>"; };
 		667AA6139C4D23BECE9292BEED1F5ADE /* alts_grpc_record_protocol_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = alts_grpc_record_protocol_common.h; path = src/core/tsi/alts/zero_copy_frame_protector/alts_grpc_record_protocol_common.h; sourceTree = "<group>"; };
+		6696301BC716A44E70A282DE66118549 /* Pods-Smart Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smart Home.release.xcconfig"; sourceTree = "<group>"; };
 		66DE4E2616FD56A0608E51B074CE338A /* basic_timers.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = basic_timers.cc; path = src/core/lib/profiling/basic_timers.cc; sourceTree = "<group>"; };
 		66E02A12D2E82BD706B01D980B11DF94 /* rpc_service_method.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rpc_service_method.h; path = include/grpcpp/impl/codegen/rpc_service_method.h; sourceTree = "<group>"; };
 		66F3A050583AFE4B1A26AB37A2E5299C /* pbkdf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pbkdf.c; path = src/crypto/evp/pbkdf.c; sourceTree = "<group>"; };
@@ -11305,7 +11305,6 @@
 		79A7566AC2EC957F3412F05101C28391 /* grpc_root_certificate_finder_generated.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = grpc_root_certificate_finder_generated.cc; path = Firestore/core/src/remote/grpc_root_certificate_finder_generated.cc; sourceTree = "<group>"; };
 		79B807777A09C3C1229549364771C3D3 /* health.upb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = health.upb.c; path = "src/core/ext/upb-generated/src/proto/grpc/health/v1/health.upb.c"; sourceTree = "<group>"; };
 		79BA8EE196623A8BBE4766E80D196DE9 /* FIRConfigValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRConfigValue.m; path = FirebaseRemoteConfig/Sources/FIRConfigValue.m; sourceTree = "<group>"; };
-		79C2FE69BD50BCF20B5034552FA1EB89 /* Pods-Smart HomeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Smart HomeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		79C62C0564BB7E5C34FD77B8F4DD63B6 /* health_check_client.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = health_check_client.h; path = src/core/ext/filters/client_channel/health/health_check_client.h; sourceTree = "<group>"; };
 		79F0617BD1E7BFB6E6B3CA56B425C825 /* check_gcp_environment_linux.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = check_gcp_environment_linux.cc; path = src/core/lib/security/credentials/alts/check_gcp_environment_linux.cc; sourceTree = "<group>"; };
 		79F3A1E48815948EB5720A5358216E20 /* slice_string_helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = slice_string_helpers.h; path = src/core/lib/slice/slice_string_helpers.h; sourceTree = "<group>"; };
@@ -11320,7 +11319,6 @@
 		7B20D4A6AA36FA48E38A22154252AA93 /* periodic_sampler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = periodic_sampler.h; path = absl/base/internal/periodic_sampler.h; sourceTree = "<group>"; };
 		7B323200C0046EB0579B40890BD724D7 /* lockfree_event.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lockfree_event.h; path = src/core/lib/iomgr/lockfree_event.h; sourceTree = "<group>"; };
 		7B480B80D19B7ED9AC1F9A5004FF1A56 /* FIROptionsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptionsInternal.h; path = FirebaseCore/Sources/Private/FIROptionsInternal.h; sourceTree = "<group>"; };
-		7B5883DE2C0204B69FD3F8E3D35F43C0 /* Pods-Smart HomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smart HomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B5A78D44A30BD3EA6ECCD33156EFEFE /* collection_reference.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = collection_reference.cc; path = Firestore/core/src/api/collection_reference.cc; sourceTree = "<group>"; };
 		7B6093CD78D5D616AEFFC8BC1E94762D /* local_store.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = local_store.cc; path = Firestore/core/src/local/local_store.cc; sourceTree = "<group>"; };
 		7B7CD1C8BB5B9CF8F9B125C666B43BCC /* FIRInstallationsAuthTokenResultInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsAuthTokenResultInternal.h; path = FirebaseInstallations/Source/Library/FIRInstallationsAuthTokenResultInternal.h; sourceTree = "<group>"; };
@@ -11576,6 +11574,7 @@
 		8BF69577ACF12647F9DB828340BE3D4E /* log_severity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log_severity.h; path = absl/base/log_severity.h; sourceTree = "<group>"; };
 		8BFD1D4155F8F9E71B157DAD1B39EA16 /* target.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = target.cc; path = Firestore/core/src/core/target.cc; sourceTree = "<group>"; };
 		8C1D2A2767E5A51946C8F9C414BE0D90 /* FIRMultiFactor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMultiFactor.h; path = FirebaseAuth/Sources/Public/FirebaseAuth/FIRMultiFactor.h; sourceTree = "<group>"; };
+		8C28000A65954361C4CCD0CF0A98D1C7 /* Pods-Smart Home-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Smart Home-umbrella.h"; sourceTree = "<group>"; };
 		8C29EB6B06107D3B612CEA146237BE6C /* port.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = port.h; path = src/core/lib/iomgr/port.h; sourceTree = "<group>"; };
 		8C4D32AA32C2EADDD9C07D9836AC91AD /* cpu_iphone.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = cpu_iphone.cc; path = src/core/lib/gpr/cpu_iphone.cc; sourceTree = "<group>"; };
 		8C5BD0C27CCF65F64FD7CCD8CD12BB8F /* span.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = span.h; path = src/include/openssl/span.h; sourceTree = "<group>"; };
@@ -11645,6 +11644,7 @@
 		90239D746EA8D749A76483B2594AC2CA /* FIRDependency.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDependency.h; path = FirebaseCore/Sources/Private/FIRDependency.h; sourceTree = "<group>"; };
 		903AB79789DE39C65C506B1436E89CEA /* validate.upb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = validate.upb.c; path = "src/core/ext/upb-generated/validate/validate.upb.c"; sourceTree = "<group>"; };
 		904438FD988275110FD944A8BCFA212D /* resource_quota.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = resource_quota.cc; path = src/core/lib/iomgr/resource_quota.cc; sourceTree = "<group>"; };
+		904696F3B0EBB075298EA2434FA3B259 /* Pods-SmartHomeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartHomeTests-dummy.m"; sourceTree = "<group>"; };
 		908AB0DC69B3092126152A229ED248BD /* ssl_transcript.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = ssl_transcript.cc; path = src/ssl/ssl_transcript.cc; sourceTree = "<group>"; };
 		90911D7E00E3473FC1AA746CA1287369 /* FIRVerifyPasswordRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRVerifyPasswordRequest.m; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyPasswordRequest.m; sourceTree = "<group>"; };
 		9091D246A20AB6AFBD743A2738F4E763 /* cipher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cipher.h; path = src/include/openssl/cipher.h; sourceTree = "<group>"; };
@@ -11695,7 +11695,6 @@
 		9330856D95CA91D03AED8578B0E4C422 /* firebase_credentials_provider_apple.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = firebase_credentials_provider_apple.mm; path = Firestore/core/src/auth/firebase_credentials_provider_apple.mm; sourceTree = "<group>"; };
 		933C1C61F0ECFF3B3D23088B40B44B79 /* memory_persistence.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = memory_persistence.cc; path = Firestore/core/src/local/memory_persistence.cc; sourceTree = "<group>"; };
 		933FF969B65C745A5019B5B5FF10821D /* grpc_util.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = grpc_util.cc; path = Firestore/core/src/remote/grpc_util.cc; sourceTree = "<group>"; };
-		93444B4F16CB951AF94055C95BE9F87D /* Pods-Smart HomeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Smart HomeTests-dummy.m"; sourceTree = "<group>"; };
 		934EEF98D8B85C30DBEF93830873005E /* FIRGameCenterAuthProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRGameCenterAuthProvider.m; path = FirebaseAuth/Sources/AuthProvider/GameCenter/FIRGameCenterAuthProvider.m; sourceTree = "<group>"; };
 		937284C3F6805490EEA9506687B47E86 /* dh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dh.h; path = src/include/openssl/dh.h; sourceTree = "<group>"; };
 		93A5DEC2BBF746E6D77098B36C4493ED /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Firebase/InstanceID/Public/FIRInstanceID.h; sourceTree = "<group>"; };
@@ -11858,6 +11857,7 @@
 		9DDD4B8ED4800E454A85A367A6D7CB14 /* asn1_lib.c */ = {isa = PBXFileReference; includeInIndex = 1; name = asn1_lib.c; path = src/crypto/asn1/asn1_lib.c; sourceTree = "<group>"; };
 		9DF43EC45DAE432F7BBE3E4B46BA53B6 /* ssl_cipher.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = ssl_cipher.cc; path = src/ssl/ssl_cipher.cc; sourceTree = "<group>"; };
 		9E045219CEDC0102ED593ABAFE398D3F /* GoogleAppMeasurement.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleAppMeasurement.xcconfig; sourceTree = "<group>"; };
+		9E045E286554BA339C505200DC35CA7F /* Pods-SmartHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E060511012B1FABD00E9E1F08EAA7AE /* GPBWireFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBWireFormat.m; path = objectivec/GPBWireFormat.m; sourceTree = "<group>"; };
 		9E0C5BF9F09FFDF5476151E35D2BE28D /* config_source.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = config_source.upb.h; path = "src/core/ext/upb-generated/envoy/api/v2/core/config_source.upb.h"; sourceTree = "<group>"; };
 		9E21128317F58C897B0897A6FA43A8A8 /* FIRAdditionalUserInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAdditionalUserInfo.m; path = FirebaseAuth/Sources/User/FIRAdditionalUserInfo.m; sourceTree = "<group>"; };
@@ -11909,6 +11909,7 @@
 		A1A17C51FBE9E3E3318134685B6CA7D7 /* byte_buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = byte_buffer.h; path = include/grpc/impl/codegen/byte_buffer.h; sourceTree = "<group>"; };
 		A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Charts.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CF284D2702087F01900E456F554207 /* alts_credentials.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = alts_credentials.h; path = src/core/lib/security/credentials/alts/alts_credentials.h; sourceTree = "<group>"; };
+		A1E3024365103938FB803A754BFC2401 /* Pods-SmartHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1E331ACA23EFFBE8F22F7A63CAD4AED /* static_metadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = static_metadata.h; path = src/core/lib/transport/static_metadata.h; sourceTree = "<group>"; };
 		A1F64F76561A42DF6660D5F066144952 /* FIRMultiFactorAssertion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMultiFactorAssertion.m; path = FirebaseAuth/Sources/MultiFactor/FIRMultiFactorAssertion.m; sourceTree = "<group>"; };
 		A1FE7C5B19E977F025BEBF77179F5EB9 /* key_field_in_filter.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = key_field_in_filter.cc; path = Firestore/core/src/core/key_field_in_filter.cc; sourceTree = "<group>"; };
@@ -11975,7 +11976,6 @@
 		A593C35AD45AD1C1D7C92FEA9DC3C6B6 /* ssl_lib.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = ssl_lib.cc; path = src/ssl/ssl_lib.cc; sourceTree = "<group>"; };
 		A5A024EF9D1EA7B0DDCC3A9CA08D9BD7 /* pem_pk8.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pem_pk8.c; path = src/crypto/pem/pem_pk8.c; sourceTree = "<group>"; };
 		A5A36B4E8354B7F9AC051ED34BDAF4A3 /* dns_resolver_selection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dns_resolver_selection.h; path = src/core/ext/filters/client_channel/resolver/dns/dns_resolver_selection.h; sourceTree = "<group>"; };
-		A5B798F2D9CFEA36249F40DEAD813B91 /* Pods-Smart Home-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Smart Home-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A5CDC1BB5E4AB141646A3EF8BF1C48D9 /* ascii.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = ascii.cc; path = absl/strings/ascii.cc; sourceTree = "<group>"; };
 		A6154D8B0BDA3D693853422E65F4F1D9 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
 		A634F9DC1290CD8D7851FBCC06CE9750 /* DefaultFillFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultFillFormatter.swift; path = Source/Charts/Formatters/DefaultFillFormatter.swift; sourceTree = "<group>"; };
@@ -12022,6 +12022,7 @@
 		A89B1CC54099C175FD4BF23105C81864 /* resolve_address.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = resolve_address.cc; path = src/core/lib/iomgr/resolve_address.cc; sourceTree = "<group>"; };
 		A8B191BC271C7DE61D7D82A568CB06EF /* exec_ctx.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = exec_ctx.h; path = src/core/lib/iomgr/exec_ctx.h; sourceTree = "<group>"; };
 		A8BE50A74C32CB8C3D191F4A75802989 /* db_iter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = db_iter.h; path = db/db_iter.h; sourceTree = "<group>"; };
+		A8DAD58684FA900AD068DB5241869052 /* Pods-SmartHomeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmartHomeTests.modulemap"; sourceTree = "<group>"; };
 		A901BF17E835EE0B20C08FF8372ACB68 /* fork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fork.h; path = src/core/lib/gprpp/fork.h; sourceTree = "<group>"; };
 		A9133C041348FAF9411A0E6824FB4B47 /* FieldMask.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FieldMask.pbobjc.h; path = objectivec/google/protobuf/FieldMask.pbobjc.h; sourceTree = "<group>"; };
 		A917362CA2EF5AEB5F2098FA6711C73F /* event_string.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = event_string.cc; path = src/core/lib/surface/event_string.cc; sourceTree = "<group>"; };
@@ -12046,7 +12047,6 @@
 		AA5D6853E2304BE696CB6CA57F95D430 /* NSError+FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+FIRInstanceID.h"; path = "Firebase/InstanceID/NSError+FIRInstanceID.h"; sourceTree = "<group>"; };
 		AA6A53EF93D53BD0AAA021B31F84F53B /* uri_parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = uri_parser.h; path = src/core/lib/uri/uri_parser.h; sourceTree = "<group>"; };
 		AA707934757A3F8C0A5EBBA55DF02261 /* oauth2_credentials.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = oauth2_credentials.cc; path = src/core/lib/security/credentials/oauth2/oauth2_credentials.cc; sourceTree = "<group>"; };
-		AA7E4610C0CC9750436807DE4B5B1B08 /* Pods-Smart HomeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Smart HomeTests.modulemap"; sourceTree = "<group>"; };
 		AA865969C257A595D83F82D8FA119BC0 /* chttp2_transport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = chttp2_transport.h; path = src/core/ext/transport/chttp2/transport/chttp2_transport.h; sourceTree = "<group>"; };
 		AA8BADEF1A7E4937451358906BEC3718 /* BarLineScatterCandleBubbleRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineScatterCandleBubbleRenderer.swift; path = Source/Charts/Renderers/BarLineScatterCandleBubbleRenderer.swift; sourceTree = "<group>"; };
 		AA9EF2A6E59DB6C049BC10F380F10D39 /* server_interface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = server_interface.h; path = include/grpcpp/impl/codegen/server_interface.h; sourceTree = "<group>"; };
@@ -12164,7 +12164,6 @@
 		B11C1814DEB265F7E5E2FA141F9A3FB3 /* FIRAuthAPNSToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthAPNSToken.m; path = FirebaseAuth/Sources/SystemService/FIRAuthAPNSToken.m; sourceTree = "<group>"; };
 		B11ED3A46E8FBA6A8A35DE3DEE6FAE1C /* algorithm_metadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = algorithm_metadata.h; path = src/core/lib/compression/algorithm_metadata.h; sourceTree = "<group>"; };
 		B1349B599B8D88EC1C8848E75FDB3DC9 /* transport_security_common.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = transport_security_common.upb.h; path = "src/core/ext/upb-generated/src/proto/grpc/gcp/transport_security_common.upb.h"; sourceTree = "<group>"; };
-		B1447520C15FE84FD2DE06130ED13EC1 /* Pods-Smart Home-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Smart Home-umbrella.h"; sourceTree = "<group>"; };
 		B15036EFC4D13151BE786FE425DB2E10 /* spinlock_akaros.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = spinlock_akaros.inc; path = absl/base/internal/spinlock_akaros.inc; sourceTree = "<group>"; };
 		B15CD9ED7683A7CDB3D9B682AAF2257A /* FIRMessagingExtensionHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMessagingExtensionHelper.m; path = FirebaseMessaging/Sources/FIRMessagingExtensionHelper.m; sourceTree = "<group>"; };
 		B16BDB8F7D744C09785D0EF57BC61562 /* wakeup_fd_pipe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = wakeup_fd_pipe.h; path = src/core/lib/iomgr/wakeup_fd_pipe.h; sourceTree = "<group>"; };
@@ -12177,6 +12176,7 @@
 		B1F8FACC91C71C11BD753937B1CEE403 /* health_check_service.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = health_check_service.cc; path = src/cpp/server/health/health_check_service.cc; sourceTree = "<group>"; };
 		B1FC0C65FE46A25BF20BD7D3454105D0 /* not_in_filter.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = not_in_filter.cc; path = Firestore/core/src/core/not_in_filter.cc; sourceTree = "<group>"; };
 		B2032DA12C6E3DE9AAA1B4A4606D3BB1 /* channel_args.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = channel_args.h; path = src/core/lib/channel/channel_args.h; sourceTree = "<group>"; };
+		B21E5F75B04C47BC353430374692E9DA /* Pods-Smart Home.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Smart Home.modulemap"; sourceTree = "<group>"; };
 		B249073A8CD4BAD68BC3647507B7BD42 /* threadpool.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = threadpool.cc; path = src/core/lib/iomgr/executor/threadpool.cc; sourceTree = "<group>"; };
 		B25ADA602A5EB433D1A746BD7EC9C89E /* percent.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = percent.upb.h; path = "src/core/ext/upb-generated/envoy/type/percent.upb.h"; sourceTree = "<group>"; };
 		B25ADD44CDDD0FDA07951AA9A37624E6 /* chacha.c */ = {isa = PBXFileReference; includeInIndex = 1; name = chacha.c; path = src/crypto/chacha/chacha.c; sourceTree = "<group>"; };
@@ -12193,7 +12193,6 @@
 		B30FA01E7ECE9FD8FF73781C149A56D4 /* orphanable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = orphanable.h; path = src/core/lib/gprpp/orphanable.h; sourceTree = "<group>"; };
 		B3119B66424C70D2A679FC621C9EB806 /* FIRLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRLogger.m; path = FirebaseCore/Sources/FIRLogger.m; sourceTree = "<group>"; };
 		B312300879262A1B09875830A44E5517 /* FIRCLSPackageReportOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSPackageReportOperation.m; path = Crashlytics/Crashlytics/Operations/Reports/FIRCLSPackageReportOperation.m; sourceTree = "<group>"; };
-		B3198797B516AC10D4233176656C3C08 /* Pods-Smart HomeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Smart HomeTests-umbrella.h"; sourceTree = "<group>"; };
 		B330773EAEA87DC440DAC347D089B309 /* FIRAuthURLPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthURLPresenter.h; path = FirebaseAuth/Sources/Utilities/FIRAuthURLPresenter.h; sourceTree = "<group>"; };
 		B33310EF1CED1833330DAFB66220CC42 /* work_serializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = work_serializer.h; path = src/core/lib/iomgr/work_serializer.h; sourceTree = "<group>"; };
 		B355E1E3B3A53B381321ECFBDAE7514B /* message_allocator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = message_allocator.h; path = include/grpcpp/support/message_allocator.h; sourceTree = "<group>"; };
@@ -12424,7 +12423,6 @@
 		C10C8D58D1341509B11BF5E38A58AF8E /* FirebaseFunctions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseFunctions.modulemap; sourceTree = "<group>"; };
 		C135DA98D8C19C1A1C148DBC32AA686F /* deprecation.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = deprecation.upb.h; path = "src/core/ext/upb-generated/envoy/annotations/deprecation.upb.h"; sourceTree = "<group>"; };
 		C15166CB870B6BD335D62936995A1A72 /* byte_stream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = byte_stream.h; path = src/core/lib/transport/byte_stream.h; sourceTree = "<group>"; };
-		C1537563AA5CA557AB38C6E40DF277F1 /* Pods-Smart Home-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smart Home-acknowledgements.plist"; sourceTree = "<group>"; };
 		C165637F6FA39F253182ED776AC1D263 /* port_undef.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = port_undef.inc; path = third_party/upb/upb/port_undef.inc; sourceTree = "<group>"; };
 		C18DB119E9D20078E37C0D49D8C48477 /* load_file.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = load_file.h; path = src/core/lib/iomgr/load_file.h; sourceTree = "<group>"; };
 		C18EC828C8748744ADD53D70AB55CA9F /* forkunsafe.c */ = {isa = PBXFileReference; includeInIndex = 1; name = forkunsafe.c; path = src/crypto/rand_extra/forkunsafe.c; sourceTree = "<group>"; };
@@ -12612,7 +12610,6 @@
 		CCF6239A7758F00BF34993A7E30DE093 /* FBLPromise+Timeout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Timeout.m"; path = "Sources/FBLPromises/FBLPromise+Timeout.m"; sourceTree = "<group>"; };
 		CD08321812FEEF2AA91C487B37075EAC /* charconv_parse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = charconv_parse.h; path = absl/strings/internal/charconv_parse.h; sourceTree = "<group>"; };
 		CD0ACE25AF3545949279AC35A4170354 /* FIRVerifyCustomTokenResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRVerifyCustomTokenResponse.h; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyCustomTokenResponse.h; sourceTree = "<group>"; };
-		CD1CE3BC92CE10853E163998864ADDF0 /* Pods-Smart Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smart Home.release.xcconfig"; sourceTree = "<group>"; };
 		CD25B6442DB2B765A47761639A3717AD /* internal_errqueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = internal_errqueue.h; path = src/core/lib/iomgr/internal_errqueue.h; sourceTree = "<group>"; };
 		CD33E0EC1A7E6CF9BE1674B1CB0E6991 /* FIRFinalizeMFAEnrollmentResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFinalizeMFAEnrollmentResponse.h; path = FirebaseAuth/Sources/Backend/RPC/MultiFactor/Enroll/FIRFinalizeMFAEnrollmentResponse.h; sourceTree = "<group>"; };
 		CD36824825CA6B28193854F7D9EDD4DF /* GDTCORDirectorySizeTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORDirectorySizeTracker.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORDirectorySizeTracker.m; sourceTree = "<group>"; };
@@ -12656,11 +12653,11 @@
 		D01CF31DBE8368ECEBF5B6F890C1A9CF /* slice_hash_table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = slice_hash_table.h; path = src/core/lib/slice/slice_hash_table.h; sourceTree = "<group>"; };
 		D032690811A24D3475EE1F8073ECBD4E /* x509_set.c */ = {isa = PBXFileReference; includeInIndex = 1; name = x509_set.c; path = src/crypto/x509/x509_set.c; sourceTree = "<group>"; };
 		D03C388DA0AB2ACE1F294C0A843C643D /* subchannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = subchannel.h; path = src/core/ext/filters/client_channel/subchannel.h; sourceTree = "<group>"; };
-		D04D50F0C316B46F40A1A155C08F058D /* Pods-Smart Home-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smart Home-Info.plist"; sourceTree = "<group>"; };
 		D06936FD9610A2B4FD1B7F4EB2B7EEF9 /* FIRStartMFAEnrollmentResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRStartMFAEnrollmentResponse.h; path = FirebaseAuth/Sources/Backend/RPC/MultiFactor/Enroll/FIRStartMFAEnrollmentResponse.h; sourceTree = "<group>"; };
 		D07A51B47DE2DAA482AED20D86B8A3CB /* GULNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkURLSession.h; path = GoogleUtilities/Network/Private/GULNetworkURLSession.h; sourceTree = "<group>"; };
 		D08E5E3E68D0D1339A095850E067499B /* spinlock_linux.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = spinlock_linux.inc; path = absl/base/internal/spinlock_linux.inc; sourceTree = "<group>"; };
 		D091AB33FA1CFE1F5EE8CA8C20543419 /* cpu-intel.c */ = {isa = PBXFileReference; includeInIndex = 1; name = "cpu-intel.c"; path = "src/crypto/cpu-intel.c"; sourceTree = "<group>"; };
+		D09B69AACBFF7A167EB26A52D2673980 /* Pods-Smart Home-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Smart Home-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D0D3184C5168082377B1D7381DE8B9C3 /* byte_buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = byte_buffer.h; path = include/grpcpp/support/byte_buffer.h; sourceTree = "<group>"; };
 		D0D53C8A6DB639064895E42BC0114A78 /* PromisesObjC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PromisesObjC-Info.plist"; sourceTree = "<group>"; };
 		D0D69444281998D2B0F01F7CB14078E8 /* FIRInstanceIDStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDStore.h; path = Firebase/InstanceID/FIRInstanceIDStore.h; sourceTree = "<group>"; };
@@ -12724,6 +12721,7 @@
 		D5277924CB778193C8A1FDCCD8DBA136 /* arg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = arg.h; path = absl/strings/internal/str_format/arg.h; sourceTree = "<group>"; };
 		D5380AA9CB67C94F2EDF8092F65F9F5A /* FIRVerifyAssertionRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRVerifyAssertionRequest.h; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyAssertionRequest.h; sourceTree = "<group>"; };
 		D5412EF20AFEBE24C970A750D4BB7743 /* time_zone_format.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = time_zone_format.cc; path = absl/time/internal/cctz/src/time_zone_format.cc; sourceTree = "<group>"; };
+		D554A7C1DD983F28A381A60576CA4051 /* Pods-Smart Home-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Smart Home-dummy.m"; sourceTree = "<group>"; };
 		D5551840BC5D956506D2223A3C0F5C7C /* x509v3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x509v3.h; path = src/include/openssl/x509v3.h; sourceTree = "<group>"; };
 		D58773E224EB6029870F5E7103A29B59 /* google_default_credentials.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = google_default_credentials.cc; path = src/core/lib/security/credentials/google_default/google_default_credentials.cc; sourceTree = "<group>"; };
 		D58B57DA5AC7BD14F686C3DC3422FFD0 /* GDTCORReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORReachability.h; path = GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORReachability.h; sourceTree = "<group>"; };
@@ -12802,7 +12800,6 @@
 		DA1E6C59BA33045578D7769D5FF8C972 /* FIRCLSdSYM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCLSdSYM.h; path = Crashlytics/Shared/FIRCLSMachO/FIRCLSdSYM.h; sourceTree = "<group>"; };
 		DA3411FCC2F206AB483CA1FAA9A96F5A /* FIRAuthProtoFinalizeMFAPhoneRequestInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthProtoFinalizeMFAPhoneRequestInfo.h; path = FirebaseAuth/Sources/Backend/RPC/Proto/Phone/FIRAuthProtoFinalizeMFAPhoneRequestInfo.h; sourceTree = "<group>"; };
 		DA382FCD8C4F982CDEA26BC4618EEAA4 /* FIRAuthAPNSTokenManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthAPNSTokenManager.m; path = FirebaseAuth/Sources/SystemService/FIRAuthAPNSTokenManager.m; sourceTree = "<group>"; };
-		DA45C624D1CDB56C4EDF4E8C11E0D1A4 /* Pods-Smart Home-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Smart Home-dummy.m"; sourceTree = "<group>"; };
 		DA4D757FD2ACB610718D7364319C58EC /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
 		DA5A5E4B0EDA6EEA55E48BF8D8ECA629 /* workaround_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = workaround_utils.h; path = src/core/ext/filters/workarounds/workaround_utils.h; sourceTree = "<group>"; };
 		DA86BAFC7E166C32AD9EA1A7494E8E1C /* event_manager.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = event_manager.cc; path = Firestore/core/src/core/event_manager.cc; sourceTree = "<group>"; };
@@ -12885,6 +12882,7 @@
 		DFB80C109C74B3FD90F5455C3ABAD579 /* GPBUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBUtilities.m; path = objectivec/GPBUtilities.m; sourceTree = "<group>"; };
 		DFBDC1A967DEF917C64AF6E48BBBBB39 /* GULNetworkMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkMessageCode.h; path = GoogleUtilities/Network/Private/GULNetworkMessageCode.h; sourceTree = "<group>"; };
 		DFC01964C2338E51920CD5E090BABC2F /* FSTFirestoreComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FSTFirestoreComponent.mm; path = Firestore/Source/API/FSTFirestoreComponent.mm; sourceTree = "<group>"; };
+		DFF6DC626BAD97D7D1D709BF3D5E7DE9 /* Pods-Smart Home-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smart Home-acknowledgements.plist"; sourceTree = "<group>"; };
 		E030A39F96045AFEBF87AECE1D158197 /* json_token.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = json_token.h; path = src/core/lib/security/credentials/jwt/json_token.h; sourceTree = "<group>"; };
 		E03256362B1FC73CD9B1087C5DA2B5BE /* secure_auth_context.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = secure_auth_context.cc; path = src/cpp/common/secure_auth_context.cc; sourceTree = "<group>"; };
 		E037276A6CC688DC38CA270CD2467B89 /* p_ec_asn1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = p_ec_asn1.c; path = src/crypto/evp/p_ec_asn1.c; sourceTree = "<group>"; };
@@ -12941,6 +12939,7 @@
 		E39FC7B077DCD79135F74AB65DFF3D26 /* FIRMessagingReceiver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMessagingReceiver.m; path = FirebaseMessaging/Sources/FIRMessagingReceiver.m; sourceTree = "<group>"; };
 		E3A972DD8ED2C98FA94A227459D3A83A /* backup_poller.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = backup_poller.cc; path = src/core/ext/filters/client_channel/backup_poller.cc; sourceTree = "<group>"; };
 		E3D3AF2FCD4949DFDAA2FBDECEFB71B2 /* GULNSDataInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNSDataInternal.h; path = "GoogleUtilities/NSData+zlib/Private/GULNSDataInternal.h"; sourceTree = "<group>"; };
+		E3D61AF9F9DB411FE5E2598931824901 /* Pods-SmartHomeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartHomeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E3E132F011BECFC3AB65B9CAFF13CAF2 /* v3_utl.c */ = {isa = PBXFileReference; includeInIndex = 1; name = v3_utl.c; path = src/crypto/x509v3/v3_utl.c; sourceTree = "<group>"; };
 		E3FDA88FFEF8D3F51FB465E80470817C /* table.c */ = {isa = PBXFileReference; includeInIndex = 1; name = table.c; path = third_party/upb/upb/table.c; sourceTree = "<group>"; };
 		E4033EED6663E64169B2FBE9AA8FC609 /* FIRMessagingDataMessageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMessagingDataMessageManager.m; path = FirebaseMessaging/Sources/FIRMessagingDataMessageManager.m; sourceTree = "<group>"; };
@@ -12981,6 +12980,7 @@
 		E6970CCB39B0D700B403F75C22B4B070 /* descriptor.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = descriptor.upb.h; path = "src/core/ext/upb-generated/google/protobuf/descriptor.upb.h"; sourceTree = "<group>"; };
 		E6A43EC33CA4BB8DE5B4CA0B24A07FC3 /* FBLPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBLPromise.m; path = Sources/FBLPromises/FBLPromise.m; sourceTree = "<group>"; };
 		E6ADFF38E2E29AEF4ACE853DEB4E4CC9 /* builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = builder.cc; path = db/builder.cc; sourceTree = "<group>"; };
+		E6BC5027EE8DEF614D0008617F7098BC /* Pods-SmartHomeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartHomeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E6C5A1A5420B57E68D9173CD615B8D99 /* time_zone_info.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = time_zone_info.h; path = absl/time/internal/cctz/src/time_zone_info.h; sourceTree = "<group>"; };
 		E6D2F9B61C343B4AFFDBAEEEC5EDCDA6 /* FIRInstallationsStoredItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsStoredItem.h; path = FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStoredItem.h; sourceTree = "<group>"; };
 		E6FB61BC90CEA1F0A8CC3E3565DAFC6F /* wrappers.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = wrappers.upb.h; path = "src/core/ext/upb-generated/google/protobuf/wrappers.upb.h"; sourceTree = "<group>"; };
@@ -13538,14 +13538,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C936931BA41C75FB2BBE3B13B8596D6D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D54A86F98B31FC07C6461DC2A23DC0B2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E43786B0653B7907B7EF3959FE1CE319 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -13561,6 +13553,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				90BDC9507DF151036A6EA4FD90289221 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F338D0E8406C748329BD8FC1A0DAA9BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAA3A4494CD6EB8F1A53D35C8077A842 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -13787,22 +13787,6 @@
 			path = "../Target Support Files/FirebaseInstallations";
 			sourceTree = "<group>";
 		};
-		1B33568E4851548560477DC5DB786EC6 /* Pods-Smart HomeTests */ = {
-			isa = PBXGroup;
-			children = (
-				AA7E4610C0CC9750436807DE4B5B1B08 /* Pods-Smart HomeTests.modulemap */,
-				79C2FE69BD50BCF20B5034552FA1EB89 /* Pods-Smart HomeTests-acknowledgements.markdown */,
-				4640D8EDF6E10744DEC19299B5273B3E /* Pods-Smart HomeTests-acknowledgements.plist */,
-				93444B4F16CB951AF94055C95BE9F87D /* Pods-Smart HomeTests-dummy.m */,
-				0C83B7FF53F4BD2E113204E126EF99DA /* Pods-Smart HomeTests-Info.plist */,
-				B3198797B516AC10D4233176656C3C08 /* Pods-Smart HomeTests-umbrella.h */,
-				7B5883DE2C0204B69FD3F8E3D35F43C0 /* Pods-Smart HomeTests.debug.xcconfig */,
-				03022325CA6285402060F5D4F5E649C9 /* Pods-Smart HomeTests.release.xcconfig */,
-			);
-			name = "Pods-Smart HomeTests";
-			path = "Target Support Files/Pods-Smart HomeTests";
-			sourceTree = "<group>";
-		};
 		1EE17D38A33D5B70CBBC77C7B2813053 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -13896,40 +13880,6 @@
 				EC883627F10FFEEB986FE86F99341DAA /* GULUserDefaults.m */,
 			);
 			name = UserDefaults;
-			sourceTree = "<group>";
-		};
-		2ABB2390C18C6C1598D50ADFAA4D05EB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BF96B57ADE05E8909F823BDF6868B3E3 /* absl.framework */,
-				A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */,
-				3347A1AB6546F0A3977529B8F199DC41 /* FBLPromises.framework */,
-				7C3AE4425E7B08F16F1B4FD32951CA7F /* FirebaseABTesting.framework */,
-				43B1E4CD7B30B9FD278100133C2AC788 /* FirebaseAuth.framework */,
-				E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore.framework */,
-				8CC9178C366942FD6FF6A115604EAD58 /* FirebaseCoreDiagnostics.framework */,
-				86375444C196BA272DDBB8165BF64A15 /* FirebaseCrashlytics.framework */,
-				92000153CD73F7FC2DBAB4AB708269F3 /* FirebaseFirestore.framework */,
-				C97D54F8AE0DD025EC3C6C5D86099019 /* FirebaseFunctions.framework */,
-				13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations.framework */,
-				2DA0D814DFCB860D31D7BCD63D795858 /* FirebaseInstanceID.framework */,
-				5B654B4B042BA7DC93766943A643E42B /* FirebaseMessaging.framework */,
-				AD776F1C94991D3E551CEAA515DB110A /* FirebaseRemoteConfig.framework */,
-				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport.framework */,
-				251C6319AD50CB50F18D50CBF727F8B2 /* GoogleToolboxForMac.framework */,
-				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */,
-				B471867C535B02FA55D87E260F6480F8 /* grpc.framework */,
-				9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */,
-				1911113E0FBF13CFF9132E5FF7685228 /* grpcpp.framework */,
-				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher.framework */,
-				0A9F46A999C47653013D3AD854352507 /* leveldb.framework */,
-				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */,
-				514D7742C6CBB0BDBD9984AEE97DDFDE /* openssl_grpc.framework */,
-				DEE76529E16FAF6F85FDF2083D5A710D /* Pods_Smart_Home.framework */,
-				480D075AADA6CE07D736311C90CC2DFE /* Pods_Smart_HomeTests.framework */,
-				C2105C94812B6214B154F54DCEDB72AC /* Protobuf.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		2E3BF820B8F0C52E40740E6C0CC79200 /* Support Files */ = {
@@ -14822,6 +14772,39 @@
 			name = Implementation;
 			sourceTree = "<group>";
 		};
+		474A18FA6C74DB8F3AE1A8758EA0DF34 /* Pods-Smart Home */ = {
+			isa = PBXGroup;
+			children = (
+				B21E5F75B04C47BC353430374692E9DA /* Pods-Smart Home.modulemap */,
+				D09B69AACBFF7A167EB26A52D2673980 /* Pods-Smart Home-acknowledgements.markdown */,
+				DFF6DC626BAD97D7D1D709BF3D5E7DE9 /* Pods-Smart Home-acknowledgements.plist */,
+				D554A7C1DD983F28A381A60576CA4051 /* Pods-Smart Home-dummy.m */,
+				42753CC311D22E9A1B22A5DA61E00B17 /* Pods-Smart Home-frameworks.sh */,
+				0E72CBB5B0DE15641BD48219E7A3C332 /* Pods-Smart Home-Info.plist */,
+				8C28000A65954361C4CCD0CF0A98D1C7 /* Pods-Smart Home-umbrella.h */,
+				16198D8461F6F5DEB611701340265518 /* Pods-Smart Home.debug.xcconfig */,
+				6696301BC716A44E70A282DE66118549 /* Pods-Smart Home.release.xcconfig */,
+			);
+			name = "Pods-Smart Home";
+			path = "Target Support Files/Pods-Smart Home";
+			sourceTree = "<group>";
+		};
+		485FCB451371B5F78CDC6C1C5882FD50 /* Pods-SmartHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8DAD58684FA900AD068DB5241869052 /* Pods-SmartHomeTests.modulemap */,
+				E6BC5027EE8DEF614D0008617F7098BC /* Pods-SmartHomeTests-acknowledgements.markdown */,
+				E3D61AF9F9DB411FE5E2598931824901 /* Pods-SmartHomeTests-acknowledgements.plist */,
+				904696F3B0EBB075298EA2434FA3B259 /* Pods-SmartHomeTests-dummy.m */,
+				23B82EC7051A801DFB040A08D1B7929F /* Pods-SmartHomeTests-Info.plist */,
+				4FC5DBBDDD659EE6B5560357C8773A5E /* Pods-SmartHomeTests-umbrella.h */,
+				A1E3024365103938FB803A754BFC2401 /* Pods-SmartHomeTests.debug.xcconfig */,
+				9E045E286554BA339C505200DC35CA7F /* Pods-SmartHomeTests.release.xcconfig */,
+			);
+			name = "Pods-SmartHomeTests";
+			path = "Target Support Files/Pods-SmartHomeTests";
+			sourceTree = "<group>";
+		};
 		4946B0F5D7D6B9934F5A0767550E6B09 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -14835,13 +14818,38 @@
 			path = "../Target Support Files/FirebaseCoreDiagnostics";
 			sourceTree = "<group>";
 		};
-		4F40454A637D45905085E6ADD7C1BCCA /* Targets Support Files */ = {
+		508101B249C9F6CE53EB613D854CDDA6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64CDF01587FCBE4C143B0AACBFC34D45 /* Pods-Smart Home */,
-				1B33568E4851548560477DC5DB786EC6 /* Pods-Smart HomeTests */,
+				BF96B57ADE05E8909F823BDF6868B3E3 /* absl.framework */,
+				A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */,
+				3347A1AB6546F0A3977529B8F199DC41 /* FBLPromises.framework */,
+				7C3AE4425E7B08F16F1B4FD32951CA7F /* FirebaseABTesting.framework */,
+				43B1E4CD7B30B9FD278100133C2AC788 /* FirebaseAuth.framework */,
+				E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore.framework */,
+				8CC9178C366942FD6FF6A115604EAD58 /* FirebaseCoreDiagnostics.framework */,
+				86375444C196BA272DDBB8165BF64A15 /* FirebaseCrashlytics.framework */,
+				92000153CD73F7FC2DBAB4AB708269F3 /* FirebaseFirestore.framework */,
+				C97D54F8AE0DD025EC3C6C5D86099019 /* FirebaseFunctions.framework */,
+				13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations.framework */,
+				2DA0D814DFCB860D31D7BCD63D795858 /* FirebaseInstanceID.framework */,
+				5B654B4B042BA7DC93766943A643E42B /* FirebaseMessaging.framework */,
+				AD776F1C94991D3E551CEAA515DB110A /* FirebaseRemoteConfig.framework */,
+				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport.framework */,
+				251C6319AD50CB50F18D50CBF727F8B2 /* GoogleToolboxForMac.framework */,
+				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */,
+				B471867C535B02FA55D87E260F6480F8 /* grpc.framework */,
+				9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */,
+				1911113E0FBF13CFF9132E5FF7685228 /* grpcpp.framework */,
+				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher.framework */,
+				0A9F46A999C47653013D3AD854352507 /* leveldb.framework */,
+				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */,
+				514D7742C6CBB0BDBD9984AEE97DDFDE /* openssl_grpc.framework */,
+				DEE76529E16FAF6F85FDF2083D5A710D /* Pods_Smart_Home.framework */,
+				1E6FBD151214CEC4DB07383836437A61 /* Pods_SmartHomeTests.framework */,
+				C2105C94812B6214B154F54DCEDB72AC /* Protobuf.framework */,
 			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		515E80DB05260AF38792A2450B4118C1 /* base */ = {
@@ -16052,23 +16060,6 @@
 			name = Implementation;
 			sourceTree = "<group>";
 		};
-		64CDF01587FCBE4C143B0AACBFC34D45 /* Pods-Smart Home */ = {
-			isa = PBXGroup;
-			children = (
-				1F47989360FE1CAE81799224A172A74F /* Pods-Smart Home.modulemap */,
-				A5B798F2D9CFEA36249F40DEAD813B91 /* Pods-Smart Home-acknowledgements.markdown */,
-				C1537563AA5CA557AB38C6E40DF277F1 /* Pods-Smart Home-acknowledgements.plist */,
-				DA45C624D1CDB56C4EDF4E8C11E0D1A4 /* Pods-Smart Home-dummy.m */,
-				0BF86342A0166205EC28466E88AB36F7 /* Pods-Smart Home-frameworks.sh */,
-				D04D50F0C316B46F40A1A155C08F058D /* Pods-Smart Home-Info.plist */,
-				B1447520C15FE84FD2DE06130ED13EC1 /* Pods-Smart Home-umbrella.h */,
-				30AB4CF11939A3FA875A58B65643C252 /* Pods-Smart Home.debug.xcconfig */,
-				CD1CE3BC92CE10853E163998864ADDF0 /* Pods-Smart Home.release.xcconfig */,
-			);
-			name = "Pods-Smart Home";
-			path = "Target Support Files/Pods-Smart Home";
-			sourceTree = "<group>";
-		};
 		658F6FB4132C65A7DF4D9BD85680F24F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -16080,6 +16071,15 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FirebaseMessaging";
+			sourceTree = "<group>";
+		};
+		6761C208976EF76709AA42F3EDC9D1C6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				474A18FA6C74DB8F3AE1A8758EA0DF34 /* Pods-Smart Home */,
+				485FCB451371B5F78CDC6C1C5882FD50 /* Pods-SmartHomeTests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		67DE281B41DE495DCE014BA0C443F585 /* Interface */ = {
@@ -17565,8 +17565,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				FDCB018C77D38715AC95598C3EAF01D5 /* Frameworks */,
 				0E6E59D55E5A248379F7A06CF639B8D5 /* Pods */,
-				2ABB2390C18C6C1598D50ADFAA4D05EB /* Products */,
-				4F40454A637D45905085E6ADD7C1BCCA /* Targets Support Files */,
+				508101B249C9F6CE53EB613D854CDDA6 /* Products */,
+				6761C208976EF76709AA42F3EDC9D1C6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -19454,6 +19454,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A84E8008342C654DCF5B04C1610EA395 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4EA4E463E9EF0C51147D9F7C87A8F89 /* Pods-SmartHomeTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC0ECB7B1CD740A203C7567F972987CD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -20282,14 +20290,6 @@
 				FEAFA40A710DC83A74F7C103D601E7A9 /* FIRStackFrame_Private.h in Headers */,
 				9265E916D541EE71C53699D80085D161 /* GDTCORDirectorySizeTracker.h in Headers */,
 				AB84FD912D0E489329ACA2AC886D4763 /* GoogleDataTransportInternal.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD1A21596412E3B127FCBEA30E71A061 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BFD8BFD356DB2C64C2E022E3467BDBE7 /* Pods-Smart HomeTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21339,6 +21339,25 @@
 			productReference = 856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		5C394EE4F03F1AC70D254883CC967F84 /* Pods-SmartHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F197DB22EF05AB457DA7E4AE5F58B050 /* Build configuration list for PBXNativeTarget "Pods-SmartHomeTests" */;
+			buildPhases = (
+				A84E8008342C654DCF5B04C1610EA395 /* Headers */,
+				CE5C248B4B8462DD4393E871E65E629D /* Sources */,
+				F338D0E8406C748329BD8FC1A0DAA9BC /* Frameworks */,
+				A1ECE02CB99B614E3E1EAA031EE05296 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0684C7AA50E3A44D2D0AC87D28352286 /* PBXTargetDependency */,
+			);
+			name = "Pods-SmartHomeTests";
+			productName = "Pods-SmartHomeTests";
+			productReference = 1E6FBD151214CEC4DB07383836437A61 /* Pods_SmartHomeTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		620E05868772C10B4920DC7E324F2C87 /* FirebaseCoreDiagnostics */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77C7C0D985004320B08370257DDD1FAD /* Build configuration list for PBXNativeTarget "FirebaseCoreDiagnostics" */;
@@ -21415,25 +21434,6 @@
 			name = abseil;
 			productName = abseil;
 			productReference = BF96B57ADE05E8909F823BDF6868B3E3 /* absl.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7B1470167F1F7E8D1029ED16791EC5AD /* Pods-Smart HomeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9C464A8A0A34C95C2023A04FED8DA65 /* Build configuration list for PBXNativeTarget "Pods-Smart HomeTests" */;
-			buildPhases = (
-				FD1A21596412E3B127FCBEA30E71A061 /* Headers */,
-				9EBF229AB4D1D15A7AC44DCAC00F7DB2 /* Sources */,
-				C936931BA41C75FB2BBE3B13B8596D6D /* Frameworks */,
-				7758076D2373C27A39C74B32B87D9FEE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E4CE4B523FB5B82044EA35B6E4AB6BB5 /* PBXTargetDependency */,
-			);
-			name = "Pods-Smart HomeTests";
-			productName = "Pods-Smart HomeTests";
-			productReference = 480D075AADA6CE07D736311C90CC2DFE /* Pods_Smart_HomeTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		87803597EB3F20FC46472B85392EC4FD /* FirebaseInstallations */ = {
@@ -21667,7 +21667,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 2ABB2390C18C6C1598D50ADFAA4D05EB /* Products */;
+			productRefGroup = 508101B249C9F6CE53EB613D854CDDA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -21699,7 +21699,7 @@
 				9307B7A119490930CF70393AB529AAC1 /* leveldb-library */,
 				D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */,
 				5282295AA6886E416D5A4D40AAEC20D3 /* Pods-Smart Home */,
-				7B1470167F1F7E8D1029ED16791EC5AD /* Pods-Smart HomeTests */,
+				5C394EE4F03F1AC70D254883CC967F84 /* Pods-SmartHomeTests */,
 				2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */,
 				470FE31978DC918618A329D8B55C85FF /* Protobuf */,
 			);
@@ -21807,13 +21807,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7758076D2373C27A39C74B32B87D9FEE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		79F04F9C3EACC8BF9C4D55655C84378F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -21850,6 +21843,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9FA37C16061820A7714BEAB3292D21E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1ECE02CB99B614E3E1EAA031EE05296 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -22863,14 +22863,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EBF229AB4D1D15A7AC44DCAC00F7DB2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C492A886FA402979DA83B2399BFC7266 /* Pods-Smart HomeTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A6A3F34C82C7E5B2C74545B4F79C7A02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -23289,6 +23281,14 @@
 				4D3C934DF31C3C8B6D3727F90D8D36AA /* x_val.c in Sources */,
 				C7C3BFC6540A1F2214285A260D05DE52 /* x_x509.c in Sources */,
 				E6CCF8115630F64733D6EDB1E8AB41F7 /* x_x509a.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5C248B4B8462DD4393E871E65E629D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C31023FBE5559D12F841A18C619FA98 /* Pods-SmartHomeTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -23769,6 +23769,12 @@
 			name = abseil;
 			target = 73CDC3D182DB953135F62609681B443D /* abseil */;
 			targetProxy = 8EC0D0D1CD9BA25D07135225B8B04E48 /* PBXContainerItemProxy */;
+		};
+		0684C7AA50E3A44D2D0AC87D28352286 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Smart Home";
+			target = 5282295AA6886E416D5A4D40AAEC20D3 /* Pods-Smart Home */;
+			targetProxy = B5C91FB8E35A7C662B8A5C7FE45C66A2 /* PBXContainerItemProxy */;
 		};
 		09357A1974A2362558A4CE8C41C6EA61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -24268,12 +24274,6 @@
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = 98E12221E910A3633770E7C3A4E5F436 /* PBXContainerItemProxy */;
 		};
-		E4CE4B523FB5B82044EA35B6E4AB6BB5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-Smart Home";
-			target = 5282295AA6886E416D5A4D40AAEC20D3 /* Pods-Smart Home */;
-			targetProxy = 3F9FA36D33B33F526F5AF4E767DFA4EC /* PBXContainerItemProxy */;
-		};
 		E8BAD4C13879B8E3692B7AE2DCC69E8E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Charts;
@@ -24370,45 +24370,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		06910202B3782CA71CB530FEBFEE4F43 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03022325CA6285402060F5D4F5E649C9 /* Pods-Smart HomeTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Smart HomeTests/Pods-Smart HomeTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Smart HomeTests/Pods-Smart HomeTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -24558,46 +24519,7 @@
 			};
 			name = Debug;
 		};
-		131F336332143AD52EF5672142C5EB67 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD1CE3BC92CE10853E163998864ADDF0 /* Pods-Smart Home.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Smart Home/Pods-Smart Home-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Smart Home/Pods-Smart Home.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */ = {
+		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -24630,16 +24552,13 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
+					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -24648,18 +24567,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
-			name = Debug;
+			name = Release;
 		};
 		1A7104C508412E279BDE59E312EA068F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -25642,66 +25560,6 @@
 			};
 			name = Debug;
 		};
-		871B6E28ABA34DAE69824AB9D22D3B7D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
 		8E4383ED4915E97D50D9141607FE4B1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 629BD243DB95D43F5A6B2ED1ACC8B7F4 /* nanopb.xcconfig */;
@@ -25731,6 +25589,45 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8FA5DF90F1607E47409ACEED7A41A1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6696301BC716A44E70A282DE66118549 /* Pods-Smart Home.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Smart Home/Pods-Smart Home-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Smart Home/Pods-Smart Home.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -25862,6 +25759,44 @@
 			};
 			name = Release;
 		};
+		AB8BD4FEBDC96EBD428CAFA94BFED488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16198D8461F6F5DEB611701340265518 /* Pods-Smart Home.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Smart Home/Pods-Smart Home-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Smart Home/Pods-Smart Home.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		B288C1707DB2E0F9F0022CBD96E635B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F8E9F55CF26E57EEEF43F76FF095AD2 /* abseil.xcconfig */;
@@ -25968,6 +25903,45 @@
 			};
 			name = Release;
 		};
+		BCF869843576D5191E522424264FE65D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E045E286554BA339C505200DC35CA7F /* Pods-SmartHomeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		BF62F33750F05320B47B2334DA6E3B13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07F9E4B635E7F9FCBB1CEC1CE2192E9E /* FirebaseFunctions.xcconfig */;
@@ -26039,44 +26013,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		C309B83660DB5ABC42976E46E7E0AA52 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30AB4CF11939A3FA875A58B65643C252 /* Pods-Smart Home.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Smart Home/Pods-Smart Home-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Smart Home/Pods-Smart Home.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		D24656D1A50D14C8C62E3195EDB11F0A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -26150,44 +26086,6 @@
 			};
 			name = Release;
 		};
-		D82C5CBD06F51ED77A538D2B78427126 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B5883DE2C0204B69FD3F8E3D35F43C0 /* Pods-Smart HomeTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Smart HomeTests/Pods-Smart HomeTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Smart HomeTests/Pods-Smart HomeTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		E008943C26645A3F6C9A9D5685F78A0E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7E3DDF47E6272202CEAECB6132B74018 /* GoogleUtilities.xcconfig */;
@@ -26259,6 +26157,44 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		E3A755DCA5E8E8C0ACF6D40C2382938E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1E3024365103938FB803A754BFC2401 /* Pods-SmartHomeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		E599EDAF3C8F37D33535CC387D97C720 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -26344,6 +26280,70 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
@@ -26477,8 +26477,8 @@
 		1D65212787B1C525AF600E41C6D69D7E /* Build configuration list for PBXNativeTarget "Pods-Smart Home" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C309B83660DB5ABC42976E46E7E0AA52 /* Debug */,
-				131F336332143AD52EF5672142C5EB67 /* Release */,
+				AB8BD4FEBDC96EBD428CAFA94BFED488 /* Debug */,
+				8FA5DF90F1607E47409ACEED7A41A1C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -26540,8 +26540,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */,
-				871B6E28ABA34DAE69824AB9D22D3B7D /* Release */,
+				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
+				1422B121EAEAEA11307496903FA623C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -26690,15 +26690,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9C464A8A0A34C95C2023A04FED8DA65 /* Build configuration list for PBXNativeTarget "Pods-Smart HomeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D82C5CBD06F51ED77A538D2B78427126 /* Debug */,
-				06910202B3782CA71CB530FEBFEE4F43 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		DA1B1B3FADF419E4EF6A22501C571C20 /* Build configuration list for PBXAggregateTarget "FirebaseAnalytics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -26740,6 +26731,15 @@
 			buildConfigurations = (
 				B288C1707DB2E0F9F0022CBD96E635B0 /* Debug */,
 				3FE3C40ACC5EE290A0EEB514297CB7E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F197DB22EF05AB457DA7E4AE5F58B050 /* Build configuration list for PBXNativeTarget "Pods-SmartHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3A755DCA5E8E8C0ACF6D40C2382938E /* Debug */,
+				BCF869843576D5191E522424264FE65D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
