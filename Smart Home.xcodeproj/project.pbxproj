@@ -703,7 +703,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C4Z6T6S45K;
+				DEVELOPMENT_TEAM = M3493F96B3;
 				INFOPLIST_FILE = "Smart Home/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -722,7 +722,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C4Z6T6S45K;
+				DEVELOPMENT_TEAM = M3493F96B3;
 				INFOPLIST_FILE = "Smart Home/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
