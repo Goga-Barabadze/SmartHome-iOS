@@ -14,8 +14,10 @@ jobs:
       XC_WORKSPACE: ${{ 'Smart Home.xcworkspace' }}
       XC_SCHEME_TESTS: ${{ 'SmartHomeTests' }}
     steps:
-    - name: Select latest Xcode
-      run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
+    #- name: Check available Xcode Versions
+     # run: "ls /Applications/"
+    #- name: Select latest Xcode
+     # run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
     - uses: actions/checkout@v2
     - name: Run Unit Tests
-      run: /usr/bin/xcodebuild test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME_TESTS"
+      run: /usr/bin/xcodebuild test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME_TESTS" -allowProvisioningUpdates
