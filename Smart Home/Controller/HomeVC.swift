@@ -49,17 +49,17 @@ class HomeVC: UIViewController {
         
         self.tableview.refreshControl = refresher
         
-        Functions.functions().httpsCallable("getPVData").call(["city" : "Perg"]) { (result, error) in
-          if let error = error as NSError? {
-            if error.domain == FunctionsErrorDomain {
-              let code = FunctionsErrorCode(rawValue: error.code)
-              let message = error.localizedDescription
-              let details = error.userInfo[FunctionsErrorDetailsKey]
-            }
-            // ...
-          }
-            print(result?.data)
-        }
+//        Functions.functions().httpsCallable("getPVData").call(["city" : "Perg"]) { (result, error) in
+//          if let error = error as NSError? {
+//            if error.domain == FunctionsErrorDomain {
+//              let code = FunctionsErrorCode(rawValue: error.code)
+//              let message = error.localizedDescription
+//              let details = error.userInfo[FunctionsErrorDetailsKey]
+//            }
+//            // ...
+//          }
+//            print(result?.data)
+//        }
     }
     
 
