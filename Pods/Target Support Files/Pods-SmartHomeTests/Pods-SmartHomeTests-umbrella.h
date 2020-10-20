@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Smart_HomeTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Smart_HomeTestsVersionString[];
+FOUNDATION_EXPORT double Pods_SmartHomeTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SmartHomeTestsVersionString[];
 
