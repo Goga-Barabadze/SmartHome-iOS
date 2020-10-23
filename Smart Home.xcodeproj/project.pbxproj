@@ -31,6 +31,7 @@
 		4A8C37DF24C1A52A004A9DBD /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C37DE24C1A52A004A9DBD /* Account.swift */; };
 		4A8C37E124C1A6B5004A9DBD /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C37E024C1A6B5004A9DBD /* Alert.swift */; };
 		4A8C37E324C1A73F004A9DBD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C37E224C1A73F004A9DBD /* Extensions.swift */; };
+		4AD08034254370DD00D2F36B /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD08033254370DD00D2F36B /* Synchronizer.swift */; };
 		4AEB2C9B24C03D230001F981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9A24C03D230001F981 /* AppDelegate.swift */; };
 		4AEB2C9D24C03D230001F981 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9C24C03D230001F981 /* SceneDelegate.swift */; };
 		4AEB2C9F24C03D230001F981 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9E24C03D230001F981 /* WelcomeVC.swift */; };
@@ -96,6 +97,7 @@
 		4A8C37DE24C1A52A004A9DBD /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		4A8C37E024C1A6B5004A9DBD /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		4A8C37E224C1A73F004A9DBD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4AD08033254370DD00D2F36B /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
 		4AEB2C9724C03D230001F981 /* Smart Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEB2C9A24C03D230001F981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AEB2C9C24C03D230001F981 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				4A8C37E024C1A6B5004A9DBD /* Alert.swift */,
 				4A8C37E224C1A73F004A9DBD /* Extensions.swift */,
 				4A426BBF24C98D32002CE5A2 /* Navigation.swift */,
+				4AD08033254370DD00D2F36B /* Synchronizer.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				4AEB2CA524C03D230001F981 /* Smart_Home.xcdatamodeld in Sources */,
 				4AEB2CDE24C05F2A0001F981 /* Weather.swift in Sources */,
 				4AEB2CCF24C0530B0001F981 /* DeviceDetailVC.swift in Sources */,
+				4AD08034254370DD00D2F36B /* Synchronizer.swift in Sources */,
 				4AEB2CDC24C05ED80001F981 /* Location.swift in Sources */,
 				4AEB2CDA24C05E0A0001F981 /* Consumer.swift in Sources */,
 				4A8C37E124C1A6B5004A9DBD /* Alert.swift in Sources */,
