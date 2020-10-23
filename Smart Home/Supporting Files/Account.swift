@@ -27,7 +27,7 @@ class Account {
         
     }
     
-    static func signIn(email: String, password: String, target: UIViewController) {
+    static func signIn(email: String, password: String, target: UIViewController, closure: @escaping (AuthDataResult?, Error?) -> Void) {
         
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             
@@ -36,11 +36,7 @@ class Account {
                 Alert.alert(title: "Something went wrong", message: error?.localizedDescription, target: target)
             }
             
-            print(authResult?.user.email)
+            closure(authResult, error)
         }
-    }
-    
-    static func amILoggedIn() -> Bool{
-        return true
     }
 }

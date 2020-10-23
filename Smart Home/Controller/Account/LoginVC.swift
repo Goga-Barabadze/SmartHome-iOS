@@ -30,13 +30,13 @@ class LoginVC: UIViewController {
             return
         }
         
-        Account.signIn(email: email, password: password, target: self)
-        
-        if Account.amILoggedIn(){
-            os_log("User is logged in now")
-        }else{
-            Alert.alert(title: "No Success", message: "Could not login. Please try again.")
-        }
+        Account.signIn(email: email, password: password, target: self, closure: {authResult, error in
+            if authResult?.user != nil && error == nil {
+                os_log("User is logged in now")
+            }else{
+                Alert.alert(title: "No Success", message: "Could not login. Please try again.")
+            }
+        })
     }
 
     fileprivate func registerNibs() {
