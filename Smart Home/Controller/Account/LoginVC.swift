@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os
 
 class LoginVC: UIViewController {
 
@@ -16,10 +17,23 @@ class LoginVC: UIViewController {
     var placeholders = ["example@example.com", "••••••••"]
     
     @IBAction func login(_ sender: Any) {
-        Account.signIn(email: "goga.barabadze73@gmail.com", password: "Qwertz73!", target: self)
+        
+        guard let email = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 0) as IndexPath) as! SimpleInputCell).input?.text else {
+            os_log("User did not enter email")
+            Alert.alert(title: "No email", message: "Please enter your email")
+            return
+        }
+        
+        guard let password = (tableview.cellForRow(at: NSIndexPath(row: 1, section: 0) as IndexPath) as! SimpleInputCell).input?.text else {
+            os_log("User did not enter password")
+            Alert.alert(title: "No password", message: "Please enter your password")
+            return
+        }
+        
+        Account.signIn(email: email, password: password, target: self)
         
         if Account.amILoggedIn(){
-            // Preceed to main screen
+            os_log("User is logged in now")
         }else{
             Alert.alert(title: "No Success", message: "Could not login. Please try again.")
         }
@@ -48,6 +62,14 @@ extension LoginVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleInputCell") as! SimpleInputCell
         
         cell.commonInit(title: titles[indexPath.row], placeholder: placeholders[indexPath.row])
+        
+        if indexPath.row == 1 {
+            cell.input.isSecureTextEntry = true
+        }
+        
+        #if DEBUG
+            cell.input.text = (indexPath.row == 0) ? "goga.barabadze73@gmail.com" : "Qwertz73!"
+        #endif
         
         return cell
     }
