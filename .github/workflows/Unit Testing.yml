@@ -20,4 +20,4 @@ jobs:
      # run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
     - uses: actions/checkout@v2
     - name: Run Unit Tests
-      run: /usr/bin/xcodebuild test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME_TESTS" -allowProvisioningUpdates
+      run: /usr/bin/xcodebuild build-for-testing -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME_TESTS" -allowProvisioningUpdates
