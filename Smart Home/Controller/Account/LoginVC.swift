@@ -34,9 +34,7 @@ class LoginVC: UIViewController {
             if authResult?.user != nil && error == nil {
                 os_log("User is logged in now")
                 
-                self.performSegue(withIdentifier: "showHomeVC", sender: self)
-                
-                self.navigationItem.hidesBackButton = true
+                self.performSegue(withIdentifier: "showHomeNC", sender: self)
                 
             }else{
                 Alert.alert(title: "No Success", message: error?.localizedDescription)
