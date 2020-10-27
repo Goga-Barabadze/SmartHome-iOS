@@ -61,6 +61,10 @@ extension RegisterVC : UITableViewDelegate, UITableViewDataSource {
             
             cell.commonInit(title: titles[tableView.globalIndexPath(for: indexPath as NSIndexPath)], placeholder: placeholders[tableView.globalIndexPath(for: indexPath as NSIndexPath)])
             
+            if indexPath.section == 2 {
+                cell.input.isSecureTextEntry = true
+            }
+            
             return cell
         }else{
             
@@ -79,7 +83,7 @@ extension RegisterVC : UITableViewDelegate, UITableViewDataSource {
         case 2:
             return "Choose a strong password with at least 6 characters."
         case 3:
-            return "By registering you agree to our Privacy Policy and Terms of Service"
+            return "By registering you agree to our Privacy Policy and Terms of Service."
         default:
             return ""
         }
