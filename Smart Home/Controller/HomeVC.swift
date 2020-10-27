@@ -64,8 +64,9 @@ class HomeVC: UIViewController {
     
 
     func demoData(){
-        let weather = Weather()
-        let location = Location(zip: "4320", place: "Perg, Upper Austria", weather: weather)
+        
+        let weather = Weather(temperatureInCelsius: 12, windSpeedInKilometerPerHour: 12, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 25)
+        let location = Location(zip: "4320", place: "Perg", province: "Upper Austria", weather: weather)
         let devices = [Consumer(name: "Washingmachine", consumption: 100, state: .running), Producer(name: "Photovoltaic", production: 500, state: .not_running)]
         let stations = [Station(name: "Main House", location: location, devices: devices), Station(name: "Summer House", location: location, devices: devices)]
         let user = User(name: "Goga", email: "goga@gmail.com", stations: stations)
@@ -112,7 +113,10 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewWeatherCell") as! OverviewWeatherCell
             
-            cell.commonInit(city: "Perg", temperature: "12°", image: UIImage(systemName: "sun.max")!, wind: "12 km/h", sunrise: "5 am", sunset: "8 pm", visibility: "25 km")
+            let location = Model.user.stations[indexPath.section].location
+            let weather = location.weather
+            
+            cell.commonInit(city: location.place, temperature: "\(weather.temperatureInCelsius)°", image: UIImage(systemName: "sun.max")!, wind: "\(weather.windSpeedInKilometerPerHour) km/h", sunrise: weather.sunrise, sunset: weather.sunset, visibility: "\(weather.visibilityInKilometers) km")
             
             return cell
         case 2:

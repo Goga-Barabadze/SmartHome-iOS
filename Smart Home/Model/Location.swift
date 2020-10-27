@@ -12,11 +12,13 @@ class Location {
     
     var zip = ""
     var place = ""
-    var weather = Weather()
+    var province = ""
+    var weather = Weather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
     
-    init(zip: String, place: String, weather: Weather) {
+    init(zip: String, place: String, province: String, weather: Weather) {
         self.zip = zip
         self.place = place
+        self.province = province
         self.weather = weather
     }
     
