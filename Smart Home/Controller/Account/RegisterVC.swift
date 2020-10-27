@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os
 
 class RegisterVC: UIViewController {
 
@@ -16,7 +17,39 @@ class RegisterVC: UIViewController {
     var placeholders = ["optional", "example@example.com", "••••••••", "••••••••"]
     
     @IBAction func register(_ sender: Any) {
-        Account.createUser(email: "", password: "", target: self)
+        
+        let name: String? = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 0) as IndexPath) as! SimpleInputCell).input?.text
+        
+        let email = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 1) as IndexPath) as! SimpleInputCell).input?.text
+        
+        let password = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 2) as IndexPath) as! SimpleInputCell).input?.text
+        
+        let password_confirmed = (tableview.cellForRow(at: NSIndexPath(row: 1, section: 2) as IndexPath) as! SimpleInputCell).input?.text
+        
+        if email == nil || email!.isEmpty {
+            os_log("User did not enter email")
+            Alert.alert(title: "No email", message: "Please enter a valid email")
+            return
+        }
+        
+        if password == nil || password!.isEmpty {
+            os_log("User did not enter password")
+            Alert.alert(title: "No password", message: "Please a password")
+            return
+        }
+        
+        if password_confirmed == nil || password_confirmed!.isEmpty {
+            os_log("User did not enter password confirmation")
+            Alert.alert(title: "No password confirmation", message: "Please enter the password confirmation")
+            return
+        }
+        
+        if password != password_confirmed {
+            Alert.alert(title: "Password not confirmed correctly", message: "The password confimation and the password do not match.")
+            return
+        }
+        
+        Account.createUser(email: email!, password: password!, target: self)
     }
     
     fileprivate func registerNibs() {
@@ -29,7 +62,7 @@ class RegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         registerNibs()
     }
 
@@ -64,6 +97,16 @@ extension RegisterVC : UITableViewDelegate, UITableViewDataSource {
             if indexPath.section == 2 {
                 cell.input.isSecureTextEntry = true
             }
+            
+            #if DEBUG
+                if indexPath.section == 0 {
+                    cell.input.text = "Test User"
+                } else if indexPath.section == 1{
+                    cell.input.text = "fakeemail@something.com"
+                } else {
+                    cell.input.text = "Averybadpassword123"
+                }
+            #endif
             
             return cell
         }else{
