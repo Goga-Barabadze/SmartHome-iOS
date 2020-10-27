@@ -55,7 +55,7 @@ class RegisterVC: UIViewController {
                 return
             }
             
-            print(authDataResult)
+            self.performSegue(withIdentifier: "showHomeNC", sender: self)
         }
     }
     
