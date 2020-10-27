@@ -49,7 +49,14 @@ class RegisterVC: UIViewController {
             return
         }
         
-        Account.createUser(email: email!, password: password!, target: self)
+        Account.createUser(email: email!, password: password!, target: self) { (authDataResult, error) in
+            
+            if error != nil {
+                return
+            }
+            
+            print(authDataResult)
+        }
     }
     
     fileprivate func registerNibs() {

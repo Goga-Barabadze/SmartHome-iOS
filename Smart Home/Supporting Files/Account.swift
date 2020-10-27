@@ -11,7 +11,7 @@ import Firebase
 
 class Account {
     
-    static func createUser(email: String, password: String, target: UIViewController) {
+    static func createUser(email: String, password: String, target: UIViewController, closure: @escaping (AuthDataResult?, Error?) -> Void) {
         
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             
@@ -21,8 +21,7 @@ class Account {
                 
             }
             
-            print(authResult?.user.email)
-            
+            closure(authResult, error)
         }
         
     }
