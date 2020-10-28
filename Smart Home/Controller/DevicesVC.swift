@@ -16,14 +16,8 @@ class DevicesVC: UIViewController {
     var devices = [Device]()
     var type_of_devices: Device.Type? = Consumer.self
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
-        devices = station.devices?.filter{type(of: $0) == type_of_devices} ?? []
+        devices = station.devices.filter{type(of: $0) == type_of_devices} ?? []
         
         let deviceTypeAsString = type_of_devices == Consumer.self ? "Consumers" : "Producers"
         self.navigationItem.title = deviceTypeAsString  + " (" + station.name + ")"

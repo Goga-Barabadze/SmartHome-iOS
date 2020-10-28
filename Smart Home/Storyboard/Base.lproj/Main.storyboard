@@ -385,6 +385,9 @@
                     <navigationItem key="navigationItem" title="Add Station" id="2BF-Pa-rhU">
                         <barButtonItem key="rightBarButtonItem" title="Add" style="done" id="Ne1-yB-K3g"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableview" destination="25J-n8-y3j" id="guh-0Z-ubY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bag-iy-fQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

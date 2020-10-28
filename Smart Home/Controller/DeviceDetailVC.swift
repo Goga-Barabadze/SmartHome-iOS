@@ -46,7 +46,7 @@ extension DeviceDetailVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleInputCell") as! SimpleInputCell
         
-        cell.title.text = titles[tableView.globalIndexPath(for: indexPath as! NSIndexPath)]
+        cell.title.text = titles[tableView.globalIndexPath(for: indexPath as NSIndexPath)]
         
         return cell
     }

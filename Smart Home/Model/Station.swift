@@ -12,12 +12,39 @@ class Station {
     
     var name = ""
     var location = Location()
-    var devices: [Device]? = [Device]()
+    var devices: [Device] = [Device]()
+    
+    var currentProduction: Int {
+        
+        var production = 0
+        
+        for producer in devices.filter({type(of: $0) == Producer.self}) {
+            production += (producer as! Producer).production
+        }
+        
+        return production
+    }
+    
+    var currentConsumption: Int {
+        
+        var consumption = 0
+        
+        for consumer in devices.filter({type(of: $0) == Consumer.self}) {
+            consumption += (consumer as! Consumer).consumption
+        }
+        
+        return consumption
+    }
     
     init(name: String, location: Location, devices: [Device]) {
         self.name = name
         self.location = location
         self.devices = devices
+    }
+    
+    init(name: String, location: Location) {
+        self.name = name
+        self.location = location
     }
     
     init() {

@@ -22,6 +22,12 @@ class AddDeviceVC: UIViewController {
 
         registerNibs()
         addDoneButton()
+        setCorrectTitle()
+    }
+    
+    fileprivate func setCorrectTitle(){
+        let deviceTypeAsString = type_of_device == Consumer.self ? "Consumer" : "Producer"
+        self.navigationItem.title = "Add \(deviceTypeAsString)"
     }
     
     fileprivate func addDoneButton(){
@@ -69,7 +75,7 @@ class AddDeviceVC: UIViewController {
             os_log("Added Producer to station \(self.station.name)")
         }
         
-        self.station.devices?.append(device)
+        self.station.devices.append(device)
         
         Navigation.pop(context: self)
     }
