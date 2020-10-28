@@ -12,9 +12,12 @@ class Device {
     
     var name = ""
     var state = State.running
+    var company = ""
     
-    init(name: String, state: State) {
+    init(name: String, company: String, state: State) {
         self.name = name
+        self.company = company
+        self.state = state
     }
     
     enum State : String {

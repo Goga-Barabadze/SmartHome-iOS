@@ -22,6 +22,7 @@ class HomeVC: UIViewController {
     }()
     
     @objc func refresh(){
+        
         refresher.endRefreshing()
     }
     
@@ -48,18 +49,6 @@ class HomeVC: UIViewController {
         self.navigationItem.title = Greeting.correctGreeting() + ", " + Model.user.name
         
         self.tableview.refreshControl = refresher
-        
-//        Functions.functions().httpsCallable("getPVData").call(["city" : "Perg"]) { (result, error) in
-//          if let error = error as NSError? {
-//            if error.domain == FunctionsErrorDomain {
-//              let code = FunctionsErrorCode(rawValue: error.code)
-//              let message = error.localizedDescription
-//              let details = error.userInfo[FunctionsErrorDetailsKey]
-//            }
-//            // ...
-//          }
-//            print(result?.data)
-//        }
     }
     
 
@@ -67,7 +56,7 @@ class HomeVC: UIViewController {
         
         let weather = Weather(temperatureInCelsius: 12, windSpeedInKilometerPerHour: 12, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 25)
         let location = Location(zip: "4320", place: "Perg", province: "Upper Austria", weather: weather)
-        let devices = [Consumer(name: "Washingmachine", consumption: 100, state: .running), Producer(name: "Photovoltaic", production: 500, state: .not_running)]
+        let devices = [Consumer(name: "Washingmachine", consumption: 100, company: "Cool Company", state: .running), Producer(name: "Photovoltaic", company: "Cool Company", production: 500, state: .not_running)]
         let stations = [Station(name: "Main House", location: location, devices: devices), Station(name: "Summer House", location: location, devices: devices)]
         let user = User(name: "Goga", email: "goga@gmail.com", stations: stations)
         

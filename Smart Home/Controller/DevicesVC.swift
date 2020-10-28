@@ -23,6 +23,12 @@ class DevicesVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
        devices = station.devices.filter{type(of: $0) == type_of_devices}
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? AddDeviceVC {
+            vc.station = station
+        }
+    }
 }
 
 extension DevicesVC: UITableViewDataSource, UITableViewDelegate {

@@ -12,8 +12,8 @@ class Producer : Device {
     
     var production = 0
     
-    init(name: String, production: Int, state: Device.State) {
-        super.init(name: name, state: state)
+    init(name: String, company: String, production: Int, state: Device.State) {
+        super.init(name: name, company: company, state: state)
         self.production = production
     }
 }
