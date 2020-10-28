@@ -12,7 +12,7 @@ class Station {
     
     var name = ""
     var location = Location()
-    var devices = [Device]()
+    var devices: [Device]? = [Device]()
     
     init(name: String, location: Location, devices: [Device]) {
         self.name = name

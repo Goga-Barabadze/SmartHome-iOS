@@ -10,10 +10,18 @@ import UIKit
 
 class AddStationVC: UIViewController {
 
+    var titles = [""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        registerNibs()
+//        Station(name: <#T##String#>, location: <#T##Location#>, devices: <#T##[Device]#>)
+    }
+    
+    fileprivate func registerNibs() {
+        let nibName = UINib(nibName: "SimpleInputCell", bundle: nil)
+        //tableview.register(nibName, forCellReuseIdentifier: "SimpleInputCell")
     }
 
 }

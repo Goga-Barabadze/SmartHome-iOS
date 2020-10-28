@@ -116,7 +116,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             
             var production = 0
             
-            for producer in Model.user.stations[indexPath.section].devices.filter({type(of: $0) == Producer.self}) {
+            for producer in Model.user.stations[indexPath.section].devices!.filter({type(of: $0) == Producer.self}) {
                 production += (producer as! Producer).production
             }
             

@@ -69,7 +69,7 @@ class AddDeviceVC: UIViewController {
             os_log("Added Producer to station \(self.station.name)")
         }
         
-        station.devices.append(device)
+        self.station.devices?.append(device)
         
         Navigation.pop(context: self)
     }
