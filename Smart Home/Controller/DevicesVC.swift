@@ -10,6 +10,8 @@ import UIKit
 
 class DevicesVC: UIViewController {
 
+    @IBOutlet weak var tableview: UITableView!
+    
     var station = Station()
     var devices = [Device]()
     var type_of_devices: Device.Type? = Consumer.self
@@ -17,16 +19,22 @@ class DevicesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = station.name
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       devices = station.devices.filter{type(of: $0) == type_of_devices}
+        devices = station.devices.filter{type(of: $0) == type_of_devices}
+        
+        let deviceTypeAsString = type_of_devices == Consumer.self ? "Consumers" : "Producers"
+        self.navigationItem.title = deviceTypeAsString  + " (" + station.name + ")"
+        
+        tableview.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? AddDeviceVC {
             vc.station = station
+            vc.type_of_device = type_of_devices
         }
     }
 }

@@ -111,7 +111,7 @@ extension RegisterVC : UITableViewDelegate, UITableViewDataSource {
                 } else if indexPath.section == 1{
                     cell.input.text = "fakeemail@something.com"
                 } else {
-                    cell.input.text = "Averybadpassword123"
+                    cell.input.text = "gogagoga"
                 }
             #endif
             

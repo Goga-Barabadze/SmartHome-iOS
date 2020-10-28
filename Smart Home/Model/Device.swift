@@ -20,6 +20,10 @@ class Device {
         self.state = state
     }
     
+    init(){
+        
+    }
+    
     enum State : String {
         case running
         case not_running

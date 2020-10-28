@@ -56,7 +56,7 @@ class HomeVC: UIViewController {
         
         let weather = Weather(temperatureInCelsius: 12, windSpeedInKilometerPerHour: 12, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 25)
         let location = Location(zip: "4320", place: "Perg", province: "Upper Austria", weather: weather)
-        let devices = [Consumer(name: "Washingmachine", consumption: 100, company: "Cool Company", state: .running), Producer(name: "Photovoltaic", company: "Cool Company", production: 500, state: .not_running)]
+        let devices = [Consumer(name: "Washingmachine", consumption: 100, manufacturer: "Cool Company", state: .running), Producer(name: "Photovoltaic", manufacturer: "Cool Company", production: 500, state: .not_running)]
         let stations = [Station(name: "Main House", location: location, devices: devices), Station(name: "Summer House", location: location, devices: devices)]
         let user = User(name: "Goga", email: "goga@gmail.com", stations: stations)
         

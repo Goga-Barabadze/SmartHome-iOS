@@ -71,7 +71,7 @@ extension LoginVC : UITableViewDelegate, UITableViewDataSource {
         }
         
         #if DEBUG
-            cell.input.text = (indexPath.row == 0) ? "fakeemail@something.com" : "Averybadpassword123"
+            cell.input.text = (indexPath.row == 0) ? "fakeemail@something.com" : "gogagoga"
         #endif
         
         return cell

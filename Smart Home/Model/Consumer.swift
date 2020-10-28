@@ -12,8 +12,8 @@ class Consumer : Device {
     
     var consumption = 0
     
-    init(name: String, consumption: Int, company: String, state: Device.State) {
-        super.init(name: name, company: company, state: state)
+    init(name: String, consumption: Int, manufacturer: String, state: Device.State) {
+        super.init(name: name, company: manufacturer, state: state)
         self.consumption = consumption
     }
 }

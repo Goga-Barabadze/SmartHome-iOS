@@ -11,8 +11,9 @@ import os
 
 class AddDeviceVC: UIViewController {
     
-    var titles = ["Name of Device", "Company"]
+    var titles = ["Name of Device", "Manufacturer", "Electricity"]
     var station = Station()
+    var type_of_device: Device.Type? = Consumer.self
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -42,22 +43,38 @@ class AddDeviceVC: UIViewController {
             return
         }
         
-        let company = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 1) as IndexPath) as! SimpleInputCell).input?.text
+        let manufacturer = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 1) as IndexPath) as! SimpleInputCell).input?.text
         
-        if company == nil || company!.isEmpty {
+        if manufacturer == nil || manufacturer!.isEmpty {
             os_log("User did not enter company of device")
             Alert.alert(title: "No Company", message: "Please enter a company for the device you are adding")
             return
         }
         
-        let device = Device(name: name!, company: company!, state: .not_running)
+        let electricity = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 2) as IndexPath) as! SimpleInputCell).input?.text
+        
+        if electricity == nil || electricity!.isEmpty {
+            os_log("User did not enter electricity of device")
+            Alert.alert(title: "No electricity", message: "Please enter the electricity input/output for the device you are adding")
+            return
+        }
+        
+        var device: Device = Device()
+        
+        if type(of: type_of_device) == Consumer.self {
+            device = Consumer(name: name!, consumption: Int(electricity!) ?? 0, manufacturer: manufacturer!, state: .not_running)
+            os_log("Added Consumer to station \(self.station.name)")
+        }else{
+            device = Producer(name: name!, manufacturer: manufacturer!, production: Int(electricity!) ?? 0, state: .not_running)
+            os_log("Added Producer to station \(self.station.name)")
+        }
         
         station.devices.append(device)
         
-        if #available(iOS 14.0, *) {
-            os_log("Added Device to station \(self.station.name)")
-        }
+        Navigation.pop(context: self)
     }
+    
+    
 }
 
 extension AddDeviceVC : UITableViewDelegate, UITableViewDataSource {
@@ -67,7 +84,7 @@ extension AddDeviceVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,7 +95,7 @@ extension AddDeviceVC : UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleInputCell") as! SimpleInputCell
         
-        cell.title.text = titles[tableView.globalIndexPath(for: indexPath as! NSIndexPath)]
+        cell.title.text = titles[tableView.globalIndexPath(for: indexPath as NSIndexPath)]
         
         return cell
     }
