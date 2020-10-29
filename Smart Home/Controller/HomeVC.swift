@@ -57,9 +57,11 @@ class HomeVC: UIViewController {
     func demoData(){
         
         let weather = Weather(temperatureInCelsius: 12, windSpeedInKilometerPerHour: 12, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 25)
+        let weather2 = Weather(temperatureInCelsius: 26, windSpeedInKilometerPerHour: 0, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 55)
         let location = Location(zip: "4320", place: "Perg", province: "Upper Austria", weather: weather)
+        let location2 = Location(zip: "4320", place: "Vienna", province: "Vienna", weather: weather2)
         let devices = [Consumer(name: "Washingmachine", consumption: 100, manufacturer: "Cool Company", state: .running), Producer(name: "Photovoltaic", manufacturer: "Cool Company", production: 500, state: .not_running)]
-        let stations = [Station(name: "Main House", location: location, devices: devices), Station(name: "Summer House", location: location, devices: devices)]
+        let stations = [Station(name: "Main House", location: location, devices: devices), Station(name: "Summer House", location: location2, devices: devices)]
         let user = User(name: "Goga", email: "goga@gmail.com", stations: stations)
         
         _ = Model.init(user: user)

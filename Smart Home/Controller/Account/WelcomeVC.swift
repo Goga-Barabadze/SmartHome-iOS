@@ -27,13 +27,60 @@ class WelcomeVC: UIViewController {
         design_view.addShadow()
     }
     
+    lazy var gradient: CAGradientLayer = {
+        let gradient = CAGradientLayer()
+        gradient.type = .axial
+        gradient.colors = [
+            UIColor.init(red: 51, green: 131, blue: 236).cgColor,
+            UIColor.init(red: 174, green: 251, blue: 219).cgColor
+        ]
+        gradient.locations = [0.2, 1]
+        return gradient
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpButtons()
-        setUpDesignView()
+        //setUpDesignView()
+        
+        let newColors = [
+            UIColor.init(red: 174, green: 251, blue: 219).cgColor,
+            UIColor.init(red: 51, green: 131, blue: 236).cgColor
+        ]
+        
+        gradient.frame = view.bounds
+        gradient.setColors(newColors,
+                           animated: true,
+                           withDuration: 4,
+                           timingFunctionName: .linear)
+        
+        view.layer.insertSublayer(gradient, at: 0)
     }
 
 
 }
 
+extension CAGradientLayer {
+    
+    func setColors(_ newColors: [CGColor],
+                   animated: Bool = true,
+                   withDuration duration: TimeInterval = 0,
+                   timingFunctionName name: CAMediaTimingFunctionName? = nil) {
+        
+        if !animated {
+            self.colors = newColors
+            return
+        }
+        
+        let colorAnimation = CABasicAnimation(keyPath: "colors")
+        colorAnimation.fromValue = colors
+        colorAnimation.toValue = newColors
+        colorAnimation.duration = duration
+        colorAnimation.isRemovedOnCompletion = false
+        colorAnimation.fillMode = CAMediaTimingFillMode.forwards
+        colorAnimation.timingFunction = CAMediaTimingFunction(name: name ?? .linear)
+
+        add(colorAnimation, forKey: "colorsChangeAnimation")
+    }
+}
