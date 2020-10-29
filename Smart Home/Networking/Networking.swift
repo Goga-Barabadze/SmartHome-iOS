@@ -30,6 +30,10 @@ class Networking {
             }
             
             print(result?.data)
+            
+            if let text = (result?.data as? [String: Any])?["text"] as? String {
+                print(text)
+              }
         }
     }
     
@@ -43,5 +47,9 @@ class Networking {
     
     static func getAllGenerators(){
         
+    }
+    
+    static func getWeather(for city: String) -> Void {
+        Networking.call(function: "getWeater", with: ["city" : city])
     }
 }

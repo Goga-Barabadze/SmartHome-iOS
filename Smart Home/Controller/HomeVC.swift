@@ -46,9 +46,11 @@ class HomeVC: UIViewController {
         registerNibs()
         demoData()
         
-        self.navigationItem.title = Greeting.correctGreeting() + ", " + Model.user.name
+        self.navigationItem.title = Greeting.correctGreeting()
         
         self.tableview.refreshControl = refresher
+        
+        Networking.getWeather(for: "Perg")
     }
     
 
