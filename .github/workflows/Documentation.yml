@@ -14,7 +14,7 @@ jobs:
         with:
           inputs: "./Smart Home"
           module-name: MyLibrary
-          output: "Documentation"
+          output: "./Documentation"
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
