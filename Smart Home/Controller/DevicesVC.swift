@@ -54,7 +54,10 @@ extension DevicesVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-                devices.remove(at: indexPath.row)
+                let removedDevice = devices.remove(at: indexPath.row)
+                station.devices.removeAll { (device) -> Bool in
+                return removedDevice.name == device.name
+            }
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }
