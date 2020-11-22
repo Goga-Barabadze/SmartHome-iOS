@@ -15,6 +15,7 @@ class DevicesVC: UIViewController {
     var station = Station()
     var devices = [Device]()
     var type_of_devices: Device.Type? = Consumer.self
+    var selected_device = Device()
     
     override func viewWillAppear(_ animated: Bool) {
         devices = station.devices.filter{type(of: $0) == type_of_devices} ?? []
@@ -29,6 +30,8 @@ class DevicesVC: UIViewController {
         if let vc = segue.destination as? AddDeviceVC {
             vc.station = station
             vc.type_of_device = type_of_devices
+        } else if let vc = segue.destination as? DeviceDetailVC {
+            vc.device = selected_device
         }
     }
 }
@@ -60,5 +63,10 @@ extension DevicesVC: UITableViewDataSource, UITableViewDelegate {
             }
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selected_device = devices[indexPath.row]
+        performSegue(withIdentifier: "showDeviceDetailVC", sender: self)
     }
 }

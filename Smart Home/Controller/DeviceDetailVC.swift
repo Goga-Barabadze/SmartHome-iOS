@@ -31,6 +31,10 @@ class DeviceDetailVC: UIViewController {
 
 extension DeviceDetailVC : UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 35
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
@@ -47,6 +51,20 @@ extension DeviceDetailVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleInputCell") as! SimpleInputCell
         
         cell.title.text = titles[tableView.globalIndexPath(for: indexPath as NSIndexPath)]
+        
+        switch tableView.globalIndexPath(for: indexPath as NSIndexPath){
+        case 0:
+            cell.input.text = device.name
+        case 1:
+            cell.input.text = "Replace me with Type of Device"
+        case 2:
+            cell.input.text = "Replace me with station of device"
+        case 3:
+            cell.input.text = "Power of device"
+        
+        default:
+            #warning("Not implemented yet")
+        }
         
         return cell
     }
