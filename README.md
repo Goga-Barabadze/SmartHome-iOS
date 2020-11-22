@@ -1,6 +1,6 @@
-Smart Home iOS
+# Smart Home iOS
 
 
-TODO-List
+## TODO-List
 
 - [ ] Loading Animation when logging in / registering.
