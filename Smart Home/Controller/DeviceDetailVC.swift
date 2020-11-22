@@ -19,6 +19,7 @@ class DeviceDetailVC: UIViewController {
         super.viewDidLoad()
 
         registerNibs()
+        addSaveButton()
         
         self.navigationItem.title = device.name
     }
@@ -26,6 +27,16 @@ class DeviceDetailVC: UIViewController {
     fileprivate func registerNibs() {
         let nibName = UINib(nibName: "SimpleInputCell", bundle: nil)
         tableview.register(nibName, forCellReuseIdentifier: "SimpleInputCell")
+    }
+    
+    fileprivate func addSaveButton(){
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveDevice))
+    }
+    
+    @objc func saveDevice(){
+        // MARK: TODO Save Device
+        
+        navigationController?.popViewController(animated: true)
     }
 }
 
