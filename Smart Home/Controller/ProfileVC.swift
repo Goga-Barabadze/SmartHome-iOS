@@ -10,12 +10,6 @@ import UIKit
 
 class ProfileVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
     func openNotificationSettings(){
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
             return
