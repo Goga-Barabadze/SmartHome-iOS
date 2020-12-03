@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os
 
 class WelcomeVC: UIViewController {
 
@@ -41,6 +42,8 @@ class WelcomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        checkIfManualLoginIsNeeded()
+        
         setUpButtons()
         //setUpDesignView()
         
@@ -58,7 +61,14 @@ class WelcomeVC: UIViewController {
         view.layer.insertSublayer(gradient, at: 0)
     }
 
-
+    fileprivate func checkIfManualLoginIsNeeded(){
+        if Networking.isLoggedIn() {
+            os_log("Automatic login can be done.")
+            performSegue(withIdentifier: "showHomeNC", sender: self)
+        } else {
+            os_log("Manual login is needed")
+        }
+    }
 }
 
 extension CAGradientLayer {

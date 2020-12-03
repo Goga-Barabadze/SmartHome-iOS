@@ -101,6 +101,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             
         case 2:
             
+            Networking.signOut()
             performSegue(withIdentifier: "showWelcomeVC", sender: self)
             
         default:
