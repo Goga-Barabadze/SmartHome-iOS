@@ -19,7 +19,14 @@ class Station {
         var production = 0
         
         for producer in devices.filter({type(of: $0) == Producer.self}) {
-            production += (producer as! Producer).production
+            
+            let currentProducer = producer as! Producer
+            
+            if (currentProducer.state == .not_running || currentProducer.state == .should_be_running){
+                continue
+            }
+            
+            production += currentProducer.production
         }
         
         return production
@@ -30,7 +37,14 @@ class Station {
         var consumption = 0
         
         for consumer in devices.filter({type(of: $0) == Consumer.self}) {
-            consumption += (consumer as! Consumer).consumption
+            
+            let currentConsumer = consumer as! Consumer
+            
+            if (currentConsumer.state == .not_running || currentConsumer.state == .should_be_running){
+                continue
+            }
+            
+            consumption += currentConsumer.consumption
         }
         
         return consumption

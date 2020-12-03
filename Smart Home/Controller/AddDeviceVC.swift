@@ -71,7 +71,7 @@ class AddDeviceVC: UIViewController {
             device = Consumer(name: name!, consumption: Int(electricity!) ?? 0, manufacturer: manufacturer!, state: .not_running)
             os_log("Added Consumer to station \(self.station.name)")
         }else{
-            device = Producer(name: name!, manufacturer: manufacturer!, production: Int(electricity!) ?? 0, state: .not_running)
+            device = Producer(name: name!, production: Int(electricity!) ?? 0, manufacturer: manufacturer!, state: .not_running)
             os_log("Added Producer to station \(self.station.name)")
         }
         

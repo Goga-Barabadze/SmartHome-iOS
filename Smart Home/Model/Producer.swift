@@ -12,7 +12,7 @@ class Producer : Device {
     
     var production = 0
     
-    init(name: String, manufacturer: String, production: Int, state: Device.State) {
+    init(name: String, production: Int, manufacturer: String, state: Device.State) {
         super.init(name: name, company: manufacturer, state: state)
         self.production = production
     }
