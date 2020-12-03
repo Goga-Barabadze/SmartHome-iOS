@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='SmartHomeTests.xctest' tests='4' failures='0'>
+  <testsuite name='SmartHomeTests.NetworkingTests' tests='2' failures='0'>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testExample' time='0.003'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testPerformanceExample' time='0.635'/>
+  </testsuite>
+  <testsuite name='SmartHomeTests.SmartHomeTests' tests='2' failures='0'>
+    <testcase classname='SmartHomeTests.SmartHomeTests' name='testExample' time='0.001'/>
+    <testcase classname='SmartHomeTests.SmartHomeTests' name='testPerformanceExample' time='0.253'/>
+  </testsuite>
+</testsuites>
