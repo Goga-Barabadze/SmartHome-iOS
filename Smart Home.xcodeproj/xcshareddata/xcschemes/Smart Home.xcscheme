@@ -48,6 +48,16 @@
                ReferencedContainer = "container:Smart Home.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4A301E43257948BC00ECD0B2"
+               BuildableName = "SmartHomeUITests.xctest"
+               BlueprintName = "SmartHomeUITests"
+               ReferencedContainer = "container:Smart Home.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
