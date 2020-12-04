@@ -56,7 +56,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
                 text = "Privacy Policy"
                 image_name = "lock"
             case 1:
-                text = "Help"
+                text = "Frequently Asked Questions"
                 image_name = "info.circle"
             case 2:
                 text = "Rate the App"
@@ -90,6 +90,14 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             case 0:
                 
                 performSegue(withIdentifier: "showPolicies", sender: self)
+                
+            case 1:
+                
+                guard let url = URL(string: "https://goga-barabadze.github.io/SmartHome-FAQ/") else {
+                    return
+                }
+                
+                UIApplication.shared.open(url, options: [:])
                 
             default:
                 print("Not implemented yet")
