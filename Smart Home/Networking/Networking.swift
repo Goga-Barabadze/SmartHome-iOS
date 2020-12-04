@@ -13,7 +13,7 @@ import os
 
 class Networking {
     
-    static func call(function: String, with arguments: [String : Any]?){
+    static func call(function: String, with arguments: [String : Any]?, closure: @escaping ([String: Any]?, NSError?) -> ()){
         
         Functions.functions().httpsCallable(function).call(arguments) { (result, error) in
             
@@ -29,13 +29,14 @@ class Networking {
                 }
                 
                 print(error)
+                
+                closure(nil, error)
             }
             
-            print(result?.data)
-            
-            if let text = (result?.data as? [String: Any])?["text"] as? String {
-                print(text)
-              }
+            if let data = (result?.data as? [String: Any]) {
+                print(data)
+                closure(data, nil)
+            }
         }
     }
     
@@ -52,7 +53,7 @@ class Networking {
     }
     
     static func getWeather(for city: String) -> Void {
-        Networking.call(function: "getWeater", with: ["city" : city])
+        // Networking.call(function: "getWeater", with: ["city" : city])
     }
     
     static func isLoggedIn() -> Bool {

@@ -19,7 +19,37 @@ class NetworkingTests: XCTestCase {
         
     }
 
-    func testExample() throws {
+    func testGetFroniusLocation() throws {
         
+        let expectation = self.expectation(description: "testGetFroniusLocation")
+        
+        Networking.call(function: "getFroniusLocation", with: ["email" : "test", "pvID": "6dd05177-193f-4580-97bd-3331e3abe530"]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result {
+                
+                XCTAssertNotNil(result["city"])
+                XCTAssertNotNil(result["zip"])
+                XCTAssertNotNil(result["country"])
+                XCTAssertNotNil(result["name"])
+                XCTAssertNotNil(result["locationID"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            XCTAssert(true)
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(10)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
     }
 }
