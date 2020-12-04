@@ -46,7 +46,7 @@ class HomeVC: UIViewController {
         registerNibs()
         demoData()
         
-        self.navigationItem.title = Greeting.correctGreeting()
+        self.navigationItem.title = Greeting.message()
         
         self.tableview.refreshControl = refresher
     }

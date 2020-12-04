@@ -10,7 +10,7 @@ import Foundation
 
 class Greeting {
     
-    static func correctGreeting() -> String {
+    static func message() -> String {
         
         let hour = Calendar.current.component(.hour, from: Date())
         
