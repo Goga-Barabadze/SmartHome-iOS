@@ -49,8 +49,6 @@ class HomeVC: UIViewController {
         self.navigationItem.title = Greeting.correctGreeting()
         
         self.tableview.refreshControl = refresher
-        
-        Networking.getWeather(for: "Perg")
     }
     
 

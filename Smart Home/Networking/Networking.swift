@@ -52,10 +52,6 @@ class Networking {
         
     }
     
-    static func getWeather(for city: String) -> Void {
-        // Networking.call(function: "getWeater", with: ["city" : city])
-    }
-    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }
