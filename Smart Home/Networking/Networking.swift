@@ -33,6 +33,7 @@ class Networking {
             
             if let data = (result?.data as? [String: Any]) {
                 closure(data, nil)
+                return
             }
             
             closure(nil, nil)

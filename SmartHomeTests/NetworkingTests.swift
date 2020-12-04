@@ -23,7 +23,7 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetFroniusLocation")
         
-        Networking.call(function: "getFroniusLocation", with: ["email" : "test", "pvID": "6dd05177-193f-4580-97bd-3331e3abe530"]) { result, error in
+        Networking.call(function: "getFroniusLocation", with: ["pvID": "6dd05177-193f-4580-97bd-3331e3abe530"]) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
