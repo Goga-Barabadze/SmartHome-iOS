@@ -9,7 +9,7 @@
 import XCTest
 @testable import Smart_Home
 
-class SmartHomeTests: XCTestCase {
+class ModelTests: XCTestCase {
 
     override func setUpWithError() throws {
         
