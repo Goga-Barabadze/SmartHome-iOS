@@ -49,6 +49,9 @@
             </BuildableReference>
             <SkippedTests>
                <Test
+                  Identifier = "NetworkingTests/testGetForecast()">
+               </Test>
+               <Test
                   Identifier = "NetworkingTests/testGetPossibleConsumers()">
                </Test>
             </SkippedTests>

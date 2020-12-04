@@ -96,6 +96,37 @@ class NetworkingTests: XCTestCase {
         }
     }
     
+    // MARK: TODO - Cannot read property 'dt_txt' of undefined. What does this error mean?
+    func testGetForecast() throws {
+        
+        let expectation = self.expectation(description: "testGetForecast")
+        
+        Networking.call(function: "getForecast", with: ["city": "Perg"]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result {
+                
+                XCTAssertNotNil(result["Forecasts"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            XCTAssert(true)
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func testGetPossibleCompanies() throws {
         
         let expectation = self.expectation(description: "getPossibleCompanies")
