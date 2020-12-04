@@ -11,6 +11,11 @@ target 'Smart Home' do
     # Pods for testing
   end
 
+  target 'SmartHomeUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'

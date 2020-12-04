@@ -7,8 +7,9 @@
 //
 
 import XCTest
+@testable import Smart_Home
 
-class SmartHomeUITests: XCTestCase {
+class LoginUITests: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
@@ -17,6 +18,17 @@ class SmartHomeUITests: XCTestCase {
     override func tearDownWithError() throws {
         
     }
+    
+//    func testLogin() throws {
+//
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        // Networking.signOut()
+//
+//        app.buttons.containing(.staticText, identifier:"Login").element.tap()
+//        app.navigationBars["Login"].buttons["Login"].tap()
+//    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {

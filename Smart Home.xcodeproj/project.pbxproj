@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A2C948125343F080075A17D /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2C948025343F080075A17D /* ModelTests.swift */; };
-		4A301E5C2579494E00ECD0B2 /* SmartHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A301E5B2579494E00ECD0B2 /* SmartHomeUITests.swift */; };
+		4A301E5C2579494E00ECD0B2 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A301E5B2579494E00ECD0B2 /* LoginUITests.swift */; };
 		4A426BB524C8BDFE002CE5A2 /* SimpleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BB324C8BDFE002CE5A2 /* SimpleTitleCell.swift */; };
 		4A426BB624C8BDFE002CE5A2 /* SimpleTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A426BB424C8BDFE002CE5A2 /* SimpleTitleCell.xib */; };
 		4A426BB924C8C0E2002CE5A2 /* DeviceOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BB724C8C0E2002CE5A2 /* DeviceOverviewCell.swift */; };
@@ -58,6 +58,7 @@
 		4AEB2CDE24C05F2A0001F981 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDD24C05F2A0001F981 /* Weather.swift */; };
 		B10B82DDDA7808C587882CD6 /* Pods_SmartHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2C4D1FBCCF703802F8D86E /* Pods_SmartHomeTests.framework */; };
 		FA78D94639BE0927E833A9F0 /* Pods_Smart_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E92C831410B472DAE7B922 /* Pods_Smart_Home.framework */; };
+		FE26CD4D227A159651E48A63 /* Pods_SmartHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AFFA91861171D926C37C6D /* Pods_SmartHomeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +80,14 @@
 
 /* Begin PBXFileReference section */
 		1C037416CF61DC5FE5E3A842 /* Pods-Smart Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home.debug.xcconfig"; path = "Target Support Files/Pods-Smart Home/Pods-Smart Home.debug.xcconfig"; sourceTree = "<group>"; };
+		1D786FDDDA3FBB4EB4486CF0 /* Pods-SmartHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeUITests.release.xcconfig"; path = "Target Support Files/Pods-SmartHomeUITests/Pods-SmartHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		34E92C831410B472DAE7B922 /* Pods_Smart_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4366045C9A550DDBFE4E4565 /* Pods-SmartHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeTests.release.xcconfig"; path = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		4A2C947E25343F080075A17D /* SmartHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2C948025343F080075A17D /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		4A2C948225343F080075A17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A301E592579494E00ECD0B2 /* SmartHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A301E5B2579494E00ECD0B2 /* SmartHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeUITests.swift; sourceTree = "<group>"; };
+		4A301E5B2579494E00ECD0B2 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		4A301E5D2579494E00ECD0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A426BB324C8BDFE002CE5A2 /* SimpleTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTitleCell.swift; sourceTree = "<group>"; };
 		4A426BB424C8BDFE002CE5A2 /* SimpleTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTitleCell.xib; sourceTree = "<group>"; };
@@ -138,7 +140,9 @@
 		4AEB2CDD24C05F2A0001F981 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		4C334A04848A0D02601903F7 /* Pods-Smart Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home.release.xcconfig"; path = "Target Support Files/Pods-Smart Home/Pods-Smart Home.release.xcconfig"; sourceTree = "<group>"; };
 		6F2C4D1FBCCF703802F8D86E /* Pods_SmartHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0AFFA91861171D926C37C6D /* Pods_SmartHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D6A7CADC9141641F9AD15E /* Pods-SmartHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD631C5022E895E4FC321856 /* Pods-SmartHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-SmartHomeUITests/Pods-SmartHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE26CD4D227A159651E48A63 /* Pods_SmartHomeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +186,7 @@
 		4A301E5A2579494E00ECD0B2 /* SmartHomeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4A301E5B2579494E00ECD0B2 /* SmartHomeUITests.swift */,
+				4A301E5B2579494E00ECD0B2 /* LoginUITests.swift */,
 				4A301E5D2579494E00ECD0B2 /* Info.plist */,
 			);
 			path = SmartHomeUITests;
@@ -326,6 +331,8 @@
 				4C334A04848A0D02601903F7 /* Pods-Smart Home.release.xcconfig */,
 				B8D6A7CADC9141641F9AD15E /* Pods-SmartHomeTests.debug.xcconfig */,
 				4366045C9A550DDBFE4E4565 /* Pods-SmartHomeTests.release.xcconfig */,
+				CD631C5022E895E4FC321856 /* Pods-SmartHomeUITests.debug.xcconfig */,
+				1D786FDDDA3FBB4EB4486CF0 /* Pods-SmartHomeUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -335,6 +342,7 @@
 			children = (
 				34E92C831410B472DAE7B922 /* Pods_Smart_Home.framework */,
 				6F2C4D1FBCCF703802F8D86E /* Pods_SmartHomeTests.framework */,
+				A0AFFA91861171D926C37C6D /* Pods_SmartHomeUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -365,6 +373,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A301E602579494E00ECD0B2 /* Build configuration list for PBXNativeTarget "SmartHomeUITests" */;
 			buildPhases = (
+				AE33CC04D25273D77F24D3C6 /* [CP] Check Pods Manifest.lock */,
 				4A301E552579494E00ECD0B2 /* Sources */,
 				4A301E562579494E00ECD0B2 /* Frameworks */,
 				4A301E572579494E00ECD0B2 /* Resources */,
@@ -535,6 +544,28 @@
 			shellPath = /bin/sh;
 			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
+		AE33CC04D25273D77F24D3C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartHomeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EA39910D53F9D6C14D3E2540 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -573,7 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A301E5C2579494E00ECD0B2 /* SmartHomeUITests.swift in Sources */,
+				4A301E5C2579494E00ECD0B2 /* LoginUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +735,7 @@
 		};
 		4A301E612579494E00ECD0B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD631C5022E895E4FC321856 /* Pods-SmartHomeUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -725,6 +757,7 @@
 		};
 		4A301E622579494E00ECD0B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D786FDDDA3FBB4EB4486CF0 /* Pods-SmartHomeUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
