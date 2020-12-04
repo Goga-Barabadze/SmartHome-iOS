@@ -126,12 +126,11 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-    // MARK: TODO - Not working yet. Getting error which potentially comes from the Backend
     func testGetPossibleConsumers() throws {
         
         let expectation = self.expectation(description: "testGetPossibleConsumers")
         
-        Networking.call(function: "testGetPossibleConsumers", with: ["companyID": compandyID]) { result, error in
+        Networking.call(function: "getPossibleConsumers", with: ["companyID": compandyID]) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -139,7 +138,7 @@ class NetworkingTests: XCTestCase {
             
             if let result = result {
                 
-                // XCTAssertNotNil(result["city"])
+                XCTAssertNotNil(result["Consumers"])
                 
             } else {
                 XCTFail("Error: Result is nil.")
