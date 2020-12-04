@@ -58,6 +58,36 @@ class NetworkingTests: XCTestCase {
         }
     }
     
+    func testGetPVData() throws {
+        
+        let expectation = self.expectation(description: "testGetPVData")
+        
+        Networking.call(function: "getPVData", with: ["pvID": pvID]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result {
+                
+                XCTAssertNotNil(result["PVData"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            XCTAssert(true)
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func testGetWeather() throws {
         
         let expectation = self.expectation(description: "testGetWeather")
