@@ -216,4 +216,12 @@ class NetworkingTests: XCTestCase {
             }
         }
     }
+    
+    func testProperSignOff() throws {
+        
+        Networking.signOut()
+        
+        XCTAssert(Networking.isLoggedIn() == false, "Did not sign off properly.")
+        
+    }
 }
