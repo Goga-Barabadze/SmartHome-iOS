@@ -47,12 +47,17 @@
                BlueprintName = "SmartHomeTests"
                ReferencedContainer = "container:Smart Home.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "NetworkingTests/testGetPossibleConsumers()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A301E43257948BC00ECD0B2"
+               BlueprintIdentifier = "4A301E582579494E00ECD0B2"
                BuildableName = "SmartHomeUITests.xctest"
                BlueprintName = "SmartHomeUITests"
                ReferencedContainer = "container:Smart Home.xcodeproj">

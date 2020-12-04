@@ -13,6 +13,8 @@ class NetworkingTests: XCTestCase {
     
     private let pvID = "6dd05177-193f-4580-97bd-3331e3abe530"
     private let maximumWaitForExpectation = 10
+    private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
+
 
     override func setUpWithError() throws {
         
@@ -107,6 +109,37 @@ class NetworkingTests: XCTestCase {
             if let result = result {
                 
                 XCTAssertNotNil(result["Companies"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            XCTAssert(true)
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    // MARK: TODO - Not working yet. Getting error which potentially comes from the Backend
+    func testGetPossibleConsumers() throws {
+        
+        let expectation = self.expectation(description: "testGetPossibleConsumers")
+        
+        Networking.call(function: "testGetPossibleConsumers", with: ["companyID": compandyID]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result {
+                
+                // XCTAssertNotNil(result["city"])
                 
             } else {
                 XCTFail("Error: Result is nil.")

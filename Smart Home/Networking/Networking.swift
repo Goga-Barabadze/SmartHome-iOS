@@ -29,6 +29,7 @@ class Networking {
                 }
                 
                 closure(nil, error)
+                return
             }
             
             if let data = (result?.data as? [String: Any]) {
