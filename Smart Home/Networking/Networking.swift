@@ -28,15 +28,14 @@ class Networking {
                     print("code: \(String(describing: code)), message: \(message), details: \(String(describing: details))")
                 }
                 
-                print(error)
-                
                 closure(nil, error)
             }
             
             if let data = (result?.data as? [String: Any]) {
-                print(data)
                 closure(data, nil)
             }
+            
+            closure(nil, nil)
         }
     }
     
