@@ -26,7 +26,7 @@ class Account {
         
     }
     
-    static func signIn(email: String, password: String, target: UIViewController, closure: @escaping (AuthDataResult?, Error?) -> Void) {
+    static func signIn(email: String, password: String, target: UIViewController?, closure: @escaping (AuthDataResult?, Error?) -> Void) {
         
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             

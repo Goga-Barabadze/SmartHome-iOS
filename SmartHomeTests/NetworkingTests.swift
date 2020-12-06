@@ -8,15 +8,18 @@
 
 import XCTest
 @testable import Smart_Home
+import FirebaseAuth
 
 class NetworkingTests: XCTestCase {
     
     private let pvID = "6dd05177-193f-4580-97bd-3331e3abe530"
     private let maximumWaitForExpectation = 5
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
-    private let email = "sarahleosa@gmail.com"
+    private let emailWithLocation = "sarahleosa@gmail.com"
     private let locationID = "6JiYw7mQna66xN7rxTH2"
     private let consumerType = "XTEKNDUF"
+    private let email = "fakeemail@something.com"
+    private let password = "gogagoga"
 
 
     override func setUpWithError() throws {
@@ -49,8 +52,6 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: Result is nil.")
             }
             
-            XCTAssert(true)
-            
             expectation.fulfill()
         }
         
@@ -65,7 +66,7 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetLocations")
         
-        Networking.call(function: "getLocations", with: ["email": email]) { result, error in
+        Networking.call(function: "getLocations", with: ["email": emailWithLocation]) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -82,8 +83,6 @@ class NetworkingTests: XCTestCase {
             } else {
                 XCTFail("Error: Result is nil.")
             }
-            
-            XCTAssert(true)
             
             expectation.fulfill()
         }
@@ -112,8 +111,6 @@ class NetworkingTests: XCTestCase {
             } else {
                 XCTFail("Error: Result is nil.")
             }
-            
-            XCTAssert(true)
             
             expectation.fulfill()
         }
@@ -151,8 +148,6 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: Result is nil.")
             }
             
-            XCTAssert(true)
-            
             expectation.fulfill()
         }
         
@@ -183,8 +178,6 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: Result is nil.")
             }
             
-            XCTAssert(true)
-            
             expectation.fulfill()
         }
         
@@ -212,8 +205,6 @@ class NetworkingTests: XCTestCase {
             } else {
                 XCTFail("Error: Result is nil.")
             }
-            
-            XCTAssert(true)
             
             expectation.fulfill()
         }
@@ -243,8 +234,6 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: Result is nil.")
             }
             
-            XCTAssert(true)
-            
             expectation.fulfill()
         }
         
@@ -259,7 +248,7 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetConsumers")
         
-        Networking.call(function: "getPossibleConsumers", with: ["email": email, "locationID": locationID]) { result, error in
+        Networking.call(function: "getPossibleConsumers", with: ["email": emailWithLocation, "locationID": locationID]) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -272,8 +261,6 @@ class NetworkingTests: XCTestCase {
             } else {
                 XCTFail("Error: Result is nil.")
             }
-            
-            XCTAssert(true)
             
             expectation.fulfill()
         }
@@ -307,8 +294,6 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: Result is nil.")
             }
             
-            XCTAssert(true)
-            
             expectation.fulfill()
         }
         
@@ -319,11 +304,28 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-    func testProperSignOff() throws {
+    func testProperSignInAndSignOff() throws {
         
-        Networking.signOut()
+        let expectation = self.expectation(description: "testProperSignInAndSignOff")
         
-        XCTAssert(Networking.isLoggedIn() == false, "Did not sign off properly.")
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            
+            if error != nil {
+                XCTFail(error.debugDescription)
+            }
+            
+            XCTAssertEqual(Networking.isLoggedIn(), true)
+            
+            Networking.signOut()
+            XCTAssertEqual(Networking.isLoggedIn(), false)
+            
+            expectation.fulfill()
+        }
         
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
     }
 }
