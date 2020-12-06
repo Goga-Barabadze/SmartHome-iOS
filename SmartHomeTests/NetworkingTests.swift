@@ -285,6 +285,8 @@ class NetworkingTests: XCTestCase {
         }
     }
     
+    // TODO: Add test for getGenerators
+    
     func testGetConsumerData() throws {
         
         let expectation = self.expectation(description: "testGetConsumerData")
