@@ -34,7 +34,7 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
             }
             
-            if let result = result {
+            if let result = result! as? [String : Any] {
                 
                 XCTAssertNotNil(result["city"])
                 XCTAssertNotNil(result["zip"])
@@ -68,7 +68,7 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
             }
             
-            if let result = result {
+            if let result = result! as? [String : Any] {
                 
                 XCTAssertNotNil(result["PVData"])
                 
@@ -98,7 +98,7 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
             }
             
-            if let result = result {
+            if let result = result! as? [String : Any] {
                 
                 XCTAssertNotNil(result["description"])
                 XCTAssertNotNil(result["temp"])
@@ -126,7 +126,6 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-    // MARK: TODO - Cannot read property 'dt_txt' of undefined. What does this error mean?
     func testGetForecast() throws {
         
         let expectation = self.expectation(description: "testGetForecast")
@@ -137,9 +136,11 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
             }
             
-            if let result = result {
+            if let result = ((result! as? [String : Any])?.first?.value as? NSArray)?.firstObject as? [String : Any] {
                 
-                XCTAssertNotNil(result["Forecasts"])
+                XCTAssertNotNil(result["dt"])
+                XCTAssertNotNil(result["temp"])
+                XCTAssertNotNil(result["description"])
                 
             } else {
                 XCTFail("Error: Result is nil.")
@@ -167,7 +168,7 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
             }
             
-            if let result = result {
+            if let result = result! as? [String : Any] {
                 
                 XCTAssertNotNil(result["Companies"])
                 
@@ -197,7 +198,7 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
             }
             
-            if let result = result {
+            if let result = result! as? [String : Any] {
                 
                 XCTAssertNotNil(result["Consumers"])
                 

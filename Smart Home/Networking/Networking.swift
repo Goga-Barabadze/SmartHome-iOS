@@ -13,7 +13,7 @@ import os
 
 class Networking {
     
-    static func call(function: String, with arguments: [String : Any]?, closure: @escaping ([String: Any]?, NSError?) -> ()){
+    static func call(function: String, with arguments: [String : Any]?, closure: @escaping (Any?, NSError?) -> ()){
         
         Functions.functions().httpsCallable(function).call(arguments) { (result, error) in
             
@@ -32,12 +32,7 @@ class Networking {
                 return
             }
             
-            if let data = (result?.data as? [String: Any]) {
-                closure(data, nil)
-                return
-            }
-            
-            closure(nil, nil)
+            closure(result?.data, nil)
         }
     }
     
