@@ -15,6 +15,7 @@ class NetworkingTests: XCTestCase {
     private let maximumWaitForExpectation = 10
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
     private let email = "sarahleosa@gmail.com"
+    private let locationID = "6JiYw7mQna66xN7rxTH2"
 
 
     override func setUpWithError() throws {
@@ -70,8 +71,6 @@ class NetworkingTests: XCTestCase {
             }
             
             if let result = ((((result! as? [String : Any])?["Locations"] as? NSArray)?.firstObject) as? [String : Any])?["Location"] as? [String : Any] {
-                
-                print(result)
                 
                 XCTAssertNotNil(result["city"])
                 XCTAssertNotNil(result["country"])
@@ -230,6 +229,36 @@ class NetworkingTests: XCTestCase {
         let expectation = self.expectation(description: "testGetPossibleConsumers")
         
         Networking.call(function: "getPossibleConsumers", with: ["companyID": compandyID]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result! as? [String : Any] {
+                
+                XCTAssertNotNil(result["Consumers"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            XCTAssert(true)
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func testGetConsumers() throws {
+        
+        let expectation = self.expectation(description: "testGetConsumers")
+        
+        Networking.call(function: "getPossibleConsumers", with: ["email": email, "locationID": locationID]) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
