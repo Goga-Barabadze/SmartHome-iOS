@@ -12,10 +12,11 @@ import XCTest
 class NetworkingTests: XCTestCase {
     
     private let pvID = "6dd05177-193f-4580-97bd-3331e3abe530"
-    private let maximumWaitForExpectation = 10
+    private let maximumWaitForExpectation = 5
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
     private let email = "sarahleosa@gmail.com"
     private let locationID = "6JiYw7mQna66xN7rxTH2"
+    private let consumerType = "XTEKNDUF"
 
 
     override func setUpWithError() throws {
@@ -267,6 +268,38 @@ class NetworkingTests: XCTestCase {
             if let result = result! as? [String : Any] {
                 
                 XCTAssertNotNil(result["Consumers"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            XCTAssert(true)
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func testGetConsumerData() throws {
+        
+        let expectation = self.expectation(description: "testGetConsumerData")
+        
+        Networking.call(function: "getConsumerData", with: ["consumerType": consumerType]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = ((result! as? [String : Any])?["Consumers"] as? NSArray)?.firstObject as? [String : Any] {
+                
+                XCTAssertNotNil(result["state"])
+                XCTAssertNotNil(result["type"])
+                XCTAssertNotNil(result["consumption"])
                 
             } else {
                 XCTFail("Error: Result is nil.")
