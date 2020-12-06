@@ -14,6 +14,7 @@ class NetworkingTests: XCTestCase {
     private let pvID = "6dd05177-193f-4580-97bd-3331e3abe530"
     private let maximumWaitForExpectation = 10
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
+    private let email = "sarahleosa@gmail.com"
 
 
     override func setUpWithError() throws {
@@ -39,6 +40,42 @@ class NetworkingTests: XCTestCase {
                 XCTAssertNotNil(result["city"])
                 XCTAssertNotNil(result["zip"])
                 XCTAssertNotNil(result["country"])
+                XCTAssertNotNil(result["name"])
+                XCTAssertNotNil(result["locationID"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            XCTAssert(true)
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func testGetLocations() throws {
+        
+        let expectation = self.expectation(description: "testGetLocations")
+        
+        Networking.call(function: "getLocations", with: ["email": email]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = ((((result! as? [String : Any])?["Locations"] as? NSArray)?.firstObject) as? [String : Any])?["Location"] as? [String : Any] {
+                
+                print(result)
+                
+                XCTAssertNotNil(result["city"])
+                XCTAssertNotNil(result["country"])
+                XCTAssertNotNil(result["zip"])
                 XCTAssertNotNil(result["name"])
                 XCTAssertNotNil(result["locationID"])
                 
