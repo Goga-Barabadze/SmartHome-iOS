@@ -29,6 +29,34 @@ class NetworkingTests: XCTestCase {
     override func tearDownWithError() throws {
         
     }
+    
+    func testAddLocation() throws {
+        
+        let expectation = self.expectation(description: "testAddLocation")
+        
+        Networking.call(function: "addLocation", with: ["email": email, "name": "Test Location", "zip": "4320", "city": "Perg", "country": "Austria"]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result! as? [String : Any] {
+                
+                XCTAssertNotNil(result["locationID"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
 
     func testGetFroniusLocation() throws {
         
