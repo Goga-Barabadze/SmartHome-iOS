@@ -15,8 +15,7 @@ class NetworkingTests: XCTestCase {
     private let pvID = "6dd05177-193f-4580-97bd-3331e3abe530"
     private let maximumWaitForExpectation = 5
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
-    private let emailWithLocation = "sarahleosa@gmail.com"
-    private let locationID = "6JiYw7mQna66xN7rxTH2"
+    private let locationID = "iQPYVxHRAuqZpdiaTn7B"
     private let consumerType = "XTEKNDUF"
     private let email = "fakeemail@something.com"
     private let password = "gogagoga"
@@ -28,6 +27,34 @@ class NetworkingTests: XCTestCase {
 
     override func tearDownWithError() throws {
         
+    }
+    
+    func testAddPV() throws {
+        
+        let expectation = self.expectation(description: "testAddPV")
+        
+        Networking.call(function: "addPV", with: ["email": email, "locationID": locationID, "pvID": pvID]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result! as? [String : Any] {
+                
+                XCTAssertEqual(result["message"] as? String, "Successful")
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     func testAddLocation() throws {
@@ -94,7 +121,7 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetLocations")
         
-        Networking.call(function: "getLocations", with: ["email": emailWithLocation]) { result, error in
+        Networking.call(function: "getLocations", with: ["email": email]) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
