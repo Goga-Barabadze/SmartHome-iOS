@@ -51,6 +51,9 @@
                <Test
                   Identifier = "NetworkingTests/testGetConsumers()">
                </Test>
+               <Test
+                  Identifier = "NetworkingTests/testGetPVData()">
+               </Test>
             </SkippedTests>
          </TestableReference>
          <TestableReference

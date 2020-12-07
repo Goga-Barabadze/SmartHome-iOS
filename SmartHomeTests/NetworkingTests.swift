@@ -248,7 +248,7 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetConsumers")
         
-        Networking.call(function: "getPossibleConsumers", with: ["email": emailWithLocation, "locationID": locationID]) { result, error in
+        Networking.call(function: "getPossibleConsumers", with: ["email": email, "locationID": locationID]) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
