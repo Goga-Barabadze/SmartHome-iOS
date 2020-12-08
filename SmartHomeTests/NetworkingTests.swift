@@ -16,6 +16,7 @@ class NetworkingTests: XCTestCase {
     private let maximumWaitForExpectation = 10
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
     private let locationID = "iQPYVxHRAuqZpdiaTn7B"
+    private let consumerID = "6knLpFwrK36jFcGdOsOn"
     private let consumerType = "XTEKNDUF"
     private let email = "fakeemail@something.com"
     private let password = "gogagoga"
@@ -453,7 +454,41 @@ class NetworkingTests: XCTestCase {
     
     // MARK: Update Functions
     
-    
+    func testUpdateState() throws {
+        
+        let expectation = self.expectation(description: "testUpdateState")
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "locationID": locationID,
+            "consumerID": consumerID,
+            "modus": "START",
+            "pvID": pvID
+        ]
+        
+        Networking.call(function: "updateState", with: parameters) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result! as? [String : Any] {
+                
+                XCTAssertNotNil(result["consumerState"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
     
     // MARK: Miscellaneous Tests
     
