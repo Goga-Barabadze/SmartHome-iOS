@@ -283,7 +283,7 @@ class NetworkingTests: XCTestCase {
         Networking.call(function: "getConsumers", with: parameters) { result, error in
             
             if error != nil {
-                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+                XCTFail("Error: \(String(describing: error.debugDescription))")
             }
             
             if let result = result as? [String : Any] {
