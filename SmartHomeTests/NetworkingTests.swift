@@ -344,15 +344,17 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetConsumers")
         
-        Networking.call(function: "getPossibleConsumers", with: ["email": email, "locationID": locationID]) { result, error in
+        Networking.call(function: "getPossibleConsumers", with: ["companyID" : "cotaTbmhNQlPbZnIn3Cq"]) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
             }
             
-            if let result = result! as? [String : Any] {
+            if let result = (((result! as? [String : Any])?["Consumers"] as? NSArray)?.firstObject as? [String : Any])?["Consumer"] as? [String : Any] {
                 
-                XCTAssertNotNil(result["Consumers"])
+                XCTAssertNotNil(result["consumerID"])
+                XCTAssertNotNil(result["averageConsumption"])
+                XCTAssertNotNil(result["consumerType"])
                 
             } else {
                 XCTFail("Error: Result is nil.")
