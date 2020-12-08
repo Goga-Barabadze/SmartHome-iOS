@@ -12,8 +12,8 @@ import FirebaseAuth
 
 class NetworkingTests: XCTestCase {
     
-    private let pvID = "6dd05177-193f-4580-97bd-3331e3abe530"
-    private let maximumWaitForExpectation = 5
+    private let pvID = "f5b8a9f8-9432-47fe-9875-3030bf74e92f"
+    private let maximumWaitForExpectation = 10
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
     private let locationID = "iQPYVxHRAuqZpdiaTn7B"
     private let consumerType = "XTEKNDUF"
