@@ -29,101 +29,7 @@ class NetworkingTests: XCTestCase {
         
     }
     
-    func testAddPV() throws {
-        
-        let expectation = self.expectation(description: "testAddPV")
-        
-        Networking.call(function: "addPV", with: ["email": email, "locationID": locationID, "pvID": pvID]) { result, error in
-            
-            if error != nil {
-                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-            }
-            
-            if let result = result! as? [String : Any] {
-                
-                XCTAssertEqual(result["message"] as? String, "Successful")
-                
-            } else {
-                XCTFail("Error: Result is nil.")
-            }
-            
-            expectation.fulfill()
-        }
-        
-        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-            if let error = error {
-                XCTFail("Error: \(error.localizedDescription)")
-            }
-        }
-    }
-    
-    func testAddConsumer() throws {
-        
-        let expectation = self.expectation(description: "testAddConsumer")
-        
-        let parameters: [String : Any] = [
-            "email": email,
-            "locationID": locationID,
-            "companyName": "companyName",
-            "consumerName": "consumerName",
-            "consumerType": "consumerType",
-            "consumerSerial": "consumerSerial",
-            "averageConsumption": "averageConsumption",
-            "state": "state"
-        ]
-        
-        Networking.call(function: "addConsumer", with: parameters) { result, error in
-            
-            if error != nil {
-                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-            }
-            
-            if let result = result! as? [String : Any] {
-                
-                XCTAssertNotNil(result["state"])
-                XCTAssertNotNil(result["consumerID"])
-                
-            } else {
-                XCTFail("Error: Result is nil.")
-            }
-            
-            expectation.fulfill()
-        }
-        
-        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-            if let error = error {
-                XCTFail("Error: \(error.localizedDescription)")
-            }
-        }
-    }
-    
-    func testAddLocation() throws {
-        
-        let expectation = self.expectation(description: "testAddLocation")
-        
-        Networking.call(function: "addLocation", with: ["email": email, "name": "Test Location", "zip": "4320", "city": "Perg", "country": "Austria"]) { result, error in
-            
-            if error != nil {
-                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-            }
-            
-            if let result = result! as? [String : Any] {
-                
-                XCTAssertNotNil(result["locationID"])
-                
-            } else {
-                XCTFail("Error: Result is nil.")
-            }
-            
-            expectation.fulfill()
-        }
-        
-        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-            if let error = error {
-                XCTFail("Error: \(error.localizedDescription)")
-            }
-        }
-    }
+    // MARK: Get Functions
 
     func testGetFroniusLocation() throws {
         
@@ -401,6 +307,106 @@ class NetworkingTests: XCTestCase {
             }
         }
     }
+    
+    // MARK: Add Functions
+    
+    func testAddPV() throws {
+        
+        let expectation = self.expectation(description: "testAddPV")
+        
+        Networking.call(function: "addPV", with: ["email": email, "locationID": locationID, "pvID": pvID]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result! as? [String : Any] {
+                
+                XCTAssertEqual(result["message"] as? String, "Successful")
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func testAddConsumer() throws {
+        
+        let expectation = self.expectation(description: "testAddConsumer")
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "locationID": locationID,
+            "companyName": "companyName",
+            "consumerName": "consumerName",
+            "consumerType": "consumerType",
+            "consumerSerial": "consumerSerial",
+            "averageConsumption": "averageConsumption",
+            "state": "state"
+        ]
+        
+        Networking.call(function: "addConsumer", with: parameters) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result! as? [String : Any] {
+                
+                XCTAssertNotNil(result["state"])
+                XCTAssertNotNil(result["consumerID"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func testAddLocation() throws {
+        
+        let expectation = self.expectation(description: "testAddLocation")
+        
+        Networking.call(function: "addLocation", with: ["email": email, "name": "Test Location", "zip": "4320", "city": "Perg", "country": "Austria"]) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result! as? [String : Any] {
+                
+                XCTAssertNotNil(result["locationID"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    // MARK: Miscellaneous Tests
     
     func testProperSignInAndSignOff() throws {
         
