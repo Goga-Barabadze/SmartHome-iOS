@@ -271,6 +271,39 @@ class NetworkingTests: XCTestCase {
         }
     }
     
+    func testGetGenerators() throws {
+        
+        let expectation = self.expectation(description: "testGetGenerators")
+        
+        let parameters: [String : Any] = [
+            "email" : "fakeemail@something.com",
+            "locationID" : "iQPYVxHRAuqZpdiaTn7B"
+        ]
+        
+        Networking.call(function: "getGenerators", with: parameters) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error.debugDescription))")
+            }
+            
+            if let result = result as? [String : Any] {
+                
+                XCTAssertNotNil(result["Generators"])
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func testGetConsumers() throws {
         
         let expectation = self.expectation(description: "testGetConsumers")
@@ -288,7 +321,7 @@ class NetworkingTests: XCTestCase {
             
             if let result = result as? [String : Any] {
                 
-                print(result)
+                XCTAssertNotNil(result["Consumers"])
                 
             } else {
                 XCTFail("Error: Result is nil.")
@@ -303,8 +336,6 @@ class NetworkingTests: XCTestCase {
             }
         }
     }
-    
-    // TODO: Add test for getGenerators
     
     func testGetConsumerData() throws {
         
