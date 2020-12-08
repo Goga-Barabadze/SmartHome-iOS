@@ -189,6 +189,7 @@ class NetworkingTests: XCTestCase {
         }
     }
     
+    // Warning: The backend doesn't differentiate between an error and when the pv is simply turned off!
     func testGetPVData() throws {
         
         let expectation = self.expectation(description: "testGetPVData")
