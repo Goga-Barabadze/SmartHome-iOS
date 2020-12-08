@@ -35,7 +35,11 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetFroniusLocation")
         
-        Networking.call(function: "getFroniusLocation", with: ["pvID": pvID]) { result, error in
+        let parameters: [String : Any] = [
+            "pvID": pvID
+        ]
+        
+        Networking.call(function: "getFroniusLocation", with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -67,7 +71,11 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetLocations")
         
-        Networking.call(function: "getLocations", with: ["email": email]) { result, error in
+        let parameters: [String : Any] = [
+            "email": email
+        ]
+        
+        Networking.call(function: "getLocations", with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -100,7 +108,11 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetPVData")
         
-        Networking.call(function: "getPVData", with: ["pvID": pvID]) { result, error in
+        let parameters: [String : Any] = [
+            "pvID": pvID
+        ]
+        
+        Networking.call(function: "getPVData", with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -128,7 +140,11 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetWeather")
         
-        Networking.call(function: "getWeather", with: ["city": "Perg"]) { result, error in
+        let parameters: [String : Any] = [
+            "city": "Perg"
+        ]
+        
+        Networking.call(function: "getWeather", with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -164,7 +180,11 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetForecast")
         
-        Networking.call(function: "getForecast", with: ["city": "Perg"]) { result, error in
+        let parameters: [String : Any] = [
+            "city": "Perg"
+        ]
+        
+        Networking.call(function: "getForecast", with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -222,7 +242,11 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetPossibleConsumers")
         
-        Networking.call(function: "getPossibleConsumers", with: ["companyID": compandyID]) { result, error in
+        let parameters: [String : Any] = [
+            "companyID": compandyID
+        ]
+        
+        Networking.call(function: "getPossibleConsumers", with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -250,7 +274,12 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetConsumers")
         
-        Networking.call(function: "getConsumers", with: ["email" : email, "locationID" : locationID]) { result, error in
+        let parameters: [String : Any] = [
+            "email" : "fakeemail@something.com",
+            "locationID" : "iQPYVxHRAuqZpdiaTn7B"
+        ]
+        
+        Networking.call(function: "getConsumers", with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -258,9 +287,7 @@ class NetworkingTests: XCTestCase {
             
             if let result = result as? [String : Any] {
                 
-                XCTAssertNotNil(result["consumerID"])
-                XCTAssertNotNil(result["averageConsumption"])
-                XCTAssertNotNil(result["consumerType"])
+                print(result)
                 
             } else {
                 XCTFail("Error: Result is nil.")
@@ -282,7 +309,11 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetConsumerData")
         
-        Networking.call(function: "getConsumerData", with: ["consumerType": consumerType]) { result, error in
+        let parameters: [String : Any] = [
+            "consumerType": consumerType
+        ]
+        
+        Networking.call(function: "getConsumerData", with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -314,7 +345,13 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testAddPV")
         
-        Networking.call(function: "addPV", with: ["email": email, "locationID": locationID, "pvID": pvID]) { result, error in
+        let parameters: [String : Any] = [
+            "email": email,
+            "locationID": locationID,
+            "pvID": pvID
+        ]
+        
+        Networking.call(function: "addPV", with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -382,7 +419,15 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testAddLocation")
         
-        Networking.call(function: "addLocation", with: ["email": email, "name": "Test Location", "zip": "4320", "city": "Perg", "country": "Austria"]) { result, error in
+        let parameters: [String : Any] = [
+            "email": email,
+            "name": "Test Location",
+            "zip": "4320",
+            "city": "Perg",
+            "country": "Austria"
+        ]
+        
+        Networking.call(function: "addLocation", with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
