@@ -95,7 +95,7 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-    // Warning: The backend doesn't differentiate between an error and when the pv is simply turned off!
+    // Warning: Could fail if Fronius API is down
     func testGetPVData() throws {
         
         let expectation = self.expectation(description: "testGetPVData")
@@ -405,6 +405,10 @@ class NetworkingTests: XCTestCase {
             }
         }
     }
+    
+    // MARK: Update Functions
+    
+    
     
     // MARK: Miscellaneous Tests
     
