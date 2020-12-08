@@ -309,8 +309,8 @@ class NetworkingTests: XCTestCase {
         let expectation = self.expectation(description: "testGetConsumers")
         
         let parameters: [String : Any] = [
-            "email" : "fakeemail@something.com",
-            "locationID" : "iQPYVxHRAuqZpdiaTn7B"
+            "email" : email,
+            "locationID" : locationID
         ]
         
         Networking.call(function: "getConsumers", with: parameters) { result, error in
