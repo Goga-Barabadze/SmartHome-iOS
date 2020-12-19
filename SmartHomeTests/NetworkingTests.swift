@@ -472,14 +472,22 @@ class NetworkingTests: XCTestCase {
                 
                 XCTAssertNotNil(result["locationID"])
                 
+                let deleteLocationParameters: [String : Any] = [
+                    "email": self.email,
+                    "locationID": result["locationID"]!
+                ]
+                
+                Networking.call(function: "deleteLocation", with: deleteLocationParameters) { (result, error) in
+                    
+                    expectation.fulfill()
+                }
+                
             } else {
                 XCTFail("Error: Result is nil.")
             }
-            
-            expectation.fulfill()
         }
         
-        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation * 2)) { (error) in
             if let error = error {
                 XCTFail("Error: \(error.localizedDescription)")
             }
