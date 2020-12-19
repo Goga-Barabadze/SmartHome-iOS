@@ -595,6 +595,7 @@ class NetworkingTests: XCTestCase {
     }
     
     func testUpdateConsumer() throws {
+        
         let expectation = self.expectation(description: "testUpdateConsumer")
         
         let parameters: [String : Any] = [
@@ -638,6 +639,55 @@ class NetworkingTests: XCTestCase {
     
     func testDeleteLocation() throws {
         
+        let expectation = self.expectation(description: "testDeleteLocation")
+        
+        // Create a location to delete it afterwards
+        
+        let addLocationParameters: [String : Any] = [
+            "email": email,
+            "name": "Test Location",
+            "zip": "4320",
+            "city": "Perg",
+            "country": "Austria"
+        ]
+        
+        Networking.call(function: "addLocation", with: addLocationParameters) { (result, error) in
+            
+            // Get generated locationID
+            guard let locationID = (result! as? [String : Any])?["locationID"] else {
+                XCTFail()
+                return
+            }
+            
+            // Delete it
+            let deleteLocationParameters: [String : Any] = [
+                "email": self.email,
+                "locationID": locationID
+            ]
+            
+            Networking.call(function: "deleteLocation", with: deleteLocationParameters) { (resultOfDelete, errorOfDelete) in
+                
+                if errorOfDelete != nil {
+                    XCTFail("Error: \(String(describing: errorOfDelete?.localizedDescription))")
+                }
+                
+                if let result = resultOfDelete! as? [String : Any] {
+                    
+                    XCTAssertNotNil(result["message"])
+                    
+                } else {
+                    XCTFail("Error: Result is nil.")
+                }
+                
+                expectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation * 2)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     func testDeleteGenerator() throws {
