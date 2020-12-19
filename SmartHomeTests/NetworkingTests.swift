@@ -696,13 +696,13 @@ class NetworkingTests: XCTestCase {
         // Create a generator to delete it afterwards
         let temporaryPVID = "delete-me"
         
-        let addPV: [String : Any] = [
+        let addPVParameters: [String : Any] = [
             "email": email,
             "locationID": locationID,
             "pvID": temporaryPVID
         ]
         
-        Networking.call(function: "addPV", with: addPV) { (result, error) in
+        Networking.call(function: "addPV", with: addPVParameters) { (result, error) in
             
             // Delete it
             let deleteGeneratorParameters: [String : Any] = [
@@ -737,7 +737,58 @@ class NetworkingTests: XCTestCase {
     }
     
     func testDeleteConsumer() throws {
+        let expectation = self.expectation(description: "testDeleteConsumer")
         
+        // Create a consumer to delete it afterwards
+        let addConsumerParameters: [String : Any] = [
+            "email": email,
+            "locationID": locationID,
+            "companyName": "companyName",
+            "consumerName": "consumerName",
+            "consumerType": "consumerType",
+            "consumerSerial": "consumerSerial",
+            "averageConsumption": 0,
+            "state": "state"
+        ]
+        
+        Networking.call(function: "addConsumer", with: addConsumerParameters) { (result, error) in
+            
+            // Get generated locationID
+            guard let consumerID = (result! as? [String : Any])?["consumerID"] else {
+                XCTFail()
+                return
+            }
+            
+            // Delete it
+            let deleteConsumerParameters: [String : Any] = [
+                "email": self.email,
+                "locationID": self.locationID,
+                "consumerID": consumerID
+            ]
+            
+            Networking.call(function: "deleteConsumer", with: deleteConsumerParameters) { (resultOfDelete, errorOfDelete) in
+                
+                if errorOfDelete != nil {
+                    XCTFail("Error: \(String(describing: errorOfDelete?.localizedDescription))")
+                }
+                
+                if let result = resultOfDelete! as? [String : Any] {
+                    
+                    XCTAssertNotNil(result["message"])
+                    
+                } else {
+                    XCTFail("Error: Result is nil.")
+                }
+                
+                expectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation * 2)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     // MARK: Account Tests
