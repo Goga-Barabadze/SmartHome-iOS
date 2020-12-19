@@ -15,8 +15,8 @@ class NetworkingTests: XCTestCase {
     private let pvID = "f5b8a9f8-9432-47fe-9875-3030bf74e92f"
     private let maximumWaitForExpectation = 10
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
-    private let locationID = "iQPYVxHRAuqZpdiaTn7B"
-    private let consumerID = "6knLpFwrK36jFcGdOsOn"
+    private let locationID = "1iXbFbWvzoiyUU7LXlgO"
+    private let consumerID = "3WAyPPXhpSXMpV4oQNkX"
     private let consumerType = "XTEKNDUF"
     private let email = "fakeemail@something.com"
     private let password = "gogagoga"
@@ -418,7 +418,7 @@ class NetworkingTests: XCTestCase {
             "consumerName": "consumerName",
             "consumerType": "consumerType",
             "consumerSerial": "consumerSerial",
-            "averageConsumption": "averageConsumption",
+            "averageConsumption": 0,
             "state": "state"
         ]
         
