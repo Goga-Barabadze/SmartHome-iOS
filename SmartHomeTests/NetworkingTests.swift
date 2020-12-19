@@ -828,5 +828,41 @@ class NetworkingTests: XCTestCase {
     
     func testUpdateUserPassword() throws {
         
+        let expectation = self.expectation(description: "testUpdateUserPassword")
+        
+        var parameters: [String : Any] = [
+            "email": email,
+            "password": "DiesesPasswordWirdGleichWiederZurückgesetzt"
+        ]
+        
+        Networking.call(function: "updateUserPassword", with: parameters) { result, error in
+            
+            if error != nil {
+                XCTFail("Error: \(String(describing: error?.localizedDescription))")
+            }
+            
+            if let result = result! as? [String : Any] {
+                
+                XCTAssertNotNil(result["message"])
+                
+                // Put the old password back in now
+                parameters["password"] = self.password
+                
+                Networking.call(function: "updateUserPassword", with: parameters) { (result, error) in
+                    expectation.fulfill()
+                }
+                
+            } else {
+                XCTFail("Error: Result is nil.")
+            }
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+        
     }
 }
