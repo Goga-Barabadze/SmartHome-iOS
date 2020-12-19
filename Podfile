@@ -1,5 +1,9 @@
 platform :ios, '13.0'
 
+def shared_pods
+   pod 'Firebase/Auth'
+end
+
 target 'Smart Home' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -11,13 +15,9 @@ target 'Smart Home' do
     # Pods for testing
   end
 
-  target 'SmartHomeUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  shared_pods
 
   pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Functions'
   pod 'Firebase/Performance'
@@ -25,4 +25,8 @@ target 'Smart Home' do
   pod 'Firebase/Messaging'
   pod 'Charts'
 
+end
+
+target 'SmartHomeUITests' do
+    shared_pods
 end
