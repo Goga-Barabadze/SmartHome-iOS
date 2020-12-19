@@ -521,7 +521,33 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-    // MARK: Miscellaneous Tests
+    func testUpdateLocation() throws {
+        
+    }
+    
+    func testUpdateGenerator() throws {
+        
+    }
+    
+    func testUpdateConsumer() throws {
+        
+    }
+    
+    // MARK: Delete Tests
+    
+    func testDeleteLocation() throws {
+        
+    }
+    
+    func testDeleteGenerator() throws {
+        
+    }
+    
+    func testDeleteConsumer() throws {
+        
+    }
+    
+    // MARK: Account Tests
     
     func testProperSignInAndSignOff() throws {
         
@@ -546,5 +572,9 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: \(error.localizedDescription)")
             }
         }
+    }
+    
+    func testUpdateUserPassword() throws {
+        
     }
 }
