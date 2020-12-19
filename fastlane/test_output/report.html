@@ -110,7 +110,9 @@
       </section>
       <section class="right">
         <section id="counters">
-          <h2 id="test-count"><span class="number">4</span> tests</h2>
+          <h2 id="test-count"><span class="number">31</span> tests</h2>
+          
+            <h2 id="fail-count"><span class="number">3</span> failures</h2>
           
         </section>
         <section id="segment-bar">
@@ -121,32 +123,87 @@
     <section id="test-suites">
       
         
-        <section class="test-suite passing" id="SmartHomeTests.NetworkingTests">
+        <section class="test-suite passing" id="SmartHomeTests.ModelTests">
           <section class="heading" onclick="toggleTests(this);">
-            <h3 class="title">SmartHomeTests.NetworkingTests</h3>
+            <h3 class="title">SmartHomeTests.ModelTests</h3>
           </section>
           <section class="tests">
             <table>
             
               
-              <tr class="test passing "  onclick="toggleDetails('testExample');">
+              <tr class="test passing "  onclick="toggleDetails('testCurrentConsumptionEmpty');">
                 <td>
                   
-                    <h3 class="time">0.003s</h3>
+                    <h3 class="time">0.002s</h3>
                   
                 </td>
-                <td><h3 class="title">testExample</h3></td>
+                <td><h3 class="title">testCurrentConsumptionEmpty</h3></td>
               </tr>
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('testPerformanceExample');">
+              <tr class="test passing odd"  onclick="toggleDetails('testCurrentConsumptionWithMultipleMixedRunningAndNotRunningConsumers');">
                 <td>
                   
-                    <h3 class="time">0.635s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
-                <td><h3 class="title">testPerformanceExample</h3></td>
+                <td><h3 class="title">testCurrentConsumptionWithMultipleMixedRunningAndNotRunningConsumers</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testCurrentConsumptionWithMultipleRunningConsumers');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">testCurrentConsumptionWithMultipleRunningConsumers</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testCurrentProductionEmpty');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">testCurrentProductionEmpty</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testCurrentProductionWithMultipleMixedRunningAndNotRunningProducers');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">testCurrentProductionWithMultipleMixedRunningAndNotRunningProducers</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testCurrentProductionWithMultipleRunningProducers');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">testCurrentProductionWithMultipleRunningProducers</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testPerformanceOfConsumptionProductionCalculation');">
+                <td>
+                  
+                    <h3 class="time">10.483s</h3>
+                  
+                </td>
+                <td><h3 class="title">testPerformanceOfConsumptionProductionCalculation</h3></td>
               </tr>
               
             
@@ -155,32 +212,319 @@
         </section>
       
         
-        <section class="test-suite passing" id="SmartHomeTests.SmartHomeTests">
+        <section class="test-suite failing" id="SmartHomeTests.NetworkingTests">
           <section class="heading" onclick="toggleTests(this);">
-            <h3 class="title">SmartHomeTests.SmartHomeTests</h3>
+            <h3 class="title">SmartHomeTests.NetworkingTests</h3>
           </section>
           <section class="tests">
             <table>
             
               
-              <tr class="test passing "  onclick="toggleDetails('testExample');">
+              <tr class="test passing "  onclick="toggleDetails('testAddConsumer');">
+                <td>
+                  
+                    <h3 class="time">2.781s</h3>
+                  
+                </td>
+                <td><h3 class="title">testAddConsumer</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testAddLocation');">
+                <td>
+                  
+                    <h3 class="time">3.182s</h3>
+                  
+                </td>
+                <td><h3 class="title">testAddLocation</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testAddPV');">
+                <td>
+                  
+                    <h3 class="time">3.081s</h3>
+                  
+                </td>
+                <td><h3 class="title">testAddPV</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testDeleteConsumer');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">testDeleteConsumer</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test failing "  onclick="toggleDetails('testDeleteGenerator');">
+                <td>
+                  
+                </td>
+                <td><h3 class="title">testDeleteGenerator</h3></td>
+              </tr>
+              
+                <tr class="details failing testDeleteGenerator">
+                  <td></td>
+                  <td>
+                    
+                      <section class="test-detail reason">failed</section>
+                    
+                    
+                      <section class="test-detail snippet">            
+            <span class="c1">// Delete it</span>
+            <span class="k">let</span> <span class="nv">deleteGeneratorParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+</section>
+                      <section class="test-detail">/Users/gogabarabadze/Documents/School/Diplomarbeit/iOS/SmartHomeTests/NetworkingTests.swift:708</section>
+                    
+                    
+                  </td>
+                </tr>
+              
+            
+              
+              <tr class="test failing odd"  onclick="toggleDetails('testDeleteGenerator');">
+                <td>
+                  
+                </td>
+                <td><h3 class="title">testDeleteGenerator</h3></td>
+              </tr>
+              
+                <tr class="details failing testDeleteGenerator">
+                  <td></td>
+                  <td>
+                    
+                      <section class="test-detail reason">Asynchronous wait failed: Exceeded timeout of 20 seconds, with unfulfilled expectations: "testDeleteGenerator".</section>
+                    
+                    
+                      <section class="test-detail snippet">            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</section>
+                      <section class="test-detail">/Users/gogabarabadze/Documents/School/Diplomarbeit/iOS/SmartHomeTests/NetworkingTests.swift:736</section>
+                    
+                    
+                  </td>
+                </tr>
+              
+            
+              
+              <tr class="test failing "  onclick="toggleDetails('testDeleteGenerator');">
+                <td>
+                  
+                </td>
+                <td><h3 class="title">testDeleteGenerator</h3></td>
+              </tr>
+              
+                <tr class="details failing testDeleteGenerator">
+                  <td></td>
+                  <td>
+                    
+                      <section class="test-detail reason">failed - Error: The operation couldn’t be completed. (com.apple.XCTestErrorDomain error 0.)</section>
+                    
+                    
+                      <section class="test-detail snippet">    <span class="p">}</span>
+    
+    <span class="kd">func</span> <span class="nf">testDeleteConsumer</span><span class="p">()</span> <span class="k">throws</span> <span class="p">{</span>
+</section>
+                      <section class="test-detail">/Users/gogabarabadze/Documents/School/Diplomarbeit/iOS/SmartHomeTests/NetworkingTests.swift:738</section>
+                    
+                    
+                  </td>
+                </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testDeleteLocation');">
+                <td>
+                  
+                    <h3 class="time">4.231s</h3>
+                  
+                </td>
+                <td><h3 class="title">testDeleteLocation</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testGetConsumerData');">
+                <td>
+                  
+                    <h3 class="time">5.186s</h3>
+                  
+                </td>
+                <td><h3 class="title">testGetConsumerData</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testGetConsumers');">
+                <td>
+                  
+                    <h3 class="time">3.071s</h3>
+                  
+                </td>
+                <td><h3 class="title">testGetConsumers</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testGetForecast');">
+                <td>
+                  
+                    <h3 class="time">2.816s</h3>
+                  
+                </td>
+                <td><h3 class="title">testGetForecast</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testGetFroniusLocation');">
+                <td>
+                  
+                    <h3 class="time">3.696s</h3>
+                  
+                </td>
+                <td><h3 class="title">testGetFroniusLocation</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testGetGenerators');">
+                <td>
+                  
+                    <h3 class="time">2.702s</h3>
+                  
+                </td>
+                <td><h3 class="title">testGetGenerators</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testGetLocations');">
+                <td>
+                  
+                    <h3 class="time">2.815s</h3>
+                  
+                </td>
+                <td><h3 class="title">testGetLocations</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testGetPossibleCompanies');">
+                <td>
+                  
+                    <h3 class="time">2.239s</h3>
+                  
+                </td>
+                <td><h3 class="title">testGetPossibleCompanies</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testGetPossibleConsumers');">
+                <td>
+                  
+                    <h3 class="time">2.625s</h3>
+                  
+                </td>
+                <td><h3 class="title">testGetPossibleConsumers</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testGetPVData');">
+                <td>
+                  
+                    <h3 class="time">4.628s</h3>
+                  
+                </td>
+                <td><h3 class="title">testGetPVData</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testGetWeather');">
+                <td>
+                  
+                    <h3 class="time">3.050s</h3>
+                  
+                </td>
+                <td><h3 class="title">testGetWeather</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testProperSignInAndSignOff');">
+                <td>
+                  
+                    <h3 class="time">0.640s</h3>
+                  
+                </td>
+                <td><h3 class="title">testProperSignInAndSignOff</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testUpdateConsumer');">
+                <td>
+                  
+                    <h3 class="time">2.688s</h3>
+                  
+                </td>
+                <td><h3 class="title">testUpdateConsumer</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testUpdateGenerator');">
+                <td>
+                  
+                    <h3 class="time">2.751s</h3>
+                  
+                </td>
+                <td><h3 class="title">testUpdateGenerator</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testUpdateLocation');">
+                <td>
+                  
+                    <h3 class="time">2.878s</h3>
+                  
+                </td>
+                <td><h3 class="title">testUpdateLocation</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('testUpdateState');">
+                <td>
+                  
+                    <h3 class="time">6.758s</h3>
+                  
+                </td>
+                <td><h3 class="title">testUpdateState</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('testUpdateUserPassword');">
                 <td>
                   
                     <h3 class="time">0.001s</h3>
                   
                 </td>
-                <td><h3 class="title">testExample</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('testPerformanceExample');">
-                <td>
-                  
-                    <h3 class="time">0.253s</h3>
-                  
-                </td>
-                <td><h3 class="title">testPerformanceExample</h3></td>
+                <td><h3 class="title">testUpdateUserPassword</h3></td>
               </tr>
               
             

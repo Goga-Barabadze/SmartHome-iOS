@@ -691,7 +691,49 @@ class NetworkingTests: XCTestCase {
     }
     
     func testDeleteGenerator() throws {
+        let expectation = self.expectation(description: "testDeleteGenerator")
         
+        // Create a generator to delete it afterwards
+        let temporaryPVID = "delete-me"
+        
+        let addPV: [String : Any] = [
+            "email": email,
+            "locationID": locationID,
+            "pvID": temporaryPVID
+        ]
+        
+        Networking.call(function: "addPV", with: addPV) { (result, error) in
+            
+            // Delete it
+            let deleteGeneratorParameters: [String : Any] = [
+                "email": self.email,
+                "locationID": self.locationID,
+                "pvID": temporaryPVID
+            ]
+            
+            Networking.call(function: "deleteGenerator", with: deleteGeneratorParameters) { (resultOfDelete, errorOfDelete) in
+                
+                if errorOfDelete != nil {
+                    XCTFail("Error: \(String(describing: errorOfDelete?.localizedDescription))")
+                }
+                
+                if let result = resultOfDelete! as? [String : Any] {
+                    
+                    XCTAssertNotNil(result["message"])
+                    
+                } else {
+                    XCTFail("Error: Result is nil.")
+                }
+                
+                expectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation * 2)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     func testDeleteConsumer() throws {
