@@ -10,7 +10,7 @@ import XCTest
 @testable import Smart_Home
 import FirebaseAuth
 
-class NetworkingTests: XCTestCase {
+class LayerlessNetworkingTests: XCTestCase {
     
     private let pvID = "f5b8a9f8-9432-47fe-9875-3030bf74e92f"
     private let maximumWaitForExpectation = 10
