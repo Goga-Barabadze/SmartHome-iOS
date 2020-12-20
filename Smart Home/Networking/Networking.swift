@@ -13,9 +13,33 @@ import os
 
 class Networking {
     
-    static func call(function: String, with arguments: [String : Any]?, closure: @escaping (Any?, NSError?) -> ()){
+    enum HTTPFunction : String {
+        case getFroniusLocation = "getFroniusLocation"
+        case getLocations = "getLocations"
+        case getPVData = "getPVData"
+        case getWeather = "getWeather"
+        case getForecast = "getForecast"
+        case getPossibleCompanies = "getPossibleCompanies"
+        case getPossibleConsumers = "getPossibleConsumers"
+        case getGenerators = "getGenerators"
+        case getConsumers = "getConsumers"
+        case getConsumerData = "getConsumerData"
+        case addPV = "addPV"
+        case addConsumer = "addConsumer"
+        case addLocation = "addLocation"
+        case updateState = "updateState"
+        case updateLocation = "updateLocation"
+        case updateGenerator = "updateGenerator"
+        case updateConsumer = "updateConsumer"
+        case deleteLocation = "deleteLocation"
+        case deleteGenerator = "deleteGenerator"
+        case deleteConsumer = "deleteConsumer"
+        case updateUserPassword = "updateUserPassword"
+    }
+    
+    static func call(function: HTTPFunction, with arguments: [String : Any]?, closure: @escaping (Any?, NSError?) -> ()){
         
-        Functions.functions().httpsCallable(function).call(arguments) { (result, error) in
+        Functions.functions().httpsCallable(function.rawValue).call(arguments) { (result, error) in
             
             if let error = error as NSError? {
                 

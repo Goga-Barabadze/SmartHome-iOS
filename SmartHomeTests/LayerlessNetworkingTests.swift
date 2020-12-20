@@ -43,7 +43,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "pvID": pvID
         ]
         
-        Networking.call(function: "getFroniusLocation", with: parameters) { result, error in
+        Networking.call(function: .getFroniusLocation, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -79,7 +79,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "email": email
         ]
         
-        Networking.call(function: "getLocations", with: parameters) { result, error in
+        Networking.call(function: .getLocations, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -116,7 +116,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "pvID": pvID
         ]
         
-        Networking.call(function: "getPVData", with: parameters) { result, error in
+        Networking.call(function: .getPVData, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -148,7 +148,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "city": "Perg"
         ]
         
-        Networking.call(function: "getWeather", with: parameters) { result, error in
+        Networking.call(function: .getWeather, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -188,7 +188,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "city": "Perg"
         ]
         
-        Networking.call(function: "getForecast", with: parameters) { result, error in
+        Networking.call(function: .getForecast, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -216,9 +216,9 @@ class LayerlessNetworkingTests: XCTestCase {
     
     func testGetPossibleCompanies() throws {
         
-        let expectation = self.expectation(description: "getPossibleCompanies")
+        let expectation = self.expectation(description: "testGetPossibleCompanies")
         
-        Networking.call(function: "getPossibleCompanies", with: nil) { result, error in
+        Networking.call(function: .getPossibleCompanies, with: nil) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -250,7 +250,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "companyID": compandyID
         ]
         
-        Networking.call(function: "getPossibleConsumers", with: parameters) { result, error in
+        Networking.call(function: .getPossibleConsumers, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -283,7 +283,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "locationID" : "iQPYVxHRAuqZpdiaTn7B"
         ]
         
-        Networking.call(function: "getGenerators", with: parameters) { result, error in
+        Networking.call(function: .getGenerators, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error.debugDescription))")
@@ -316,7 +316,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "locationID" : locationID
         ]
         
-        Networking.call(function: "getConsumers", with: parameters) { result, error in
+        Networking.call(function: .getConsumers, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error.debugDescription))")
@@ -348,7 +348,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "consumerType": consumerType
         ]
         
-        Networking.call(function: "getConsumerData", with: parameters) { result, error in
+        Networking.call(function: .getConsumerData, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -386,7 +386,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "pvID": pvID
         ]
         
-        Networking.call(function: "addPV", with: parameters) { result, error in
+        Networking.call(function: .addPV, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -425,7 +425,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "state": "state"
         ]
         
-        Networking.call(function: "addConsumer", with: parameters) { result, error in
+        Networking.call(function: .addConsumer, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -462,7 +462,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "country": "Austria"
         ]
         
-        Networking.call(function: "addLocation", with: parameters) { result, error in
+        Networking.call(function: .addLocation, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -477,7 +477,7 @@ class LayerlessNetworkingTests: XCTestCase {
                     "locationID": result["locationID"]!
                 ]
                 
-                Networking.call(function: "deleteLocation", with: deleteLocationParameters) { (result, error) in
+                Networking.call(function: .deleteLocation, with: deleteLocationParameters) { (result, error) in
                     
                     expectation.fulfill()
                 }
@@ -508,7 +508,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "pvID": pvID
         ]
         
-        Networking.call(function: "updateState", with: parameters) { result, error in
+        Networking.call(function: .updateState, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -544,7 +544,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "locationID": locationID
         ]
         
-        Networking.call(function: "updateLocation", with: parameters) { result, error in
+        Networking.call(function: .updateLocation, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -578,7 +578,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "pvID": pvID
         ]
         
-        Networking.call(function: "updateGenerator", with: parameters) { result, error in
+        Networking.call(function: .updateGenerator, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -619,7 +619,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "pvID": pvID
         ]
         
-        Networking.call(function: "updateConsumer", with: parameters) { result, error in
+        Networking.call(function: .updateConsumer, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -659,7 +659,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "country": "Austria"
         ]
         
-        Networking.call(function: "addLocation", with: addLocationParameters) { (result, error) in
+        Networking.call(function: .addLocation, with: addLocationParameters) { (result, error) in
             
             // Get generated locationID
             guard let locationID = (result! as? [String : Any])?["locationID"] else {
@@ -673,7 +673,7 @@ class LayerlessNetworkingTests: XCTestCase {
                 "locationID": locationID
             ]
             
-            Networking.call(function: "deleteLocation", with: deleteLocationParameters) { (resultOfDelete, errorOfDelete) in
+            Networking.call(function: .deleteLocation, with: deleteLocationParameters) { (resultOfDelete, errorOfDelete) in
                 
                 if errorOfDelete != nil {
                     XCTFail("Error: \(String(describing: errorOfDelete?.localizedDescription))")
@@ -710,7 +710,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "pvID": temporaryPVID
         ]
         
-        Networking.call(function: "addPV", with: addPVParameters) { (result, error) in
+        Networking.call(function: .addPV, with: addPVParameters) { (result, error) in
             
             // Delete it
             let deleteGeneratorParameters: [String : Any] = [
@@ -719,7 +719,7 @@ class LayerlessNetworkingTests: XCTestCase {
                 "pvID": temporaryPVID
             ]
             
-            Networking.call(function: "deleteGenerator", with: deleteGeneratorParameters) { (resultOfDelete, errorOfDelete) in
+            Networking.call(function: .deleteGenerator, with: deleteGeneratorParameters) { (resultOfDelete, errorOfDelete) in
                 
                 if errorOfDelete != nil {
                     XCTFail("Error: \(String(describing: errorOfDelete?.localizedDescription))")
@@ -759,7 +759,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "state": "state"
         ]
         
-        Networking.call(function: "addConsumer", with: addConsumerParameters) { (result, error) in
+        Networking.call(function: .addConsumer, with: addConsumerParameters) { (result, error) in
             
             // Get generated locationID
             guard let consumerID = (result! as? [String : Any])?["consumerID"] else {
@@ -774,7 +774,7 @@ class LayerlessNetworkingTests: XCTestCase {
                 "consumerID": consumerID
             ]
             
-            Networking.call(function: "deleteConsumer", with: deleteConsumerParameters) { (resultOfDelete, errorOfDelete) in
+            Networking.call(function: .deleteConsumer, with: deleteConsumerParameters) { (resultOfDelete, errorOfDelete) in
                 
                 if errorOfDelete != nil {
                     XCTFail("Error: \(String(describing: errorOfDelete?.localizedDescription))")
@@ -835,7 +835,7 @@ class LayerlessNetworkingTests: XCTestCase {
             "password": "DiesesPasswordWirdGleichWiederZurückgesetzt"
         ]
         
-        Networking.call(function: "updateUserPassword", with: parameters) { result, error in
+        Networking.call(function: .updateUserPassword, with: parameters) { result, error in
             
             if error != nil {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
@@ -848,7 +848,7 @@ class LayerlessNetworkingTests: XCTestCase {
                 // Put the old password back in now
                 parameters["password"] = self.password
                 
-                Networking.call(function: "updateUserPassword", with: parameters) { (result, error) in
+                Networking.call(function: .updateUserPassword, with: parameters) { (result, error) in
                     expectation.fulfill()
                 }
                 
