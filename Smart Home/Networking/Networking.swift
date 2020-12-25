@@ -76,21 +76,22 @@ class Networking {
                 return
             }
             
-            for iterated_location in locationsArray {
+            for currentlyIteratedLocation in locationsArray {
                 
-                let locationDictionary = (iterated_location as? [String : Any])?["Location"] as! [String : Any]
+                let dictionaryOfCurrentLocation = (currentlyIteratedLocation as? [String : Any])?["Location"] as! [String : Any]
                 
                 guard
-                    let locationID = locationDictionary["locationID"] as? String,
-                    let country = locationDictionary["country"] as? String,
-                    let name = locationDictionary["name"] as? String,
-                    let zip = locationDictionary["zip"] as? String,
-                    let city = locationDictionary["city"] as? String
+                    let locationID = dictionaryOfCurrentLocation["locationID"] as? String,
+                    let country = dictionaryOfCurrentLocation["country"] as? String,
+                    let name = dictionaryOfCurrentLocation["name"] as? String,
+                    let zip = dictionaryOfCurrentLocation["zip"] as? String,
+                    let city = dictionaryOfCurrentLocation["city"] as? String
                 else {
                     continue
                 }
                 
                 let location = Location()
+                
                 location.city = city
                 location.country = country
                 location.name = name
