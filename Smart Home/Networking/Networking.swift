@@ -68,7 +68,7 @@ class Networking {
         
         call(function: .getLocations, with: parameters) { (result, error) in
             
-            var locations = [Location]()
+            var finalLocations = [Location]()
             
             let dictionary = result as? [String : Any]
             
@@ -99,10 +99,10 @@ class Networking {
                 location.zip = zip
                 location.id = locationID
                 
-                locations.append(location)
+                finalLocations.append(location)
             }
             
-            closure(locations)
+            closure(finalLocations)
             
         }
         
