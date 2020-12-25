@@ -87,6 +87,7 @@ class Networking {
                     let zip = dictionaryOfCurrentLocation["zip"] as? String,
                     let city = dictionaryOfCurrentLocation["city"] as? String
                 else {
+                    os_log("Skipping over this location because found nil while unwrapping optional.")
                     continue
                 }
                 
