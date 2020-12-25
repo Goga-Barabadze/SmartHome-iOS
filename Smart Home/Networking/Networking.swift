@@ -72,11 +72,11 @@ class Networking {
             
             let dictionary = result as? [String : Any]
             
-            guard let locationsArray = dictionary?["Locations"] as? NSArray else {
+            guard let unparsedLocations = dictionary?["Locations"] as? NSArray else {
                 return
             }
             
-            for currentlyIteratedLocation in locationsArray {
+            for currentlyIteratedLocation in unparsedLocations {
                 
                 let dictionaryOfCurrentLocation = (currentlyIteratedLocation as? [String : Any])?["Location"] as! [String : Any]
                 
