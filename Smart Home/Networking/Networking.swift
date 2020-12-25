@@ -91,15 +91,7 @@ class Networking {
                     continue
                 }
                 
-                let location = Location()
-                
-                location.city = city
-                location.country = country
-                location.name = name
-                location.zip = zip
-                location.id = locationID
-                
-                finalLocations.append(location)
+                finalLocations.append(Location(id: locationID, city: city, country: country, name: name, zip: zip))
             }
             
             closure(finalLocations)

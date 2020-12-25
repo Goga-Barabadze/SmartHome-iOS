@@ -10,11 +10,18 @@ import Foundation
 
 class Location {
     
+    var id: String = ""
     var city: String = ""
     var country: String = ""
     var name: String = ""
     var zip: String = ""
-    var id: String = ""
     var devices: [Device] = []
     
+    init(id: String, city: String, country: String, name: String, zip: String) {
+        self.id = id
+        self.city = city
+        self.country = country
+        self.name = name
+        self.zip = zip
+    }
 }
