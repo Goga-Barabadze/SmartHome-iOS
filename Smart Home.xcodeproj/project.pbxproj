@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A2C948125343F080075A17D /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2C948025343F080075A17D /* ModelTests.swift */; };
 		4A301E5C2579494E00ECD0B2 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A301E5B2579494E00ECD0B2 /* LoginUITests.swift */; };
+		4A35F4D9258FD9F600668769 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35F4D8258FD9F600668769 /* NetworkingTests.swift */; };
 		4A426BB524C8BDFE002CE5A2 /* SimpleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BB324C8BDFE002CE5A2 /* SimpleTitleCell.swift */; };
 		4A426BB624C8BDFE002CE5A2 /* SimpleTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A426BB424C8BDFE002CE5A2 /* SimpleTitleCell.xib */; };
 		4A426BB924C8C0E2002CE5A2 /* DeviceOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BB724C8C0E2002CE5A2 /* DeviceOverviewCell.swift */; };
@@ -34,6 +35,10 @@
 		4A8C37DF24C1A52A004A9DBD /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C37DE24C1A52A004A9DBD /* Account.swift */; };
 		4A8C37E124C1A6B5004A9DBD /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C37E024C1A6B5004A9DBD /* Alert.swift */; };
 		4A8C37E324C1A73F004A9DBD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C37E224C1A73F004A9DBD /* Extensions.swift */; };
+		4A96D84625969207001C9554 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96D84525969207001C9554 /* Location.swift */; };
+		4A96D84E25969224001C9554 /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96D84D25969224001C9554 /* Consumer.swift */; };
+		4A96D85325969243001C9554 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96D85225969243001C9554 /* Generator.swift */; };
+		4A96D858259692CA001C9554 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96D857259692CA001C9554 /* Device.swift */; };
 		4AD08034254370DD00D2F36B /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD08033254370DD00D2F36B /* Synchronizer.swift */; };
 		4AEB2C9B24C03D230001F981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9A24C03D230001F981 /* AppDelegate.swift */; };
 		4AEB2C9D24C03D230001F981 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9C24C03D230001F981 /* SceneDelegate.swift */; };
@@ -50,11 +55,11 @@
 		4AEB2CCD24C052F60001F981 /* AddStationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CCC24C052F60001F981 /* AddStationVC.swift */; };
 		4AEB2CCF24C0530B0001F981 /* DeviceDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CCE24C0530B0001F981 /* DeviceDetailVC.swift */; };
 		4AEB2CD224C05DA70001F981 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD124C05DA70001F981 /* User.swift */; };
-		4AEB2CD424C05DF10001F981 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD324C05DF10001F981 /* Station.swift */; };
-		4AEB2CD624C05DFA0001F981 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD524C05DFA0001F981 /* Device.swift */; };
-		4AEB2CD824C05E030001F981 /* Producer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD724C05E030001F981 /* Producer.swift */; };
-		4AEB2CDA24C05E0A0001F981 /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD924C05E0A0001F981 /* Consumer.swift */; };
-		4AEB2CDC24C05ED80001F981 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDB24C05ED80001F981 /* Location.swift */; };
+		4AEB2CD424C05DF10001F981 /* OldStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD324C05DF10001F981 /* OldStation.swift */; };
+		4AEB2CD624C05DFA0001F981 /* OldDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD524C05DFA0001F981 /* OldDevice.swift */; };
+		4AEB2CD824C05E030001F981 /* OldProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD724C05E030001F981 /* OldProducer.swift */; };
+		4AEB2CDA24C05E0A0001F981 /* OldConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD924C05E0A0001F981 /* OldConsumer.swift */; };
+		4AEB2CDC24C05ED80001F981 /* OldLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDB24C05ED80001F981 /* OldLocation.swift */; };
 		4AEB2CDE24C05F2A0001F981 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDD24C05F2A0001F981 /* Weather.swift */; };
 		503902A16BAE134CF2D1C637 /* Pods_SmartHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FC5281491CF4F88EE540D4 /* Pods_SmartHomeTests.framework */; };
 		D64C31CCB617D14B593F31B3 /* libPods-SmartHomeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA75F25E9448D9364456D6 /* libPods-SmartHomeUITests.a */; };
@@ -89,6 +94,7 @@
 		4A301E592579494E00ECD0B2 /* SmartHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A301E5B2579494E00ECD0B2 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		4A301E5D2579494E00ECD0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A35F4D8258FD9F600668769 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		4A426BB324C8BDFE002CE5A2 /* SimpleTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTitleCell.swift; sourceTree = "<group>"; };
 		4A426BB424C8BDFE002CE5A2 /* SimpleTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTitleCell.xib; sourceTree = "<group>"; };
 		4A426BB724C8C0E2002CE5A2 /* DeviceOverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOverviewCell.swift; sourceTree = "<group>"; };
@@ -114,6 +120,10 @@
 		4A8C37DE24C1A52A004A9DBD /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		4A8C37E024C1A6B5004A9DBD /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		4A8C37E224C1A73F004A9DBD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4A96D84525969207001C9554 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4A96D84D25969224001C9554 /* Consumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumer.swift; sourceTree = "<group>"; };
+		4A96D85225969243001C9554 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		4A96D857259692CA001C9554 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		4AD08033254370DD00D2F36B /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
 		4AEB2C9724C03D230001F981 /* Smart Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEB2C9A24C03D230001F981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,11 +142,11 @@
 		4AEB2CCC24C052F60001F981 /* AddStationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStationVC.swift; sourceTree = "<group>"; };
 		4AEB2CCE24C0530B0001F981 /* DeviceDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailVC.swift; sourceTree = "<group>"; };
 		4AEB2CD124C05DA70001F981 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		4AEB2CD324C05DF10001F981 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		4AEB2CD524C05DFA0001F981 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		4AEB2CD724C05E030001F981 /* Producer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producer.swift; sourceTree = "<group>"; };
-		4AEB2CD924C05E0A0001F981 /* Consumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumer.swift; sourceTree = "<group>"; };
-		4AEB2CDB24C05ED80001F981 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4AEB2CD324C05DF10001F981 /* OldStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldStation.swift; sourceTree = "<group>"; };
+		4AEB2CD524C05DFA0001F981 /* OldDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldDevice.swift; sourceTree = "<group>"; };
+		4AEB2CD724C05E030001F981 /* OldProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldProducer.swift; sourceTree = "<group>"; };
+		4AEB2CD924C05E0A0001F981 /* OldConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldConsumer.swift; sourceTree = "<group>"; };
+		4AEB2CDB24C05ED80001F981 /* OldLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldLocation.swift; sourceTree = "<group>"; };
 		4AEB2CDD24C05F2A0001F981 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		4C334A04848A0D02601903F7 /* Pods-Smart Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home.release.xcconfig"; path = "Target Support Files/Pods-Smart Home/Pods-Smart Home.release.xcconfig"; sourceTree = "<group>"; };
 		B8D6A7CADC9141641F9AD15E /* Pods-SmartHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +186,7 @@
 		4A2C947F25343F080075A17D /* SmartHomeTests */ = {
 			isa = PBXGroup;
 			children = (
+				4A35F4D8258FD9F600668769 /* NetworkingTests.swift */,
 				4A2C948025343F080075A17D /* ModelTests.swift */,
 				4A2C948225343F080075A17D /* Info.plist */,
 				4A575C352549958F00EF22AC /* LayerlessNetworkingTests.swift */,
@@ -232,6 +243,18 @@
 				4AD08033254370DD00D2F36B /* Synchronizer.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A96D83825969004001C9554 /* Old Model */ = {
+			isa = PBXGroup;
+			children = (
+				4AEB2CD324C05DF10001F981 /* OldStation.swift */,
+				4AEB2CDB24C05ED80001F981 /* OldLocation.swift */,
+				4AEB2CD724C05E030001F981 /* OldProducer.swift */,
+				4AEB2CD924C05E0A0001F981 /* OldConsumer.swift */,
+				4AEB2CD524C05DFA0001F981 /* OldDevice.swift */,
+			);
+			path = "Old Model";
 			sourceTree = "<group>";
 		};
 		4AEB2C8E24C03D230001F981 = {
@@ -302,14 +325,14 @@
 		4AEB2CC124C03DEA0001F981 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4A8C37D524C1930E004A9DBD /* Model.swift */,
+				4A96D857259692CA001C9554 /* Device.swift */,
+				4A96D84D25969224001C9554 /* Consumer.swift */,
+				4A96D85225969243001C9554 /* Generator.swift */,
+				4A96D84525969207001C9554 /* Location.swift */,
 				4AEB2CD124C05DA70001F981 /* User.swift */,
-				4AEB2CD324C05DF10001F981 /* Station.swift */,
-				4AEB2CDB24C05ED80001F981 /* Location.swift */,
+				4A8C37D524C1930E004A9DBD /* Model.swift */,
 				4AEB2CDD24C05F2A0001F981 /* Weather.swift */,
-				4AEB2CD524C05DFA0001F981 /* Device.swift */,
-				4AEB2CD724C05E030001F981 /* Producer.swift */,
-				4AEB2CD924C05E0A0001F981 /* Consumer.swift */,
+				4A96D83825969004001C9554 /* Old Model */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -596,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2C948125343F080075A17D /* ModelTests.swift in Sources */,
+				4A35F4D9258FD9F600668769 /* NetworkingTests.swift in Sources */,
 				4A575C362549958F00EF22AC /* LayerlessNetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A96D858259692CA001C9554 /* Device.swift in Sources */,
 				4A8C37E324C1A73F004A9DBD /* Extensions.swift in Sources */,
 				4AEB2C9F24C03D230001F981 /* WelcomeVC.swift in Sources */,
 				4AEB2CC724C052B30001F981 /* HomeVC.swift in Sources */,
@@ -623,22 +648,25 @@
 				4AEB2CDE24C05F2A0001F981 /* Weather.swift in Sources */,
 				4AEB2CCF24C0530B0001F981 /* DeviceDetailVC.swift in Sources */,
 				4AD08034254370DD00D2F36B /* Synchronizer.swift in Sources */,
-				4AEB2CDC24C05ED80001F981 /* Location.swift in Sources */,
-				4AEB2CDA24C05E0A0001F981 /* Consumer.swift in Sources */,
+				4AEB2CDC24C05ED80001F981 /* OldLocation.swift in Sources */,
+				4AEB2CDA24C05E0A0001F981 /* OldConsumer.swift in Sources */,
+				4A96D85325969243001C9554 /* Generator.swift in Sources */,
+				4A96D84E25969224001C9554 /* Consumer.swift in Sources */,
 				4A8C37E124C1A6B5004A9DBD /* Alert.swift in Sources */,
 				4A426BBE24C97E98002CE5A2 /* DevicesVC.swift in Sources */,
 				4A6FF6C324C31BB600CA3828 /* SimpleInputCell.swift in Sources */,
-				4AEB2CD624C05DFA0001F981 /* Device.swift in Sources */,
-				4AEB2CD424C05DF10001F981 /* Station.swift in Sources */,
+				4AEB2CD624C05DFA0001F981 /* OldDevice.swift in Sources */,
+				4AEB2CD424C05DF10001F981 /* OldStation.swift in Sources */,
 				4AEB2CC924C052C90001F981 /* ProfileVC.swift in Sources */,
 				4AEB2CCB24C052DE0001F981 /* StatisticsVC.swift in Sources */,
 				4A8B6CC524C6D39700C59680 /* SimpleInformationCell.swift in Sources */,
 				4AEB2CCD24C052F60001F981 /* AddStationVC.swift in Sources */,
+				4A96D84625969207001C9554 /* Location.swift in Sources */,
 				4AEB2CD224C05DA70001F981 /* User.swift in Sources */,
 				4A426BB924C8C0E2002CE5A2 /* DeviceOverviewCell.swift in Sources */,
 				4AEB2CC524C052950001F981 /* RegisterVC.swift in Sources */,
 				4A5DC19324CEF9BC0047E456 /* AddDeviceVC.swift in Sources */,
-				4AEB2CD824C05E030001F981 /* Producer.swift in Sources */,
+				4AEB2CD824C05E030001F981 /* OldProducer.swift in Sources */,
 				4A6FF6C724C31BE400CA3828 /* OverviewWeatherCell.swift in Sources */,
 				4A426BC324C9918F002CE5A2 /* StatsCell.swift in Sources */,
 				4A8C37DF24C1A52A004A9DBD /* Account.swift in Sources */,

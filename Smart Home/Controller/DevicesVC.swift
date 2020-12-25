@@ -12,15 +12,15 @@ class DevicesVC: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     
-    var station = Station()
-    var devices = [Device]()
-    var type_of_devices: Device.Type? = Consumer.self
-    var selected_device = Device()
+    var station = OldStation()
+    var devices = [OldDevice]()
+    var type_of_devices: OldDevice.Type? = OldConsumer.self
+    var selected_device = OldDevice()
     
     override func viewWillAppear(_ animated: Bool) {
         devices = station.devices.filter{type(of: $0) == type_of_devices}
         
-        let deviceTypeAsString = type_of_devices == Consumer.self ? "Consumers" : "Producers"
+        let deviceTypeAsString = type_of_devices == OldConsumer.self ? "Consumers" : "Producers"
         self.navigationItem.title = deviceTypeAsString  + " (" + station.name + ")"
         
         tableview.reloadData()

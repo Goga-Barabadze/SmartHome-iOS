@@ -1,5 +1,5 @@
 //
-//  Producer.swift
+//  Consumer.swift
 //  Smart Home
 //
 //  Created by Goga Barabadze on 16.07.20.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-class Producer : Device {
+class OldConsumer : OldDevice {
     
-    var production = 0
+    var consumption = 0
     
-    init(name: String, production: Int, manufacturer: String, state: Device.State) {
+    init(name: String, consumption: Int, manufacturer: String, state: OldDevice.State) {
         super.init(name: name, company: manufacturer, state: state)
-        self.production = production
+        self.consumption = consumption
     }
 }

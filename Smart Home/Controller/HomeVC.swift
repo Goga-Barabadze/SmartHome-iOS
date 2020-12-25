@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
     }
     
     var selected_station = 0
-    var type_of_devices: Device.Type? = Consumer.self
+    var type_of_devices: OldDevice.Type? = OldConsumer.self
     
     fileprivate func registerNibs() {
         let simple_title_cell = UINib(nibName: "SimpleTitleCell", bundle: nil)
@@ -56,10 +56,10 @@ class HomeVC: UIViewController {
         
         let weather = Weather(temperatureInCelsius: 12, windSpeedInKilometerPerHour: 12, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 25)
         let weather2 = Weather(temperatureInCelsius: 26, windSpeedInKilometerPerHour: 0, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 55)
-        let location = Location(zip: "4320", place: "Perg", province: "Upper Austria", weather: weather)
-        let location2 = Location(zip: "4320", place: "Vienna", province: "Vienna", weather: weather2)
-        let devices = [Consumer(name: "Washingmachine", consumption: 100, manufacturer: "Cool Company", state: .running), Producer(name: "Photovoltaic", production: 500, manufacturer: "Cool Company", state: .not_running)]
-        let stations = [Station(name: "Main House", location: location, devices: devices), Station(name: "Summer House", location: location2, devices: devices)]
+        let location = OldLocation(zip: "4320", place: "Perg", province: "Upper Austria", weather: weather)
+        let location2 = OldLocation(zip: "4320", place: "Vienna", province: "Vienna", weather: weather2)
+        let devices = [OldConsumer(name: "Washingmachine", consumption: 100, manufacturer: "Cool Company", state: .running), OldProducer(name: "Photovoltaic", production: 500, manufacturer: "Cool Company", state: .not_running)]
+        let stations = [OldStation(name: "Main House", location: location, devices: devices), OldStation(name: "Summer House", location: location2, devices: devices)]
         let user = User(name: "Goga", email: "goga@gmail.com", stations: stations)
         
         _ = Model.init(user: user)
@@ -152,11 +152,11 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         case 2:
             selected_station = indexPath.section
-            type_of_devices = Producer.self
+            type_of_devices = OldProducer.self
             performSegue(withIdentifier: "showDevicesVC", sender: self)
         case 3:
             selected_station = indexPath.section
-            type_of_devices = Consumer.self
+            type_of_devices = OldConsumer.self
             performSegue(withIdentifier: "showDevicesVC", sender: self)
         
         default:

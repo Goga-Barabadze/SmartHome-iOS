@@ -13,7 +13,7 @@ import os
 
 class Networking {
     
-    enum HTTPFunction : String {
+    enum Function : String {
         case getFroniusLocation = "getFroniusLocation"
         case getLocations = "getLocations"
         case getPVData = "getPVData"
@@ -37,9 +37,9 @@ class Networking {
         case updateUserPassword = "updateUserPassword"
     }
     
-    static func call(function: HTTPFunction, with arguments: [String : Any]?, closure: @escaping (Any?, NSError?) -> ()){
+    static func call(function: Function, with parameters: [String : Any]?, closure: @escaping (Any?, NSError?) -> ()){
         
-        Functions.functions().httpsCallable(function.rawValue).call(arguments) { (result, error) in
+        Functions.functions().httpsCallable(function.rawValue).call(parameters) { (result, error) in
             
             if let error = error as NSError? {
                 
@@ -60,15 +60,49 @@ class Networking {
         }
     }
     
-    static func getAllDevices(){
+    static func getLocations(email: String, closure: @escaping ([Location]?) -> ()){
         
-    }
-    
-    static func getAllConsumers(){
+        let parameters: [String : Any] = [
+            "email": email
+        ]
         
-    }
-    
-    static func getAllGenerators(){
+        call(function: .getLocations, with: parameters) { (result, error) in
+            
+            var locations = [Location]()
+            
+            let dictionary = result as? [String : Any]
+            
+            guard let locationsArray = dictionary?["Locations"] as? NSArray else {
+                return
+            }
+            
+            for iterated_location in locationsArray {
+                
+                let locationDictionary = (iterated_location as? [String : Any])?["Location"] as! [String : Any]
+                
+                guard
+                    let locationID = locationDictionary["locationID"] as? String,
+                    let country = locationDictionary["country"] as? String,
+                    let name = locationDictionary["name"] as? String,
+                    let zip = locationDictionary["zip"] as? String,
+                    let city = locationDictionary["city"] as? String
+                else {
+                    continue
+                }
+                
+                let location = Location()
+                location.city = city
+                location.country = country
+                location.name = name
+                location.zip = zip
+                location.id = locationID
+                
+                locations.append(location)
+            }
+            
+            closure(locations)
+            
+        }
         
     }
     

@@ -8,19 +8,19 @@
 
 import Foundation
 
-class Station {
+class OldStation {
     
     var name = ""
-    var location = Location()
-    var devices: [Device] = [Device]()
+    var location = OldLocation()
+    var devices: [OldDevice] = [OldDevice]()
     
     var currentProduction: Int {
         
         var production = 0
         
-        for producer in devices.filter({type(of: $0) == Producer.self}) {
+        for producer in devices.filter({type(of: $0) == OldProducer.self}) {
             
-            let currentProducer = producer as! Producer
+            let currentProducer = producer as! OldProducer
             
             if (currentProducer.state == .not_running || currentProducer.state == .should_be_running){
                 continue
@@ -36,9 +36,9 @@ class Station {
         
         var consumption = 0
         
-        for consumer in devices.filter({type(of: $0) == Consumer.self}) {
+        for consumer in devices.filter({type(of: $0) == OldConsumer.self}) {
             
-            let currentConsumer = consumer as! Consumer
+            let currentConsumer = consumer as! OldConsumer
             
             if (currentConsumer.state == .not_running || currentConsumer.state == .should_be_running){
                 continue
@@ -50,13 +50,13 @@ class Station {
         return consumption
     }
     
-    init(name: String, location: Location, devices: [Device]) {
+    init(name: String, location: OldLocation, devices: [OldDevice]) {
         self.name = name
         self.location = location
         self.devices = devices
     }
     
-    init(name: String, location: Location) {
+    init(name: String, location: OldLocation) {
         self.name = name
         self.location = location
     }
