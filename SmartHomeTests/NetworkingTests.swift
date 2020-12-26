@@ -33,42 +33,6 @@ class NetworkingTests: XCTestCase {
     
     // MARK: Get Functions
 
-//    func testGetFroniusLocation() throws {
-//
-//        let expectation = self.expectation(description: "testGetFroniusLocation")
-//
-//        let parameters: [String : Any] = [
-//            "pvID": pvID
-//        ]
-//
-//        Networking.call(function: .getFroniusLocation, with: parameters) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = result! as? [String : Any] {
-//
-//                XCTAssertNotNil(result["city"])
-//                XCTAssertNotNil(result["zip"])
-//                XCTAssertNotNil(result["country"])
-//                XCTAssertNotNil(result["name"])
-//                XCTAssertNotNil(result["locationID"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-    
     func testGetFroniusLocation() throws {
         
         let expectation = self.expectation(description: "testGetFroniusLocation")
@@ -142,7 +106,28 @@ class NetworkingTests: XCTestCase {
 //            }
 //        }
 //    }
-//
+
+    func testGetWeather() throws {
+        
+        let expectation = self.expectation(description: "testGetWeather")
+        
+        Networking.getWeather(city: "Linz") { (weather) in
+            
+            XCTAssertNotNil(weather)
+            XCTAssertNotNil(weather?.datetime)
+            XCTAssertNotNil(weather?.temperature)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 //    func testGetWeather() throws {
 //
 //        let expectation = self.expectation(description: "testGetWeather")

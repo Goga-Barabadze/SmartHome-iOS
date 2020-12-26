@@ -21,6 +21,7 @@
 		4A575C2E254993F700EF22AC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A575C2D254993F700EF22AC /* Networking.swift */; };
 		4A575C362549958F00EF22AC /* LayerlessNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A575C352549958F00EF22AC /* LayerlessNetworkingTests.swift */; };
 		4A5DC19324CEF9BC0047E456 /* AddDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5DC19224CEF9BC0047E456 /* AddDeviceVC.swift */; };
+		4A6871622596C03300DFC64F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6871612596C03300DFC64F /* Weather.swift */; };
 		4A6FF6C324C31BB600CA3828 /* SimpleInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FF6C124C31BB600CA3828 /* SimpleInputCell.swift */; };
 		4A6FF6C424C31BB600CA3828 /* SimpleInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FF6C224C31BB600CA3828 /* SimpleInputCell.xib */; };
 		4A6FF6C724C31BE400CA3828 /* OverviewWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FF6C524C31BE400CA3828 /* OverviewWeatherCell.swift */; };
@@ -60,7 +61,7 @@
 		4AEB2CD824C05E030001F981 /* OldProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD724C05E030001F981 /* OldProducer.swift */; };
 		4AEB2CDA24C05E0A0001F981 /* OldConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD924C05E0A0001F981 /* OldConsumer.swift */; };
 		4AEB2CDC24C05ED80001F981 /* OldLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDB24C05ED80001F981 /* OldLocation.swift */; };
-		4AEB2CDE24C05F2A0001F981 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDD24C05F2A0001F981 /* Weather.swift */; };
+		4AEB2CDE24C05F2A0001F981 /* OldWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDD24C05F2A0001F981 /* OldWeather.swift */; };
 		503902A16BAE134CF2D1C637 /* Pods_SmartHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FC5281491CF4F88EE540D4 /* Pods_SmartHomeTests.framework */; };
 		D64C31CCB617D14B593F31B3 /* libPods-SmartHomeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA75F25E9448D9364456D6 /* libPods-SmartHomeUITests.a */; };
 		F99A6154FD09972077AD3ABE /* Pods_Smart_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0C04383C22DC1154D11F4F /* Pods_Smart_Home.framework */; };
@@ -106,6 +107,7 @@
 		4A575C2D254993F700EF22AC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		4A575C352549958F00EF22AC /* LayerlessNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerlessNetworkingTests.swift; sourceTree = "<group>"; };
 		4A5DC19224CEF9BC0047E456 /* AddDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceVC.swift; sourceTree = "<group>"; };
+		4A6871612596C03300DFC64F /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		4A6FF6C124C31BB600CA3828 /* SimpleInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInputCell.swift; sourceTree = "<group>"; };
 		4A6FF6C224C31BB600CA3828 /* SimpleInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleInputCell.xib; sourceTree = "<group>"; };
 		4A6FF6C524C31BE400CA3828 /* OverviewWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewWeatherCell.swift; sourceTree = "<group>"; };
@@ -147,7 +149,7 @@
 		4AEB2CD724C05E030001F981 /* OldProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldProducer.swift; sourceTree = "<group>"; };
 		4AEB2CD924C05E0A0001F981 /* OldConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldConsumer.swift; sourceTree = "<group>"; };
 		4AEB2CDB24C05ED80001F981 /* OldLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldLocation.swift; sourceTree = "<group>"; };
-		4AEB2CDD24C05F2A0001F981 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		4AEB2CDD24C05F2A0001F981 /* OldWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldWeather.swift; sourceTree = "<group>"; };
 		4C334A04848A0D02601903F7 /* Pods-Smart Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home.release.xcconfig"; path = "Target Support Files/Pods-Smart Home/Pods-Smart Home.release.xcconfig"; sourceTree = "<group>"; };
 		B8D6A7CADC9141641F9AD15E /* Pods-SmartHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BCDA75F25E9448D9364456D6 /* libPods-SmartHomeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartHomeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +250,7 @@
 		4A96D83825969004001C9554 /* Old Model */ = {
 			isa = PBXGroup;
 			children = (
+				4AEB2CDD24C05F2A0001F981 /* OldWeather.swift */,
 				4AEB2CD324C05DF10001F981 /* OldStation.swift */,
 				4AEB2CDB24C05ED80001F981 /* OldLocation.swift */,
 				4AEB2CD724C05E030001F981 /* OldProducer.swift */,
@@ -325,13 +328,13 @@
 		4AEB2CC124C03DEA0001F981 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A6871612596C03300DFC64F /* Weather.swift */,
 				4A96D857259692CA001C9554 /* Device.swift */,
 				4A96D84D25969224001C9554 /* Consumer.swift */,
 				4A96D85225969243001C9554 /* Generator.swift */,
 				4A96D84525969207001C9554 /* Location.swift */,
 				4AEB2CD124C05DA70001F981 /* User.swift */,
 				4A8C37D524C1930E004A9DBD /* Model.swift */,
-				4AEB2CDD24C05F2A0001F981 /* Weather.swift */,
 				4A96D83825969004001C9554 /* Old Model */,
 			);
 			path = Model;
@@ -645,7 +648,7 @@
 				4AEB2C9B24C03D230001F981 /* AppDelegate.swift in Sources */,
 				4A575C2E254993F700EF22AC /* Networking.swift in Sources */,
 				4AEB2CA524C03D230001F981 /* Smart_Home.xcdatamodeld in Sources */,
-				4AEB2CDE24C05F2A0001F981 /* Weather.swift in Sources */,
+				4AEB2CDE24C05F2A0001F981 /* OldWeather.swift in Sources */,
 				4AEB2CCF24C0530B0001F981 /* DeviceDetailVC.swift in Sources */,
 				4AD08034254370DD00D2F36B /* Synchronizer.swift in Sources */,
 				4AEB2CDC24C05ED80001F981 /* OldLocation.swift in Sources */,
@@ -660,6 +663,7 @@
 				4AEB2CC924C052C90001F981 /* ProfileVC.swift in Sources */,
 				4AEB2CCB24C052DE0001F981 /* StatisticsVC.swift in Sources */,
 				4A8B6CC524C6D39700C59680 /* SimpleInformationCell.swift in Sources */,
+				4A6871622596C03300DFC64F /* Weather.swift in Sources */,
 				4AEB2CCD24C052F60001F981 /* AddStationVC.swift in Sources */,
 				4A96D84625969207001C9554 /* Location.swift in Sources */,
 				4AEB2CD224C05DA70001F981 /* User.swift in Sources */,

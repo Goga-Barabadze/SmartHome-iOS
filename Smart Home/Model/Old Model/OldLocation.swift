@@ -13,9 +13,9 @@ class OldLocation {
     var zip = ""
     var place = ""
     var province = ""
-    var weather = Weather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
+    var weather = OldWeather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
     
-    init(zip: String, place: String, province: String, weather: Weather) {
+    init(zip: String, place: String, province: String, weather: OldWeather) {
         self.zip = zip
         self.place = place
         self.province = province

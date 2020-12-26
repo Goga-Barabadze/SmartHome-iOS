@@ -108,11 +108,8 @@ class Networking {
         
         call(function: .getFroniusLocation, with: parameters) { (result, error) in
             
-            guard let dictionary = result as? [String : Any] else {
-                return
-            }
-            
             guard
+                let dictionary = result as? [String : Any],
                 // let locationID = dictionary["locationID"] as? String, // FIXME: Uncomment this line
                 let country = dictionary["country"] as? String,
                 let name = dictionary["name"] as? String,
@@ -125,6 +122,33 @@ class Networking {
             }
             
             closure(Location(id: "locationID", city: city, country: country, name: name, zip: zip)) // FIXME: Replace the hardcoded string with the actual variable
+            
+        }
+        
+    }
+    
+    static func getWeather(city: String, closure: @escaping (Weather?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "city": city
+        ]
+        
+        call(function: .getWeather, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let description = dictionary["description"] as? String,
+                let temperature = dictionary["temp"] as? Double,
+                let sunset = dictionary["sunset"] as? Double,
+                let sunrise = dictionary["sunrise"] as? Double,
+                let datetime = dictionary["dt"] as? Double
+            else {
+                os_log("Could not unwrap weather object.")
+                closure(nil)
+                return
+            }
+            
+            closure(Weather(description: description, temperature: temperature, sunset: sunset, sunrise: sunrise, datetime: datetime))
             
         }
         

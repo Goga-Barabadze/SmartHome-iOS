@@ -54,8 +54,8 @@ class HomeVC: UIViewController {
 
     func demoData(){
         
-        let weather = Weather(temperatureInCelsius: 12, windSpeedInKilometerPerHour: 12, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 25)
-        let weather2 = Weather(temperatureInCelsius: 26, windSpeedInKilometerPerHour: 0, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 55)
+        let weather = OldWeather(temperatureInCelsius: 12, windSpeedInKilometerPerHour: 12, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 25)
+        let weather2 = OldWeather(temperatureInCelsius: 26, windSpeedInKilometerPerHour: 0, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 55)
         let location = OldLocation(zip: "4320", place: "Perg", province: "Upper Austria", weather: weather)
         let location2 = OldLocation(zip: "4320", place: "Vienna", province: "Vienna", weather: weather2)
         let devices = [OldConsumer(name: "Washingmachine", consumption: 100, manufacturer: "Cool Company", state: .running), OldProducer(name: "Photovoltaic", production: 500, manufacturer: "Cool Company", state: .not_running)]

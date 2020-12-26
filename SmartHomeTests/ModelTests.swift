@@ -20,7 +20,7 @@ class ModelTests: XCTestCase {
     }
 
     func testCurrentConsumptionEmpty() throws {
-        let weather = Weather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
+        let weather = OldWeather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
         let location = OldLocation(zip: "ZIP", place: "PLACE", province: "PROVINCE", weather: weather)
         let device = OldDevice(name: "DEVICE NAME", company: "COMPANY", state: .running)
         let station = OldStation(name: "STATION NAME", location: location, devices: [device])
@@ -29,7 +29,7 @@ class ModelTests: XCTestCase {
     }
     
     func testCurrentProductionEmpty() {
-        let weather = Weather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
+        let weather = OldWeather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
         let location = OldLocation(zip: "ZIP", place: "PLACE", province: "PROVINCE", weather: weather)
         let device = OldDevice(name: "DEVICE NAME", company: "COMPANY", state: .running)
         let station = OldStation(name: "STATION NAME", location: location, devices: [device])
@@ -38,7 +38,7 @@ class ModelTests: XCTestCase {
     }
     
     func testCurrentConsumptionWithMultipleRunningConsumers() throws {
-        let weather = Weather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
+        let weather = OldWeather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
         let location = OldLocation(zip: "ZIP", place: "PLACE", province: "PROVINCE", weather: weather)
         let consumer_1 = OldConsumer(name: "CONSUMER", consumption: 7, manufacturer: "MANUFACTURER", state: .running)
         let consumer_2 = OldConsumer(name: "CONSUMER", consumption: 8, manufacturer: "MANUFACTURER", state: .running)
@@ -49,7 +49,7 @@ class ModelTests: XCTestCase {
     }
     
     func testCurrentProductionWithMultipleRunningProducers() throws {
-        let weather = Weather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
+        let weather = OldWeather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
         let location = OldLocation(zip: "ZIP", place: "PLACE", province: "PROVINCE", weather: weather)
         let producer_1 = OldProducer(name: "PRODUCER", production: 7, manufacturer: "MANUFACTURER", state: .running)
         let producer_2 = OldProducer(name: "PRODUCER", production: 8, manufacturer: "MANUFACTURER", state: .running)
@@ -60,7 +60,7 @@ class ModelTests: XCTestCase {
     }
     
     func testCurrentConsumptionWithMultipleMixedRunningAndNotRunningConsumers() throws {
-        let weather = Weather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
+        let weather = OldWeather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
         let location = OldLocation(zip: "ZIP", place: "PLACE", province: "PROVINCE", weather: weather)
         let consumer_1 = OldConsumer(name: "CONSUMER", consumption: 1, manufacturer: "MANUFACTURER", state: .running)
         let consumer_2 = OldConsumer(name: "CONSUMER", consumption: 1, manufacturer: "MANUFACTURER", state: .not_running)
@@ -72,7 +72,7 @@ class ModelTests: XCTestCase {
     }
     
     func testCurrentProductionWithMultipleMixedRunningAndNotRunningProducers() throws {
-        let weather = Weather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
+        let weather = OldWeather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
         let location = OldLocation(zip: "ZIP", place: "PLACE", province: "PROVINCE", weather: weather)
         let producer_1 = OldProducer(name: "PRODUCER", production: 1, manufacturer: "MANUFACTURER", state: .running)
         let producer_2 = OldProducer(name: "PRODUCER", production: 1, manufacturer: "MANUFACTURER", state: .not_running)
@@ -85,7 +85,7 @@ class ModelTests: XCTestCase {
 
     func testPerformanceOfConsumptionProductionCalculation() throws {
         
-        let weather = Weather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
+        let weather = OldWeather(temperatureInCelsius: 0, windSpeedInKilometerPerHour: 0, sunrise: "", sunset: "", visibilityInKilometers: 0)
         let location = OldLocation(zip: "ZIP", place: "PLACE", province: "PROVINCE", weather: weather)
         var devices = [OldDevice]()
         
