@@ -69,6 +69,26 @@ class NetworkingTests: XCTestCase {
 //        }
 //    }
     
+    func testGetFroniusLocation() throws {
+        
+        let expectation = self.expectation(description: "testGetFroniusLocation")
+        
+        Networking.getFroniusLocation(pvID: pvID) { (location) in
+            
+            XCTAssertNotNil(location)
+            XCTAssertNotNil(location?.id)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func testGetLocations() throws {
         
         let expectation = self.expectation(description: "testGetLocations")

@@ -100,6 +100,36 @@ class Networking {
         
     }
     
+    static func getFroniusLocation(pvID: String, closure: @escaping (Location?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "pvID": pvID
+        ]
+        
+        call(function: .getFroniusLocation, with: parameters) { (result, error) in
+            
+            guard let dictionary = result as? [String : Any] else {
+                return
+            }
+            
+            guard
+                // let locationID = dictionary["locationID"] as? String, // FIXME: Uncomment this line
+                let country = dictionary["country"] as? String,
+                let name = dictionary["name"] as? String,
+                let zip = dictionary["zip"] as? String,
+                let city = dictionary["city"] as? String
+            else {
+                os_log("Could not unwrap fronius location.")
+                closure(nil)
+                return
+            }
+            
+            closure(Location(id: "locationID", city: city, country: country, name: name, zip: zip)) // FIXME: Replace the hardcoded string with the actual variable
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }
