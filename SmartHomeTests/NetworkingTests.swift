@@ -128,46 +128,6 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//    func testGetWeather() throws {
-//
-//        let expectation = self.expectation(description: "testGetWeather")
-//
-//        let parameters: [String : Any] = [
-//            "city": "Perg"
-//        ]
-//
-//        Networking.call(function: .getWeather, with: parameters) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = result! as? [String : Any] {
-//
-//                XCTAssertNotNil(result["description"])
-//                XCTAssertNotNil(result["temp"])
-//                XCTAssertNotNil(result["sunset"])
-//                XCTAssertNotNil(result["sunrise"])
-//                XCTAssertNotNil(result["dt"])
-//
-//                // MARK: TODO - Why are these two not in my results?
-////                XCTAssertNotNil(result["temp_min"])
-////                XCTAssertNotNil(result["temp_max"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-//
 //    func testGetForecast() throws {
 //
 //        let expectation = self.expectation(description: "testGetForecast")
