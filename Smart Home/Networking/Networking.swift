@@ -110,7 +110,7 @@ class Networking {
             
             guard
                 let dictionary = result as? [String : Any],
-                // let locationID = dictionary["locationID"] as? String, // FIXME: Uncomment this line
+                let locationID = dictionary["locationID"] as? Int,
                 let country = dictionary["country"] as? String,
                 let name = dictionary["name"] as? String,
                 let zip = dictionary["zip"] as? String,
@@ -121,7 +121,7 @@ class Networking {
                 return
             }
             
-            closure(Location(id: "locationID", city: city, country: country, name: name, zip: zip)) // FIXME: Replace the hardcoded string with the actual variable
+            closure(Location(id: String(locationID), city: city, country: country, name: name, zip: zip))
             
         }
         
