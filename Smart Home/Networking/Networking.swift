@@ -181,7 +181,7 @@ class Networking {
                 else {
                     os_log("Could not unwrap weather object from forecast.")
                     closure([])
-                    return
+                    continue
                 }
 
                 let dateFormatter = DateFormatter()
@@ -225,7 +225,7 @@ class Networking {
                 else {
                     os_log("Could not unwrap pvData.")
                     closure([])
-                    return
+                    continue
                 }
                 
                 let value = (dictionaryOfCurrentData["value"] as? Double) ?? 0.0
@@ -262,7 +262,7 @@ class Networking {
                 else {
                     os_log("Could not unwrap company.")
                     closure([])
-                    return
+                    continue
                 }
 
                 finalCompanies.append(Company(id: id, name: name))
@@ -302,7 +302,7 @@ class Networking {
                 else {
                     os_log("Could not unwrap consumer.")
                     closure([])
-                    return
+                    continue
                 }
                 
                 finalConsumer.append(Consumer(id: id, averageConsumption: averageConsumption, type: consumerType))
@@ -342,13 +342,58 @@ class Networking {
                 else {
                     os_log("Could not unwrap generator.")
                     closure([])
-                    return
+                    continue
                 }
                 
                 finalConsumer.append(Generator(id: id, type: type))
             }
             
             closure(finalConsumer)
+            
+        }
+        
+    }
+    
+    static func getConsumers(email: String, locationID: String, closure: @escaping ([Consumer]?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email" : email,
+            "locationID" : locationID
+        ]
+        
+        call(function: .getConsumers, with: parameters) { (result, error) in
+            
+            var consumers = [Consumer]()
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let resultConsumers = dictionary["Consumers"] as? NSArray
+            else {
+                return
+            }
+            
+            for resultConsumer in resultConsumers {
+                
+                guard
+                    let consumerDictionary = (resultConsumer as? [String : Any])?["Consumer"] as? [String : Any],
+                    let id = consumerDictionary["consumerID"] as? String,
+                    let state = (consumerDictionary["consumerState"] as? String)?.replacingOccurrences(of: "\"", with: ""),
+                    let serial = consumerDictionary["consumerSerial"] as? String,
+                    let averageConsumptionAsString = consumerDictionary["consumerAverageConsumption"] as? String,
+                    let averageConsumption = Double(averageConsumptionAsString.replacingOccurrences(of: "\"", with: "")),
+                    let type = consumerDictionary["consumerType"] as? String,
+                    let consumerName = consumerDictionary["consumerName"] as? String,
+                    let companyName = consumerDictionary["companyName"] as? String
+                else {
+                    os_log("Skipping over this consumer because found nil while unwrapping optional.")
+                    closure([])
+                    continue
+                }
+                
+                consumers.append(Consumer(id: id, averageConsumption: averageConsumption, company: companyName, name: consumerName, serial: serial, state: Device.State.from(text: state), type: type))
+            }
+            
+            closure(consumers)
             
         }
         

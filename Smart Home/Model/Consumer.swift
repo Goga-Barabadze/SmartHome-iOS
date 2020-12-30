@@ -18,10 +18,18 @@ class Consumer: Device {
     var type: String = ""
     
     init(id: String, averageConsumption: Double, type: String) {
-        
         super.init(id: id)
         self.averageConsumption = averageConsumption
         self.type = type
-        
+    }
+    
+    init(id: String, averageConsumption: Double, company: String, name: String, serial: String, state: Device.State, type: String) {
+        super.init(id: id)
+        self.averageConsumption = averageConsumption
+        self.company = company
+        self.name = name
+        self.serial = serial
+        self.state = state
+        self.type = type
     }
 }
