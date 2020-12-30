@@ -274,6 +274,46 @@ class Networking {
         
     }
     
+    static func getPossibleConsumers(companyID: String, closure: @escaping ([Consumer]?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "companyID": companyID
+        ]
+        
+        call(function: .getPossibleConsumers, with: parameters) { (result, error) in
+            
+            var finalConsumer = [Consumer]()
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let unparsedConsumers = dictionary.first?.value as? NSArray
+            else {
+                return
+            }
+            
+            for currentlyIteratedConsumer in unparsedConsumers {
+                
+                guard
+                    let dictionaryOfCurrentConsumer = currentlyIteratedConsumer as? [String : Any],
+                    let valueOfdictionaryOfCurrentCompany = dictionaryOfCurrentConsumer.values.first as? [String : Any],
+                    let id = valueOfdictionaryOfCurrentCompany["consumerID"] as? String,
+                    let averageConsumption = valueOfdictionaryOfCurrentCompany["averageConsumption"] as? Double,
+                    let consumerType = valueOfdictionaryOfCurrentCompany["consumerType"] as? String
+                else {
+                    os_log("Could not unwrap consumer.")
+                    closure([])
+                    return
+                }
+                
+                finalConsumer.append(Consumer(id: id, averageConsumption: averageConsumption, type: consumerType))
+            }
+            
+            closure(finalConsumer)
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }

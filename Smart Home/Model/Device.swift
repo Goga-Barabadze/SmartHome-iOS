@@ -19,4 +19,7 @@ class Device {
         case should_not_be_running
     }
     
+    init (id: String){
+        self.id = id
+    }
 }

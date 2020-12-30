@@ -17,4 +17,11 @@ class Consumer: Device {
     var state: Device.State = .not_running
     var type: String = ""
     
+    init(id: String, averageConsumption: Double, type: String) {
+        
+        super.init(id: id)
+        self.averageConsumption = averageConsumption
+        self.type = type
+        
+    }
 }
