@@ -314,6 +314,46 @@ class Networking {
         
     }
     
+    static func getGenerators(email: String, locationID: String, closure: @escaping ([Generator]?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email" : email,
+            "locationID" : locationID
+        ]
+        
+        call(function: .getGenerators, with: parameters) { (result, error) in
+            
+            var finalConsumer = [Generator]()
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let unparsedGenerators = dictionary.first?.value as? NSArray
+            else {
+                return
+            }
+            
+            for currentlyIteratedGenerators in unparsedGenerators {
+                
+                guard
+                    let dictionaryOfCurrentGenerator = currentlyIteratedGenerators as? [String : Any],
+                    let valueOfdictionaryOfCurrentGenerator = dictionaryOfCurrentGenerator.values.first as? [String : Any],
+                    let id = valueOfdictionaryOfCurrentGenerator["pvID"] as? String,
+                    let type = valueOfdictionaryOfCurrentGenerator["generatorType"] as? String
+                else {
+                    os_log("Could not unwrap generator.")
+                    closure([])
+                    return
+                }
+                
+                finalConsumer.append(Generator(id: id, type: type))
+            }
+            
+            closure(finalConsumer)
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }

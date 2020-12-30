@@ -12,4 +12,8 @@ class Generator: Device {
     
     var type: String = ""
     
+    init(id: String, type: String) {
+        super.init(id: id)
+        self.type = type
+    }
 }
