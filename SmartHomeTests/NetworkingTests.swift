@@ -240,7 +240,26 @@ class NetworkingTests: XCTestCase {
     }
     
 //    // MARK: Add Functions
-//
+
+    func testAddPV() throws {
+        
+        let expectation = self.expectation(description: "testAddPV")
+        
+        Networking.addPV(email: email, locationID: locationID, pvID: pvID) { (didSucceed) in
+            
+            XCTAssertTrue(didSucceed)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 //    func testAddPV() throws {
 //
 //        let expectation = self.expectation(description: "testAddPV")

@@ -438,6 +438,29 @@ class Networking {
         
     }
     
+    static func addPV(email: String, locationID: String, pvID: String, closure: @escaping (Bool) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "locationID": locationID,
+            "pvID": pvID
+        ]
+        
+        call(function: .addPV, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let message = dictionary["message"] as? String
+            else {
+                return
+            }
+            
+            closure(message == "Successful")
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }
