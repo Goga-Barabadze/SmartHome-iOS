@@ -68,33 +68,33 @@ class Networking {
         
         call(function: .getLocations, with: parameters) { (result, error) in
             
-            var finalLocations = [Location]()
+            var locations = [Location]()
             
-            let dictionary = result as? [String : Any]
-            
-            guard let unparsedLocations = dictionary?["Locations"] as? NSArray else {
+            guard
+                let dictionary = result as? [String : Any],
+                let resultLocations = dictionary["Locations"] as? NSArray
+            else {
                 return
             }
             
-            for currentlyIteratedLocation in unparsedLocations {
-                
-                let dictionaryOfCurrentLocation = (currentlyIteratedLocation as? [String : Any])?["Location"] as! [String : Any]
+            for resultLocation in resultLocations {
                 
                 guard
-                    let locationID = dictionaryOfCurrentLocation["locationID"] as? String,
-                    let country = dictionaryOfCurrentLocation["country"] as? String,
-                    let name = dictionaryOfCurrentLocation["name"] as? String,
-                    let zip = dictionaryOfCurrentLocation["zip"] as? String,
-                    let city = dictionaryOfCurrentLocation["city"] as? String
+                    let locationDictionary = (resultLocation as? [String : Any])?["Location"] as? [String : Any],
+                    let id = locationDictionary["locationID"] as? String,
+                    let country = locationDictionary["country"] as? String,
+                    let name = locationDictionary["name"] as? String,
+                    let zip = locationDictionary["zip"] as? String,
+                    let city = locationDictionary["city"] as? String
                 else {
                     os_log("Skipping over this location because found nil while unwrapping optional.")
                     continue
                 }
                 
-                finalLocations.append(Location(id: locationID, city: city, country: country, name: name, zip: zip))
+                locations.append(Location(id: id, city: city, country: country, name: name, zip: zip))
             }
             
-            closure(finalLocations)
+            closure(locations)
             
         }
         
