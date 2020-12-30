@@ -24,6 +24,18 @@ class Weather {
         self.datetime = Date.init(timeIntervalSince1970: datetime)
     }
     
+    init(description: String, temperature: Double, datetime: Double) {
+        self.description = description
+        self.temperature = temperature
+        self.datetime = Date.init(timeIntervalSince1970: datetime)
+    }
+    
+    init(description: String, temperature: Double, datetime: Date) {
+        self.description = description
+        self.temperature = temperature
+        self.datetime = datetime
+    }
+    
     init(description: String, temperature: Double, sunset: Date, sunrise: Date, datetime: Date) {
         self.description = description
         self.temperature = temperature

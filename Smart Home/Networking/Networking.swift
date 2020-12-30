@@ -154,6 +154,45 @@ class Networking {
         
     }
     
+    static func getForecast(city: String, closure: @escaping ([Weather]?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "city": city
+        ]
+        
+        call(function: .getForecast, with: parameters) { (result, error) in
+            
+            var finalForecast = [Weather]()
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let unparsedForecast = dictionary.first?.value as? NSArray
+            else {
+                return
+            }
+            
+            for currentlyIteratedWeather in unparsedForecast {
+                
+                guard
+                    let dictionaryOfCurrentWeather = currentlyIteratedWeather as? [String : Any],
+                    let description = dictionaryOfCurrentWeather["description"] as? String,
+                    let temperature = dictionaryOfCurrentWeather["temp"] as? Double,
+                    let datetime = dictionaryOfCurrentWeather["dt"] as? String,
+                    let date = ISO8601DateFormatter().date(from: datetime)
+                else {
+                    os_log("Could not unwrap weather object from forecast.")
+                    closure([])
+                    return
+                }
+
+                finalForecast.append(Weather(description: description, temperature: temperature, datetime: date))
+            }
+            
+            closure(finalForecast)
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }

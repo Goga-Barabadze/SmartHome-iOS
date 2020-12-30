@@ -128,6 +128,27 @@ class NetworkingTests: XCTestCase {
         }
     }
     
+    func testGetForecast() throws {
+        
+        let expectation = self.expectation(description: "testGetForecast")
+        
+        Networking.getForecast(city: "Perg") { (forecast) in
+            
+            XCTAssertNotNil(forecast)
+            XCTAssertNotNil(forecast?.first)
+            XCTAssertNotNil(forecast?.first?.datetime)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 //    func testGetForecast() throws {
 //
 //        let expectation = self.expectation(description: "testGetForecast")
