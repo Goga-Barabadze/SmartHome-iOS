@@ -399,6 +399,45 @@ class Networking {
         
     }
     
+    static func getConsumerData(consumerType: String, closure: @escaping ([ConsumerData]?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "consumerType": consumerType
+        ]
+        
+        call(function: .getConsumerData, with: parameters) { (result, error) in
+            
+            var finalGeneratorData = [ConsumerData]()
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let unparsedData = dictionary.first?.value as? NSArray
+            else {
+                return
+            }
+            
+            for currentlyIteratedData in unparsedData {
+                
+                guard
+                    let dictionaryOfCurrentData = currentlyIteratedData as? [String : Any],
+                    let type = dictionaryOfCurrentData["type"] as? String,
+                    let state = dictionaryOfCurrentData["state"] as? String,
+                    let consumption = Double(dictionaryOfCurrentData["consumption"] as? String ?? "0.00")
+                else {
+                    os_log("Could not unwrap ConsumerData.")
+                    closure([])
+                    continue
+                }
+                
+                finalGeneratorData.append(ConsumerData(type: type, state: Device.State.from(text: state), consumption: consumption))
+            }
+            
+            closure(finalGeneratorData)
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }

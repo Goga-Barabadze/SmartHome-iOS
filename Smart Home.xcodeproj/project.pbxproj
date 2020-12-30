@@ -23,6 +23,7 @@
 		4A575C2E254993F700EF22AC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A575C2D254993F700EF22AC /* Networking.swift */; };
 		4A575C362549958F00EF22AC /* LayerlessNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A575C352549958F00EF22AC /* LayerlessNetworkingTests.swift */; };
 		4A5DC19324CEF9BC0047E456 /* AddDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5DC19224CEF9BC0047E456 /* AddDeviceVC.swift */; };
+		4A608BA3259D2A8900C41CCD /* ConsumerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A608BA2259D2A8900C41CCD /* ConsumerData.swift */; };
 		4A6871622596C03300DFC64F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6871612596C03300DFC64F /* Weather.swift */; };
 		4A6FF6C324C31BB600CA3828 /* SimpleInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FF6C124C31BB600CA3828 /* SimpleInputCell.swift */; };
 		4A6FF6C424C31BB600CA3828 /* SimpleInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FF6C224C31BB600CA3828 /* SimpleInputCell.xib */; };
@@ -111,6 +112,7 @@
 		4A575C2D254993F700EF22AC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		4A575C352549958F00EF22AC /* LayerlessNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerlessNetworkingTests.swift; sourceTree = "<group>"; };
 		4A5DC19224CEF9BC0047E456 /* AddDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceVC.swift; sourceTree = "<group>"; };
+		4A608BA2259D2A8900C41CCD /* ConsumerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerData.swift; sourceTree = "<group>"; };
 		4A6871612596C03300DFC64F /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		4A6FF6C124C31BB600CA3828 /* SimpleInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInputCell.swift; sourceTree = "<group>"; };
 		4A6FF6C224C31BB600CA3828 /* SimpleInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleInputCell.xib; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 		4AEB2CC124C03DEA0001F981 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A608BA2259D2A8900C41CCD /* ConsumerData.swift */,
 				4A04EE0E259CD757000992C1 /* Company.swift */,
 				4A04EE06259CCEDC000992C1 /* GeneratorData.swift */,
 				4A6871612596C03300DFC64F /* Weather.swift */,
@@ -655,6 +658,7 @@
 				4A575C2E254993F700EF22AC /* Networking.swift in Sources */,
 				4AEB2CA524C03D230001F981 /* Smart_Home.xcdatamodeld in Sources */,
 				4AEB2CDE24C05F2A0001F981 /* OldWeather.swift in Sources */,
+				4A608BA3259D2A8900C41CCD /* ConsumerData.swift in Sources */,
 				4AEB2CCF24C0530B0001F981 /* DeviceDetailVC.swift in Sources */,
 				4A04EE0F259CD757000992C1 /* Company.swift in Sources */,
 				4AD08034254370DD00D2F36B /* Synchronizer.swift in Sources */,

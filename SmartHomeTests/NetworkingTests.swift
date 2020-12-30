@@ -206,6 +206,7 @@ class NetworkingTests: XCTestCase {
             XCTAssertNotNil(consumers)
             XCTAssertNotNil(consumers?.first)
             XCTAssertNotNil(consumers?.first?.id)
+            XCTAssertNotNil(consumers?.first?.averageConsumption)
             
             expectation.fulfill()
             
@@ -218,41 +219,26 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//
-//    func testGetConsumerData() throws {
-//
-//        let expectation = self.expectation(description: "testGetConsumerData")
-//
-//        let parameters: [String : Any] = [
-//            "consumerType": consumerType
-//        ]
-//
-//        Networking.call(function: .getConsumerData, with: parameters) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = ((result! as? [String : Any])?["Consumers"] as? NSArray)?.firstObject as? [String : Any] {
-//
-//                XCTAssertNotNil(result["state"])
-//                XCTAssertNotNil(result["type"])
-//                XCTAssertNotNil(result["consumption"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-//
+    func testGetConsumerData() throws {
+        
+        let expectation = self.expectation(description: "testGetConsumerData")
+        
+        Networking.getConsumerData(consumerType: consumerType) { (consumerData) in
+            
+            XCTAssertNotNil(consumerData)
+            XCTAssertNotNil(consumerData?.first)
+            XCTAssertNotNil(consumerData?.first?.consumption)
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 //    // MARK: Add Functions
 //
 //    func testAddPV() throws {
