@@ -239,6 +239,41 @@ class Networking {
         
     }
     
+    static func getPossibleCompanies(closure: @escaping ([Company]?) -> ()){
+        
+        call(function: .getPossibleCompanies, with: nil) { (result, error) in
+            
+            var finalCompanies = [Company]()
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let unparsedCompanies = dictionary.first?.value as? NSArray
+            else {
+                return
+            }
+            
+            for currentlyIteratedCompany in unparsedCompanies {
+                
+                guard
+                    let dictionaryOfCurrentCompany = currentlyIteratedCompany as? [String : Any],
+                    let valueOfdictionaryOfCurrentCompany = dictionaryOfCurrentCompany.values.first as? [String : Any],
+                    let id = valueOfdictionaryOfCurrentCompany["companyID"] as? String,
+                    let name = valueOfdictionaryOfCurrentCompany["companyName"] as? String
+                else {
+                    os_log("Could not unwrap company.")
+                    closure([])
+                    return
+                }
+
+                finalCompanies.append(Company(id: id, name: name))
+            }
+            
+            closure(finalCompanies)
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }

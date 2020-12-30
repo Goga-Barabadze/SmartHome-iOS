@@ -137,34 +137,28 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//    func testGetPossibleCompanies() throws {
-//
-//        let expectation = self.expectation(description: "testGetPossibleCompanies")
-//
-//        Networking.call(function: .getPossibleCompanies, with: nil) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = result! as? [String : Any] {
-//
-//                XCTAssertNotNil(result["Companies"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-//
+    func testGetPossibleCompanies() throws {
+        
+        let expectation = self.expectation(description: "testGetPossibleCompanies")
+        
+        Networking.getPossibleCompanies { (companies) in
+            
+            XCTAssertNotNil(companies)
+            XCTAssertNotNil(companies?.first)
+            XCTAssertNotNil(companies?.first?.id)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    
 //    func testGetPossibleConsumers() throws {
 //
 //        let expectation = self.expectation(description: "testGetPossibleConsumers")
