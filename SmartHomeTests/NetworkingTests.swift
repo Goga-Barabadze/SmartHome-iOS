@@ -74,39 +74,27 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-    // Warning: Could fail if Fronius API is down
-//    func testGetPVData() throws {
-//
-//        let expectation = self.expectation(description: "testGetPVData")
-//
-//        let parameters: [String : Any] = [
-//            "pvID": pvID
-//        ]
-//
-//        Networking.call(function: .getPVData, with: parameters) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = result! as? [String : Any] {
-//
-//                XCTAssertNotNil(result["PVData"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-
+    func testGetPVData() throws {
+        
+        let expectation = self.expectation(description: "testGetPVData")
+        
+        Networking.getGeneratorData(pvID: pvID) { (generatorData) in
+            
+            XCTAssertNotNil(generatorData)
+            XCTAssertNotNil(generatorData?.first)
+            XCTAssertNotNil(generatorData?.first?.value)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func testGetWeather() throws {
         
         let expectation = self.expectation(description: "testGetWeather")

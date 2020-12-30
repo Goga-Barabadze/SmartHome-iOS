@@ -198,6 +198,47 @@ class Networking {
         
     }
     
+    static func getGeneratorData(pvID: String, closure: @escaping ([GeneratorData]?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "pvID": pvID
+        ]
+        
+        call(function: .getPVData, with: parameters) { (result, error) in
+            
+            var finalGeneratorData = [GeneratorData]()
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let unparsedData = dictionary.first?.value as? NSArray
+            else {
+                return
+            }
+            
+            for currentlyIteratedData in unparsedData {
+                
+                guard
+                    let dictionaryOfCurrentData = currentlyIteratedData as? [String : Any],
+                    let channelName = dictionaryOfCurrentData["channelName"] as? String,
+                    let channelType = dictionaryOfCurrentData["channelType"] as? String,
+                    let unit = dictionaryOfCurrentData["unit"] as? String
+                else {
+                    os_log("Could not unwrap pvData.")
+                    closure([])
+                    return
+                }
+                
+                let value = (dictionaryOfCurrentData["value"] as? Double) ?? 0.0
+
+                finalGeneratorData.append(GeneratorData(value: value, channelName: channelName, channelType: channelType, unit: unit))
+            }
+            
+            closure(finalGeneratorData)
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }

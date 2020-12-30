@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A04EE07259CCEDC000992C1 /* GeneratorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A04EE06259CCEDC000992C1 /* GeneratorData.swift */; };
 		4A2C948125343F080075A17D /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2C948025343F080075A17D /* ModelTests.swift */; };
 		4A301E5C2579494E00ECD0B2 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A301E5B2579494E00ECD0B2 /* LoginUITests.swift */; };
 		4A35F4D9258FD9F600668769 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35F4D8258FD9F600668769 /* NetworkingTests.swift */; };
@@ -89,6 +90,7 @@
 		1C037416CF61DC5FE5E3A842 /* Pods-Smart Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home.debug.xcconfig"; path = "Target Support Files/Pods-Smart Home/Pods-Smart Home.debug.xcconfig"; sourceTree = "<group>"; };
 		1D786FDDDA3FBB4EB4486CF0 /* Pods-SmartHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeUITests.release.xcconfig"; path = "Target Support Files/Pods-SmartHomeUITests/Pods-SmartHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4366045C9A550DDBFE4E4565 /* Pods-SmartHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeTests.release.xcconfig"; path = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests.release.xcconfig"; sourceTree = "<group>"; };
+		4A04EE06259CCEDC000992C1 /* GeneratorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorData.swift; sourceTree = "<group>"; };
 		4A2C947E25343F080075A17D /* SmartHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2C948025343F080075A17D /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		4A2C948225343F080075A17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 		4AEB2CC124C03DEA0001F981 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A04EE06259CCEDC000992C1 /* GeneratorData.swift */,
 				4A6871612596C03300DFC64F /* Weather.swift */,
 				4A96D857259692CA001C9554 /* Device.swift */,
 				4A96D84D25969224001C9554 /* Consumer.swift */,
@@ -664,6 +667,7 @@
 				4AEB2CCB24C052DE0001F981 /* StatisticsVC.swift in Sources */,
 				4A8B6CC524C6D39700C59680 /* SimpleInformationCell.swift in Sources */,
 				4A6871622596C03300DFC64F /* Weather.swift in Sources */,
+				4A04EE07259CCEDC000992C1 /* GeneratorData.swift in Sources */,
 				4AEB2CCD24C052F60001F981 /* AddStationVC.swift in Sources */,
 				4A96D84625969207001C9554 /* Location.swift in Sources */,
 				4AEB2CD224C05DA70001F981 /* User.swift in Sources */,
