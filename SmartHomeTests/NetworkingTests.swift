@@ -149,40 +149,6 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//    func testGetForecast() throws {
-//
-//        let expectation = self.expectation(description: "testGetForecast")
-//
-//        let parameters: [String : Any] = [
-//            "city": "Perg"
-//        ]
-//
-//        Networking.call(function: .getForecast, with: parameters) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = ((result! as? [String : Any])?.first?.value as? NSArray)?.firstObject as? [String : Any] {
-//
-//                XCTAssertNotNil(result["dt"])
-//                XCTAssertNotNil(result["temp"])
-//                XCTAssertNotNil(result["description"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-//
 //    func testGetPossibleCompanies() throws {
 //
 //        let expectation = self.expectation(description: "testGetPossibleCompanies")

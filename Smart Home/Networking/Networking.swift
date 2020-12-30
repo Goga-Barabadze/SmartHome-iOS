@@ -177,14 +177,19 @@ class Networking {
                     let dictionaryOfCurrentWeather = currentlyIteratedWeather as? [String : Any],
                     let description = dictionaryOfCurrentWeather["description"] as? String,
                     let temperature = dictionaryOfCurrentWeather["temp"] as? Double,
-                    let datetime = dictionaryOfCurrentWeather["dt"] as? String,
-                    let date = ISO8601DateFormatter().date(from: datetime)
+                    let datetime = dictionaryOfCurrentWeather["dt"] as? String
                 else {
                     os_log("Could not unwrap weather object from forecast.")
                     closure([])
                     return
                 }
 
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                guard let date = dateFormatter.date(from: datetime.replacingOccurrences(of: "\"", with: "")) else {
+                    return
+                }
+                
                 finalForecast.append(Weather(description: description, temperature: temperature, datetime: date))
             }
             
