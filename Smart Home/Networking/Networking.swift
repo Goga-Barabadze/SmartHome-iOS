@@ -698,6 +698,29 @@ class Networking {
         
     }
     
+    static func updateUserPassword(email: String, password: String, closure: @escaping (Bool) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "password": password
+        ]
+        
+        call(function: .updateUserPassword, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let message = dictionary["message"] as? String
+            else {
+                closure(false)
+                return
+            }
+            
+            closure(message == "Successful")
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }
