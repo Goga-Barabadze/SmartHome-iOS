@@ -37,6 +37,20 @@ class Device {
             
         }
         
+        static func from(state: State) -> String {
+            
+            switch state {
+            case .running:
+                return "RUNNING"
+            case .not_running:
+                return "NOT_RUNNING"
+            case .should_be_running:
+                return "SHOULD_BE_RUNNING"
+            case .should_not_be_running:
+                return "SHOULD_NOT_BE_RUNNING"
+            }
+        }
+        
     }
     
     init (id: String){

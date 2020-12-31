@@ -461,6 +461,36 @@ class Networking {
         
     }
     
+    static func addConsumer(email: String, locationID: String, consumer: Consumer, closure: @escaping (String?, String?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "locationID": locationID,
+            "companyName": consumer.company,
+            "consumerName": consumer.name,
+            "consumerType": consumer.type,
+            "consumerSerial": consumer.serial,
+            "averageConsumption": consumer.averageConsumption,
+            "state": Device.State.from(state: consumer.state)
+        ]
+        
+        call(function: .addConsumer, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let state = dictionary["state"] as? String,
+                let consumerID = dictionary["consumerID"] as? String
+            else {
+                closure(nil, nil)
+                return
+            }
+            
+            closure(state, consumerID)
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }

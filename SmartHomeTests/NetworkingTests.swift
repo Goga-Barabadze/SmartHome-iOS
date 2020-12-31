@@ -239,7 +239,7 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//    // MARK: Add Functions
+    // MARK: Add Functions
 
     func testAddPV() throws {
         
@@ -248,6 +248,28 @@ class NetworkingTests: XCTestCase {
         Networking.addPV(email: email, locationID: locationID, pvID: pvID) { (didSucceed) in
             
             XCTAssertTrue(didSucceed)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func testAddConsumer() throws {
+        
+        let expectation = self.expectation(description: "testAddConsumer")
+        
+        let consumer = Consumer(id: consumerID, averageConsumption: 1.0, company: "", name: "", serial: consumerSerial, state: .not_running, type: consumerType)
+        
+        Networking.addConsumer(email: email, locationID: locationID, consumer: consumer) { (state, consumerID) in
+            
+            XCTAssertNotNil(state)
+            XCTAssertNotNil(consumerID)
             
             expectation.fulfill()
             
