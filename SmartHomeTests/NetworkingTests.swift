@@ -387,8 +387,39 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//    // MARK: Delete Tests
-//
+    // MARK: Delete Tests
+
+    func testDeleteLocation() throws {
+        
+        let expectation = self.expectation(description: "testDeleteLocation")
+        
+        let location = Location(id: "", city: "Linz", country: "Austria", name: "Name of Location", zip: "2123")
+        
+        Networking.addLocation(email: email, location: location) { (locationID) in
+            
+            // Get generated locationID
+            guard let locationID = locationID else {
+                XCTFail()
+                return
+            }
+            
+            Networking.deleteLocation(email: self.email, locationID: locationID) { (didSucceed) in
+                
+                XCTAssertTrue(didSucceed)
+                
+                expectation.fulfill()
+                
+            }
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 //    func testDeleteLocation() throws {
 //
 //        let expectation = self.expectation(description: "testDeleteLocation")

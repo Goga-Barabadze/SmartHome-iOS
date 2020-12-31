@@ -627,6 +627,29 @@ class Networking {
         
     }
     
+    static func deleteLocation(email: String, locationID: String, closure: @escaping (Bool) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "locationID": locationID
+        ]
+        
+        call(function: .deleteLocation, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let message = dictionary["message"] as? String
+            else {
+                closure(false)
+                return
+            }
+            
+            closure(message == "Successful")
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }
