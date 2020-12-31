@@ -491,6 +491,32 @@ class Networking {
         
     }
     
+    static func addLocation(email: String, location: Location, closure: @escaping (String?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "name": "Test Location",
+            "zip": "4320",
+            "city": "Perg",
+            "country": "Austria"
+        ]
+        
+        call(function: .addLocation, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let locationID = dictionary["locationID"] as? String
+            else {
+                closure(nil)
+                return
+            }
+            
+            closure(locationID)
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }
