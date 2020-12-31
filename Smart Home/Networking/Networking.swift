@@ -650,6 +650,30 @@ class Networking {
         
     }
     
+    static func deleteGenerator(email: String, locationID: String, pvID: String, closure: @escaping (Bool) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "locationID": locationID,
+            "pvID": pvID
+        ]
+        
+        call(function: .deleteGenerator, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let message = dictionary["message"] as? String
+            else {
+                closure(false)
+                return
+            }
+            
+            closure(message == "Successful")
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }
