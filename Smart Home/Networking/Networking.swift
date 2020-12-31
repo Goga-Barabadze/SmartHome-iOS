@@ -452,6 +452,7 @@ class Networking {
                 let dictionary = result as? [String : Any],
                 let message = dictionary["message"] as? String
             else {
+                closure(false)
                 return
             }
             
@@ -538,6 +539,33 @@ class Networking {
             }
             
             closure(consumerState)
+            
+        }
+        
+    }
+    
+    static func updateLocation(email: String, location: Location, closure: @escaping (Bool) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "city": location.city,
+            "zip": location.zip,
+            "country": location.country,
+            "name": location.name,
+            "locationID": location.id
+        ]
+        
+        call(function: .updateLocation, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let message = dictionary["message"] as? String
+            else {
+                closure(false)
+                return
+            }
+            
+            closure(message == "Successful")
             
         }
         

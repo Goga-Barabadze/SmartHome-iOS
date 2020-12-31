@@ -324,42 +324,27 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//    func testUpdateLocation() throws {
-//        let expectation = self.expectation(description: "testUpdateLocation")
-//
-//        let parameters: [String : Any] = [
-//            "email": email,
-//            "city": "Perg",
-//            "zip": "4320",
-//            "country": "Austria",
-//            "name": "Goga's wonderful lil test",
-//            "locationID": locationID
-//        ]
-//
-//        Networking.call(function: .updateLocation, with: parameters) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = result! as? [String : Any] {
-//
-//                XCTAssertNotNil(result["message"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-//
+    func testUpdateLocation() throws {
+        
+        let expectation = self.expectation(description: "testUpdateLocation")
+        
+        let location = Location(id: locationID, city: "Somewhere in Austria", country: "Germany", name: "Location 1", zip: "123")
+        
+        Networking.updateLocation(email: email, location: location) { (didSucceed) in
+            
+            XCTAssertTrue(didSucceed)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 //    func testUpdateGenerator() throws {
 //        let expectation = self.expectation(description: "testUpdateGenerator")
 //
