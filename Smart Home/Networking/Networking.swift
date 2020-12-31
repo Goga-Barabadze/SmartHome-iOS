@@ -495,10 +495,10 @@ class Networking {
         
         let parameters: [String : Any] = [
             "email": email,
-            "name": "Test Location",
-            "zip": "4320",
-            "city": "Perg",
-            "country": "Austria"
+            "name": location.name,
+            "zip": location.zip,
+            "city": location.city,
+            "country": location.country
         ]
         
         call(function: .addLocation, with: parameters) { (result, error) in
