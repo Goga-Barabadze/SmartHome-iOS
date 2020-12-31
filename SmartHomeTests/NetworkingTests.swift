@@ -292,8 +292,16 @@ class NetworkingTests: XCTestCase {
             
             XCTAssertNotNil(locationID)
             
-            expectation.fulfill()
+            guard let id = locationID else {
+                XCTFail()
+                return
+            }
             
+            Networking.deleteLocation(email: self.email, locationID: id) { (didSucceed) in
+                
+                expectation.fulfill()
+                
+            }
         }
         
         waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
