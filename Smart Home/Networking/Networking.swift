@@ -571,6 +571,31 @@ class Networking {
         
     }
     
+    static func updateGenerator(email: String, locationID: String, generator: Generator, closure: @escaping (Bool) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "type": generator.type,
+            "locationID": locationID,
+            "pvID": generator.id
+        ]
+        
+        call(function: .updateGenerator, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let message = dictionary["message"] as? String
+            else {
+                closure(false)
+                return
+            }
+            
+            closure(message == "Successful")
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }

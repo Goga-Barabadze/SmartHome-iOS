@@ -345,40 +345,27 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//    func testUpdateGenerator() throws {
-//        let expectation = self.expectation(description: "testUpdateGenerator")
-//
-//        let parameters: [String : Any] = [
-//            "email": email,
-//            "type": generatorType,
-//            "locationID": locationID,
-//            "pvID": pvID
-//        ]
-//
-//        Networking.call(function: .updateGenerator, with: parameters) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = result! as? [String : Any] {
-//
-//                XCTAssertNotNil(result["message"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-//
+    func testUpdateGenerator() throws {
+        
+        let expectation = self.expectation(description: "testUpdateGenerator")
+        
+        let generator = Generator(id: pvID, type: "Type")
+        
+        Networking.updateGenerator(email: email, locationID: locationID, generator: generator) { (didSucceed) in
+            
+            XCTAssertTrue(didSucceed)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 //    func testUpdateConsumer() throws {
 //
 //        let expectation = self.expectation(description: "testUpdateConsumer")
