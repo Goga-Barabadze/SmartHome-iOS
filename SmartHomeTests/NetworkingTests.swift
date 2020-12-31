@@ -282,46 +282,6 @@ class NetworkingTests: XCTestCase {
         }
     }
    
-//    func testAddConsumer() throws {
-//
-//        let expectation = self.expectation(description: "testAddConsumer")
-//
-//        let parameters: [String : Any] = [
-//            "email": email,
-//            "locationID": locationID,
-//            "companyName": "companyName",
-//            "consumerName": "consumerName",
-//            "consumerType": "consumerType",
-//            "consumerSerial": "consumerSerial",
-//            "averageConsumption": 0,
-//            "state": "state"
-//        ]
-//
-//        Networking.call(function: .addConsumer, with: parameters) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = result! as? [String : Any] {
-//
-//                XCTAssertNotNil(result["state"])
-//                XCTAssertNotNil(result["consumerID"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-//
 //    func testAddLocation() throws {
 //
 //        let expectation = self.expectation(description: "testAddLocation")
