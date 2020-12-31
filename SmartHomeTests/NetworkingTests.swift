@@ -324,42 +324,6 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//    func testUpdateState() throws {
-//
-//        let expectation = self.expectation(description: "testUpdateState")
-//
-//        let parameters: [String : Any] = [
-//            "email": email,
-//            "locationID": locationID,
-//            "consumerID": consumerID,
-//            "modus": "START",
-//            "pvID": pvID
-//        ]
-//
-//        Networking.call(function: .updateState, with: parameters) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = result! as? [String : Any] {
-//
-//                XCTAssertNotNil(result["consumerState"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-//
 //    func testUpdateLocation() throws {
 //        let expectation = self.expectation(description: "testUpdateLocation")
 //
