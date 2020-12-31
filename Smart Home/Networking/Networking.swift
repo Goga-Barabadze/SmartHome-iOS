@@ -596,6 +596,37 @@ class Networking {
         
     }
     
+    static func updateConsumer(email: String, locationID: String, pvID: String, consumer: Consumer, closure: @escaping (Bool) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "type": consumer.type,
+            "consumerID": consumer.id,
+            "serial": consumer.serial,
+            "state": Device.State.from(state: consumer.state),
+            "company": consumer.company,
+            "name": consumer.name,
+            "averageConsumption": consumer.averageConsumption,
+            "locationID": locationID,
+            "pvID": pvID
+        ]
+        
+        call(function: .updateConsumer, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let message = dictionary["message"] as? String
+            else {
+                closure(false)
+                return
+            }
+            
+            closure(message == "Successful")
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }

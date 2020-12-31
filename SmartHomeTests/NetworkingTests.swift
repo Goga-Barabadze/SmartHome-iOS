@@ -366,47 +366,27 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//    func testUpdateConsumer() throws {
-//
-//        let expectation = self.expectation(description: "testUpdateConsumer")
-//
-//        let parameters: [String : Any] = [
-//            "email": email,
-//            "type": consumerType,
-//            "consumerID": consumerID,
-//            "serial": consumerSerial,
-//            "state": consumerState,
-//            "company": compandyID,
-//            "name": "Gustav",
-//            "averageConsumption": Double.random(in: 0...100),
-//            "locationID": locationID,
-//            "pvID": pvID
-//        ]
-//
-//        Networking.call(function: .updateConsumer, with: parameters) { result, error in
-//
-//            if error != nil {
-//                XCTFail("Error: \(String(describing: error?.localizedDescription))")
-//            }
-//
-//            if let result = result! as? [String : Any] {
-//
-//                XCTAssertNotNil(result["message"])
-//
-//            } else {
-//                XCTFail("Error: Result is nil.")
-//            }
-//
-//            expectation.fulfill()
-//        }
-//
-//        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
-//            if let error = error {
-//                XCTFail("Error: \(error.localizedDescription)")
-//            }
-//        }
-//    }
-//
+    func testUpdateConsumer() throws {
+        
+        let expectation = self.expectation(description: "testUpdateConsumer")
+        
+        let consumer = Consumer(id: consumerID, averageConsumption: 0.0, company: "", name: "", serial: consumerSerial, state: .running, type: consumerType)
+        
+        Networking.updateConsumer(email: email, locationID: locationID, pvID: pvID, consumer: consumer) { (didSucceed) in
+            
+            XCTAssertTrue(didSucceed)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 //    // MARK: Delete Tests
 //
 //    func testDeleteLocation() throws {
