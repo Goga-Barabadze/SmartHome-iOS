@@ -517,6 +517,32 @@ class Networking {
         
     }
     
+    static func updateState(email: String, locationID: String, consumerID: String, modus: String, pvID: String, closure: @escaping (String?) -> ()){
+        
+        let parameters: [String : Any] = [
+            "email": email,
+            "locationID": locationID,
+            "consumerID": consumerID,
+            "modus": modus,
+            "pvID": pvID
+        ]
+        
+        call(function: .updateState, with: parameters) { (result, error) in
+            
+            guard
+                let dictionary = result as? [String : Any],
+                let consumerState = dictionary["consumerState"] as? String
+            else {
+                closure(nil)
+                return
+            }
+            
+            closure(consumerState)
+            
+        }
+        
+    }
+    
     static func isLoggedIn() -> Bool {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }

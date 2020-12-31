@@ -303,8 +303,27 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-//    // MARK: Update Functions
-//
+    // MARK: Update Functions
+
+    func testUpdateState() throws {
+        
+        let expectation = self.expectation(description: "testUpdateState")
+        
+        Networking.updateState(email: email, locationID: locationID, consumerID: consumerID, modus: "START", pvID: pvID) { (state) in
+            
+            XCTAssertNotNil(state)
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 //    func testUpdateState() throws {
 //
 //        let expectation = self.expectation(description: "testUpdateState")
