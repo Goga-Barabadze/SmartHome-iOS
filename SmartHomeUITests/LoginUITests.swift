@@ -19,17 +19,6 @@ class LoginUITests: XCTestCase {
         
     }
     
-//    func testLogin() throws {
-//
-//        let app = XCUIApplication()
-//        app.launch()
-//
-//        // Networking.signOut()
-//
-//        app.buttons.containing(.staticText, identifier:"Login").element.tap()
-//        app.navigationBars["Login"].buttons["Login"].tap()
-//    }
-
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             measure(metrics: [XCTApplicationLaunchMetric()]) {

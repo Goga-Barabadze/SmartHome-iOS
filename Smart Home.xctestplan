@@ -1,0 +1,51 @@
+{
+  "configurations" : [
+    {
+      "id" : "86B4158D-7D46-499F-A04C-C66AFEAB289F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Smart Home.xcodeproj",
+          "identifier" : "4AEB2C9624C03D230001F981",
+          "name" : "Smart Home"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Smart Home.xcodeproj",
+      "identifier" : "4AEB2C9624C03D230001F981",
+      "name" : "Smart Home"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Smart Home.xcodeproj",
+        "identifier" : "4AEB2CAF24C03D250001F981",
+        "name" : "Smart HomeTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Smart Home.xcodeproj",
+        "identifier" : "4A2C947D25343F080075A17D",
+        "name" : "SmartHomeTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Smart Home.xcodeproj",
+        "identifier" : "4A301E582579494E00ECD0B2",
+        "name" : "SmartHomeUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

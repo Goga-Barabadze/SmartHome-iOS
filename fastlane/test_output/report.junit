@@ -1,39 +1,77 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='SmartHomeUITests.xctest' tests='30' failures='0'>
+<testsuites name='SmartHomeUITests.xctest' tests='54' failures='6'>
+  <testsuite name='SmartHomeTests.LayerlessNetworkingTests' tests='25' failures='6'>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testAddConsumer' time='7.335'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testAddLocation'>
+      <failure message='Asynchronous wait failed: Exceeded timeout of 20 seconds, with unfulfilled expectations: &quot;testAddLocation&quot;.'>SmartHomeTests/LayerlessNetworkingTests.swift:490</failure>
+    </testcase>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testAddLocation'>
+      <failure message='failed - Error: The operation couldn’t be completed. (com.apple.XCTestErrorDomain error 0.)'>SmartHomeTests/LayerlessNetworkingTests.swift:492</failure>
+    </testcase>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testAddPV'>
+      <failure message='Asynchronous wait failed: Exceeded timeout of 10 seconds, with unfulfilled expectations: &quot;testAddPV&quot;.'>SmartHomeTests/LayerlessNetworkingTests.swift:406</failure>
+    </testcase>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testAddPV'>
+      <failure message='failed - Error: The operation couldn’t be completed. (com.apple.XCTestErrorDomain error 0.)'>SmartHomeTests/LayerlessNetworkingTests.swift:408</failure>
+    </testcase>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testDeleteConsumer'>
+      <failure message='Asynchronous wait failed: Exceeded timeout of 20 seconds, with unfulfilled expectations: &quot;testDeleteConsumer&quot;.'>SmartHomeTests/LayerlessNetworkingTests.swift:795</failure>
+    </testcase>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testDeleteConsumer'>
+      <failure message='failed - Error: The operation couldn’t be completed. (com.apple.XCTestErrorDomain error 0.)'>SmartHomeTests/LayerlessNetworkingTests.swift:797</failure>
+    </testcase>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testDeleteGenerator' time='8.752'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testDeleteLocation' time='3.818'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testGetConsumerData' time='0.783'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testGetConsumers' time='1.024'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testGetForecast' time='0.785'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testGetFroniusLocation' time='1.163'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testGetGenerators' time='0.744'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testGetLocations' time='0.691'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testGetPossibleCompanies' time='0.548'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testGetPossibleConsumers' time='0.696'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testGetPVData' time='1.304'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testGetWeather' time='0.738'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testProperSignInAndSignOff' time='0.791'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testUpdateConsumer' time='0.756'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testUpdateGenerator' time='0.704'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testUpdateLocation' time='0.683'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testUpdateState' time='2.566'/>
+    <testcase classname='SmartHomeTests.LayerlessNetworkingTests' name='testUpdateUserPassword' time='2.170'/>
+  </testsuite>
   <testsuite name='SmartHomeTests.ModelTests' tests='7' failures='0'>
-    <testcase classname='SmartHomeTests.ModelTests' name='testCurrentConsumptionEmpty' time='0.004'/>
+    <testcase classname='SmartHomeTests.ModelTests' name='testCurrentConsumptionEmpty' time='0.003'/>
     <testcase classname='SmartHomeTests.ModelTests' name='testCurrentConsumptionWithMultipleMixedRunningAndNotRunningConsumers' time='0.001'/>
     <testcase classname='SmartHomeTests.ModelTests' name='testCurrentConsumptionWithMultipleRunningConsumers' time='0.001'/>
     <testcase classname='SmartHomeTests.ModelTests' name='testCurrentProductionEmpty' time='0.001'/>
     <testcase classname='SmartHomeTests.ModelTests' name='testCurrentProductionWithMultipleMixedRunningAndNotRunningProducers' time='0.001'/>
     <testcase classname='SmartHomeTests.ModelTests' name='testCurrentProductionWithMultipleRunningProducers' time='0.001'/>
-    <testcase classname='SmartHomeTests.ModelTests' name='testPerformanceOfConsumptionProductionCalculation' time='11.365'/>
+    <testcase classname='SmartHomeTests.ModelTests' name='testPerformanceOfConsumptionProductionCalculation' time='9.192'/>
   </testsuite>
-  <testsuite name='SmartHomeTests.NetworkingTests' tests='22' failures='0'>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testAddConsumer' time='1.173'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testAddLocation' time='1.798'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testAddPV' time='0.646'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testDeleteConsumer' time='1.272'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testDeleteGenerator' time='1.656'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testDeleteLocation' time='1.535'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetConsumerData' time='0.767'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetConsumers' time='0.857'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetForecast' time='0.679'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetFroniusLocation' time='0.969'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetGenerators' time='0.807'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetLocations' time='0.788'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetPossibleCompanies' time='0.759'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetPossibleConsumers' time='0.769'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetPVData' time='1.352'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetWeather' time='0.626'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testProperSignInAndSignOff' time='0.737'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testUpdateConsumer' time='0.680'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testUpdateGenerator' time='0.788'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testUpdateLocation' time='0.679'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testUpdateState' time='2.813'/>
-    <testcase classname='SmartHomeTests.NetworkingTests' name='testUpdateUserPassword' time='2.027'/>
+  <testsuite name='SmartHomeTests.NetworkingTests' tests='21' failures='0'>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testAddConsumer' time='0.781'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testAddLocation' time='1.583'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testAddPV' time='0.720'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testDeleteConsumer' time='1.535'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testDeleteGenerator' time='1.537'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testDeleteLocation' time='1.790'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetConsumerData' time='0.771'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetConsumers' time='1.025'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetForecast' time='0.572'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetFroniusLocation' time='0.960'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetGenerators' time='0.768'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetLocations' time='1.022'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetPossibleCompanies' time='0.769'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetPossibleConsumers' time='0.766'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetPVData' time='1.120'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testGetWeather' time='0.671'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testUpdateConsumer' time='0.775'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testUpdateGenerator' time='0.760'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testUpdateLocation' time='1.024'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testUpdateState' time='2.046'/>
+    <testcase classname='SmartHomeTests.NetworkingTests' name='testUpdateUserPassword' time='2.304'/>
   </testsuite>
   <testsuite name='SmartHomeUITests.LoginUITests' tests='1' failures='0'>
-    <testcase classname='SmartHomeUITests.LoginUITests' name='testLaunchPerformance' time='58.835'/>
+    <testcase classname='SmartHomeUITests.LoginUITests' name='testLaunchPerformance' time='19.566'/>
   </testsuite>
 </testsuites>
