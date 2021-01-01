@@ -1,4 +1,4 @@
-framework module Pods_SmartHomeUITests {
+module Pods_SmartHomeUITests {
   umbrella header "Pods-SmartHomeUITests-umbrella.h"
 
   export *
