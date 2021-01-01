@@ -18,8 +18,6 @@ class RegisterVC: UIViewController {
     
     @IBAction func register(_ sender: Any) {
         
-        let name: String? = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 0) as IndexPath) as! SimpleInputCell).input?.text
-        
         let email = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 1) as IndexPath) as! SimpleInputCell).input?.text
         
         let password = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 2) as IndexPath) as! SimpleInputCell).input?.text
