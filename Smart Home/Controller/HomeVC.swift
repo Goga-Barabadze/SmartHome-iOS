@@ -44,7 +44,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         registerNibs()
-        demoData()
+        loadData()
         
         self.navigationItem.title = Greeting.message()
         
@@ -52,14 +52,44 @@ class HomeVC: UIViewController {
     }
     
 
-    func demoData(){
+    func loadData(){
         
-        let weather = Weather(description: "", temperature: 0.0, sunset: 0.0, sunrise: 0.0, datetime: 0.0)
-        let weather2 = Weather(description: "", temperature: 0.0, sunset: 0.0, sunrise: 0.0, datetime: 0.0)
-        let devices = [Consumer(id: "", averageConsumption: 100.0, company: "", name: "", serial: "", state: .running, type: ""), Consumer(id: "", averageConsumption: 100.0, company: "", name: "", serial: "", state: .running, type: "")]
-//        let stations = [OldStation(name: "Main House", location: location, devices: devices), OldStation(name: "Summer House", location: location2, devices: devices)]
-        let locations = [Location(id: "1", city: "Perg", country: "Austria", name: "Goga's house", zip: "4320", devices: devices)]
-        let user = User(name: "Goga", email: "goga@gmail.com", stations: locations)
+        let user = User(name: "Goga", email: "fakeemail@something.com", stations: [])
+        
+        Networking.getLocations(email: user.email) { (locations) in
+            
+            guard let locations = locations else {
+                return
+            }
+            
+            for location in locations {
+                
+                Networking.getConsumers(email: user.email, locationID: location.id) { (consumers) in
+                    
+                    guard let consumers = consumers else {
+                        return
+                    }
+                    
+                    location.devices.append(contentsOf: consumers)
+                    
+                }
+                
+                Networking.getGenerators(email: user.email, locationID: location.id) { (generators) in
+                    
+                    guard let generators = generators else {
+                        return
+                    }
+                    
+                    location.devices.append(contentsOf: generators)
+                    
+                }
+                
+            }
+            
+            user.stations = locations
+            
+            self.tableview.reloadData()
+        }
         
         _ = Model.init(user: user)
     }
