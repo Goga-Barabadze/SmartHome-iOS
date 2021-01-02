@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
     }
     
     var selected_station = 0
-    var type_of_devices: OldDevice.Type? = OldConsumer.self
+    var type_of_devices: Device.Type? = Consumer.self
     
     fileprivate func registerNibs() {
         let simple_title_cell = UINib(nibName: "SimpleTitleCell", bundle: nil)
@@ -54,13 +54,12 @@ class HomeVC: UIViewController {
 
     func demoData(){
         
-        let weather = OldWeather(temperatureInCelsius: 12, windSpeedInKilometerPerHour: 12, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 25)
-        let weather2 = OldWeather(temperatureInCelsius: 26, windSpeedInKilometerPerHour: 0, sunrise: "5 am", sunset: "8 pm", visibilityInKilometers: 55)
-        let location = OldLocation(zip: "4320", place: "Perg", province: "Upper Austria", weather: weather)
-        let location2 = OldLocation(zip: "4320", place: "Vienna", province: "Vienna", weather: weather2)
-        let devices = [OldConsumer(name: "Washingmachine", consumption: 100, manufacturer: "Cool Company", state: .running), OldProducer(name: "Photovoltaic", production: 500, manufacturer: "Cool Company", state: .not_running)]
-        let stations = [OldStation(name: "Main House", location: location, devices: devices), OldStation(name: "Summer House", location: location2, devices: devices)]
-        let user = User(name: "Goga", email: "goga@gmail.com", stations: stations)
+        let weather = Weather(description: "", temperature: 0.0, sunset: 0.0, sunrise: 0.0, datetime: 0.0)
+        let weather2 = Weather(description: "", temperature: 0.0, sunset: 0.0, sunrise: 0.0, datetime: 0.0)
+        let devices = [Consumer(id: "", averageConsumption: 100.0, company: "", name: "", serial: "", state: .running, type: ""), Consumer(id: "", averageConsumption: 100.0, company: "", name: "", serial: "", state: .running, type: "")]
+//        let stations = [OldStation(name: "Main House", location: location, devices: devices), OldStation(name: "Summer House", location: location2, devices: devices)]
+        let locations = [Location(id: "1", city: "Perg", country: "Austria", name: "Goga's house", zip: "4320", devices: devices)]
+        let user = User(name: "Goga", email: "goga@gmail.com", stations: locations)
         
         _ = Model.init(user: user)
     }
@@ -104,10 +103,10 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewWeatherCell") as! OverviewWeatherCell
             
-            let location = Model.user.stations[indexPath.section].location
-            let weather = location.weather
+            let location = Model.user.stations[indexPath.section].city
+            let weather = Model.user.stations[indexPath.section].weather
             
-            cell.commonInit(city: location.place, temperature: "\(weather.temperatureInCelsius)°", image: UIImage(systemName: "sun.max")!, wind: "\(weather.windSpeedInKilometerPerHour) km/h", sunrise: weather.sunrise, sunset: weather.sunset, visibility: "\(weather.visibilityInKilometers) km")
+            cell.commonInit(city: location, temperature: "\(weather.temperature) °", image: UIImage(systemName: "sun.max")!, wind: "km/h", sunrise: "\(weather.sunrise)", sunset: "\(weather.sunset)", visibility: " km")
             
             return cell
         case 2:
@@ -116,8 +115,8 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             cell.commontInit(color: UIColor(rgb: 0x147AFC))
             cell.textLabel!.text = "Photovoltaic"
             
-            let production = Model.user.stations[indexPath.section].currentProduction
-            cell.detailTextLabel!.text = "Currently producing \(production) Watts per hour"
+//            let production = Model.user.stations[indexPath.section].currentProduction
+//            cell.detailTextLabel!.text = "Currently producing \(production) Watts per hour"
             
             return cell
         case 3:
@@ -126,8 +125,8 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             cell.commontInit(color: UIColor(rgb: 0x34C759))
             cell.textLabel!.text = "Devices"
             
-            let consumption = Model.user.stations[indexPath.section].currentConsumption
-            cell.detailTextLabel!.text = "Currently consuming \(consumption) Watts per hour"
+//            let consumption = Model.user.stations[indexPath.section].currentConsumption
+//            cell.detailTextLabel!.text = "Currently consuming \(consumption) Watts per hour"
             
             return cell
         default:
@@ -152,11 +151,11 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         case 2:
             selected_station = indexPath.section
-            type_of_devices = OldProducer.self
+            type_of_devices = Generator.self
             performSegue(withIdentifier: "showDevicesVC", sender: self)
         case 3:
             selected_station = indexPath.section
-            type_of_devices = OldConsumer.self
+            type_of_devices = Consumer.self
             performSegue(withIdentifier: "showDevicesVC", sender: self)
         
         default:

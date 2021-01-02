@@ -11,6 +11,8 @@ import Foundation
 class Device {
     
     var id: String = ""
+    var name: String = ""
+    var state: State = .not_running
     
     enum State : String {
         case running
@@ -55,5 +57,14 @@ class Device {
     
     init (id: String){
         self.id = id
+    }
+    
+    init (id: String, name: String){
+        self.id = id
+        self.name = name
+    }
+    
+    init() {
+        
     }
 }

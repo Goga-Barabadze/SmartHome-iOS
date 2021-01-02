@@ -43,4 +43,8 @@ class Weather {
         self.sunrise = sunrise
         self.datetime = datetime
     }
+    
+    init() {
+        
+    }
 }

@@ -12,8 +12,8 @@ import os
 class AddDeviceVC: UIViewController {
     
     var titles = ["Name of Device", "Manufacturer", "Electricity"]
-    var station = OldStation()
-    var type_of_device: OldDevice.Type? = OldConsumer.self
+    var station = Location()
+    var type_of_device: Device.Type? = Consumer.self
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -26,7 +26,7 @@ class AddDeviceVC: UIViewController {
     }
     
     fileprivate func setCorrectTitle(){
-        let deviceTypeAsString = type_of_device == OldConsumer.self ? "Consumer" : "Producer"
+        let deviceTypeAsString = type_of_device == Consumer.self ? "Consumer" : "Producer"
         self.navigationItem.title = "Add \(deviceTypeAsString)"
     }
     
@@ -65,13 +65,13 @@ class AddDeviceVC: UIViewController {
             return
         }
         
-        var device: OldDevice = OldDevice()
+        var device = Device()
         
-        if type(of: type_of_device) == OldConsumer.self {
-            device = OldConsumer(name: name!, consumption: Int(electricity!) ?? 0, manufacturer: manufacturer!, state: .not_running)
+        if type(of: type_of_device) == Consumer.self {
+            device = Consumer(id: "", averageConsumption: Double(electricity!) ?? 0, company: "", name: "", serial: "", state: .not_running, type: "")
             os_log("Added Consumer to station \(self.station.name)")
         }else{
-            device = OldProducer(name: name!, production: Int(electricity!) ?? 0, manufacturer: manufacturer!, state: .not_running)
+            device = Generator(id: "", type: "")
             os_log("Added Producer to station \(self.station.name)")
         }
         

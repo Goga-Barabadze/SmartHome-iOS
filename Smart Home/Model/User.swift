@@ -12,9 +12,9 @@ class User {
     
     var name = ""
     var email = ""
-    var stations = [OldStation]()
+    var stations = [Location]()
     
-    init(name: String, email: String, stations: [OldStation]) {
+    init(name: String, email: String, stations: [Location]) {
         self.name = name
         self.email = email
         self.stations = stations

@@ -16,6 +16,7 @@ class Location {
     var name: String = ""
     var zip: String = ""
     var devices: [Device] = []
+    var weather: Weather = Weather()
     
     init(id: String, city: String, country: String, name: String, zip: String) {
         self.id = id
@@ -23,5 +24,18 @@ class Location {
         self.country = country
         self.name = name
         self.zip = zip
+    }
+    
+    init(id: String, city: String, country: String, name: String, zip: String, devices: [Device]) {
+        self.id = id
+        self.city = city
+        self.country = country
+        self.name = name
+        self.zip = zip
+        self.devices = devices
+    }
+    
+    init() {
+        
     }
 }

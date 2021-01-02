@@ -12,9 +12,7 @@ class Consumer: Device {
     
     var averageConsumption: Double = 0.0
     var company: String = ""
-    var name: String = ""
     var serial: String = ""
-    var state: Device.State = .not_running
     var type: String = ""
     
     init(id: String, averageConsumption: Double, type: String) {

@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "86B4158D-7D46-499F-A04C-C66AFEAB289F",
+      "id" : "8484DAF9-02BC-4D7A-B564-7B3324DD68A3",
       "name" : "Configuration 1",
       "options" : {
 
@@ -26,13 +26,7 @@
   },
   "testTargets" : [
     {
-      "target" : {
-        "containerPath" : "container:Smart Home.xcodeproj",
-        "identifier" : "4AEB2CAF24C03D250001F981",
-        "name" : "Smart HomeTests"
-      }
-    },
-    {
+      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:Smart Home.xcodeproj",
         "identifier" : "4A2C947D25343F080075A17D",
