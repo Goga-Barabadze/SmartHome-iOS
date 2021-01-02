@@ -206,7 +206,7 @@ class NetworkingTests: XCTestCase {
             XCTAssertNotNil(consumers)
             XCTAssertNotNil(consumers?.first)
             XCTAssertNotNil(consumers?.first?.id)
-            XCTAssertNotNil(consumers?.first?.averageConsumption)
+            XCTAssertNotNil(consumers?.first?.consumption)
             
             expectation.fulfill()
             

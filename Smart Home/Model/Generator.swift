@@ -11,6 +11,7 @@ import Foundation
 class Generator: Device {
     
     var type: String = ""
+    var production: Double = 0.0
     
     init(id: String, type: String) {
         super.init(id: id)

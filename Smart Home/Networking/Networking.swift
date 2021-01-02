@@ -471,7 +471,7 @@ class Networking {
             "consumerName": consumer.name,
             "consumerType": consumer.type,
             "consumerSerial": consumer.serial,
-            "averageConsumption": consumer.averageConsumption,
+            "averageConsumption": consumer.consumption,
             "state": Device.State.from(state: consumer.state)
         ]
         
@@ -606,7 +606,7 @@ class Networking {
             "state": Device.State.from(state: consumer.state),
             "company": consumer.company,
             "name": consumer.name,
-            "averageConsumption": consumer.averageConsumption,
+            "averageConsumption": consumer.consumption,
             "locationID": locationID,
             "pvID": pvID
         ]

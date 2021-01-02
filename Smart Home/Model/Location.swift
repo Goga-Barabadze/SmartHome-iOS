@@ -18,6 +18,42 @@ class Location {
     var devices: [Device] = []
     var weather: Weather = Weather()
     
+    var currentProduction: Double {
+    
+        var production = 0.0
+
+        for producer in devices.filter({type(of: $0) == Generator.self}) {
+
+            let currentProducer = producer as! Generator
+
+            if (currentProducer.state == .not_running || currentProducer.state == .should_be_running){
+                continue
+            }
+
+            production += currentProducer.production
+        }
+
+        return production
+    }
+
+    var currentConsumption: Double {
+
+        var consumption = 0.0
+
+        for consumer in devices.filter({type(of: $0) == Consumer.self}) {
+
+            let currentConsumer = consumer as! Consumer
+
+            if (currentConsumer.state == .not_running || currentConsumer.state == .should_be_running){
+                continue
+            }
+
+            consumption += currentConsumer.consumption
+        }
+
+        return consumption
+    }
+    
     init(id: String, city: String, country: String, name: String, zip: String) {
         self.id = id
         self.city = city
