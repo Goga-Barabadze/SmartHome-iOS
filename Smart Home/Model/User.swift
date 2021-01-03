@@ -14,10 +14,10 @@ class User {
     var email = ""
     var stations = [Location]()
     
-    init(name: String, email: String, stations: [Location]) {
+    init(name: String, email: String, locations: [Location]) {
         self.name = name
         self.email = email
-        self.stations = stations
+        self.stations = locations
     }
     
     init() {

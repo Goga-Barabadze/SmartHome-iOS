@@ -74,7 +74,7 @@ class NetworkingTests: XCTestCase {
         }
     }
     
-    func testGetPVData() throws {
+    func testGetGeneratorData() throws {
         
         let expectation = self.expectation(description: "testGetPVData")
         
@@ -241,7 +241,7 @@ class NetworkingTests: XCTestCase {
     
     // MARK: Add Functions
 
-    func testAddPV() throws {
+    func testGeneratorPV() throws {
         
         let expectation = self.expectation(description: "testAddPV")
         

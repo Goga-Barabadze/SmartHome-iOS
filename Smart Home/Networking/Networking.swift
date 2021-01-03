@@ -60,6 +60,43 @@ class Networking {
         }
     }
     
+    static func loadLocationsWithDepth(email: String, closure: @escaping ([Location]) -> ()){
+        
+        Networking.getLocations(email: email) { (locations) in
+            
+            guard let locations = locations else {
+                return
+            }
+            
+            for location in locations {
+                
+                Networking.getConsumers(email: email, locationID: location.id) { (consumers) in
+                    
+                    guard let consumers = consumers else {
+                        return
+                    }
+                    
+                    location.devices.append(contentsOf: consumers)
+                    
+                }
+                
+                Networking.getGenerators(email: email, locationID: location.id) { (generators) in
+                    
+                    guard let generators = generators else {
+                        return
+                    }
+                    
+                    location.devices.append(contentsOf: generators)
+                    
+                }
+                
+            }
+            
+            closure(locations)
+        }
+        
+    }
+    
     static func unescape(data: Any) -> Any {
         
         if var dictionary = data as? [String : Any] {

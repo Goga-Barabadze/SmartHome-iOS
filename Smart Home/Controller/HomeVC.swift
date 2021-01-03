@@ -54,41 +54,16 @@ class HomeVC: UIViewController {
 
     func loadData(){
         
-        let user = User(name: "Goga", email: "fakeemail@something.com", stations: [])
+        let user = User(name: "Goga", email: "fakeemail@something.com", locations: [])
         
-        Networking.getLocations(email: user.email) { (locations) in
-            
-            guard let locations = locations else {
-                return
-            }
-            
-            for location in locations {
-                
-                Networking.getConsumers(email: user.email, locationID: location.id) { (consumers) in
-                    
-                    guard let consumers = consumers else {
-                        return
-                    }
-                    
-                    location.devices.append(contentsOf: consumers)
-                    
-                }
-                
-                Networking.getGenerators(email: user.email, locationID: location.id) { (generators) in
-                    
-                    guard let generators = generators else {
-                        return
-                    }
-                    
-                    location.devices.append(contentsOf: generators)
-                    
-                }
-                
-            }
+        refresher.beginRefreshing()
+        
+        Networking.loadLocationsWithDepth(email: user.email) { (locations) in
             
             user.stations = locations
-            
             self.tableview.reloadData()
+            
+            self.refresher.endRefreshing()
         }
         
         _ = Model.init(user: user)
