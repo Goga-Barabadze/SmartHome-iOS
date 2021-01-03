@@ -241,7 +241,7 @@ class NetworkingTests: XCTestCase {
     
     // MARK: Add Functions
 
-    func testGeneratorPV() throws {
+    func testAddPV() throws {
         
         let expectation = self.expectation(description: "testAddPV")
         
@@ -271,8 +271,12 @@ class NetworkingTests: XCTestCase {
             XCTAssertNotNil(state)
             XCTAssertNotNil(consumerID)
             
-            expectation.fulfill()
-            
+            Networking.deleteConsumer(email: self.email, locationID: self.locationID, consumerID: consumerID!) { (didSucceed) in
+                
+                XCTAssertTrue(didSucceed)
+                
+                expectation.fulfill()
+            }
         }
         
         waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
