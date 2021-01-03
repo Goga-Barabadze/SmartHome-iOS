@@ -505,4 +505,18 @@ class NetworkingTests: XCTestCase {
             }
         }
     }
+    
+    // MARK: Internal Functionality
+    
+    func testUnescape() {
+        XCTAssertEqual(Networking.unescape(data: "hello") as? String, "hello")
+        XCTAssertEqual(Networking.unescape(data: "\"") as? String, "")
+        XCTAssertEqual(Networking.unescape(data: "Hello\"This is fun") as? String, "HelloThis is fun")
+    }
+    
+    func testMeasureUnescape(){
+        measure {
+            testUnescape()
+        }
+    }
 }

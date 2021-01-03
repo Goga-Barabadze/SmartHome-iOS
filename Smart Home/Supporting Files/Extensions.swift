@@ -68,3 +68,10 @@ extension UIColor {
        )
    }
 }
+
+extension String {
+    mutating func unescape() -> String {
+        self = self.replacingOccurrences(of: "\"", with: "")
+        return self
+    }
+}

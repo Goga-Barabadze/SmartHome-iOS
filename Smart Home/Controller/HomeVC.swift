@@ -145,8 +145,8 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             cell.commontInit(color: UIColor(rgb: 0x147AFC))
             cell.textLabel!.text = "Photovoltaic"
             
-//            let production = Model.user.stations[indexPath.section].currentProduction
-//            cell.detailTextLabel!.text = "Currently producing \(production) Watts per hour"
+            let production = Model.user.stations[indexPath.section].currentProduction
+            cell.detailTextLabel!.text = "Currently producing \(production) Watts per hour"
             
             return cell
         case 3:
@@ -155,8 +155,8 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             cell.commontInit(color: UIColor(rgb: 0x34C759))
             cell.textLabel!.text = "Devices"
             
-//            let consumption = Model.user.stations[indexPath.section].currentConsumption
-//            cell.detailTextLabel!.text = "Currently consuming \(consumption) Watts per hour"
+            let consumption = Model.user.stations[indexPath.section].currentConsumption
+            cell.detailTextLabel!.text = "Currently consuming \(consumption) Watts per hour"
             
             return cell
         default:

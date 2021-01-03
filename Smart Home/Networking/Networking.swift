@@ -60,6 +60,31 @@ class Networking {
         }
     }
     
+    static func unescape(data: Any) -> Any {
+        
+        if var dictionary = data as? [String : Any] {
+            for (key, value) in dictionary {
+                dictionary.updateValue(unescape(data: value), forKey: key)
+            }
+            
+            return dictionary
+        }
+        
+        if var array = (data as? NSArray)?.firstObject as? [String : Any] {
+            for (key, value) in array {
+                array.updateValue(unescape(data: value), forKey: key)
+            }
+            
+            return array
+        }
+        
+        if var string = data as? String {
+            return string.unescape()
+        }
+        
+        return data
+    }
+    
     static func getLocations(email: String, closure: @escaping ([Location]?) -> ()){
         
         let parameters: [String : Any] = [
