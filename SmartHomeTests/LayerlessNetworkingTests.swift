@@ -16,7 +16,7 @@ class LayerlessNetworkingTests: XCTestCase {
     private let maximumWaitForExpectation = 10
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
     private let locationID = "1iXbFbWvzoiyUU7LXlgO"
-    private let consumerID = "3WAyPPXhpSXMpV4oQNkX"
+    private let consumerID = "eicvFogRoDJYNyfH0EfM"
     private let consumerType = "XTEKNDUF"
     private let consumerSerial = "Serial"
     private let consumerState = "RUNNING"
@@ -435,6 +435,10 @@ class LayerlessNetworkingTests: XCTestCase {
                 
                 XCTAssertNotNil(result["state"])
                 XCTAssertNotNil(result["consumerID"])
+                
+                Networking.deleteConsumer(email: self.email, locationID: self.locationID, consumerID: result["consumerID"] as! String) { (didSucceed) in
+                    XCTAssertTrue(didSucceed)
+                }
                 
             } else {
                 XCTFail("Error: Result is nil.")
