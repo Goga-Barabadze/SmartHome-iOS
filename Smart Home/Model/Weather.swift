@@ -17,15 +17,17 @@ class Weather {
     var datetime: Date = Date()
     
     var formattedSunset: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:MM"
-        return dateFormatter.string(from: sunset)
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: sunset)
+        let minute = calendar.component(.minute, from: sunset)
+        return "\(hour):\(minute)"
     }
     
     var formattedSunrise: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:MM"
-        return dateFormatter.string(from: sunrise)
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: sunrise)
+        let minute = calendar.component(.minute, from: sunrise)
+        return "\(hour):\(minute)"
     }
     
     init(description: String, temperature: Double, sunset: Double, sunrise: Double, datetime: Double) {

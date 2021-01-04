@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CDDE926D-D67E-4119-B577-7FF907EC4C95"
+            uuid = "35E5E5E4-25CF-4CAE-BFE7-E52E862A9BF4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Smart Home/Networking/Networking.swift"
+            filePath = "SmartHomeTests/NetworkingTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
-            landmarkName = "getWeather(city:closure:)"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "testGetWeather()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
