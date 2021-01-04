@@ -44,6 +44,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         registerNibs()
+        
         loadData()
         
         self.navigationItem.title = Greeting.message()
