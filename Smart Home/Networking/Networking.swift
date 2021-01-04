@@ -787,6 +787,15 @@ class Networking {
         return FirebaseAuth.Auth.auth().currentUser != nil
     }
     
+    static func getEmail() -> String? {
+        
+        if isLoggedIn() {
+            return FirebaseAuth.Auth.auth().currentUser?.email
+        }
+        
+        return nil
+    }
+    
     static func signOut() {
         do{
             try FirebaseAuth.Auth.auth().signOut()

@@ -62,8 +62,9 @@ class WelcomeVC: UIViewController {
     }
 
     fileprivate func checkIfManualLoginIsNeeded(){
-        if Networking.isLoggedIn() {
+        if let email = Networking.getEmail() {
             os_log("Automatic login can be done.")
+            User.main.email = email
             performSegue(withIdentifier: "showHomeNC", sender: self)
         } else {
             os_log("Manual login is needed")

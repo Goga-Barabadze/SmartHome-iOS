@@ -13,6 +13,9 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     
+    var selected_station = 0
+    var type_of_devices: Device.Type? = Consumer.self
+    
     lazy var refresher : UIRefreshControl = {
         let refresher = UIRefreshControl()
         
@@ -26,24 +29,23 @@ class HomeVC: UIViewController {
         refresher.endRefreshing()
     }
     
-    var selected_station = 0
-    var type_of_devices: Device.Type? = Consumer.self
-    
-    fileprivate func registerNibs() {
-        let simple_title_cell = UINib(nibName: "SimpleTitleCell", bundle: nil)
-        tableview.register(simple_title_cell, forCellReuseIdentifier: "SimpleTitleCell")
+    fileprivate func registerNibCells() {
         
-        let device_overview_cell = UINib(nibName: "DeviceOverviewCell", bundle: nil)
-        tableview.register(device_overview_cell, forCellReuseIdentifier: "DeviceOverviewCell")
+        let cells = [
+            "SimpleTitleCell",
+            "DeviceOverviewCell",
+            "OverviewWeatherCell"
+        ]
         
-        let overview_weather_cell = UINib(nibName: "OverviewWeatherCell", bundle: nil)
-        tableview.register(overview_weather_cell, forCellReuseIdentifier: "OverviewWeatherCell")
+        for cell in cells {
+            tableview.register(UINib(nibName: cell, bundle: nil), forCellReuseIdentifier: cell)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        registerNibs()
+        registerNibCells()
         
         loadData()
         
@@ -55,24 +57,21 @@ class HomeVC: UIViewController {
 
     func loadData(){
         
-        let user = User(name: "Goga", email: "fakeemail@something.com", locations: [])
-        
         refresher.beginRefreshing()
         
-        Networking.loadLocationsWithDepth(email: user.email) { (locations) in
+        Networking.loadLocationsWithDepth(email: User.main.email) { (locations) in
             
-            user.stations = locations
+            User.main.locations = locations
+            
             self.tableview.reloadData()
             
             self.refresher.endRefreshing()
         }
-        
-        _ = Model.init(user: user)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DevicesVC {
-            vc.station = Model.user.stations[selected_station]
+            vc.station = User.main.locations[selected_station]
             vc.type_of_devices = self.type_of_devices
         }
     }
@@ -90,7 +89,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return Model.user.stations.count
+        return User.main.locations.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -103,14 +102,14 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleTitleCell") as! SimpleTitleCell
             
-            cell.commontInit(title: Model.user.stations[indexPath.section].name)
+            cell.commontInit(title: User.main.locations[indexPath.section].name)
             
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewWeatherCell") as! OverviewWeatherCell
             
-            let location = Model.user.stations[indexPath.section].city
-            let weather = Model.user.stations[indexPath.section].weather
+            let location = User.main.locations[indexPath.section].city
+            let weather = User.main.locations[indexPath.section].weather
             
             cell.commonInit(city: location, temperature: "\(weather.temperature) °", image: UIImage(systemName: "sun.max")!, wind: "km/h", sunrise: "\(weather.sunrise)", sunset: "\(weather.sunset)", visibility: " km")
             
@@ -121,7 +120,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             cell.commontInit(color: UIColor(rgb: 0x147AFC))
             cell.textLabel!.text = "Photovoltaic"
             
-            let production = Model.user.stations[indexPath.section].currentProduction
+            let production = User.main.locations[indexPath.section].currentProduction
             cell.detailTextLabel!.text = "Currently producing \(production) Watts per hour"
             
             return cell
@@ -131,7 +130,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             cell.commontInit(color: UIColor(rgb: 0x34C759))
             cell.textLabel!.text = "Devices"
             
-            let consumption = Model.user.stations[indexPath.section].currentConsumption
+            let consumption = User.main.locations[indexPath.section].currentConsumption
             cell.detailTextLabel!.text = "Currently consuming \(consumption) Watts per hour"
             
             return cell

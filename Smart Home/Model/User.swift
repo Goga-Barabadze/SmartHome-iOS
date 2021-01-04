@@ -10,14 +10,15 @@ import Foundation
 
 class User {
     
-    var name = ""
-    var email = ""
-    var stations = [Location]()
+    // Singleton
+    static var main = User()
     
-    init(name: String, email: String, locations: [Location]) {
-        self.name = name
+    var email = ""
+    var locations = [Location]()
+    
+    init(email: String, locations: [Location]) {
         self.email = email
-        self.stations = locations
+        self.locations = locations
     }
     
     init() {
