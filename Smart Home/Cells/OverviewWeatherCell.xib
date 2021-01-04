@@ -52,16 +52,16 @@
                                 <rect key="frame" x="92.5" y="52.5" width="168.5" height="42.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="gpS-aN-GVU">
-                                        <rect key="frame" x="0.0" y="0.0" width="168.5" height="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="168.5" height="14.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx9-3d-pcJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="28" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuo-Ck-8ns">
-                                                <rect key="frame" x="137.5" y="0.0" width="31" height="14"/>
+                                                <rect key="frame" x="137.5" y="0.0" width="31" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -69,17 +69,11 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-ee-ArY">
-                                        <rect key="frame" x="0.0" y="28" width="168.5" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="168.5" height="14"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="25 km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0m-B5-TTq">
-                                                <rect key="frame" x="0.0" y="0.0" width="131" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="12 m/h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lz-UW-pgG">
-                                                <rect key="frame" x="131" y="0.0" width="37.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="sunny" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0m-B5-TTq">
+                                                <rect key="frame" x="0.0" y="0.0" width="168.5" height="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -115,12 +109,11 @@
             <connections>
                 <outlet property="city" destination="L7P-UU-TaD" id="QAf-W8-1EO"/>
                 <outlet property="design_view" destination="jvE-9w-pRF" id="7ut-ag-zW4"/>
+                <outlet property="dictionary" destination="n0m-B5-TTq" id="SoT-Tl-4CI"/>
                 <outlet property="sunrise" destination="Fx9-3d-pcJ" id="jil-PT-gtc"/>
                 <outlet property="sunset" destination="Yuo-Ck-8ns" id="bvn-46-NG4"/>
                 <outlet property="temperature" destination="YZN-Gt-WOe" id="EjW-jF-amR"/>
-                <outlet property="visibility" destination="n0m-B5-TTq" id="SoT-Tl-4CI"/>
                 <outlet property="weather_image" destination="MMo-ua-RVt" id="Zdl-1i-lGd"/>
-                <outlet property="wind" destination="0Lz-UW-pgG" id="Qt4-kr-rqi"/>
             </connections>
             <point key="canvasLocation" x="155.79710144927537" y="97.433035714285708"/>
         </tableViewCell>
