@@ -114,8 +114,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             let location = User.main.locations[indexPath.section]
             let weather = location.weather
             
-            // FIXME: displaying in a weird way
-            cell.commonInit(city: location.city, temperature: "\(weather.temperature) °", image: UIImage(systemName: "sun.max")!, sunrise: "\(weather.sunrise)", sunset: "\(weather.sunset)", description: weather.description)
+            cell.commonInit(city: location.city, temperature: "\(weather.temperature) °", image: UIImage(systemName: "sun.max")!, sunrise: "\(weather.formattedSunrise)", sunset: "\(weather.formattedSunset)", description: weather.description)
             
             return cell
         case 2:

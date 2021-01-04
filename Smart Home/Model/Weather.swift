@@ -16,6 +16,18 @@ class Weather {
     var sunrise: Date = Date()
     var datetime: Date = Date()
     
+    var formattedSunset: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:MM"
+        return dateFormatter.string(from: sunset)
+    }
+    
+    var formattedSunrise: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:MM"
+        return dateFormatter.string(from: sunrise)
+    }
+    
     init(description: String, temperature: Double, sunset: Double, sunrise: Double, datetime: Double) {
         self.description = description
         self.temperature = temperature
