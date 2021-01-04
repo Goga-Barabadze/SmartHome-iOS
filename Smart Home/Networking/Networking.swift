@@ -73,6 +73,7 @@ class Networking {
                 Networking.getConsumers(email: email, locationID: location.id) { (consumers) in
                     
                     guard let consumers = consumers else {
+                        os_log("Could not load consumers.")
                         return
                     }
                     
@@ -83,11 +84,22 @@ class Networking {
                 Networking.getGenerators(email: email, locationID: location.id) { (generators) in
                     
                     guard let generators = generators else {
+                        os_log("Could not load generators.")
                         return
                     }
                     
                     location.devices.append(contentsOf: generators)
                     
+                }
+                
+                Networking.getWeather(city: location.city) { (weather) in
+                    
+                    guard let weather = weather else {
+                        os_log("Could not load weather.")
+                        return
+                    }
+                    
+                    location.weather = weather
                 }
                 
             }

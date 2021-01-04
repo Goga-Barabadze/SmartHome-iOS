@@ -30,15 +30,23 @@ class OverviewWeatherCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func commonInit(city: String, temperature: String, image: UIImage, wind: String, sunrise: String, sunset: String, visibility: String){
+    func commonInit(city: String, temperature: String, image: UIImage, sunrise: String, sunset: String, description: String){
+        
+        /*
+         var description: String = ""
+         var temperature: Double = 0.0
+         var sunset: Date = Date()
+         var sunrise: Date = Date()
+         var datetime: Date = Date()
+         */
         
         self.city.text = city
         self.temperature.text = temperature
         self.weather_image.image = image
-        self.wind.text = wind
+//        self.wind.text = wind
         self.sunrise.text = sunrise
         self.sunset.text = sunset
-        self.visibility.text = visibility
+        self.visibility.text = "description"
         
         design_view.roundCorners(radius: 20, masksToBounds: true)
         design_view.gradient(colors: [.init(rgb: 0x5BBDB), .black], locations: [0, 3])

@@ -41,12 +41,16 @@ class HomeVC: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         registerNibCells()
-        
-        loadData()
         
         self.navigationItem.title = Greeting.message()
         
@@ -111,7 +115,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             let weather = User.main.locations[indexPath.section].weather
             
             // FIXME: displaying in a weird way
-            cell.commonInit(city: location, temperature: "\(weather.temperature) °", image: UIImage(systemName: "sun.max")!, wind: "km/h", sunrise: "\(weather.sunrise)", sunset: "\(weather.sunset)", visibility: " km")
+            cell.commonInit(city: location, temperature: "\(weather.temperature) °", image: UIImage(systemName: "sun.max")!, sunrise: "\(weather.sunrise)", sunset: "\(weather.sunset)", description: weather.description)
             
             return cell
         case 2:
