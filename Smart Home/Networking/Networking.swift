@@ -68,6 +68,17 @@ class Networking {
                 return
             }
             
+            var countCompletions = 0
+            
+            func oneCompletionMore() {
+                
+                countCompletions += 1
+                
+                if countCompletions >= locations.count * 3 {
+                    closure(locations)
+                }
+            }
+            
             for location in locations {
                 
                 Networking.getConsumers(email: email, locationID: location.id) { (consumers) in
@@ -79,6 +90,7 @@ class Networking {
                     
                     location.devices.append(contentsOf: consumers)
                     
+                    oneCompletionMore()
                 }
                 
                 Networking.getGenerators(email: email, locationID: location.id) { (generators) in
@@ -90,6 +102,7 @@ class Networking {
                     
                     location.devices.append(contentsOf: generators)
                     
+                    oneCompletionMore()
                 }
                 
                 Networking.getWeather(city: location.city) { (weather) in
@@ -100,11 +113,11 @@ class Networking {
                     }
                     
                     location.weather = weather
+                    
+                    oneCompletionMore()
                 }
                 
             }
-            
-            closure(locations)
         }
         
     }
@@ -120,24 +133,9 @@ class Networking {
         }
         
         if var array = data as? [Any] {
-            for value in array {
-                let currentIndex = array.firstIndex { (value2) -> Bool in
-                    
-                    guard
-                        let string1 = value as? String,
-                        let string2 = value2 as? String
-                    else {
-                        return false
-                    }
-                    
-                    return string1 == string2
-                }
-                
-                guard let index = currentIndex else {
-                    continue
-                }
-                
-                array[index] = unescape(data: value)
+            
+            array.enumerated().forEach { (item) in
+                array[item.offset] = unescape(data: item.element)
             }
             
             return array

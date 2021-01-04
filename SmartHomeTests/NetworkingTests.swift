@@ -33,6 +33,25 @@ class NetworkingTests: XCTestCase {
     
     // MARK: Get Functions
 
+    func testLoadLocationsWithDepth() throws {
+        
+        let expectation = self.expectation(description: "testLoadLocationsWithDepth")
+        
+        Networking.loadLocationsWithDepth(email: email) { (locations) in
+            
+            XCTAssertNotEqual(locations.first?.weather.description, "")
+            
+            expectation.fulfill()
+            
+        }
+        
+        waitForExpectations(timeout: TimeInterval(maximumWaitForExpectation)) { (error) in
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func testGetFroniusLocation() throws {
         
         let expectation = self.expectation(description: "testGetFroniusLocation")
@@ -102,8 +121,7 @@ class NetworkingTests: XCTestCase {
         Networking.getWeather(city: "Linz") { (weather) in
             
             XCTAssertNotNil(weather)
-            XCTAssertNotNil(weather?.datetime)
-            XCTAssertNotNil(weather?.temperature)
+            XCTAssertNotEqual(weather?.description, "")
             
             expectation.fulfill()
             

@@ -111,11 +111,11 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewWeatherCell") as! OverviewWeatherCell
             
-            let location = User.main.locations[indexPath.section].city
-            let weather = User.main.locations[indexPath.section].weather
+            let location = User.main.locations[indexPath.section]
+            let weather = location.weather
             
             // FIXME: displaying in a weird way
-            cell.commonInit(city: location, temperature: "\(weather.temperature) °", image: UIImage(systemName: "sun.max")!, sunrise: "\(weather.sunrise)", sunset: "\(weather.sunset)", description: weather.description)
+            cell.commonInit(city: location.city, temperature: "\(weather.temperature) °", image: UIImage(systemName: "sun.max")!, sunrise: "\(weather.sunrise)", sunset: "\(weather.sunset)", description: weather.description)
             
             return cell
         case 2:
