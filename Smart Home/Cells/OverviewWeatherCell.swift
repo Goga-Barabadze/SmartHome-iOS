@@ -15,7 +15,7 @@ class OverviewWeatherCell: UITableViewCell {
     @IBOutlet weak var temperature: UILabel!
     @IBOutlet weak var weather_image: UIImageView!
     @IBOutlet weak var sunrise: UILabel!
-    @IBOutlet weak var dictionary: UILabel!
+    @IBOutlet weak var descriptionOfWeather: UILabel!
     @IBOutlet weak var sunset: UILabel!
     
     override func awakeFromNib() {
@@ -33,7 +33,7 @@ class OverviewWeatherCell: UITableViewCell {
         self.weather_image.image = image
         self.sunrise.text = sunrise
         self.sunset.text = sunset
-        self.dictionary.text = description
+        self.descriptionOfWeather.text = description
         
         design_view.roundCorners(radius: 20, masksToBounds: true)
         design_view.gradient(colors: [.init(rgb: 0x5BBDB), .black], locations: [0, 3])

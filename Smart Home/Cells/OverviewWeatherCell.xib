@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -108,8 +107,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="city" destination="L7P-UU-TaD" id="QAf-W8-1EO"/>
+                <outlet property="descriptionOfWeather" destination="n0m-B5-TTq" id="SoT-Tl-4CI"/>
                 <outlet property="design_view" destination="jvE-9w-pRF" id="7ut-ag-zW4"/>
-                <outlet property="dictionary" destination="n0m-B5-TTq" id="SoT-Tl-4CI"/>
                 <outlet property="sunrise" destination="Fx9-3d-pcJ" id="jil-PT-gtc"/>
                 <outlet property="sunset" destination="Yuo-Ck-8ns" id="bvn-46-NG4"/>
                 <outlet property="temperature" destination="YZN-Gt-WOe" id="EjW-jF-amR"/>
