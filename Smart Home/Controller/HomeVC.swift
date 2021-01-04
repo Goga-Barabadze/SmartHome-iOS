@@ -13,7 +13,7 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     
-    var selected_station = 0
+    var selected_location = 0
     var type_of_devices: Device.Type? = Consumer.self
     
     lazy var refresher : UIRefreshControl = {
@@ -25,8 +25,7 @@ class HomeVC: UIViewController {
     }()
     
     @objc func refresh(){
-        
-        refresher.endRefreshing()
+        loadData()
     }
     
     fileprivate func registerNibCells() {
@@ -57,21 +56,21 @@ class HomeVC: UIViewController {
 
     func loadData(){
         
-        refresher.beginRefreshing()
+        User.main.locations.removeAll()
         
         Networking.loadLocationsWithDepth(email: User.main.email) { (locations) in
-            
+
             User.main.locations = locations
-            
+
             self.tableview.reloadData()
-            
+
             self.refresher.endRefreshing()
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DevicesVC {
-            vc.station = User.main.locations[selected_station]
+            vc.station = User.main.locations[selected_location]
             vc.type_of_devices = self.type_of_devices
         }
     }
@@ -111,6 +110,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             let location = User.main.locations[indexPath.section].city
             let weather = User.main.locations[indexPath.section].weather
             
+            // FIXME: displaying in a weird way
             cell.commonInit(city: location, temperature: "\(weather.temperature) °", image: UIImage(systemName: "sun.max")!, wind: "km/h", sunrise: "\(weather.sunrise)", sunset: "\(weather.sunset)", visibility: " km")
             
             return cell
@@ -155,11 +155,11 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         
         case 2:
-            selected_station = indexPath.section
+            selected_location = indexPath.section
             type_of_devices = Generator.self
             performSegue(withIdentifier: "showDevicesVC", sender: self)
         case 3:
-            selected_station = indexPath.section
+            selected_location = indexPath.section
             type_of_devices = Consumer.self
             performSegue(withIdentifier: "showDevicesVC", sender: self)
         

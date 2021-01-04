@@ -33,7 +33,7 @@ class LoginVC: UIViewController {
         Account.signIn(email: email, password: password, target: self, closure: {authResult, error in
             if authResult?.user != nil && error == nil {
                 os_log("User is logged in now")
-                
+                User.main.email = email
                 self.performSegue(withIdentifier: "showHomeNC", sender: self)
                 
             }else{
