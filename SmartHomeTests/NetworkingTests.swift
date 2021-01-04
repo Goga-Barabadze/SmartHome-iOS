@@ -340,7 +340,7 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testUpdateLocation")
         
-        let location = Location(id: locationID, city: "Somewhere in Austria", country: "Germany", name: "Location 1", zip: "123")
+        let location = Location(id: locationID, city: "Perg", country: "Austria", name: "Location 1", zip: "123")
         
         Networking.updateLocation(email: email, location: location) { (didSucceed) in
             
@@ -512,15 +512,35 @@ class NetworkingTests: XCTestCase {
     
     // MARK: Internal Functionality
     
-    func testUnescape() {
+    func testUnescapeString() {
         XCTAssertEqual(Networking.unescape(data: "hello") as? String, "hello")
         XCTAssertEqual(Networking.unescape(data: "\"") as? String, "")
         XCTAssertEqual(Networking.unescape(data: "Hello\"This is fun") as? String, "HelloThis is fun")
     }
     
-    func testMeasureUnescape(){
-        measure {
-            testUnescape()
-        }
+    func testUnescapeDictionary(){
+        
+        let dictionary: [String : Any] = [
+            "variable1": "\"hello",
+            "entry2": "\"hel\"lo",
+            "test3": "\"hello",
+            "dic": [
+                "welcome": "\"to \"level deux",
+                "array": [10, 299, "string", "string2", "h\"mm"]
+            ],
+        ]
+        
+        let unescaped = Networking.unescape(data: dictionary) as! [String : Any]
+        
+        XCTAssertEqual(unescaped["variable1"] as! String, "hello")
+        
+        let second_level_dictionary = unescaped["dic"] as! [String : Any]
+        
+        XCTAssertEqual(second_level_dictionary["welcome"] as! String, "to level deux")
+        
+        let third_level_array = second_level_dictionary["array"] as! NSArray
+        
+        XCTAssertEqual(third_level_array[2] as! String, "string")
+        XCTAssertEqual(third_level_array[4] as! String, "hmm")
     }
 }

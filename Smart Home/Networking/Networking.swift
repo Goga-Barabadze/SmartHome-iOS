@@ -56,7 +56,7 @@ class Networking {
                 return
             }
             
-            closure(result?.data, nil)
+            closure(unescape(data: result!.data), nil)
         }
     }
     
@@ -119,9 +119,25 @@ class Networking {
             return dictionary
         }
         
-        if var array = (data as? NSArray)?.firstObject as? [String : Any] {
-            for (key, value) in array {
-                array.updateValue(unescape(data: value), forKey: key)
+        if var array = data as? [Any] {
+            for value in array {
+                let currentIndex = array.firstIndex { (value2) -> Bool in
+                    
+                    guard
+                        let string1 = value as? String,
+                        let string2 = value2 as? String
+                    else {
+                        return false
+                    }
+                    
+                    return string1 == string2
+                }
+                
+                guard let index = currentIndex else {
+                    continue
+                }
+                
+                array[index] = unescape(data: value)
             }
             
             return array
