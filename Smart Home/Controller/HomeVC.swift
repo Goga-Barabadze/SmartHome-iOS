@@ -29,16 +29,8 @@ class HomeVC: UIViewController {
     }
     
     fileprivate func registerNibCells() {
-        
-        let cells = [
-            "SimpleTitleCell",
-            "DeviceOverviewCell",
-            "OverviewWeatherCell"
-        ]
-        
-        for cell in cells {
-            tableview.register(UINib(nibName: cell, bundle: nil), forCellReuseIdentifier: cell)
-        }
+        ["SimpleTitleCell", "DeviceOverviewCell", "OverviewWeatherCell"]
+            .forEach({tableview.register(UINib(nibName: $0, bundle: nil), forCellReuseIdentifier: $0)})
     }
     
     override func viewWillAppear(_ animated: Bool) {
