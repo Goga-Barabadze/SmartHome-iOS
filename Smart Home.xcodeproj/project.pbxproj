@@ -42,6 +42,8 @@
 		4A96D84E25969224001C9554 /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96D84D25969224001C9554 /* Consumer.swift */; };
 		4A96D85325969243001C9554 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96D85225969243001C9554 /* Generator.swift */; };
 		4A96D858259692CA001C9554 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96D857259692CA001C9554 /* Device.swift */; };
+		4AB3C7F625B323C100F0B109 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB3C7F425B323C100F0B109 /* Home.storyboard */; };
+		4AB3C7FC25B323C800F0B109 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB3C7FA25B323C800F0B109 /* Registration.storyboard */; };
 		4AD08034254370DD00D2F36B /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD08033254370DD00D2F36B /* Synchronizer.swift */; };
 		4AEB2C9B24C03D230001F981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9A24C03D230001F981 /* AppDelegate.swift */; };
 		4AEB2C9D24C03D230001F981 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9C24C03D230001F981 /* SceneDelegate.swift */; };
@@ -129,6 +131,8 @@
 		4A96D84D25969224001C9554 /* Consumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumer.swift; sourceTree = "<group>"; };
 		4A96D85225969243001C9554 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		4A96D857259692CA001C9554 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		4AB3C7F525B323C100F0B109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		4AB3C7FB25B323C800F0B109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Registration.storyboard; sourceTree = "<group>"; };
 		4AD08033254370DD00D2F36B /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
 		4AEB2C9724C03D230001F981 /* Smart Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEB2C9A24C03D230001F981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -308,6 +312,8 @@
 		4AEB2CBF24C03DC90001F981 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				4AB3C7FA25B323C800F0B109 /* Registration.storyboard */,
+				4AB3C7F425B323C100F0B109 /* Home.storyboard */,
 				4AEB2CA024C03D230001F981 /* Main.storyboard */,
 				4AEB2CA824C03D240001F981 /* LaunchScreen.storyboard */,
 			);
@@ -505,12 +511,14 @@
 				4A426BB624C8BDFE002CE5A2 /* SimpleTitleCell.xib in Resources */,
 				4AEB2CAA24C03D240001F981 /* LaunchScreen.storyboard in Resources */,
 				4A426BBA24C8C0E2002CE5A2 /* DeviceOverviewCell.xib in Resources */,
+				4AB3C7F625B323C100F0B109 /* Home.storyboard in Resources */,
 				4A426BC424C9918F002CE5A2 /* StatsCell.xib in Resources */,
 				4A6FF6C824C31BE400CA3828 /* OverviewWeatherCell.xib in Resources */,
 				4A8B6CC624C6D39700C59680 /* SimpleInformationCell.xib in Resources */,
 				4A6FF6CC24C3289000CA3828 /* SimpleButtonCell.xib in Resources */,
 				4A8C37DD24C19AD3004A9DBD /* GoogleService-Info.plist in Resources */,
 				4A6FF6C424C31BB600CA3828 /* SimpleInputCell.xib in Resources */,
+				4AB3C7FC25B323C800F0B109 /* Registration.storyboard in Resources */,
 				4AEB2CA724C03D240001F981 /* Assets.xcassets in Resources */,
 				4AEB2CA224C03D230001F981 /* Main.storyboard in Resources */,
 			);
@@ -706,6 +714,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4AB3C7F425B323C100F0B109 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AB3C7F525B323C100F0B109 /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		4AB3C7FA25B323C800F0B109 /* Registration.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AB3C7FB25B323C800F0B109 /* Base */,
+			);
+			name = Registration.storyboard;
+			sourceTree = "<group>";
+		};
 		4AEB2CA024C03D230001F981 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
