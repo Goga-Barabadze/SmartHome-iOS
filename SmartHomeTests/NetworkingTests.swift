@@ -118,7 +118,7 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetWeather")
         
-        Networking.getWeather(city: "Linz") { (weather) in
+        Networking.getWeather(zip: "4320") { (weather) in
             
             XCTAssertNotNil(weather)
             XCTAssertNotEqual(weather?.description, "")
@@ -138,7 +138,7 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testGetForecast")
         
-        Networking.getForecast(city: "Perg") { (forecast) in
+        Networking.getForecast(zip: "4020") { (forecast) in
             
             XCTAssertNotNil(forecast)
             XCTAssertNotNil(forecast?.first)
@@ -263,9 +263,11 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testAddPV")
         
-        Networking.addPV(email: email, locationID: locationID, pvID: pvID) { (didSucceed) in
+        Networking.addPV(email: email, locationID: locationID, pvID: pvID) { (returnedPvID, returnedGeneratorType) in
             
-            XCTAssertTrue(didSucceed)
+            XCTAssertEqual(returnedPvID, self.pvID)
+            XCTAssertNotNil(returnedPvID)
+            XCTAssertNotNil(returnedGeneratorType)
             
             expectation.fulfill()
             

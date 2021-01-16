@@ -105,7 +105,7 @@ class Networking {
                     oneCompletionMore()
                 }
                 
-                Networking.getWeather(city: location.city) { (weather) in
+                Networking.getWeather(zip: location.zip) { (weather) in
                     
                     guard let weather = weather else {
                         os_log("Could not load weather.")
@@ -215,10 +215,10 @@ class Networking {
         
     }
     
-    static func getWeather(city: String, closure: @escaping (Weather?) -> ()){
+    static func getWeather(zip: String, closure: @escaping (Weather?) -> ()){
         
         let parameters: [String : Any] = [
-            "city": city
+            "zip": zip
         ]
         
         call(function: .getWeather, with: parameters) { (result, error) in
@@ -242,10 +242,10 @@ class Networking {
         
     }
     
-    static func getForecast(city: String, closure: @escaping ([Weather]?) -> ()){
+    static func getForecast(zip: String, closure: @escaping ([Weather]?) -> ()){
         
         let parameters: [String : Any] = [
-            "city": city
+            "zip": zip
         ]
         
         call(function: .getForecast, with: parameters) { (result, error) in
@@ -265,18 +265,13 @@ class Networking {
                     let dictionaryOfCurrentWeather = currentlyIteratedWeather as? [String : Any],
                     let description = dictionaryOfCurrentWeather["description"] as? String,
                     let temperature = dictionaryOfCurrentWeather["temp"] as? Double,
-                    let datetime = dictionaryOfCurrentWeather["dt"] as? String
+                    let datetime = dictionaryOfCurrentWeather["dt"] as? NSString
                 else {
                     os_log("Could not unwrap weather object from forecast.")
-                    closure([])
                     continue
                 }
 
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                guard let date = dateFormatter.date(from: datetime.replacingOccurrences(of: "\"", with: "")) else {
-                    return
-                }
+                let date = Date(timeIntervalSince1970: datetime.doubleValue)
                 
                 finalForecast.append(Weather(description: description, temperature: temperature, datetime: date))
             }
@@ -526,7 +521,7 @@ class Networking {
         
     }
     
-    static func addPV(email: String, locationID: String, pvID: String, closure: @escaping (Bool) -> ()){
+    static func addPV(email: String, locationID: String, pvID: String, closure: @escaping (String?, String?) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,
@@ -537,14 +532,19 @@ class Networking {
         call(function: .addPV, with: parameters) { (result, error) in
             
             guard
-                let dictionary = result as? [String : Any],
-                let message = dictionary["message"] as? String
+                let unwrapped_result = result,
+                let unwrapped_dictionary = unwrapped_result as? [String : Any],
+                let dictionary_array = unwrapped_dictionary["result"] as? NSArray,
+                let dictionary = dictionary_array.firstObject as? [String : Any]
             else {
-                closure(false)
+                closure(nil, nil)
                 return
             }
             
-            closure(message == "Successful")
+            closure(
+                dictionary["pvID"] as? String,
+                dictionary["generatorType"] as? String
+            )
             
         }
         

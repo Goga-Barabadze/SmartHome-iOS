@@ -145,7 +145,7 @@ class LayerlessNetworkingTests: XCTestCase {
         let expectation = self.expectation(description: "testGetWeather")
         
         let parameters: [String : Any] = [
-            "city": "Perg"
+            "zip": "4020"
         ]
         
         Networking.call(function: .getWeather, with: parameters) { result, error in
@@ -185,7 +185,7 @@ class LayerlessNetworkingTests: XCTestCase {
         let expectation = self.expectation(description: "testGetForecast")
         
         let parameters: [String : Any] = [
-            "city": "Perg"
+            "zip": "4020"
         ]
         
         Networking.call(function: .getForecast, with: parameters) { result, error in
@@ -392,13 +392,18 @@ class LayerlessNetworkingTests: XCTestCase {
                 XCTFail("Error: \(String(describing: error?.localizedDescription))")
             }
             
-            if let result = result! as? [String : Any] {
-                
-                XCTAssertEqual(result["message"] as? String, "Successful")
-                
-            } else {
+            guard
+                let unwrapped_result = result,
+                let unwrapped_dictionary = unwrapped_result as? [String : Any],
+                let dictionary_array = unwrapped_dictionary["result"] as? NSArray,
+                let dictionary = dictionary_array.firstObject as? [String : Any]
+            else {
                 XCTFail("Error: Result is nil.")
+                return
             }
+            
+            XCTAssertNotNil(dictionary["pvID"])
+            XCTAssertNotNil(dictionary["generatorType"])
             
             expectation.fulfill()
         }
