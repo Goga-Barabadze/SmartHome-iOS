@@ -456,7 +456,7 @@ class NetworkingTests: XCTestCase {
         
         let expectation = self.expectation(description: "testDeleteGenerator")
         
-        Networking.addPV(email: email, locationID: locationID, pvID: "delete-me") { (didSucceed) in
+        Networking.addPV(email: email, locationID: locationID, pvID: "delete-me") { (_, _) in
             
             Networking.deleteGenerator(email: self.email, locationID: self.locationID, pvID: "delete-me") { (didSucceed) in
                 
