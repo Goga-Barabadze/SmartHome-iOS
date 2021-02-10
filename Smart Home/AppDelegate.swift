@@ -15,6 +15,7 @@ import FirebaseMessaging
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         FirebaseApp.configure()
         
         UNUserNotificationCenter.current().delegate = self
@@ -28,7 +29,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         Messaging.messaging().delegate = self
         
+        doAdditionalSetupForEnvironment()
+        
         return true
+    }
+    
+    private func doAdditionalSetupForEnvironment(){
+        
+        let environment = ProcessInfo.processInfo.environment
+        
+        if let forceSignOut = environment["FORCESIGNOUT"], forceSignOut == "true" {
+            Networking.signOut()
+        }
+        
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {

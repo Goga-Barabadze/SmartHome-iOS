@@ -13,9 +13,25 @@ class LoginUITests: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
+        
+        let application = XCUIApplication()
+        application.launchEnvironment = ["FORCESIGNOUT" : "true"]
+        application.launch()
     }
 
     override func tearDownWithError() throws {
+        
+    }
+    
+    func testThreeTabBarItems() {
+        
+        let app = XCUIApplication()
+        app/*@START_MENU_TOKEN@*/.staticTexts["Login"]/*[[".buttons[\"Login\"].staticTexts[\"Login\"]",".staticTexts[\"Login\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Login"].buttons["Login"].tap()
+        
+        let tabBar = app.tabBars["Tab Bar"]
+        tabBar.buttons["Stats."].tap()
+        tabBar.buttons["Profile"].tap()
         
     }
     
