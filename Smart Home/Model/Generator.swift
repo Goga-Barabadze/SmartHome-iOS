@@ -15,6 +15,7 @@ class Generator: Device {
     
     init(id: String, type: String) {
         super.init(id: id)
+        super.name = id
         self.type = type
     }
 }
