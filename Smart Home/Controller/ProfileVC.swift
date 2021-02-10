@@ -88,17 +88,12 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             
             switch indexPath.row {
             case 0:
-                
                 performSegue(withIdentifier: "showPolicies", sender: self)
-                
             case 1:
-                
                 guard let url = URL(string: "https://goga-barabadze.github.io/SmartHome-FAQ/") else {
                     return
                 }
-                
                 UIApplication.shared.open(url, options: [:])
-                
             default:
                 print("Not implemented yet")
             }

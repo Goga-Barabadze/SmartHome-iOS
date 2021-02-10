@@ -57,15 +57,9 @@
 		4AEB2CC724C052B30001F981 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CC624C052B30001F981 /* HomeVC.swift */; };
 		4AEB2CC924C052C90001F981 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CC824C052C90001F981 /* ProfileVC.swift */; };
 		4AEB2CCB24C052DE0001F981 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CCA24C052DE0001F981 /* StatisticsVC.swift */; };
-		4AEB2CCD24C052F60001F981 /* AddStationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CCC24C052F60001F981 /* AddStationVC.swift */; };
+		4AEB2CCD24C052F60001F981 /* AddLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CCC24C052F60001F981 /* AddLocationVC.swift */; };
 		4AEB2CCF24C0530B0001F981 /* DeviceDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CCE24C0530B0001F981 /* DeviceDetailVC.swift */; };
 		4AEB2CD224C05DA70001F981 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD124C05DA70001F981 /* User.swift */; };
-		4AEB2CD424C05DF10001F981 /* OldStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD324C05DF10001F981 /* OldStation.swift */; };
-		4AEB2CD624C05DFA0001F981 /* OldDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD524C05DFA0001F981 /* OldDevice.swift */; };
-		4AEB2CD824C05E030001F981 /* OldProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD724C05E030001F981 /* OldProducer.swift */; };
-		4AEB2CDA24C05E0A0001F981 /* OldConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD924C05E0A0001F981 /* OldConsumer.swift */; };
-		4AEB2CDC24C05ED80001F981 /* OldLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDB24C05ED80001F981 /* OldLocation.swift */; };
-		4AEB2CDE24C05F2A0001F981 /* OldWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CDD24C05F2A0001F981 /* OldWeather.swift */; };
 		78629F11AC49811D8DB41880 /* Pods_Smart_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B1EF8C622D5EDA784B6BCA /* Pods_Smart_Home.framework */; };
 		C2107B3A330BE2CE3A40739A /* Pods_SmartHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287D72F7FAE5EEF121EF222 /* Pods_SmartHomeTests.framework */; };
 		E59307984667366153CBC595 /* libPods-SmartHomeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FC0B6F8CBAE32C8BFB57B9 /* libPods-SmartHomeUITests.a */; };
@@ -148,15 +142,9 @@
 		4AEB2CC624C052B30001F981 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		4AEB2CC824C052C90001F981 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		4AEB2CCA24C052DE0001F981 /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
-		4AEB2CCC24C052F60001F981 /* AddStationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStationVC.swift; sourceTree = "<group>"; };
+		4AEB2CCC24C052F60001F981 /* AddLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationVC.swift; sourceTree = "<group>"; };
 		4AEB2CCE24C0530B0001F981 /* DeviceDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailVC.swift; sourceTree = "<group>"; };
 		4AEB2CD124C05DA70001F981 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		4AEB2CD324C05DF10001F981 /* OldStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldStation.swift; sourceTree = "<group>"; };
-		4AEB2CD524C05DFA0001F981 /* OldDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldDevice.swift; sourceTree = "<group>"; };
-		4AEB2CD724C05E030001F981 /* OldProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldProducer.swift; sourceTree = "<group>"; };
-		4AEB2CD924C05E0A0001F981 /* OldConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldConsumer.swift; sourceTree = "<group>"; };
-		4AEB2CDB24C05ED80001F981 /* OldLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldLocation.swift; sourceTree = "<group>"; };
-		4AEB2CDD24C05F2A0001F981 /* OldWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldWeather.swift; sourceTree = "<group>"; };
 		4C334A04848A0D02601903F7 /* Pods-Smart Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home.release.xcconfig"; path = "Target Support Files/Pods-Smart Home/Pods-Smart Home.release.xcconfig"; sourceTree = "<group>"; };
 		56FC0B6F8CBAE32C8BFB57B9 /* libPods-SmartHomeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartHomeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D6A7CADC9141641F9AD15E /* Pods-SmartHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartHomeTests/Pods-SmartHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -255,19 +243,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4A96D83825969004001C9554 /* Old Model */ = {
-			isa = PBXGroup;
-			children = (
-				4AEB2CDD24C05F2A0001F981 /* OldWeather.swift */,
-				4AEB2CD324C05DF10001F981 /* OldStation.swift */,
-				4AEB2CDB24C05ED80001F981 /* OldLocation.swift */,
-				4AEB2CD724C05E030001F981 /* OldProducer.swift */,
-				4AEB2CD924C05E0A0001F981 /* OldConsumer.swift */,
-				4AEB2CD524C05DFA0001F981 /* OldDevice.swift */,
-			);
-			path = "Old Model";
-			sourceTree = "<group>";
-		};
 		4AEB2C8E24C03D230001F981 = {
 			isa = PBXGroup;
 			children = (
@@ -327,7 +302,7 @@
 				4AEB2CC624C052B30001F981 /* HomeVC.swift */,
 				4AEB2CC824C052C90001F981 /* ProfileVC.swift */,
 				4AEB2CCA24C052DE0001F981 /* StatisticsVC.swift */,
-				4AEB2CCC24C052F60001F981 /* AddStationVC.swift */,
+				4AEB2CCC24C052F60001F981 /* AddLocationVC.swift */,
 				4AEB2CCE24C0530B0001F981 /* DeviceDetailVC.swift */,
 				4A426BBD24C97E98002CE5A2 /* DevicesVC.swift */,
 				4A5DC19224CEF9BC0047E456 /* AddDeviceVC.swift */,
@@ -347,7 +322,6 @@
 				4A96D85225969243001C9554 /* Generator.swift */,
 				4A96D84525969207001C9554 /* Location.swift */,
 				4AEB2CD124C05DA70001F981 /* User.swift */,
-				4A96D83825969004001C9554 /* Old Model */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -662,32 +636,26 @@
 				4AEB2C9B24C03D230001F981 /* AppDelegate.swift in Sources */,
 				4A575C2E254993F700EF22AC /* Networking.swift in Sources */,
 				4AEB2CA524C03D230001F981 /* Smart_Home.xcdatamodeld in Sources */,
-				4AEB2CDE24C05F2A0001F981 /* OldWeather.swift in Sources */,
 				4A608BA3259D2A8900C41CCD /* ConsumerData.swift in Sources */,
 				4AEB2CCF24C0530B0001F981 /* DeviceDetailVC.swift in Sources */,
 				4A04EE0F259CD757000992C1 /* Company.swift in Sources */,
 				4AD08034254370DD00D2F36B /* Synchronizer.swift in Sources */,
-				4AEB2CDC24C05ED80001F981 /* OldLocation.swift in Sources */,
-				4AEB2CDA24C05E0A0001F981 /* OldConsumer.swift in Sources */,
 				4A96D85325969243001C9554 /* Generator.swift in Sources */,
 				4A96D84E25969224001C9554 /* Consumer.swift in Sources */,
 				4A8C37E124C1A6B5004A9DBD /* Alert.swift in Sources */,
 				4A426BBE24C97E98002CE5A2 /* DevicesVC.swift in Sources */,
 				4A6FF6C324C31BB600CA3828 /* SimpleInputCell.swift in Sources */,
-				4AEB2CD624C05DFA0001F981 /* OldDevice.swift in Sources */,
-				4AEB2CD424C05DF10001F981 /* OldStation.swift in Sources */,
 				4AEB2CC924C052C90001F981 /* ProfileVC.swift in Sources */,
 				4AEB2CCB24C052DE0001F981 /* StatisticsVC.swift in Sources */,
 				4A8B6CC524C6D39700C59680 /* SimpleInformationCell.swift in Sources */,
 				4A6871622596C03300DFC64F /* Weather.swift in Sources */,
 				4A04EE07259CCEDC000992C1 /* GeneratorData.swift in Sources */,
-				4AEB2CCD24C052F60001F981 /* AddStationVC.swift in Sources */,
+				4AEB2CCD24C052F60001F981 /* AddLocationVC.swift in Sources */,
 				4A96D84625969207001C9554 /* Location.swift in Sources */,
 				4AEB2CD224C05DA70001F981 /* User.swift in Sources */,
 				4A426BB924C8C0E2002CE5A2 /* DeviceOverviewCell.swift in Sources */,
 				4AEB2CC524C052950001F981 /* RegisterVC.swift in Sources */,
 				4A5DC19324CEF9BC0047E456 /* AddDeviceVC.swift in Sources */,
-				4AEB2CD824C05E030001F981 /* OldProducer.swift in Sources */,
 				4A6FF6C724C31BE400CA3828 /* OverviewWeatherCell.swift in Sources */,
 				4A426BC324C9918F002CE5A2 /* StatsCell.swift in Sources */,
 				4A8C37DF24C1A52A004A9DBD /* Account.swift in Sources */,
