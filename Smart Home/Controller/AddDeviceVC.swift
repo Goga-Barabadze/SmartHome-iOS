@@ -12,8 +12,8 @@ import os
 class AddDeviceVC: UIViewController {
     
     var titles = ["Name", "Manufacturer", "Electricity"]
+    var placeholders = ["Washing Machine", "Samsung", "38.0"]
     var location = Location()
-    var type_of_device: Device.Type? = Consumer.self
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -26,8 +26,7 @@ class AddDeviceVC: UIViewController {
     }
     
     fileprivate func setCorrectTitle(){
-        let deviceTypeAsString = type_of_device == Consumer.self ? "Consumer" : "Producer"
-        self.navigationItem.title = "Add \(deviceTypeAsString)"
+        self.navigationItem.title = "Add Consumer"
     }
     
     fileprivate func addDoneButton(){
@@ -57,30 +56,25 @@ class AddDeviceVC: UIViewController {
             return
         }
         
-        let electricity = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 2) as IndexPath) as! SimpleInputCell).input?.text
+        let electricity = Double((tableview.cellForRow(at: NSIndexPath(row: 0, section: 2) as IndexPath) as! SimpleInputCell).input?.text ?? "0")
         
-        if electricity == nil || electricity!.isEmpty {
+        if electricity == nil {
             os_log("User did not enter electricity of device")
             Alert.alert(title: "No electricity", message: "Please enter the electricity input/output for the device you are adding")
             return
         }
         
-        var device = Device()
+        let consumer = Consumer(id: "", averageConsumption: electricity!, company: manufacturer!, name: name!, serial: "", state: .not_running, type: "")
         
-        if type(of: type_of_device) == Consumer.self {
-            device = Consumer(id: "", averageConsumption: Double(electricity!) ?? 0, company: "", name: "", serial: "", state: .not_running, type: "")
-            os_log("Added Consumer to location \(self.location.name)")
-        }else{
-            device = Generator(id: "", type: "")
-            os_log("Added Producer to location \(self.location.name)")
+        os_log("Added Consumer to location \(self.location.name)")
+        
+        Networking.addConsumer(email: User.main.email, locationID: location.id, consumer: consumer) { (_, _) in
+            
+            HomeVC.load_needed = true
+            self.navigationController?.popViewController(animated: true)
+            
         }
-        
-        self.location.devices.append(device)
-        
-        navigationController?.popViewController(animated: true)
     }
-    
-    
 }
 
 extension AddDeviceVC : UITableViewDelegate, UITableViewDataSource {
@@ -90,11 +84,11 @@ extension AddDeviceVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -102,6 +96,7 @@ extension AddDeviceVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleInputCell") as! SimpleInputCell
         
         cell.title.text = titles[tableView.globalIndexPath(for: indexPath as NSIndexPath)]
+        cell.input.placeholder = placeholders[tableView.globalIndexPath(for: indexPath as NSIndexPath)]
         
         return cell
     }
