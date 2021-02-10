@@ -69,7 +69,7 @@ extension DeviceDetailVC : UITableViewDelegate, UITableViewDataSource {
         case 1:
             cell.input.text = "Replace me with Type of Device"
         case 2:
-            cell.input.text = "Replace me with station of device"
+            cell.input.text = "Replace me with location of device"
         case 3:
             cell.input.text = "Power of device"
         

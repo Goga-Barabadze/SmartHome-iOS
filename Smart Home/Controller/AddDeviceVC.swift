@@ -11,8 +11,8 @@ import os
 
 class AddDeviceVC: UIViewController {
     
-    var titles = ["Name of Device", "Manufacturer", "Electricity"]
-    var station = Location()
+    var titles = ["Name", "Manufacturer", "Electricity"]
+    var location = Location()
     var type_of_device: Device.Type? = Consumer.self
     
     @IBOutlet weak var tableview: UITableView!
@@ -69,15 +69,15 @@ class AddDeviceVC: UIViewController {
         
         if type(of: type_of_device) == Consumer.self {
             device = Consumer(id: "", averageConsumption: Double(electricity!) ?? 0, company: "", name: "", serial: "", state: .not_running, type: "")
-            os_log("Added Consumer to station \(self.station.name)")
+            os_log("Added Consumer to location \(self.location.name)")
         }else{
             device = Generator(id: "", type: "")
-            os_log("Added Producer to station \(self.station.name)")
+            os_log("Added Producer to location \(self.location.name)")
         }
         
-        self.station.devices.append(device)
+        self.location.devices.append(device)
         
-        Navigation.pop(context: self)
+        navigationController?.popViewController(animated: true)
     }
     
     

@@ -17,7 +17,6 @@
 		4A426BB924C8C0E2002CE5A2 /* DeviceOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BB724C8C0E2002CE5A2 /* DeviceOverviewCell.swift */; };
 		4A426BBA24C8C0E2002CE5A2 /* DeviceOverviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A426BB824C8C0E2002CE5A2 /* DeviceOverviewCell.xib */; };
 		4A426BBE24C97E98002CE5A2 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BBD24C97E98002CE5A2 /* DevicesVC.swift */; };
-		4A426BC024C98D32002CE5A2 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BBF24C98D32002CE5A2 /* Navigation.swift */; };
 		4A426BC324C9918F002CE5A2 /* StatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A426BC124C9918F002CE5A2 /* StatsCell.swift */; };
 		4A426BC424C9918F002CE5A2 /* StatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A426BC224C9918F002CE5A2 /* StatsCell.xib */; };
 		4A575C2E254993F700EF22AC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A575C2D254993F700EF22AC /* Networking.swift */; };
@@ -44,7 +43,6 @@
 		4A96D858259692CA001C9554 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96D857259692CA001C9554 /* Device.swift */; };
 		4AB3C7F625B323C100F0B109 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB3C7F425B323C100F0B109 /* Home.storyboard */; };
 		4AB3C7FC25B323C800F0B109 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB3C7FA25B323C800F0B109 /* Registration.storyboard */; };
-		4AD08034254370DD00D2F36B /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD08033254370DD00D2F36B /* Synchronizer.swift */; };
 		4AEB2C9B24C03D230001F981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9A24C03D230001F981 /* AppDelegate.swift */; };
 		4AEB2C9D24C03D230001F981 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9C24C03D230001F981 /* SceneDelegate.swift */; };
 		4AEB2C9F24C03D230001F981 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9E24C03D230001F981 /* WelcomeVC.swift */; };
@@ -100,7 +98,6 @@
 		4A426BB724C8C0E2002CE5A2 /* DeviceOverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOverviewCell.swift; sourceTree = "<group>"; };
 		4A426BB824C8C0E2002CE5A2 /* DeviceOverviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceOverviewCell.xib; sourceTree = "<group>"; };
 		4A426BBD24C97E98002CE5A2 /* DevicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
-		4A426BBF24C98D32002CE5A2 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		4A426BC124C9918F002CE5A2 /* StatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCell.swift; sourceTree = "<group>"; };
 		4A426BC224C9918F002CE5A2 /* StatsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsCell.xib; sourceTree = "<group>"; };
 		4A575C2D254993F700EF22AC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -127,7 +124,6 @@
 		4A96D857259692CA001C9554 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		4AB3C7F525B323C100F0B109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		4AB3C7FB25B323C800F0B109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Registration.storyboard; sourceTree = "<group>"; };
-		4AD08033254370DD00D2F36B /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
 		4AEB2C9724C03D230001F981 /* Smart Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEB2C9A24C03D230001F981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AEB2C9C24C03D230001F981 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -237,8 +233,6 @@
 				4A8C37DE24C1A52A004A9DBD /* Account.swift */,
 				4A8C37E024C1A6B5004A9DBD /* Alert.swift */,
 				4A8C37E224C1A73F004A9DBD /* Extensions.swift */,
-				4A426BBF24C98D32002CE5A2 /* Navigation.swift */,
-				4AD08033254370DD00D2F36B /* Synchronizer.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -639,7 +633,6 @@
 				4A608BA3259D2A8900C41CCD /* ConsumerData.swift in Sources */,
 				4AEB2CCF24C0530B0001F981 /* DeviceDetailVC.swift in Sources */,
 				4A04EE0F259CD757000992C1 /* Company.swift in Sources */,
-				4AD08034254370DD00D2F36B /* Synchronizer.swift in Sources */,
 				4A96D85325969243001C9554 /* Generator.swift in Sources */,
 				4A96D84E25969224001C9554 /* Consumer.swift in Sources */,
 				4A8C37E124C1A6B5004A9DBD /* Alert.swift in Sources */,
@@ -659,7 +652,6 @@
 				4A6FF6C724C31BE400CA3828 /* OverviewWeatherCell.swift in Sources */,
 				4A426BC324C9918F002CE5A2 /* StatsCell.swift in Sources */,
 				4A8C37DF24C1A52A004A9DBD /* Account.swift in Sources */,
-				4A426BC024C98D32002CE5A2 /* Navigation.swift in Sources */,
 				4AEB2C9D24C03D230001F981 /* SceneDelegate.swift in Sources */,
 				4A8C37D924C1943B004A9DBD /* Greeting.swift in Sources */,
 				4AEB2CC324C0526C0001F981 /* LoginVC.swift in Sources */,

@@ -70,8 +70,10 @@ class HomeVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DevicesVC {
-            vc.station = User.main.locations[selected_location]
+            vc.location = User.main.locations[selected_location]
             vc.type_of_devices = self.type_of_devices
+        } else if let vc = segue.destination as? AddDeviceVC {
+            vc.location = User.main.locations[selected_location]
         }
     }
 
