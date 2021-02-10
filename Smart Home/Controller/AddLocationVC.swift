@@ -50,14 +50,12 @@ class AddLocationVC: UIViewController {
                     return
                 }
                 Networking.addPV(email: User.main.email, locationID: locationID, pvID: pvID) { (_, _) in
+                    HomeVC.load_needed = true
                     self.navigationController?.popViewController(animated: true)
                 }
-                
             }
         }
-        
     }
-
 }
 
 extension AddLocationVC : UITableViewDelegate, UITableViewDataSource {

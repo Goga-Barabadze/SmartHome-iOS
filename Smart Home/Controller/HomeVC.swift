@@ -15,6 +15,7 @@ class HomeVC: UIViewController {
     
     var selected_location = 0
     var type_of_devices: Device.Type? = Consumer.self
+    static var load_needed = true
     
     lazy var refresher : UIRefreshControl = {
         let refresher = UIRefreshControl()
@@ -36,7 +37,10 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        loadData()
+        if HomeVC.load_needed {
+            loadData()
+            HomeVC.load_needed = false
+        }
     }
     
     override func viewDidLoad() {
