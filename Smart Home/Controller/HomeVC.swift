@@ -160,6 +160,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
                     
                     if success {
                         tableView.reloadSections([indexPath.section], with: .automatic)
+                        User.main.locations.removeAll(where: {$0.id == idOfLocationToRemove})
                     }
                     
                 }
