@@ -60,7 +60,7 @@ class Networking {
         }
     }
     
-    static func loadLocationsWithDepth(email: String, closure: @escaping ([Location]) -> ()){
+    static func loadLocationsWithDepth(email: String = User.main.email, closure: @escaping ([Location]) -> ()){
         
         Networking.getLocations(email: email) { (locations) in
             
@@ -148,7 +148,7 @@ class Networking {
         return data
     }
     
-    static func getLocations(email: String, closure: @escaping ([Location]?) -> ()){
+    static func getLocations(email: String = User.main.email, closure: @escaping ([Location]?) -> ()){
         
         let parameters: [String : Any] = [
             "email": email
@@ -397,7 +397,7 @@ class Networking {
         
     }
     
-    static func getGenerators(email: String, locationID: String, closure: @escaping ([Generator]?) -> ()){
+    static func getGenerators(email: String = User.main.email, locationID: String, closure: @escaping ([Generator]?) -> ()){
         
         let parameters: [String : Any] = [
             "email" : email,
@@ -437,7 +437,7 @@ class Networking {
         
     }
     
-    static func getConsumers(email: String, locationID: String, closure: @escaping ([Consumer]?) -> ()){
+    static func getConsumers(email: String = User.main.email, locationID: String, closure: @escaping ([Consumer]?) -> ()){
         
         let parameters: [String : Any] = [
             "email" : email,
@@ -521,7 +521,7 @@ class Networking {
         
     }
     
-    static func addPV(email: String, locationID: String, pvID: String, closure: @escaping (String?, String?) -> ()){
+    static func addPV(email: String = User.main.email, locationID: String, pvID: String, closure: @escaping (String?, String?) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,
@@ -550,7 +550,7 @@ class Networking {
         
     }
     
-    static func addConsumer(email: String, locationID: String, consumer: Consumer, closure: @escaping (String?, String?) -> ()){
+    static func addConsumer(email: String = User.main.email, locationID: String, consumer: Consumer, closure: @escaping (String?, String?) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,
@@ -580,7 +580,7 @@ class Networking {
         
     }
     
-    static func addLocation(email: String, location: Location, closure: @escaping (String?) -> ()){
+    static func addLocation(email: String = User.main.email, location: Location, closure: @escaping (String?) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,
@@ -606,7 +606,7 @@ class Networking {
         
     }
     
-    static func updateState(email: String, locationID: String, consumerID: String, modus: String, pvID: String, closure: @escaping (String?) -> ()){
+    static func updateState(email: String = User.main.email, locationID: String, consumerID: String, modus: String, pvID: String, closure: @escaping (String?) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,
@@ -632,7 +632,7 @@ class Networking {
         
     }
     
-    static func updateLocation(email: String, location: Location, closure: @escaping (Bool) -> ()){
+    static func updateLocation(email: String = User.main.email, location: Location, closure: @escaping (Bool) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,
@@ -659,7 +659,7 @@ class Networking {
         
     }
     
-    static func updateGenerator(email: String, locationID: String, generator: Generator, closure: @escaping (Bool) -> ()){
+    static func updateGenerator(email: String = User.main.email, locationID: String, generator: Generator, closure: @escaping (Bool) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,
@@ -684,7 +684,7 @@ class Networking {
         
     }
     
-    static func updateConsumer(email: String, locationID: String, pvID: String, consumer: Consumer, closure: @escaping (Bool) -> ()){
+    static func updateConsumer(email: String = User.main.email, locationID: String, pvID: String, consumer: Consumer, closure: @escaping (Bool) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,
@@ -738,7 +738,7 @@ class Networking {
         
     }
     
-    static func deleteGenerator(email: String, locationID: String, pvID: String, closure: @escaping (Bool) -> ()){
+    static func deleteGenerator(email: String = User.main.email, locationID: String, pvID: String, closure: @escaping (Bool) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,
@@ -762,7 +762,7 @@ class Networking {
         
     }
     
-    static func deleteConsumer(email: String, locationID: String, consumerID: String, closure: @escaping (Bool) -> ()){
+    static func deleteConsumer(email: String = User.main.email, locationID: String, consumerID: String, closure: @escaping (Bool) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,
@@ -786,7 +786,7 @@ class Networking {
         
     }
     
-    static func updateUserPassword(email: String, password: String, closure: @escaping (Bool) -> ()){
+    static func updateUserPassword(email: String = User.main.email, password: String, closure: @escaping (Bool) -> ()){
         
         let parameters: [String : Any] = [
             "email": email,

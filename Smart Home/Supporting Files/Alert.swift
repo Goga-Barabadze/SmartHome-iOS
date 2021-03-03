@@ -11,7 +11,7 @@ import UIKit
 
 class Alert {
     
-    static func alert(title: String?, message: String?, target: UIViewController? = UIApplication.currentViewController()!, actions: [UIAlertAction] = [UIAlertAction(title: "OK", style: .default, handler: nil)]){
+    static func alert(title: String? = nil, message: String? = nil, target: UIViewController? = UIApplication.currentViewController()!, actions: [UIAlertAction] = [UIAlertAction(title: "OK", style: .default, handler: nil)]){
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         

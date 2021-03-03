@@ -155,7 +155,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableview" destination="FFL-MT-ed9" id="tGW-ZQ-JSb"/>
+                        <outlet property="tableView" destination="FFL-MT-ed9" id="tGW-ZQ-JSb"/>
                         <segue destination="FL2-c3-9Dd" kind="show" identifier="showDeviceDetailVC" id="aTg-Xb-464"/>
                     </connections>
                 </viewController>
