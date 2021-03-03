@@ -47,23 +47,13 @@ class WelcomeVC: UIViewController {
         
         animationView!.frame = view.bounds
         
-        // 3. Set animation content mode
-        
         animationView!.contentMode = .scaleAspectFit
-        
-        // 4. Set animation loop mode
         
         animationView!.loopMode = .loop
         
-        // 5. Adjust animation speed
-        
         animationView!.animationSpeed = 0.5
         
-//        view.addSubview(animationView!)
-        
         view.insertSubview(animationView!, at: 1)
-        
-        // 6. Play animation
         
         animationView!.play()
     }
