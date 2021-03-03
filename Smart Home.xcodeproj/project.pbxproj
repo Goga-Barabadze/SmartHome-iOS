@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,6 +43,8 @@
 		4A96D858259692CA001C9554 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96D857259692CA001C9554 /* Device.swift */; };
 		4AB3C7F625B323C100F0B109 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB3C7F425B323C100F0B109 /* Home.storyboard */; };
 		4AB3C7FC25B323C800F0B109 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB3C7FA25B323C800F0B109 /* Registration.storyboard */; };
+		4AE4C47225F01B9000B5FA80 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4AE4C47125F01B9000B5FA80 /* Lottie */; };
+		4AE4C47825F01D0200B5FA80 /* earth.json in Resources */ = {isa = PBXBuildFile; fileRef = 4AE4C47725F01D0200B5FA80 /* earth.json */; };
 		4AEB2C9B24C03D230001F981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9A24C03D230001F981 /* AppDelegate.swift */; };
 		4AEB2C9D24C03D230001F981 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9C24C03D230001F981 /* SceneDelegate.swift */; };
 		4AEB2C9F24C03D230001F981 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2C9E24C03D230001F981 /* WelcomeVC.swift */; };
@@ -124,6 +126,7 @@
 		4A96D857259692CA001C9554 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		4AB3C7F525B323C100F0B109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		4AB3C7FB25B323C800F0B109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Registration.storyboard; sourceTree = "<group>"; };
+		4AE4C47725F01D0200B5FA80 /* earth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = earth.json; sourceTree = "<group>"; };
 		4AEB2C9724C03D230001F981 /* Smart Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEB2C9A24C03D230001F981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AEB2C9C24C03D230001F981 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78629F11AC49811D8DB41880 /* Pods_Smart_Home.framework in Frameworks */,
+				4AE4C47225F01B9000B5FA80 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +241,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4AE4C47625F01C6100B5FA80 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4AE4C47725F01D0200B5FA80 /* earth.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		4AEB2C8E24C03D230001F981 = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +274,7 @@
 		4AEB2C9924C03D230001F981 /* Smart Home */ = {
 			isa = PBXGroup;
 			children = (
+				4AE4C47625F01C6100B5FA80 /* Assets */,
 				4A575C2C254993D700EF22AC /* Networking */,
 				4A6FF6C024C31B4300CA3828 /* Cells */,
 				4A8C37D724C19408004A9DBD /* Supporting Files */,
@@ -269,8 +282,8 @@
 				4AEB2CC024C03DD00001F981 /* Controller */,
 				4AEB2CBF24C03DC90001F981 /* Storyboard */,
 				4AEB2C9A24C03D230001F981 /* AppDelegate.swift */,
-				4AEB2C9C24C03D230001F981 /* SceneDelegate.swift */,
 				4AEB2CA624C03D240001F981 /* Assets.xcassets */,
+				4AEB2C9C24C03D230001F981 /* SceneDelegate.swift */,
 				4AEB2CAB24C03D240001F981 /* Info.plist */,
 				4AEB2CA324C03D230001F981 /* Smart_Home.xcdatamodeld */,
 				4A8C37DC24C19AD3004A9DBD /* GoogleService-Info.plist */,
@@ -410,6 +423,9 @@
 			dependencies = (
 			);
 			name = "Smart Home";
+			packageProductDependencies = (
+				4AE4C47125F01B9000B5FA80 /* Lottie */,
+			);
 			productName = "Smart Home";
 			productReference = 4AEB2C9724C03D230001F981 /* Smart Home.app */;
 			productType = "com.apple.product-type.application";
@@ -446,6 +462,9 @@
 				Base,
 			);
 			mainGroup = 4AEB2C8E24C03D230001F981;
+			packageReferences = (
+				4AE4C47025F01B9000B5FA80 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 4AEB2C9824C03D230001F981 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -488,6 +507,7 @@
 				4A6FF6C424C31BB600CA3828 /* SimpleInputCell.xib in Resources */,
 				4AB3C7FC25B323C800F0B109 /* Registration.storyboard in Resources */,
 				4AEB2CA724C03D240001F981 /* Assets.xcassets in Resources */,
+				4AE4C47825F01D0200B5FA80 /* earth.json in Resources */,
 				4AEB2CA224C03D230001F981 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -995,6 +1015,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4AE4C47025F01B9000B5FA80 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4AE4C47125F01B9000B5FA80 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AE4C47025F01B9000B5FA80 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4AEB2CA324C03D230001F981 /* Smart_Home.xcdatamodeld */ = {

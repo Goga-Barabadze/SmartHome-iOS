@@ -1,5 +1,5 @@
 //
-//  AddDeviceVC.swift
+//  AddLocationVC.swift
 //  Smart Home
 //
 //  Created by Goga Barabadze on 16.07.20.

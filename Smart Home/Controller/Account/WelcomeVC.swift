@@ -8,12 +8,15 @@
 
 import UIKit
 import os
+import Lottie
 
 class WelcomeVC: UIViewController {
 
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var register: UIButton!
     @IBOutlet weak var design_view: UIView!
+    
+    private var animationView: AnimationView?
     
     fileprivate func setUpButtons() {
         login.roundCorners(radius: 10)
@@ -39,6 +42,32 @@ class WelcomeVC: UIViewController {
         return gradient
     }()
     
+    fileprivate func startAnimation() {
+        animationView = .init(name: "earth")
+        
+        animationView!.frame = view.bounds
+        
+        // 3. Set animation content mode
+        
+        animationView!.contentMode = .scaleAspectFit
+        
+        // 4. Set animation loop mode
+        
+        animationView!.loopMode = .loop
+        
+        // 5. Adjust animation speed
+        
+        animationView!.animationSpeed = 0.5
+        
+//        view.addSubview(animationView!)
+        
+        view.insertSubview(animationView!, at: 1)
+        
+        // 6. Play animation
+        
+        animationView!.play()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,7 +87,15 @@ class WelcomeVC: UIViewController {
                            withDuration: 4,
                            timingFunctionName: .linear)
         
+        gradient.opacity = 0.3
+        
         view.layer.insertSublayer(gradient, at: 0)
+        
+        startAnimation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        animationView?.play()
     }
 
     fileprivate func checkIfManualLoginIsNeeded(){
