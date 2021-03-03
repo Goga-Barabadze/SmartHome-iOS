@@ -154,7 +154,21 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
-        
+        case 0:
+            Alert.alert(title: nil, message: nil, actions: [
+                UIAlertAction(title: "Delete Location", style: .destructive, handler: { (alertAction) in
+                    let idOfLocationToRemove = User.main.locations[indexPath.section].id
+                    Networking.deleteLocation(email: User.main.email, locationID: idOfLocationToRemove) { (success) in
+                        print("Did successfully remove location: \(success)")
+                        
+                        if success {
+                            tableView.reloadSections([indexPath.section], with: .automatic)
+                        }
+                        
+                    }
+                }),
+                UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            ])
         case 2:
             selected_location = indexPath.section
             type_of_devices = Generator.self
@@ -165,7 +179,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             performSegue(withIdentifier: "showDevicesVC", sender: self)
         
         default:
-            print("Not implemented yet")
+            print(indexPath.row)
         }
     }
 }
