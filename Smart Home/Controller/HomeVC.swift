@@ -151,24 +151,28 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    fileprivate func deleteLocation(_ indexPath: IndexPath, _ tableView: UITableView) {
+        Alert.alert(title: nil, message: nil, actions: [
+            UIAlertAction(title: "Delete Location", style: .destructive, handler: { (alertAction) in
+                let idOfLocationToRemove = User.main.locations[indexPath.section].id
+                Networking.deleteLocation(email: User.main.email, locationID: idOfLocationToRemove) { (success) in
+                    print("Did successfully delete location: \(success)")
+                    
+                    if success {
+                        tableView.reloadSections([indexPath.section], with: .automatic)
+                    }
+                    
+                }
+            }),
+            UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ])
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
         case 0:
-            Alert.alert(title: nil, message: nil, actions: [
-                UIAlertAction(title: "Delete Location", style: .destructive, handler: { (alertAction) in
-                    let idOfLocationToRemove = User.main.locations[indexPath.section].id
-                    Networking.deleteLocation(email: User.main.email, locationID: idOfLocationToRemove) { (success) in
-                        print("Did successfully remove location: \(success)")
-                        
-                        if success {
-                            tableView.reloadSections([indexPath.section], with: .automatic)
-                        }
-                        
-                    }
-                }),
-                UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            ])
+            deleteLocation(indexPath, tableView)
         case 2:
             selected_location = indexPath.section
             type_of_devices = Generator.self

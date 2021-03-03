@@ -12,7 +12,7 @@ class DeviceDetailVC: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     
-    var device = Device(id: "", name: "Something cool")
+    var device = Device(id: "", name: "")
     var titles = ["Name", "Type Of Device", "Station", "Power", "Placeholder for Stats"]
     
     override func viewDidLoad() {
