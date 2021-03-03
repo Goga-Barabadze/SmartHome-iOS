@@ -28,7 +28,7 @@ class DevicesVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? AddDeviceVC {
+        if let vc = segue.destination as? AddConsumerVC {
             vc.location = location
         } else if let vc = segue.destination as? DeviceDetailVC {
             vc.device = selected_device

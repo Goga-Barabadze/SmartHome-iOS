@@ -21,7 +21,7 @@
 		4A426BC424C9918F002CE5A2 /* StatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A426BC224C9918F002CE5A2 /* StatsCell.xib */; };
 		4A575C2E254993F700EF22AC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A575C2D254993F700EF22AC /* Networking.swift */; };
 		4A575C362549958F00EF22AC /* LayerlessNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A575C352549958F00EF22AC /* LayerlessNetworkingTests.swift */; };
-		4A5DC19324CEF9BC0047E456 /* AddDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5DC19224CEF9BC0047E456 /* AddDeviceVC.swift */; };
+		4A5DC19324CEF9BC0047E456 /* AddConsumerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5DC19224CEF9BC0047E456 /* AddConsumerVC.swift */; };
 		4A608BA3259D2A8900C41CCD /* ConsumerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A608BA2259D2A8900C41CCD /* ConsumerData.swift */; };
 		4A6871622596C03300DFC64F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6871612596C03300DFC64F /* Weather.swift */; };
 		4A6FF6C324C31BB600CA3828 /* SimpleInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FF6C124C31BB600CA3828 /* SimpleInputCell.swift */; };
@@ -104,7 +104,7 @@
 		4A426BC224C9918F002CE5A2 /* StatsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsCell.xib; sourceTree = "<group>"; };
 		4A575C2D254993F700EF22AC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		4A575C352549958F00EF22AC /* LayerlessNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerlessNetworkingTests.swift; sourceTree = "<group>"; };
-		4A5DC19224CEF9BC0047E456 /* AddDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceVC.swift; sourceTree = "<group>"; };
+		4A5DC19224CEF9BC0047E456 /* AddConsumerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConsumerVC.swift; sourceTree = "<group>"; };
 		4A608BA2259D2A8900C41CCD /* ConsumerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerData.swift; sourceTree = "<group>"; };
 		4A6871612596C03300DFC64F /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		4A6FF6C124C31BB600CA3828 /* SimpleInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInputCell.swift; sourceTree = "<group>"; };
@@ -312,7 +312,7 @@
 				4AEB2CCC24C052F60001F981 /* AddLocationVC.swift */,
 				4AEB2CCE24C0530B0001F981 /* DeviceDetailVC.swift */,
 				4A426BBD24C97E98002CE5A2 /* DevicesVC.swift */,
-				4A5DC19224CEF9BC0047E456 /* AddDeviceVC.swift */,
+				4A5DC19224CEF9BC0047E456 /* AddConsumerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -668,7 +668,7 @@
 				4AEB2CD224C05DA70001F981 /* User.swift in Sources */,
 				4A426BB924C8C0E2002CE5A2 /* DeviceOverviewCell.swift in Sources */,
 				4AEB2CC524C052950001F981 /* RegisterVC.swift in Sources */,
-				4A5DC19324CEF9BC0047E456 /* AddDeviceVC.swift in Sources */,
+				4A5DC19324CEF9BC0047E456 /* AddConsumerVC.swift in Sources */,
 				4A6FF6C724C31BE400CA3828 /* OverviewWeatherCell.swift in Sources */,
 				4A426BC324C9918F002CE5A2 /* StatsCell.swift in Sources */,
 				4A8C37DF24C1A52A004A9DBD /* Account.swift in Sources */,

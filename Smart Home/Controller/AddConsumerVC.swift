@@ -1,5 +1,5 @@
 //
-//  AddDeviceVC.swift
+//  AddConsumerVC.swift
 //  Smart Home
 //
 //  Created by Goga Barabadze on 27.07.20.
@@ -9,11 +9,12 @@
 import UIKit
 import os
 
-class AddDeviceVC: UIViewController {
+class AddConsumerVC: UIViewController {
     
     var titles = ["Name", "Manufacturer", "Electricity"]
     var placeholders = ["Washing Machine", "Samsung", "38.0"]
     var location = Location()
+    static var load_needed = true
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -23,6 +24,15 @@ class AddDeviceVC: UIViewController {
         registerNibs()
         addDoneButton()
         setCorrectTitle()
+    }
+    
+    override func  viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if AddConsumerVC.load_needed {
+            AddConsumerVC.load_needed = false
+            tableview.reloadData()
+        }
     }
     
     fileprivate func setCorrectTitle(){
@@ -48,7 +58,7 @@ class AddDeviceVC: UIViewController {
             return
         }
         
-        let manufacturer = (tableview.cellForRow(at: NSIndexPath(row: 0, section: 1) as IndexPath) as! SimpleInputCell).input?.text
+        let manufacturer = (tableview.cellForRow(at: NSIndexPath(row: 1, section: 0) as IndexPath) as! SimpleInputCell).input?.text
         
         if manufacturer == nil || manufacturer!.isEmpty {
             os_log("User did not enter company of device")
@@ -56,7 +66,7 @@ class AddDeviceVC: UIViewController {
             return
         }
         
-        let electricity = Double((tableview.cellForRow(at: NSIndexPath(row: 0, section: 2) as IndexPath) as! SimpleInputCell).input?.text ?? "0")
+        let electricity = Double((tableview.cellForRow(at: NSIndexPath(row: 2, section: 0) as IndexPath) as! SimpleInputCell).input?.text ?? "0")
         
         if electricity == nil {
             os_log("User did not enter electricity of device")
@@ -72,12 +82,13 @@ class AddDeviceVC: UIViewController {
             
             HomeVC.load_needed = true
             self.navigationController?.popViewController(animated: true)
+            self.location.devices.append(consumer)
             
         }
     }
 }
 
-extension AddDeviceVC : UITableViewDelegate, UITableViewDataSource {
+extension AddConsumerVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 35

@@ -72,7 +72,7 @@ class HomeVC: UIViewController {
         if let vc = segue.destination as? DevicesVC {
             vc.location = User.main.locations[selected_location]
             vc.type_of_devices = self.type_of_devices
-        } else if let vc = segue.destination as? AddDeviceVC {
+        } else if let vc = segue.destination as? AddConsumerVC {
             vc.location = User.main.locations[selected_location]
         }
     }

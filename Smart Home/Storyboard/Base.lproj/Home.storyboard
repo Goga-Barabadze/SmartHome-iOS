@@ -166,7 +166,7 @@
         <!--Add Device-->
         <scene sceneID="pse-3y-174">
             <objects>
-                <viewController id="jmH-c9-wO4" customClass="AddDeviceVC" customModule="Smart_Home" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jmH-c9-wO4" customClass="AddConsumerVC" customModule="Smart_Home" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OX0-2B-GUJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
