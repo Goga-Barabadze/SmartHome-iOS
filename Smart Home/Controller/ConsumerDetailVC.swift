@@ -1,5 +1,5 @@
 //
-//  DeviceDetailVC.swift
+//  ConsumerDetailVC.swift
 //  Smart Home
 //
 //  Created by Goga Barabadze on 16.07.20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeviceDetailVC: UIViewController {
+class ConsumerDetailVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,7 +40,7 @@ class DeviceDetailVC: UIViewController {
     }
 }
 
-extension DeviceDetailVC : UITableViewDelegate, UITableViewDataSource {
+extension ConsumerDetailVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 35

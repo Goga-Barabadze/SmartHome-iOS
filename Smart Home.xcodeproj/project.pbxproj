@@ -58,7 +58,7 @@
 		4AEB2CC924C052C90001F981 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CC824C052C90001F981 /* ProfileVC.swift */; };
 		4AEB2CCB24C052DE0001F981 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CCA24C052DE0001F981 /* StatisticsVC.swift */; };
 		4AEB2CCD24C052F60001F981 /* AddLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CCC24C052F60001F981 /* AddLocationVC.swift */; };
-		4AEB2CCF24C0530B0001F981 /* DeviceDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CCE24C0530B0001F981 /* DeviceDetailVC.swift */; };
+		4AEB2CCF24C0530B0001F981 /* ConsumerDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CCE24C0530B0001F981 /* ConsumerDetailVC.swift */; };
 		4AEB2CD224C05DA70001F981 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB2CD124C05DA70001F981 /* User.swift */; };
 		78629F11AC49811D8DB41880 /* Pods_Smart_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B1EF8C622D5EDA784B6BCA /* Pods_Smart_Home.framework */; };
 		C2107B3A330BE2CE3A40739A /* Pods_SmartHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287D72F7FAE5EEF121EF222 /* Pods_SmartHomeTests.framework */; };
@@ -142,7 +142,7 @@
 		4AEB2CC824C052C90001F981 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		4AEB2CCA24C052DE0001F981 /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		4AEB2CCC24C052F60001F981 /* AddLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationVC.swift; sourceTree = "<group>"; };
-		4AEB2CCE24C0530B0001F981 /* DeviceDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailVC.swift; sourceTree = "<group>"; };
+		4AEB2CCE24C0530B0001F981 /* ConsumerDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerDetailVC.swift; sourceTree = "<group>"; };
 		4AEB2CD124C05DA70001F981 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4C334A04848A0D02601903F7 /* Pods-Smart Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Home.release.xcconfig"; path = "Target Support Files/Pods-Smart Home/Pods-Smart Home.release.xcconfig"; sourceTree = "<group>"; };
 		56FC0B6F8CBAE32C8BFB57B9 /* libPods-SmartHomeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartHomeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,7 +310,7 @@
 				4AEB2CC824C052C90001F981 /* ProfileVC.swift */,
 				4AEB2CCA24C052DE0001F981 /* StatisticsVC.swift */,
 				4AEB2CCC24C052F60001F981 /* AddLocationVC.swift */,
-				4AEB2CCE24C0530B0001F981 /* DeviceDetailVC.swift */,
+				4AEB2CCE24C0530B0001F981 /* ConsumerDetailVC.swift */,
 				4A426BBD24C97E98002CE5A2 /* DevicesVC.swift */,
 				4A5DC19224CEF9BC0047E456 /* AddConsumerVC.swift */,
 			);
@@ -651,7 +651,7 @@
 				4A575C2E254993F700EF22AC /* Networking.swift in Sources */,
 				4AEB2CA524C03D230001F981 /* Smart_Home.xcdatamodeld in Sources */,
 				4A608BA3259D2A8900C41CCD /* ConsumerData.swift in Sources */,
-				4AEB2CCF24C0530B0001F981 /* DeviceDetailVC.swift in Sources */,
+				4AEB2CCF24C0530B0001F981 /* ConsumerDetailVC.swift in Sources */,
 				4A04EE0F259CD757000992C1 /* Company.swift in Sources */,
 				4A96D85325969243001C9554 /* Generator.swift in Sources */,
 				4A96D84E25969224001C9554 /* Consumer.swift in Sources */,
