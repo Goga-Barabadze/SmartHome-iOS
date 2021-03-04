@@ -53,6 +53,35 @@ class Device {
             }
         }
         
+        static func toggle(state: State) -> State {
+            switch state {
+            case .running:
+                fallthrough
+            case .should_be_running:
+                return .not_running
+            case .not_running:
+                fallthrough
+            case .should_not_be_running:
+                return .running
+            default:
+                return .not_running
+            }
+        }
+        
+        static func modus(state: State) -> String {
+            switch state {
+            case .running:
+                fallthrough
+            case .should_be_running:
+                return "STOP"
+            case .not_running:
+                fallthrough
+            case .should_not_be_running:
+                return "START"
+            default:
+                return "STOP"
+            }
+        }
     }
     
     init (id: String){

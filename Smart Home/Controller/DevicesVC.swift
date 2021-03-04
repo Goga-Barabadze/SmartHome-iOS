@@ -18,11 +18,20 @@ class DevicesVC: UIViewController {
     var type_of_devices: Device.Type? = Consumer.self
     var selected_device = Device()
     
+    @IBOutlet weak var addButtonOutlet: UIBarButtonItem!
+    
+    @IBAction func addButton(_ sender: Any) {
+        performSegue(withIdentifier: "showAddConsumerVC", sender: self)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         devices = location.devices.filter{type(of: $0) == type_of_devices}
         
         let deviceTypeAsString = type_of_devices == Consumer.self ? "Consumers" : "Producers"
         self.navigationItem.title = deviceTypeAsString  + " (" + location.name + ")"
+        
+        // Disable Add Button for Producers
+        addButtonOutlet.isEnabled = type_of_devices == Consumer.self
         
         tableView.reloadData()
     }
@@ -39,7 +48,7 @@ class DevicesVC: UIViewController {
 extension DevicesVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return devices.count
+        devices.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -67,7 +76,7 @@ extension DevicesVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        Alert.alert(actions: [
+        var actions = [
             UIAlertAction(title: "Show Details", style: .default, handler: { (alertAction) in
                 self.selected_device = self.devices[indexPath.row]
                 self.performSegue(withIdentifier: "showDeviceDetailVC", sender: self)
@@ -82,6 +91,7 @@ extension DevicesVC: UITableViewDataSource, UITableViewDelegate {
                         os_log("Delete Consumer Success: \(success)")
                         
                         if success {
+                            self.location.devices.removeAll(where: {$0.id == id})
                             self.devices.removeAll(where: {$0.id == id})
                         }
                     }
@@ -90,15 +100,38 @@ extension DevicesVC: UITableViewDataSource, UITableViewDelegate {
                         os_log("Delete Generator Success: \(success)")
                         
                         if success {
+                            self.location.devices.removeAll(where: {$0.id == id})
                             self.devices.removeAll(where: {$0.id == id})
                         }
                     }
                 }
                 
                 self.tableView.reloadData()
-            }),
-            
-            UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        ])
+            })
+        ]
+        
+        if self.type_of_devices == Consumer.self {
+            actions.insert(UIAlertAction(title: "Toggle on and off", style: .default, handler: { (alertAction) in
+                
+                if self.type_of_devices == Consumer.self {
+                    
+                    let consumer = self.devices[indexPath.row]
+                    let togglesModus = Device.State.modus(state: consumer.state)
+                    let pvID = self.location.devices.first(where: {type(of: $0) == Generator.self})?.id.trimmingCharacters(in: .whitespacesAndNewlines)
+                    
+                    Networking.updateState(locationID: self.location.id, consumerID: consumer.id, modus: togglesModus, pvID: pvID ?? "") { (result) in
+                        
+                        consumer.state = Device.State.from(text: result ?? "NOT_RUNNING")
+                        
+                        self.tableView.reloadData()
+                        
+                    }
+                }
+            }), at: 0)
+        }
+        
+        actions.append(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        Alert.alert(actions: actions)
     }
 }
