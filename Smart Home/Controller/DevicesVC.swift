@@ -40,7 +40,8 @@ class DevicesVC: UIViewController {
         if let vc = segue.destination as? AddConsumerVC {
             vc.location = location
         } else if let vc = segue.destination as? ConsumerDetailVC {
-            vc.device = selected_device
+            vc.location = location
+            vc.consumer = selected_device as? Consumer
         }
     }
 }

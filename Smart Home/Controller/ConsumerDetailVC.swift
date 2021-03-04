@@ -12,8 +12,10 @@ class ConsumerDetailVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var device = Device(id: "", name: "")
-    var titles = ["Name", "Type Of Device", "Station", "Power", "Placeholder for Stats"]
+    var consumer: Consumer!
+    var location: Location!
+    var titles = ["Name", "Manufacturer", "Type", "Serial", "Electricity", "State", "Station"]
+    var placeholders = ["Washing Machine", "Miele", "SMSNM123", "163785736", "100.0", "RUNNING", "Location 1"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,7 @@ class ConsumerDetailVC: UIViewController {
         registerNibs()
         addSaveButton()
         
-        self.navigationItem.title = device.name
+        self.navigationItem.title = consumer.name
     }
 
     fileprivate func registerNibs() {
@@ -34,47 +36,57 @@ class ConsumerDetailVC: UIViewController {
     }
     
     @objc func saveDevice(){
-        // MARK: TODO Save Device
         
-        navigationController?.popViewController(animated: true)
+        consumer.name =         (tableView.cellForRow(at: NSIndexPath(row: 0, section: 0) as IndexPath) as! SimpleInputCell).input?.text ?? ""
+        consumer.company =      (tableView.cellForRow(at: NSIndexPath(row: 1, section: 0) as IndexPath) as! SimpleInputCell).input?.text ?? ""
+        consumer.type =         (tableView.cellForRow(at: NSIndexPath(row: 2, section: 0) as IndexPath) as! SimpleInputCell).input?.text ?? ""
+        consumer.serial =       (tableView.cellForRow(at: NSIndexPath(row: 3, section: 0) as IndexPath) as! SimpleInputCell).input?.text ?? ""
+        consumer.consumption =  Double((tableView.cellForRow(at: NSIndexPath(row: 4, section: 0) as IndexPath) as! SimpleInputCell).input?.text ?? "0") ?? 0
+        consumer.state =        Device.State.from(text: (tableView.cellForRow(at: NSIndexPath(row: 5, section: 0) as IndexPath) as! SimpleInputCell).input?.text ?? "")
+        
+        let foundPV = location.devices.first(where: {type(of: $0) == Generator.self}) ?? Generator(id: "", type: "")
+        Networking.updateConsumer(locationID: location.id, pvID: foundPV.id, consumer: consumer) { (success) in
+            print("Update Consumer: \(success)")
+            self.navigationController?.popViewController(animated: true)
+        }
+        
     }
 }
 
 extension ConsumerDetailVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 35
+        35
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 1 {
-            return 2
-        }
-        
-        return 1
+        titles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleInputCell") as! SimpleInputCell
         
+        let information = [
+            consumer.name,
+            consumer.company,
+            consumer.type,
+            consumer.serial,
+            String(consumer.consumption),
+            Device.State.from(state:  consumer.state),
+            location.name
+        ]
+        
         cell.title.text = titles[tableView.globalIndexPath(for: indexPath as NSIndexPath)]
+        cell.input.placeholder = placeholders[indexPath.row]
+        cell.input.text = information[indexPath.row]
         
-        switch tableView.globalIndexPath(for: indexPath as NSIndexPath){
-        case 0:
-            cell.input.text = device.name
-        case 1:
-            cell.input.text = "Replace me with Type of Device"
-        case 2:
-            cell.input.text = "Replace me with location of device"
-        case 3:
-            cell.input.text = "Power of device"
-        
-        default:
-            #warning("Not implemented yet")
+        // Disable the last two inputs
+        if indexPath.row >= titles.count - 2 {
+            cell.isUserInteractionEnabled = false
         }
         
         return cell
