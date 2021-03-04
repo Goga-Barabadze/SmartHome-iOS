@@ -10,7 +10,7 @@ import UIKit
 
 class DeviceDetailVC: UIViewController {
 
-    @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var device = Device(id: "", name: "")
     var titles = ["Name", "Type Of Device", "Station", "Power", "Placeholder for Stats"]
@@ -26,7 +26,7 @@ class DeviceDetailVC: UIViewController {
 
     fileprivate func registerNibs() {
         let nibName = UINib(nibName: "SimpleInputCell", bundle: nil)
-        tableview.register(nibName, forCellReuseIdentifier: "SimpleInputCell")
+        tableView.register(nibName, forCellReuseIdentifier: "SimpleInputCell")
     }
     
     fileprivate func addSaveButton(){
