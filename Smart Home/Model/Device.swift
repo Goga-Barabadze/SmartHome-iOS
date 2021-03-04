@@ -63,8 +63,6 @@ class Device {
                 fallthrough
             case .should_not_be_running:
                 return .running
-            default:
-                return .not_running
             }
         }
         
@@ -78,8 +76,6 @@ class Device {
                 fallthrough
             case .should_not_be_running:
                 return "START"
-            default:
-                return "STOP"
             }
         }
     }
