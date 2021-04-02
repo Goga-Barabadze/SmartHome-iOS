@@ -19,7 +19,6 @@ class Account {
             if error != nil {
                 print(error.debugDescription)
                 Alert.alert(title: "Something went wrong", message: error?.localizedDescription, target: target)
-                
             }
             
             closure(authResult, error)

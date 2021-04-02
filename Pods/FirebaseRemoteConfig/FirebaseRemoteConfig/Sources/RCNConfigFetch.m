@@ -16,6 +16,7 @@
 
 #import "FirebaseRemoteConfig/Sources/Private/RCNConfigFetch.h"
 
+#import <GoogleUtilities/GULNSData+zlib.h>
 #import "FirebaseCore/Sources/Private/FirebaseCoreInternal.h"
 #import "FirebaseInstallations/Source/Library/Private/FirebaseInstallationsInternal.h"
 #import "FirebaseRemoteConfig/Sources/Private/RCNConfigSettings.h"
@@ -23,7 +24,6 @@
 #import "FirebaseRemoteConfig/Sources/RCNConfigContent.h"
 #import "FirebaseRemoteConfig/Sources/RCNConfigExperiment.h"
 #import "FirebaseRemoteConfig/Sources/RCNDevice.h"
-#import "GoogleUtilities/NSData+zlib/Private/GULNSDataInternal.h"
 
 #ifdef RCN_STAGING_SERVER
 static NSString *const kServerURLDomain =
@@ -480,9 +480,13 @@ static const NSInteger sFIRErrorCodeConfigFailed = -114;
         // Update config content to cache and DB.
         [strongSelf->_content updateConfigContentWithResponse:fetchedConfig
                                                  forNamespace:strongSelf->_FIRNamespace];
-        // Update experiments.
-        [strongSelf->_experiment
-            updateExperimentsWithResponse:fetchedConfig[RCNFetchResponseKeyExperimentDescriptions]];
+        // Update experiments only for 3p namespace
+        NSString *namespace = [strongSelf->_FIRNamespace
+            substringToIndex:[strongSelf->_FIRNamespace rangeOfString:@":"].location];
+        if ([namespace isEqualToString:FIRNamespaceGoogleMobilePlatform]) {
+          [strongSelf->_experiment updateExperimentsWithResponse:
+                                       fetchedConfig[RCNFetchResponseKeyExperimentDescriptions]];
+        }
       } else {
         FIRLogDebug(kFIRLoggerRemoteConfig, @"I-RCN000063",
                     @"Empty response with no fetched config.");

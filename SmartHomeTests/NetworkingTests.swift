@@ -12,10 +12,11 @@ import XCTest
 class NetworkingTests: XCTestCase {
     
     private let pvID = "f5b8a9f8-9432-47fe-9875-3030bf74e92f"
+//    private let pvID = "6dd05177-193f-4580-97bd-3331e3abe530"
     private let maximumWaitForExpectation = 10
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
     private let locationID = "wuYIY2t9hEEc8U8QzDRv"
-    private let consumerID = "zqRzfmyfJb2hYdQZharZ"
+    private let consumerID = "n9FTVYpxTEXzFluP6Z0d"
     private let consumerType = "XTEKNDUF"
     private let consumerSerial = "Serial"
     private let consumerState = "RUNNING"

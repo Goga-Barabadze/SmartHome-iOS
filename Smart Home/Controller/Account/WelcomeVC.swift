@@ -16,7 +16,7 @@ class WelcomeVC: UIViewController {
     @IBOutlet weak var register: UIButton!
     @IBOutlet weak var design_view: UIView!
     
-    private var animationView: AnimationView?
+    private var animationView: AnimationView!
     
     fileprivate func setUpButtons() {
         login.roundCorners(radius: 10)
@@ -43,19 +43,16 @@ class WelcomeVC: UIViewController {
     }()
     
     fileprivate func startAnimation() {
+        
         animationView = .init(name: "earth")
+        animationView.frame = view.bounds
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 0.5
         
-        animationView!.frame = view.bounds
+        view.insertSubview(animationView, at: 1)
         
-        animationView!.contentMode = .scaleAspectFit
-        
-        animationView!.loopMode = .loop
-        
-        animationView!.animationSpeed = 0.5
-        
-        view.insertSubview(animationView!, at: 1)
-        
-        animationView!.play()
+        animationView.play()
     }
     
     override func viewDidLoad() {

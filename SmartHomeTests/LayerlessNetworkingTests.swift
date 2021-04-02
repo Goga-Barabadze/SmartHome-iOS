@@ -17,7 +17,7 @@ class LayerlessNetworkingTests: XCTestCase {
     private let maximumWaitForExpectation = 10
     private let compandyID = "pVw6UrCyUSbgyAqXI9rV"
     private let locationID = "wuYIY2t9hEEc8U8QzDRv"
-    private let consumerID = "zqRzfmyfJb2hYdQZharZ"
+    private let consumerID = "n9FTVYpxTEXzFluP6Z0d"
     private let consumerType = "XTEKNDUF"
     private let consumerSerial = "Serial"
     private let consumerState = "RUNNING"
