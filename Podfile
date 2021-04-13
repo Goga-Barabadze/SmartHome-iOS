@@ -1,7 +1,7 @@
 platform :ios, '13.0'
 
 def shared_pods
-   pod 'Firebase/Auth'
+   pod 'FirebaseAuth'
 end
 
 target 'Smart Home' do
@@ -17,12 +17,10 @@ target 'Smart Home' do
 
   shared_pods
 
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Firestore'
-  pod 'Firebase/Functions'
-  pod 'Firebase/Performance'
-  pod 'Firebase/Crashlytics'
-  pod 'Firebase/Messaging'
+  # pod 'FirebaseMessaging'
+  pod 'GoogleAnalytics'
+  pod 'FirebaseFirestore'
+  pod 'FirebaseFunctions'
   pod 'Charts'
 
 end
