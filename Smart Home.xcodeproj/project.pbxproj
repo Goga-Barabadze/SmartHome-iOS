@@ -31,6 +31,8 @@
 		4A6FF6C824C31BE400CA3828 /* OverviewWeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FF6C624C31BE400CA3828 /* OverviewWeatherCell.xib */; };
 		4A6FF6CB24C3289000CA3828 /* SimpleButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FF6C924C3289000CA3828 /* SimpleButtonCell.swift */; };
 		4A6FF6CC24C3289000CA3828 /* SimpleButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FF6CA24C3289000CA3828 /* SimpleButtonCell.xib */; };
+		4A8A76AB262ECB6400CF1E8A /* GeneratorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A76AA262ECB6400CF1E8A /* GeneratorDetailView.swift */; };
+		4A8A76B3262ED54C00CF1E8A /* ForecastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A76B2262ED54C00CF1E8A /* ForecastVC.swift */; };
 		4A8B6CC524C6D39700C59680 /* SimpleInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B6CC324C6D39700C59680 /* SimpleInformationCell.swift */; };
 		4A8B6CC624C6D39700C59680 /* SimpleInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8B6CC424C6D39700C59680 /* SimpleInformationCell.xib */; };
 		4A8C37D924C1943B004A9DBD /* Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C37D824C1943B004A9DBD /* Greeting.swift */; };
@@ -111,6 +113,8 @@
 		4A6FF6C624C31BE400CA3828 /* OverviewWeatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewWeatherCell.xib; sourceTree = "<group>"; };
 		4A6FF6C924C3289000CA3828 /* SimpleButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButtonCell.swift; sourceTree = "<group>"; };
 		4A6FF6CA24C3289000CA3828 /* SimpleButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleButtonCell.xib; sourceTree = "<group>"; };
+		4A8A76AA262ECB6400CF1E8A /* GeneratorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorDetailView.swift; sourceTree = "<group>"; };
+		4A8A76B2262ED54C00CF1E8A /* ForecastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastVC.swift; sourceTree = "<group>"; };
 		4A8B6CC324C6D39700C59680 /* SimpleInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInformationCell.swift; sourceTree = "<group>"; };
 		4A8B6CC424C6D39700C59680 /* SimpleInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleInformationCell.xib; sourceTree = "<group>"; };
 		4A8C37D824C1943B004A9DBD /* Greeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greeting.swift; sourceTree = "<group>"; };
@@ -321,8 +325,10 @@
 				4AEB2CCA24C052DE0001F981 /* StatisticsVC.swift */,
 				4AEB2CCC24C052F60001F981 /* AddLocationVC.swift */,
 				4AEB2CCE24C0530B0001F981 /* ConsumerDetailVC.swift */,
+				4A8A76AA262ECB6400CF1E8A /* GeneratorDetailView.swift */,
 				4A426BBD24C97E98002CE5A2 /* DevicesVC.swift */,
 				4A5DC19224CEF9BC0047E456 /* AddConsumerVC.swift */,
+				4A8A76B2262ED54C00CF1E8A /* ForecastVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -649,6 +655,7 @@
 				4A426BB524C8BDFE002CE5A2 /* SimpleTitleCell.swift in Sources */,
 				4AEB2C9B24C03D230001F981 /* AppDelegate.swift in Sources */,
 				4A575C2E254993F700EF22AC /* Networking.swift in Sources */,
+				4A8A76AB262ECB6400CF1E8A /* GeneratorDetailView.swift in Sources */,
 				4AEB2CA524C03D230001F981 /* Smart_Home.xcdatamodeld in Sources */,
 				4A608BA3259D2A8900C41CCD /* ConsumerData.swift in Sources */,
 				4AEB2CCF24C0530B0001F981 /* ConsumerDetailVC.swift in Sources */,
@@ -667,6 +674,7 @@
 				4A96D84625969207001C9554 /* Location.swift in Sources */,
 				4AEB2CD224C05DA70001F981 /* User.swift in Sources */,
 				4A426BB924C8C0E2002CE5A2 /* DeviceOverviewCell.swift in Sources */,
+				4A8A76B3262ED54C00CF1E8A /* ForecastVC.swift in Sources */,
 				4AEB2CC524C052950001F981 /* RegisterVC.swift in Sources */,
 				4A5DC19324CEF9BC0047E456 /* AddConsumerVC.swift in Sources */,
 				4A6FF6C724C31BE400CA3828 /* OverviewWeatherCell.swift in Sources */,

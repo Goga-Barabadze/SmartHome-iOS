@@ -26,6 +26,12 @@
   },
   "testTargets" : [
     {
+      "skippedTests" : [
+        "LayerlessNetworkingTests\/testUpdateConsumer()",
+        "LayerlessNetworkingTests\/testUpdateState()",
+        "NetworkingTests\/testUpdateConsumer()",
+        "NetworkingTests\/testUpdateState()"
+      ],
       "target" : {
         "containerPath" : "container:Smart Home.xcodeproj",
         "identifier" : "4A2C947D25343F080075A17D",

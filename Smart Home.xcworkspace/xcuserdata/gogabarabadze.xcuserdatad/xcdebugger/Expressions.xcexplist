@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Generator.production.getter:Generator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "generatorData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "static Networking.unescape(data:):Networking.swift">
       </ContextState>
       <ContextState
