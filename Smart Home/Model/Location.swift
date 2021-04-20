@@ -26,9 +26,9 @@ class Location {
 
             let currentProducer = producer as! Generator
 
-            if (currentProducer.state == .not_running || currentProducer.state == .should_be_running){
-                continue
-            }
+//            if (currentProducer.state == .not_running || currentProducer.state == .should_be_running){
+//                continue
+//            }
 
             production += currentProducer.production
         }

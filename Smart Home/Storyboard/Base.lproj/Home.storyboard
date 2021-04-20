@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="9bH-Bm-RUB" customClass="HomeVC" customModule="Smart_Home" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w9z-Gh-OXw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="uQY-0g-dxs">
@@ -45,6 +45,7 @@
                     <connections>
                         <outlet property="tableview" destination="uQY-0g-dxs" id="xd2-5g-d1Z"/>
                         <segue destination="HwQ-yE-Fga" kind="show" identifier="showDevicesVC" id="Tly-pI-sfo"/>
+                        <segue destination="ZoL-fS-O2m" kind="presentation" identifier="showForecastVC" id="pOO-bO-l35"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Yu-Jd-3dq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -56,7 +57,7 @@
             <objects>
                 <viewController id="FL2-c3-9Dd" customClass="ConsumerDetailVC" customModule="Smart_Home" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mUI-Hx-LFm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="H2a-nz-p7b">
@@ -94,14 +95,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlO-S2-dAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5061" y="1603"/>
+            <point key="canvasLocation" x="4496" y="1721"/>
+        </scene>
+        <!--Generator DetailVC-->
+        <scene sceneID="IoQ-AN-Yc8">
+            <objects>
+                <viewController id="EI6-0r-BlQ" customClass="GeneratorDetailVC" customModule="Smart_Home" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tmE-DL-IMO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="SnP-FV-GRA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="r0k-kV-tN5">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r0k-kV-tN5" id="pRe-19-VI5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EI6-0r-BlQ" id="pQh-3S-g6V"/>
+                                    <outlet property="delegate" destination="EI6-0r-BlQ" id="LHc-zz-0m9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t3V-Cd-cyV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t3V-Cd-cyV" firstAttribute="trailing" secondItem="SnP-FV-GRA" secondAttribute="trailing" id="138-JD-TeU"/>
+                            <constraint firstItem="t3V-Cd-cyV" firstAttribute="bottom" secondItem="SnP-FV-GRA" secondAttribute="bottom" id="JE3-yH-pv7"/>
+                            <constraint firstItem="SnP-FV-GRA" firstAttribute="leading" secondItem="t3V-Cd-cyV" secondAttribute="leading" id="gZY-Q8-mym"/>
+                            <constraint firstItem="SnP-FV-GRA" firstAttribute="top" secondItem="t3V-Cd-cyV" secondAttribute="top" id="hIo-YV-8cd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ooy-Ma-ELT"/>
+                    <connections>
+                        <outlet property="tableView" destination="SnP-FV-GRA" id="UwA-xA-na2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iTB-uk-ikN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5510" y="1721"/>
         </scene>
         <!--Devices-->
         <scene sceneID="IsS-xV-UaT">
             <objects>
                 <viewController id="HwQ-yE-Fga" customClass="DevicesVC" customModule="Smart_Home" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rLm-ec-MeV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="FFL-MT-ed9">
@@ -161,18 +207,64 @@
                         <segue destination="FL2-c3-9Dd" kind="show" identifier="showDeviceDetailVC" id="aTg-Xb-464"/>
                         <segue destination="jmH-c9-wO4" kind="show" identifier="showAddConsumerVC" id="fRl-ht-iRN"/>
                         <segue destination="2JE-2G-EBT" kind="show" identifier="showAddProducerVC" id="Mtm-U1-ctG"/>
+                        <segue destination="EI6-0r-BlQ" kind="show" identifier="showGeneratorDetailVC" id="WwX-TF-Fh1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5d-vQ-JXd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5061" y="921"/>
         </scene>
+        <!--ForecastVC-->
+        <scene sceneID="1sN-me-Zhd">
+            <objects>
+                <viewController id="ZoL-fS-O2m" customClass="ForecastVC" customModule="Smart_Home" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="51m-T9-vKx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="AUW-bC-Ylw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Er3-YE-57E">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Er3-YE-57E" id="mWZ-5n-Keh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZoL-fS-O2m" id="Mas-bj-A6B"/>
+                                    <outlet property="delegate" destination="ZoL-fS-O2m" id="e0U-Da-t0g"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WWv-sl-Slh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WWv-sl-Slh" firstAttribute="bottom" secondItem="AUW-bC-Ylw" secondAttribute="bottom" id="aCW-Nl-Ohh"/>
+                            <constraint firstItem="WWv-sl-Slh" firstAttribute="trailing" secondItem="AUW-bC-Ylw" secondAttribute="trailing" id="aDC-nZ-2Ep"/>
+                            <constraint firstItem="AUW-bC-Ylw" firstAttribute="top" secondItem="WWv-sl-Slh" secondAttribute="top" id="lKf-4Z-6kd"/>
+                            <constraint firstItem="AUW-bC-Ylw" firstAttribute="leading" secondItem="WWv-sl-Slh" secondAttribute="leading" id="pxm-8x-EgX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Dv-2p-One"/>
+                    <connections>
+                        <outlet property="tableView" destination="AUW-bC-Ylw" id="GR5-Eo-5iG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ols-hv-t7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5877" y="138"/>
+        </scene>
         <!--Add Device-->
         <scene sceneID="pse-3y-174">
             <objects>
                 <viewController id="jmH-c9-wO4" customClass="AddConsumerVC" customModule="Smart_Home" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OX0-2B-GUJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="nRR-7p-njc">
@@ -217,7 +309,7 @@
             <objects>
                 <viewController id="2JE-2G-EBT" customClass="AddLocationVC" customModule="Smart_Home" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Si-jO-j08">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="25J-n8-y3j">
@@ -261,11 +353,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Mtm-U1-ctG"/>
+        <segue reference="0b3-oB-4LR"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemGreenColor"/>
     <resources>
         <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
@@ -273,6 +368,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

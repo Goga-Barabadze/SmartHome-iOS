@@ -83,6 +83,9 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         switch indexPath.section {
         case 0:
             
@@ -105,6 +108,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         case 2:
             
             Networking.signOut()
+            User.main = User()
             performSegue(withIdentifier: "showWelcomeVC", sender: self)
             
         default:

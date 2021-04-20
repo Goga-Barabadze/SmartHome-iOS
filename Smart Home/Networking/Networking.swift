@@ -69,11 +69,8 @@ class Networking {
             }
             
             var countCompletions = 0
-            
             func oneCompletionMore() {
-                
                 countCompletions += 1
-                
                 if countCompletions >= locations.count * 3 {
                     closure(locations)
                 }
@@ -98,6 +95,19 @@ class Networking {
                     guard let generators = generators else {
                         os_log("Could not load generators.")
                         return
+                    }
+                    
+                    for generator in generators{
+                        
+                        Networking.getGeneratorData(pvID: generator.id) { (generatorDatas) in
+                            
+                            guard let generatorData = generatorDatas else {
+                                os_log("Could not load generator datas.")
+                                return
+                            }
+                            
+                            generator.generatorData = generatorData
+                        }
                     }
                     
                     location.devices.append(contentsOf: generators)

@@ -42,6 +42,9 @@ class DevicesVC: UIViewController {
         } else if let vc = segue.destination as? ConsumerDetailVC {
             vc.location = location
             vc.consumer = selected_device as? Consumer
+        } else if let vc = segue.destination as? GeneratorDetailVC {
+            vc.location = location
+            vc.generator = selected_device as? Generator
         }
     }
 }
@@ -77,10 +80,19 @@ extension DevicesVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         var actions = [
+            
             UIAlertAction(title: "Show Details", style: .default, handler: { (alertAction) in
                 self.selected_device = self.devices[indexPath.row]
-                self.performSegue(withIdentifier: "showDeviceDetailVC", sender: self)
+                
+                if self.type_of_devices == Consumer.self {
+                    self.performSegue(withIdentifier: "showDeviceDetailVC", sender: self)
+                } else if self.type_of_devices == Generator.self {
+                    self.performSegue(withIdentifier: "showGeneratorDetailVC", sender: self)
+                }
+                
             }),
             
             UIAlertAction(title: "Remove Device", style: .destructive, handler: { (alertAction) in
@@ -94,6 +106,7 @@ extension DevicesVC: UITableViewDataSource, UITableViewDelegate {
                         if success {
                             self.location.devices.removeAll(where: {$0.id == id})
                             self.devices.removeAll(where: {$0.id == id})
+                            self.tableView.reloadData()
                         }
                     }
                 } else {
@@ -123,7 +136,6 @@ extension DevicesVC: UITableViewDataSource, UITableViewDelegate {
                     Networking.updateState(locationID: self.location.id, consumerID: consumer.id, modus: togglesModus, pvID: pvID ?? "") { (result) in
                         
                         consumer.state = Device.State.from(text: result ?? "NOT_RUNNING")
-                        
                         self.tableView.reloadData()
                         
                     }

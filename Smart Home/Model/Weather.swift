@@ -16,6 +16,13 @@ class Weather {
     var sunrise: Date = Date()
     var datetime: Date = Date()
     
+    var time: String {
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: datetime)
+        
+        return "\(hour):00"
+    }
+    
     var formattedSunset: String {
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: sunset)

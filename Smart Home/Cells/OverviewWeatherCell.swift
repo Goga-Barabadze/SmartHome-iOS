@@ -38,6 +38,12 @@ class OverviewWeatherCell: UITableViewCell {
         design_view.roundCorners(radius: 20, masksToBounds: true)
         design_view.gradient(colors: [.init(rgb: 0x5BBDB), .black], locations: [0, 3])
         
+        if description.contains("cloud"){
+            self.weather_image.image = UIImage(systemName: "cloud")
+        } else if description.contains("rain") {
+            self.weather_image.image = UIImage(systemName: "cloud.rain")
+        }
+        
         self.selectionStyle = .none
     }
 }

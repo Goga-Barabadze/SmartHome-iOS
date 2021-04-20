@@ -15,6 +15,7 @@ class HomeVC: UIViewController {
     
     var selected_location = 0
     var type_of_devices: Device.Type? = Consumer.self
+    var forecast = [Weather]()
     static var load_needed = true
     
     lazy var refresher : UIRefreshControl = {
@@ -57,6 +58,7 @@ class HomeVC: UIViewController {
     func loadData(){
         
         User.main.locations.removeAll()
+        tableview.reloadData()
         
         Networking.loadLocationsWithDepth(email: User.main.email) { (locations) in
 
@@ -74,6 +76,9 @@ class HomeVC: UIViewController {
             vc.type_of_devices = self.type_of_devices
         } else if let vc = segue.destination as? AddConsumerVC {
             vc.location = User.main.locations[selected_location]
+        } else if let vc = segue.destination as? ForecastVC {
+            vc.location = User.main.locations[selected_location]
+            vc.forecast = forecast
         }
     }
 
@@ -151,18 +156,18 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    fileprivate func deleteLocation(_ indexPath: IndexPath, _ tableView: UITableView) {
+    fileprivate func askIfShouldDeleteLocation(_ indexPath: IndexPath, _ tableView: UITableView) {
         Alert.alert(title: nil, message: nil, actions: [
             UIAlertAction(title: "Delete Location", style: .destructive, handler: { (alertAction) in
                 let idOfLocationToRemove = User.main.locations[indexPath.section].id
                 Networking.deleteLocation(email: User.main.email, locationID: idOfLocationToRemove) { (success) in
+                    
                     print("Did successfully delete location: \(success)")
                     
                     if success {
-                        tableView.reloadSections([indexPath.section], with: .automatic)
                         User.main.locations.removeAll(where: {$0.id == idOfLocationToRemove})
+                        tableView.reloadData()
                     }
-                    
                 }
             }),
             UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -171,9 +176,14 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         switch indexPath.row {
         case 0:
-            deleteLocation(indexPath, tableView)
+            askIfShouldDeleteLocation(indexPath, tableView)
+        case 1:
+            selected_location = indexPath.section
+            performSegue(withIdentifier: "showForecastVC", sender: self)
         case 2:
             selected_location = indexPath.section
             type_of_devices = Generator.self

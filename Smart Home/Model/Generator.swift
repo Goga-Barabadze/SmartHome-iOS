@@ -10,8 +10,17 @@ import Foundation
 
 class Generator: Device {
     
-    var type: String = ""
-    var production: Double = 0.0
+    var type: String = "Fronius"
+    
+    var production: Double {
+        
+        return (generatorData.first(where: { (gd) -> Bool in
+            gd.channelName == "PowerPV"
+        })?.value ?? 0) as Double
+        
+    }
+    
+    var generatorData = [GeneratorData]()
     
     init(id: String, type: String) {
         super.init(id: id)
